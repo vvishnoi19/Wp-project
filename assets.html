@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./assets/css/assets.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+       <div class="main-container">
+
+        <div id="sidebar-container"></div>
+<div class="container">
+       <div class="dashboard-header">
+            <h1 class="dashboard-title">Asset Management</h1>
+            <div class="tab-container">
+                <button class="tab-btn active" data-tab="MY-Assets.html">My Assets</button>
+                <button class="tab-btn" data-tab="My-Team-Assets.html">My Team's Assets</button>
+            </div>
+        </div>
+
+            <!-- Data Table -->
+            <div class="data-table-container">
+                <table class="data-table table">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="asset-id-col">Asset Id</th>
+                            <th class="serial-col">Asset Serial Number</th>
+                            <th class="type-col">Asset Type</th>
+                            <th class="date-col">Assigned On</th>
+                            <th class="status-col">Status</th>
+                            <th class="action-col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="assetsTableBody">
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Macbook</td>
+                            <td>30/05/2025</td>
+                            <td><span class="status-badge status-requested">Requested</span></td>
+                            <td>
+                                <button class="action-btn" onclick="showActions(0)">
+                                    <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="4" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#234567</td>
+                            <td>C02D3GQ5MD7N</td>
+                            <td>iPhone</td>
+                            <td>15/07/2025</td>
+                            <td><span class="status-badge status-returned">Returned</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>#345678</td>
+                            <td>C02D3GQ5MD8O</td>
+                            <td>iPad</td>
+                            <td>20/07/2025</td>
+                            <td><span class="status-badge status-rejected">Rejected</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>#456789</td>
+                            <td>C02D3GQ5MD9P</td>
+                            <td>AirPods</td>
+                            <td>05/08/2025</td>
+                            <td><span class="status-badge status-assigned">Assigned</span></td>
+                            <td>
+                                <button class="action-btn" onclick="showActions(3)">
+                                    <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="4" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#567890</td>
+                            <td>C02D3GQ5MA0Q</td>
+                            <td>Apple Watch</td>
+                            <td>10/09/2025</td>
+                            <td><span class="status-badge status-assigned">Assigned</span></td>
+                            <td>
+                                <button class="action-btn" onclick="showActions(4)">
+                                    <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="4" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#678901</td>
+                            <td>C02D3GQ5MA1R</td>
+                            <td>AirTag</td>
+                            <td>12/10/2025</td>
+                            <td><span class="status-badge status-assigned">Assigned</span></td>
+                            <td>
+                                <button class="action-btn" onclick="showActions(5)">
+                                    <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="4" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#789012</td>
+                            <td>C02D3GQ5MA2S</td>
+                            <td>Magic Keyboard</td>
+                            <td>15/11/2025</td>
+                            <td><span class="status-badge status-assigned">Assigned</span></td>
+                            <td>
+                                <button class="action-btn" onclick="showActions(6)">
+                                    <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="4" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#890123</td>
+                            <td>C02D3GQ5MA3T</td>
+                            <td>Magic Mouse</td>
+                            <td>20/12/2025</td>
+                            <td><span class="status-badge status-assigned">Assigned</span></td>
+                            <td>
+                                <button class="action-btn" onclick="showActions(7)">
+                                    <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="4" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#901234</td>
+                            <td>C02D3GQ5MA4U</td>
+                            <td>HomePod</td>
+                            <td>01/02/2026</td>
+                            <td><span class="status-badge status-assigned">Assigned</span></td>
+                            <td>
+                                <button class="action-btn" onclick="showActions(8)">
+                                    <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="4" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#012345</td>
+                            <td>C02D3GQ5MA5V</td>
+                            <td>Apple TV</td>
+                            <td>10/03/2026</td>
+                            <td><span class="status-badge status-assigned">Assigned</span></td>
+                            <td>
+                                <button class="action-btn" onclick="showActions(9)">
+                                    <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="4" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#123456</td>
+                            <td>C02D3GQ5MA6W</td>
+                            <td>Mac Mini</td>
+                            <td>15/04/2026</td>
+                            <td><span class="status-badge status-assigned">Assigned</span></td>
+                            <td>
+                                <button class="action-btn" onclick="showActions(10)">
+                                    <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="4" cy="10" r="1" fill="currentColor"/>
+                                        <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-- Pagination -->
+                <div class="pagination-container">
+                    <div class="pagination-info">
+                        Showing 1-10 of 20
+                    </div>
+                    <div class="pagination-controls">
+                        <div class="rows-control">
+                            <label>Rows per page</label>
+                            <select class="rows-select" id="rowsSelect">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                            </select>
+                        </div>
+                        <div class="page-info">Page 1 of 10</div>
+                        <div class="pagination-buttons">
+                            <button class="pagination-btn disabled" id="firstPage">
+                                <svg fill="none" viewBox="0 0 16 16">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.333 11.333L4 8l3.333-3.333M12 11.333L8.667 8 12 4.667"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-btn disabled" id="prevPage">
+                                <svg fill="none" viewBox="0 0 16 16">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M10 12L6 8l4-4"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-btn" id="nextPage">
+                                <svg fill="none" viewBox="0 0 16 16">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M6 12l4-4-4-4"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-btn" id="lastPage">
+                                <svg fill="none" viewBox="0 0 16 16">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M4 11.333L7.333 8 4 4.667M8.667 11.333L12 8l-3.333-3.333"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            </body>
+          <script src="./assets/js/script.js"></script>
+</html>

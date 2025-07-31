@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/payroll.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+
+        <div id="sidebar-container"></div>
+        <div class="main-content
+        ">
+        <!-- Header -->
+        <div class="header">
+            <div class="page-title">Payroll</div>
+            
+            <div class="main-tabs">
+                <button class="main-tab active" data-tab="paylist">
+                    <div class="main-tab-text">Pay list</div>
+                </button>
+                <button class="main-tab" data-tab="reimbursements">
+                    <div class="main-tab-text">Reimbursements</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Tab Content for Pay List -->
+        <div id="paylist-content" class="tab-content active">
+            <div class="controls-container">
+                <div class="controls-row">
+                    <div class="controls-left">
+                        <div class="search-container">
+                            <input type="text" class="search-field" placeholder="Search" />
+                        </div>
+                    </div>
+                    <div class="controls-right">
+                        <div class="date-picker">
+                            <div class="calendar-icon">
+                                <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                                    <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 6.66667H14" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="date-text">Oct 17, 2024 - Nov 6, 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pay List Table -->
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="table-cell header">Start Date</div>
+                    <div class="table-cell header">End Date</div>
+                    <div class="table-cell header">Gross pay</div>
+                    <div class="table-cell header">Deduction</div>
+                    <div class="table-cell header">Net Pay</div>
+                </div>
+                <div class="table-data">
+                    <div class="table-row">
+                        <div class="table-cell data">01/05/2025</div>
+                        <div class="table-cell data">30/05/2025</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="table-cell data">₹ 0.00</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="action-cell">
+                            <button class="action-button">
+                                <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                    <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                    <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell data">01/05/2025</div>
+                        <div class="table-cell data">30/05/2025</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="table-cell data">₹ 0.00</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="action-cell">
+                            <button class="action-button">
+                                <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                    <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                    <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell data">01/05/2025</div>
+                        <div class="table-cell data">30/05/2025</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="table-cell data">₹ 0.00</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="action-cell">
+                            <button class="action-button">
+                                <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                    <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                    <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell data">01/05/2025</div>
+                        <div class="table-cell data">30/05/2025</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="table-cell data">₹ 0.00</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="action-cell">
+                            <button class="action-button">
+                                <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                    <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                    <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell data">01/05/2025</div>
+                        <div class="table-cell data">30/05/2025</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="table-cell data">₹ 0.00</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="action-cell">
+                            <button class="action-button">
+                                <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                    <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                    <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell data">01/05/2025</div>
+                        <div class="table-cell data">30/05/2025</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="table-cell data">₹ 0.00</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="action-cell">
+                            <button class="action-button">
+                                <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                    <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                    <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell data">01/05/2025</div>
+                        <div class="table-cell data">30/05/2025</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="table-cell data">₹ 0.00</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="action-cell">
+                            <button class="action-button">
+                                <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                    <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                    <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell data">01/05/2025</div>
+                        <div class="table-cell data">30/05/2025</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="table-cell data">₹ 0.00</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="action-cell">
+                            <button class="action-button">
+                                <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                    <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                    <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell data">01/05/2025</div>
+                        <div class="table-cell data">30/05/2025</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="table-cell data">₹ 0.00</div>
+                        <div class="table-cell data">₹ 25000.00</div>
+                        <div class="action-cell">
+                            <button class="action-button">
+                                <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                    <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                    <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+
+        <!-- Tab Content for Reimbursements -->
+        <div id="reimbursements-content" class="tab-content">
+            <!-- Stats Cards (only in Reimbursements tab) -->
+            <div class="stats-cards">
+                <div class="stats-card">
+                    <div class="stats-card-header">
+                        <div class="stats-card-title">Total</div>
+                        <div class="stats-icon">
+                            <svg fill="none" viewBox="0 0 24 24">
+                                <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H6C4.93913 15 3.92172 15.4214 3.17157 16.1716C2.42143 16.9217 2 17.9391 2 19V21" stroke="#224FB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 3.128C16.8578 3.35037 17.6174 3.85126 18.1597 4.55206C18.702 5.25286 18.9962 6.11389 18.9962 7C18.9962 7.88611 18.702 8.74714 18.1597 9.44794C17.6174 10.1487 16.8578 10.6496 16 10.872" stroke="#224FB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 21V19C21.9993 18.1137 21.7044 17.2528 21.1614 16.5523C20.6184 15.8519 19.8581 15.3516 19 15.13" stroke="#224FB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#224FB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stats-card-content">
+                        <div class="stats-card-value">313</div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stats-card-header">
+                        <div class="stats-card-title">Approved</div>
+                        <div class="stats-icon">
+                            <svg fill="none" viewBox="0 0 24 24">
+                                <path d="M3.85 8.62C3.70404 7.96253 3.72645 7.27884 3.91516 6.63234C4.10386 5.98584 4.45275 5.39744 4.92947 4.92172C5.40619 4.446 5.99531 4.09834 6.64221 3.91099C7.2891 3.72364 7.97283 3.70266 8.63 3.85C8.99171 3.2843 9.49 2.81876 10.079 2.49629C10.6679 2.17381 11.3285 2.00479 12 2.00479C12.6715 2.00479 13.3321 2.17381 13.921 2.49629C14.51 2.81876 15.0083 3.2843 15.37 3.85C16.0282 3.70202 16.7131 3.72291 17.361 3.91071C18.0089 4.09852 18.5988 4.44714 19.0758 4.92415C19.5529 5.40117 19.9015 5.99107 20.0893 6.639C20.2771 7.28693 20.298 7.97183 20.15 8.63C20.7157 8.99171 21.1812 9.49 21.5037 10.079C21.8262 10.6679 21.9952 11.3285 21.9952 12C21.9952 12.6715 21.8262 13.3321 21.5037 13.921C21.1812 14.51 20.7157 15.0083 20.15 15.37C20.2973 16.0272 20.2764 16.7109 20.089 17.3578C19.9017 18.0047 19.554 18.5938 19.0783 19.0705C18.6026 19.5473 18.0142 19.8961 17.3677 20.0848C16.7212 20.2735 16.0375 20.296 15.38 20.15C15.0188 20.7179 14.5201 21.1854 13.9301 21.5093C13.3402 21.8332 12.678 22.0031 12.005 22.0031C11.332 22.0031 10.6698 21.8332 10.0799 21.5093C9.48992 21.1854 8.99124 20.7179 8.63 20.15C7.97283 20.2973 7.2891 20.2764 6.64221 20.089C5.99531 19.9017 5.40619 19.554 4.92947 19.0783C4.45275 18.6026 4.10386 18.0142 3.91516 17.3677C3.72645 16.7212 3.70404 16.0375 3.85 15.38C3.27996 15.0192 2.81041 14.5202 2.48505 13.9292C2.15968 13.3383 1.98907 12.6746 1.98907 12C1.98907 11.3254 2.15968 10.6617 2.48505 10.0708C2.81041 9.47983 3.27996 8.98076 3.85 8.62Z" stroke="#224FB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 12L11 14L15 10" stroke="#224FB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stats-card-content">
+                        <div class="stats-card-value">150</div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stats-card-header">
+                        <div class="stats-card-title">Pending</div>
+                        <div class="stats-icon">
+                            <svg fill="none" viewBox="0 0 24 24">
+                                <path d="M12.22 2H11.78C11.2496 2 10.7409 2.21071 10.3658 2.58579C9.99071 2.96086 9.78 3.46957 9.78 4V4.18C9.77964 4.53073 9.68706 4.87519 9.51154 5.17884C9.33602 5.48248 9.08374 5.73464 8.78 5.91L8.35 6.16C8.04596 6.33554 7.70107 6.42795 7.35 6.42795C6.99893 6.42795 6.65404 6.33554 6.35 6.16L6.2 6.08C5.74106 5.81526 5.19584 5.74344 4.684 5.88031C4.17217 6.01717 3.73555 6.35154 3.47 6.81L3.25 7.19C2.98526 7.64893 2.91344 8.19416 3.05031 8.706C3.18717 9.21783 3.52154 9.65445 3.98 9.92L4.13 10.02C4.43228 10.1945 4.68362 10.4451 4.85905 10.7468C5.03448 11.0486 5.12789 11.391 5.13 11.74V12.25C5.1314 12.6024 5.03965 12.949 4.86404 13.2545C4.68844 13.5601 4.43521 13.8138 4.13 13.99L3.98 14.08C3.52154 14.3456 3.18717 14.7822 3.05031 15.294C2.91344 15.8058 2.98526 16.3511 3.25 16.81L3.47 17.19C3.73555 17.6485 4.17217 17.9828 4.684 18.1197C5.19584 18.2566 5.74106 18.1847 6.2 17.92L6.35 17.84C6.65404 17.6645 6.99893 17.5721 7.35 17.5721C7.70107 17.5721 8.04596 17.6645 8.35 17.84L8.78 18.09C9.08374 18.2654 9.33602 18.5175 9.51154 18.8212C9.68706 19.1248 9.77964 19.4693 9.78 19.82V20C9.78 20.5304 9.99071 21.0391 10.3658 21.4142C10.7409 21.7893 11.2496 22 11.78 22H12.22C12.7504 22 13.2591 21.7893 13.6342 21.4142C14.0093 21.0391 14.22 20.5304 14.22 20V19.82C14.2204 19.4693 14.3129 19.1248 14.4885 18.8212C14.664 18.5175 14.9163 18.2654 15.22 18.09L15.65 17.84C15.954 17.6645 16.2989 17.5721 16.65 17.5721C17.0011 17.5721 17.346 17.6645 17.65 17.84L17.8 17.92C18.2589 18.1847 18.8042 18.2566 19.316 18.1197C19.8278 17.9828 20.2644 17.6485 20.53 17.19L20.75 16.8C21.0147 16.3411 21.0866 15.7958 20.9497 15.284C20.8128 14.7722 20.4785 14.3356 20.02 14.07L19.87 13.99C19.5648 13.8138 19.3116 13.5601 19.136 13.2545C18.9603 12.949 18.8686 12.6024 18.87 12.25V11.75C18.8686 11.3976 18.9603 11.051 19.136 10.7455C19.3116 10.4399 19.5648 10.1862 19.87 10.01L20.02 9.92C20.4785 9.65445 20.8128 9.21783 20.9497 8.706C21.0866 8.19416 21.0147 7.64893 20.75 7.19L20.53 6.81C20.2644 6.35154 19.8278 6.01717 19.316 5.88031C18.8042 5.74344 18.2589 5.81526 17.8 6.08L17.65 6.16C17.346 6.33554 17.0011 6.42795 16.65 6.42795C16.2989 6.42795 15.954 6.33554 15.65 6.16L15.22 5.91C14.9163 5.73464 14.664 5.48248 14.4885 5.17884C14.3129 4.87519 14.2204 4.53073 14.22 4.18V4C14.22 3.46957 14.0093 2.96086 13.6342 2.58579C13.2591 2.21071 12.7504 2 12.22 2Z" stroke="#224FB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#224FB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stats-card-content">
+                        <div class="stats-card-value">30</div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stats-card-header">
+                        <div class="stats-card-title">Rejected</div>
+                        <div class="stats-icon">
+                            <svg fill="none" viewBox="0 0 24 24">
+                                <path d="M16 0C17.6569 0 19 1.34315 19 3C19 4.65685 17.6569 6 16 6C14.3431 6 13 4.65685 13 3C13 1.34315 14.3431 0 16 0Z" fill="#224FB1"/>
+                                <path d="M7.70711 3.29289C7.31658 2.90237 6.68342 2.90237 6.29289 3.29289L0.292891 9.2929C-0.097629 9.6834 -0.097629 10.3166 0.292891 10.7071C0.683421 11.0976 1.31658 11.0976 1.70711 10.7071L2 10.4142V13C2 13.5523 2.44772 14 3 14H9C9.5523 14 10 13.5523 10 13C10 12.4477 9.5523 12 9 12H4V8.4142L7 5.41421L8.5429 6.95711C8.9334 7.34763 9.5666 7.34763 9.9571 6.95711C10.3476 6.56658 10.3476 5.93342 9.9571 5.54289L7.70711 3.29289Z" fill="#224FB1"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stats-card-content">
+                        <div class="stats-card-value">55</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub Tabs -->
+            <div class="sub-tabs">
+                <button class="sub-tab active" data-subtab="reimbursements-tab">
+                    <div class="sub-tab-text">Reimbursements</div>
+                </button>
+                <button class="sub-tab" data-subtab="bonus-tab">
+                    <div class="sub-tab-text">Bonus Encashments</div>
+                </button>
+            </div>
+
+            <!-- Reimbursements Sub Tab Content -->
+            <div id="reimbursements-tab-content" class="tab-content active">
+                <div class="controls-container">
+                    <div class="controls-row">
+                        <div class="controls-left">
+                            <div class="search-container">
+                                <input type="text" class="search-field" placeholder="Search" />
+                            </div>
+                            <div class="status-filter">
+                                <span>Status</span>
+                                <svg class="chevron-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#1E293B" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="controls-right">
+                            <div class="date-picker">
+                                <div class="calendar-icon">
+                                    <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                                        <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2 6.66667H14" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="date-text">Oct 17, 2024 - Nov 6, 2024</div>
+                            </div>
+                            <button class="create-button">
+                                <svg class="plus-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                                    <path d="M8 3.33333V12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.33333 8H12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="create-button-text">Create Reimbursements</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reimbursements Table -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="table-cell header title">Title</div>
+                        <div class="table-cell header">Description</div>
+                        <div class="table-cell header date">Allowance on</div>
+                        <div class="table-cell header amount">Amount</div>
+                        <div class="table-cell header approved-by">Approved by</div>
+                        <div class="table-cell header status">Status</div>
+                    </div>
+                    <div class="table-data">
+                        <div class="table-row">
+                            <div class="table-cell data title">Travel Allowance</div>
+                            <div class="table-cell data">Trip to client site</div>
+                            <div class="table-cell data date">01/05/2025</div>
+                            <div class="table-cell data amount">₹ 25000.00</div>
+                            <div class="table-cell data approved-by">HR Manager</div>
+                            <div class="table-cell data status">
+                                <span class="status-tag approved">Approved</span>
+                            </div>
+                            <div class="action-cell">
+                                <button class="action-button">
+                                    <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                        <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                        <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                        <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell data title">Internet Bill</div>
+                            <div class="table-cell data">Work-from-home claim</div>
+                            <div class="table-cell data date">01/05/2025</div>
+                            <div class="table-cell data amount">₹ 25000.00</div>
+                            <div class="table-cell data approved-by">Finance Head</div>
+                            <div class="table-cell data status">
+                                <span class="status-tag approved">Approved</span>
+                            </div>
+                            <div class="action-cell">
+                                <button class="action-button">
+                                    <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                        <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                        <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                        <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell data title">Medical</div>
+                            <div class="table-cell data">Missing documents</div>
+                            <div class="table-cell data date">01/05/2025</div>
+                            <div class="table-cell data amount">₹ 25000.00</div>
+                            <div class="table-cell data approved-by">-</div>
+                            <div class="table-cell data status">
+                                <span class="status-tag requested">Requested</span>
+                            </div>
+                            <div class="action-cell">
+                                <button class="action-button">
+                                    <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                        <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                        <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                        <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell data title">Food Allowance</div>
+                            <div class="table-cell data">Team lunch receipt</div>
+                            <div class="table-cell data date">01/05/2025</div>
+                            <div class="table-cell data amount">₹ 25000.00</div>
+                            <div class="table-cell data approved-by">Finance Head</div>
+                            <div class="table-cell data status">
+                                <span class="status-tag rejected">Rejected</span>
+                            </div>
+                            <div class="action-cell">
+                                <button class="action-button">
+                                    <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                        <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                        <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                        <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bonus Encashments Sub Tab Content -->
+            <div id="bonus-tab-content" class="tab-content">
+                <div class="controls-container">
+                    <div class="controls-row">
+                        <div class="controls-left">
+                            <div class="search-container">
+                                <input type="text" class="search-field" placeholder="Search" />
+                            </div>
+                        </div>
+                        <div class="controls-right">
+                            <div class="date-picker">
+                                <div class="calendar-icon">
+                                    <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                                        <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2 6.66667H14" stroke="#1E293B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="date-text">Oct 17, 2024 - Nov 6, 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bonus Encashments Table -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="table-cell header title">Bonus Type</div>
+                        <div class="table-cell header remarks">Remarks</div>
+                        <div class="table-cell header date">Request Date</div>
+                        <div class="table-cell header amount">Amount</div>
+                    </div>
+                    <div class="table-data">
+                        <div class="table-row">
+                            <div class="table-cell data title">Annual Bonus</div>
+                            <div class="table-cell data remarks">FY 2024–2025 Performance</div>
+                            <div class="table-cell data date">01/05/2025</div>
+                            <div class="table-cell data amount">₹ 25000.00</div>
+                            <div class="action-cell">
+                                <button class="action-button">
+                                    <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                        <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                        <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                        <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell data title">Festival Bonus</div>
+                            <div class="table-cell data remarks">Diwali Bonus</div>
+                            <div class="table-cell data date">01/05/2025</div>
+                            <div class="table-cell data amount">₹ 25000.00</div>
+                            <div class="action-cell">
+                                <button class="action-button">
+                                    <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                        <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                        <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                        <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell data title">Referral Bonus</div>
+                            <div class="table-cell data remarks">New Year Bonus</div>
+                            <div class="table-cell data date">01/15/2025</div>
+                            <div class="table-cell data amount">₹ 30000.00</div>
+                            <div class="action-cell">
+                                <button class="action-button">
+                                    <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                        <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                        <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                        <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell data title">Referral Bonus</div>
+                            <div class="table-cell data remarks">Christmas Bonus</div>
+                            <div class="table-cell data date">11/30/2025</div>
+                            <div class="table-cell data amount">₹ 20000.00</div>
+                            <div class="action-cell">
+                                <button class="action-button">
+                                    <svg class="ellipsis-icon" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                                        <path d="M10 10.8341C10.4602 10.8341 10.8333 10.4611 10.8333 10.0008C10.8333 9.54058 10.4602 9.16748 10 9.16748C9.53976 9.16748 9.16666 9.54058 9.16666 10.0008C9.16666 10.4611 9.53976 10.8341 10 10.8341Z" fill="#224FB1"/>
+                                        <path d="M15.8333 10.8341C16.2936 10.8341 16.6667 10.4611 16.6667 10.0008C16.6667 9.54058 16.2936 9.16748 15.8333 9.16748C15.3731 9.16748 15 9.54058 15 10.0008C15 10.4611 15.3731 10.8341 15.8333 10.8341Z" fill="#224FB1"/>
+                                        <path d="M4.16666 10.8341C4.62689 10.8341 5 10.4611 5 10.0008C5 9.54058 4.62689 9.16748 4.16666 9.16748C3.70643 9.16748 3.33333 9.54058 3.33333 10.0008C3.33333 10.4611 3.70643 10.8341 4.16666 10.8341Z" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <div class="pagination-left">Showing 1-10 of 20</div>
+            
+            <div class="pagination-right">
+                <div class="rows-per-page">
+                    <div class="rows-label">Rows per page</div>
+                    <select class="rows-select">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                
+                <div class="page-info">Page 1 of 10</div>
+                
+                <div class="pagination-buttons">
+                    <button class="pagination-btn disabled">
+                        <svg class="pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="pagination-btn disabled">
+                        <svg class="pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M10 12L6 8L10 4" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="pagination-btn">
+                        <svg class="pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M6 12L10 8L6 4" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="pagination-btn">
+                        <svg class="pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+       
+  
+    </div>
+    </div>
+
+    <script>
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMainTabs();
+            initializeSubTabs();
+           
+        });
+
+        // Main tab switching functionality
+        function initializeMainTabs() {
+            const mainTabs = document.querySelectorAll('.main-tab');
+            
+            mainTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all main tabs
+                    mainTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all tab contents
+                    const tabContents = document.querySelectorAll('.main-container > .tab-content');
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Show selected tab content
+                    const selectedContent = document.getElementById(tabId + '-content');
+                    if (selectedContent) {
+                        selectedContent.classList.add('active');
+                    }
+                    
+                    console.log(`Switched to main tab: ${tabId}`);
+                });
+            });
+        }
+
+        // Sub tab switching functionality
+        function initializeSubTabs() {
+            const subTabs = document.querySelectorAll('.sub-tab');
+            
+            subTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const subtabId = this.getAttribute('data-subtab');
+                    
+                    // Remove active class from all sub tabs
+                    subTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked sub tab
+                    this.classList.add('active');
+                    
+                    // Hide all sub tab contents
+                    const subTabContents = document.querySelectorAll('#reimbursements-content .tab-content');
+                    subTabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Show selected sub tab content
+                    const selectedSubContent = document.getElementById(subtabId + '-content');
+                    if (selectedSubContent) {
+                        selectedSubContent.classList.add('active');
+                    }
+                    
+                    console.log(`Switched to sub tab: ${subtabId}`);
+                });
+            });
+        }
+
+        // Initialize hover effects
+        function initializeHoverEffects() {
+            // Tab hover effects
+            const allTabs = document.querySelectorAll('.main-tab, .sub-tab');
+            allTabs.forEach(tab => {
+                tab.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.opacity = '0.7';
+                    }
+                });
+
+                tab.addEventListener('mouseleave', function() {
+                    this.style.opacity = '1';
+                });
+            });
+
+            // Button hover effects
+            const actionButtons = document.querySelectorAll('.action-button');
+            actionButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)';
+                });
+
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Input hover effects
+            const inputs = document.querySelectorAll('.search-field, .date-picker, .status-filter');
+            inputs.forEach(input => {
+                input.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#f9fafb';
+                });
+
+                input.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '#ffffff';
+                });
+            });
+        }
+
+
+
+      
+document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll(".main-tab");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const tab = button.getAttribute("data-tab");
+
+            // Remove 'active' class from all tabs and contents
+            tabButtons.forEach(btn => btn.classList.remove("active"));
+            tabContents.forEach(content => content.classList.remove("active"));
+
+            // Add 'active' class to the selected tab and its content
+            button.classList.add("active");
+            document.getElementById(`${tab}-content`).classList.add("active");
+        });
+    });
+});
+    </script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

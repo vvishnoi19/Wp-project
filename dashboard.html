@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="./assets/css/dashboard.css">
+ <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div id="sidebar-container"></div>
+        <div class="main-content">
+        <!-- Page Title -->
+        <h1 class="page-title">Dashboard</h1>
+
+        <!-- Stat Cards -->
+        <div class="stat-cards">
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <div class="stat-card-title">Total Employee</div>
+                    <div class="stat-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">313</div>
+                    <div class="stat-card-caption">
+                        <span class="stat-change">+10%</span>
+                        <span class="stat-period">Than Last Year</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <div class="stat-card-title">On Leave Employee</div>
+                    <div class="stat-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">55</div>
+                    <div class="stat-card-caption">
+                        <span class="stat-change">+2.15%</span>
+                        <span class="stat-period">Than Last Month</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <div class="stat-card-title">On Leave In my Team</div>
+                    <div class="stat-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">55</div>
+                    <div class="stat-card-caption">
+                        <span class="stat-change">+2.15%</span>
+                        <span class="stat-period">Than Last Month</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <div class="stat-card-title">Total Project</div>
+                    <div class="stat-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">5</div>
+                    <div class="stat-card-caption">
+                        <span class="stat-change">+2.15%</span>
+                        <span class="stat-period">Than Last Month</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <div class="stat-card-title">Requests</div>
+                    <div class="stat-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM19 8v6M22 11h-6"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="stat-card-content">
+                    <div class="requests-badge">12</div>
+                    <div class="stat-card-caption">
+                        <span class="stat-change">+5.5%</span>
+                        <span class="stat-period">Than Last Month</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="row g-4">
+            <!-- Left Column -->
+            <div class="col-xl-8 col-lg-7">
+                <!-- Team's Progress -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3 class="section-title">Team's Progress</h3>
+                    </div>
+                    <div class="section-content">
+                        <table class="progress-table">
+                            <tbody>
+                                <tr>
+                                    <td>Ayush Kumar</td>
+                                    <td>working on client feedbacks from extras section</td>
+                                    <td class="project-crm">CRM Design</td>
+                                    <td>
+                                        <div class="time-indicator">
+                                            <span>00:04:10</span>
+                                            <div class="time-status"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Prachi Mehta</td>
+                                    <td>conducting usability tests for new features</td>
+                                    <td class="project-ui-testing">UI Testing</td>
+                                    <td>
+                                        <div class="time-indicator">
+                                            <span>00:03:45</span>
+                                            <div class="time-status"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Chirag Arora</td>
+                                    <td>developing high-fidelity prototypes for approval</td>
+                                    <td class="project-prototype">Prototype Development</td>
+                                    <td>
+                                        <div class="time-indicator">
+                                            <span>00:02:30</span>
+                                            <div class="time-status"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Dipanshu Singh</td>
+                                    <td>evaluating design for accessibility compliance</td>
+                                    <td class="project-accessibility">Accessibility Audit</td>
+                                    <td>00:02:55</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Team's Requests -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3 class="section-title">Team's Requests</h3>
+                    </div>
+                    <div class="section-content">
+                        <!-- Request Summary Cards -->
+                        <div class="request-cards">
+                            <div class="request-card">
+                                <div class="request-label">Leave Requests</div>
+                                <div class="request-value">20</div>
+                            </div>
+                            <div class="request-card">
+                                <div class="request-label">Attendance Requests</div>
+                                <div class="request-value">14</div>
+                            </div>
+                            <div class="request-card">
+                                <div class="request-label">Red Flag Entry</div>
+                                <div class="request-value">6</div>
+                            </div>
+                            <div class="request-card">
+                                <div class="request-label">Asset Request</div>
+                                <div class="request-value">2</div>
+                            </div>
+                        </div>
+
+                        <!-- Tabs -->
+                        <div class="custom-tabs">
+                            <button class="tab-btn active" data-tab="leave-requests">Leave Requests</button>
+                            <button class="tab-btn" data-tab="attendance-requests">Attendance Requests</button>
+                            <button class="tab-btn" data-tab="red-flag-entry">Red Flag Entry</button>
+                            <button class="tab-btn" data-tab="asset-request">Asset Request</button>
+                        </div>
+
+                        <!-- Tab Content: Leave Requests -->
+                        <div class="tab-content active" id="leave-requests">
+                            <div class="table-responsive">
+                                <table class="requests-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Employee Name</th>
+                                            <th>Leave Type</th>
+                                            <th>Start Date</th>
+                                            <th>End Date</th>
+                                            <th>Days</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Ayush Kumar</td>
+                                            <td>Sick Leave (SL)</td>
+                                            <td>2025-05-22(first-half)</td>
+                                            <td>2025-05-27 (first-half)</td>
+                                            <td>2</td>
+                                            <td>I am not feeling well. I'm experiencing stomach pain and won't be able to come to the office today.</td>
+                                            <td>
+                                                <button class="action-btn">
+                                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                        <circle cx="10" cy="4" r="1.5"/>
+                                                        <circle cx="10" cy="10" r="1.5"/>
+                                                        <circle cx="10" cy="16" r="1.5"/>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chirag Arrora</td>
+                                            <td>Vacation Leave (VL)</td>
+                                            <td>2025-06-15(first-half)</td>
+                                            <td>2025-06-20 (first-half)</td>
+                                            <td>5</td>
+                                            <td>I'm going on a family trip to the beach and will be unavailable during this time.</td>
+                                            <td>
+                                                <button class="action-btn">
+                                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                        <circle cx="10" cy="4" r="1.5"/>
+                                                        <circle cx="10" cy="10" r="1.5"/>
+                                                        <circle cx="10" cy="16" r="1.5"/>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dipanshu Singh</td>
+                                            <td>Personal Leave (PL)</td>
+                                            <td>2025-07-10(first-half)</td>
+                                            <td>2025-07-11 (first-half)</td>
+                                            <td>1</td>
+                                            <td>I have a personal matter to attend to and will need a day off.</td>
+                                            <td>
+                                                <button class="action-btn">
+                                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                        <circle cx="10" cy="4" r="1.5"/>
+                                                        <circle cx="10" cy="10" r="1.5"/>
+                                                        <circle cx="10" cy="16" r="1.5"/>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Prachi Mehta</td>
+                                            <td>Medical Leave (ML)</td>
+                                            <td>2025-08-01(first-half)</td>
+                                            <td>2025-08-05 (first-half)</td>
+                                            <td>4</td>
+                                            <td>I need to undergo a medical procedure and will require several days for recovery.</td>
+                                            <td>
+                                                <button class="action-btn">
+                                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                        <circle cx="10" cy="4" r="1.5"/>
+                                                        <circle cx="10" cy="10" r="1.5"/>
+                                                        <circle cx="10" cy="16" r="1.5"/>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Akash Singh</td>
+                                            <td>Paternity Leave (PL)</td>
+                                            <td>2025-10-15(first-half)</td>
+                                            <td>2025-10-22 (first-half)</td>
+                                            <td>7</td>
+                                            <td>I will need time off to support my partner and care for our newborn.</td>
+                                            <td>
+                                                <button class="action-btn">
+                                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                        <circle cx="10" cy="4" r="1.5"/>
+                                                        <circle cx="10" cy="10" r="1.5"/>
+                                                        <circle cx="10" cy="16" r="1.5"/>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Attendance Requests -->
+                        <div class="tab-content" id="attendance-requests">
+                            <div class="table-responsive">
+                                <table class="requests-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Employee Name</th>
+                                            <th>Description</th>
+                                            <th>Date</th>
+                                            <th>Check In</th>
+                                            <th>Check Out</th>
+                                            <th>Working Hours</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Ayush Kumar</td>
+                                            <td>Request for Attendance: I would like to formally request attendance for the upcoming client site visit scheduled for next week.</td>
+                                            <td>12/09/2025</td>
+                                            <td>09:28 AM</td>
+                                            <td>07:00 PM</td>
+                                            <td>09:02 Hrs</td>
+                                            <td>
+                                                <button class="action-btn">
+                                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                        <circle cx="10" cy="4" r="1.5"/>
+                                                        <circle cx="10" cy="10" r="1.5"/>
+                                                        <circle cx="10" cy="16" r="1.5"/>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Prachi Mehta</td>
+                                            <td>Request for Attendance: I would like to formally request attendance for the team meeting.</td>
+                                            <td>12/09/2025</td>
+                                            <td>09:20 AM</td>
+                                            <td>07:00 PM</td>
+                                            <td>09:20 Hrs</td>
+                                            <td>
+                                                <button class="action-btn">
+                                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                        <circle cx="10" cy="4" r="1.5"/>
+                                                        <circle cx="10" cy="10" r="1.5"/>
+                                                        <circle cx="10" cy="16" r="1.5"/>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Red Flag Entry -->
+                        <div class="tab-content" id="red-flag-entry">
+                            <div class="table-responsive">
+                                <table class="requests-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Employee</th>
+                                            <th>Description</th>
+                                            <th>Project</th>
+                                            <th>Time</th>
+                                            <th>Duration</th>
+                                            <th>Date</th>
+                                            <th>Revenue</th>
+                                            <th>Billable</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="red-flag-row">
+                                            <td>
+                                                <svg class="red-flag-icon" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M12.6668 5.96667L6.00016 3.08333V2.29167C6.00016 1.95 5.71683 1.66667 5.37516 1.66667C5.0335 1.66667 4.75016 1.95 4.75016 2.29167V17.7083C4.75016 18.05 5.0335 18.3333 5.37516 18.3333C5.71683 18.3333 6.00016 18.05 6.00016 17.7083V14.4083L12.8502 11.025C12.8502 11.025 12.8502 11.025 12.8585 11.025C14.2418 10.3083 14.9835 9.38333 14.9418 8.40833C14.9002 7.43333 14.0918 6.56667 12.6668 5.96667Z"/>
+                                                </svg>
+                                                Ayush Kumar
+                                            </td>
+                                            <td>working on client feedbacks from extras section</td>
+                                            <td class="project-ui-testing">UI Testing</td>
+                                            <td class="time-red">15:32 - 19:52</td>
+                                            <td class="time-red">04:20:45</td>
+                                            <td>12/09/2025</td>
+                                            <td>$123</td>
+                                            <td>
+                                                <div class="billable-badge">
+                                                    <svg width="20" height="20" fill="white" viewBox="0 0 20 20">
+                                                        <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999C12.5131 6.97968 12.6241 7.18054 12.7969 7.31838C12.9698 7.45622 13.1903 7.51975 13.41 7.49499C13.6297 7.47024 13.8305 7.35923 13.9684 7.18638C14.1062 7.01354 14.1698 6.79301 14.145 6.57333C14.0497 5.73161 13.6632 4.94967 13.0524 4.36274C12.4416 3.77582 11.6448 3.42083 10.8 3.35916V2.49999C10.8 2.27898 10.7122 2.06702 10.5559 1.91074C10.3996 1.75446 10.1877 1.66666 9.96666 1.66666C9.74565 1.66666 9.53369 1.75446 9.37741 1.91074C9.22113 2.06702 9.13333 2.27898 9.13333 2.49999V3.36749C8.27916 3.44679 7.48061 3.82584 6.87913 4.43748C6.27764 5.04913 5.91204 5.85392 5.84706 6.7093C5.78208 7.56468 6.02193 8.41546 6.52412 9.11094C7.02631 9.80643 7.75844 10.3017 8.59083 10.5092L11.0075 11.1075C11.4741 11.226 11.8814 11.5107 12.153 11.9082C12.4246 12.3058 12.5418 12.7887 12.4826 13.2665C12.4233 13.7443 12.1918 14.184 11.8314 14.5032C11.4709 14.8223 11.0064 14.999 10.525 15H9.475C8.98851 14.9996 8.51924 14.8199 8.157 14.4952C7.79476 14.1705 7.56499 13.7235 7.51166 13.24C7.48691 13.0203 7.3759 12.8195 7.20305 12.6816C7.11747 12.6134 7.01928 12.5626 6.91409 12.5323C6.8089 12.502 6.69878 12.4927 6.59 12.505C6.37031 12.5297 6.16945 12.6408 6.03161 12.8136C5.89377 12.9865 5.83024 13.207 5.855 13.4267C5.94909 14.2569 6.32652 15.0293 6.92369 15.6137C7.52086 16.1982 8.30125 16.5588 9.13333 16.635V17.5C9.13333 17.721 9.22113 17.933 9.37741 18.0893C9.53369 18.2455 9.74565 18.3333 9.96666 18.3333C10.1877 18.3333 10.3996 18.2455 10.5559 18.0893C10.7122 17.933 10.8 17.721 10.8 17.5V16.64C11.7146 16.5758 12.5709 16.167 13.1958 15.496C13.8207 14.825 14.1676 13.9419 14.1667 13.025Z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="action-btn">
+                                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                        <circle cx="10" cy="4" r="1.5"/>
+                                                        <circle cx="10" cy="10" r="1.5"/>
+                                                        <circle cx="10" cy="16" r="1.5"/>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Asset Request -->
+                        <div class="tab-content" id="asset-request">
+                            <div class="table-responsive">
+                                <table class="requests-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Request Id</th>
+                                            <th>Team Member</th>
+                                            <th>Asset Type</th>
+                                            <th>Request Date</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>Laptop</td>
+                                            <td>12/09/2025</td>
+                                            <td>Pending</td>
+                                           
+                                            <td>
+                                                <button class="action-btn">
+                                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                        <circle cx="10" cy="4" r="1.5"/>
+                                                        <circle cx="10" cy="10" r="1.5"/>
+                                                        <circle cx="10" cy="16" r="1.5"/>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination-container">
+                            <div class="pagination-info">
+                                Showing 1-5 of 20
+                            </div>
+                            <div class="pagination-controls">
+                                <div class="rows-per-page">
+                                    <span>Rows per page</span>
+                                    <select>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                    </select>
+                                </div>
+                                <div class="page-info">
+                                    Page 1 of 10
+                                </div>
+                                <div class="pagination-nav">
+                                    <button class="pagination-btn disabled">
+                                        <svg width="16" height="16" fill="none" viewBox="0 0 16 16" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667"/>
+                                        </svg>
+                                    </button>
+                                    <button class="pagination-btn disabled">
+                                        <svg width="16" height="16" fill="none" viewBox="0 0 16 16" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 12L6 8L10 4"/>
+                                        </svg>
+                                    </button>
+                                    <button class="pagination-btn">
+                                        <svg width="16" height="16" fill="none" viewBox="0 0 16 16" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L10 8L6 4"/>
+                                        </svg>
+                                    </button>
+                                    <button class="pagination-btn">
+                                        <svg width="16" height="16" fill="none" viewBox="0 0 16 16" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-xl-4 col-lg-5">
+                <!-- Teams Status -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3 class="section-title">Teams Status</h3>
+                    </div>
+                    <div class="section-content">
+                        <table class="status-table">
+                            <tbody>
+                                <tr>
+                                    <td>Ayush Kumar</td>
+                                    <td>
+                                        <span class="status-badge status-present">Present</span>
+                                    </td>
+                                    <td class="status-icon">
+                                        <svg width="24" height="24" fill="#34B53A" viewBox="0 0 24 24">
+                                            <path d="M21.0059 18.7559C21.252 18.4824 21.375 18.168 21.375 17.8125C21.375 17.457 21.252 17.1426 21.0059 16.8691L10.5059 6.36914C10.2324 6.12305 9.91797 6 9.5625 6C9.20703 6 8.89258 6.12305 8.61914 6.36914L3.36914 11.6191C3.12305 11.8926 3 12.207 3 12.5625C3 12.918 3.12305 13.2324 3.36914 13.5059C3.64258 13.752 3.95703 13.875 4.3125 13.875C4.66797 13.875 4.98242 13.752 5.25586 13.5059L9.5625 9.1582L19.1191 18.7559C19.3926 19.002 19.707 19.125 20.0625 19.125C20.418 19.125 20.7324 19.002 21.0059 18.7559Z"/>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Prachi Mehta</td>
+                                    <td>
+                                        <span class="status-badge status-half-day">Half Day</span>
+                                    </td>
+                                    <td class="status-icon">
+                                        <svg width="26" height="24" fill="#80CAFF" viewBox="0 0 26 24">
+                                            <path d="M12.6 6.74984L13.7813 6.13734L17.5 4.12484L16.7563 8.41234L16.5375 9.63734L17.4563 10.5561L20.5188 13.5748L16.3188 14.1873L15.05 14.4061L14.4813 15.5436L12.6 19.3936V6.74984ZM20.2563 2.41859C20.3438 1.86443 20.1542 1.41234 19.6875 1.06234C19.2208 0.74151 18.725 0.712344 18.2 0.974844L12.6 3.94984L7.00001 0.974844C6.47501 0.712344 5.97918 0.74151 5.51251 1.06234C5.07501 1.41234 4.88543 1.86443 4.94376 2.41859L6.03751 8.80609L1.48751 13.3123C1.07918 13.7207 0.962515 14.2019 1.13751 14.7561C1.31251 15.2811 1.6771 15.5873 2.23126 15.6748L8.53126 16.6373L11.3313 22.4123C11.6229 22.9082 12.0458 23.1707 12.6 23.1998C13.1833 23.1707 13.6063 22.9082 13.8688 22.4123L16.6688 16.6373L22.9688 15.6748C23.5229 15.5873 23.9021 15.2811 24.1063 14.7561C24.2521 14.2019 24.1354 13.7207 23.7563 13.3123L19.2063 8.80609L20.2563 2.41859Z"/>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Chirag Arora</td>
+                                    <td>
+                                        <span class="status-badge status-late">Late</span>
+                                    </td>
+                                    <td class="status-icon">
+                                        <svg width="23" height="24" fill="#FFB200" viewBox="0 0 23 24">
+                                            <path d="M11.2 0.8C13.2416 0.829167 15.1083 1.325 16.8 2.2875C18.4916 3.27917 19.8625 4.65 20.9125 6.4C21.9041 8.17917 22.4 10.0458 22.4 12C22.4 13.9542 21.9041 15.8208 20.9125 17.6C19.8625 19.35 18.4916 20.7208 16.8 21.7125C15.1083 22.675 13.2416 23.1708 11.2 23.2C9.15828 23.1708 7.29162 22.675 5.59995 21.7125C3.90828 20.7208 2.53745 19.35 1.48745 17.6C0.495785 15.8208 -4.88281e-05 13.9542 -4.88281e-05 12C-4.88281e-05 10.0458 0.495785 8.17917 1.48745 6.4C2.53745 4.65 3.90828 3.27917 5.59995 2.2875C7.29162 1.325 9.15828 0.829167 11.2 0.8ZM11.2 17.6C11.8416 17.5417 12.1916 17.1917 12.25 16.55V11.65C12.1916 11.0083 11.8416 10.6583 11.2 10.6C10.5583 10.6583 10.2083 11.0083 10.15 11.65V16.55C10.2083 17.1917 10.5583 17.5417 11.2 17.6ZM9.79995 7.8C9.79995 8.20833 9.9312 8.54375 10.1937 8.80625C10.4562 9.06875 10.7916 9.2 11.2 9.2C11.6083 9.2 11.9437 9.06875 12.2062 8.80625C12.4687 8.54375 12.6 8.20833 12.6 7.8C12.6 7.39167 12.4687 7.05625 12.2062 6.79375C11.9437 6.53125 11.6083 6.4 11.2 6.4C10.7916 6.4 10.4562 6.53125 10.1937 6.79375C9.9312 7.05625 9.79995 7.39167 9.79995 7.8Z"/>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Dipanshu Singh</td>
+                                    <td>
+                                        <span class="status-badge status-absent">Absent</span>
+                                    </td>
+                                    <td class="status-icon">
+                                        <svg width="17" height="24" fill="#FF3A29" viewBox="0 0 17 24">
+                                            <path d="M15.0063 16.5937C15.2688 16.8854 15.4 17.2208 15.4 17.6C15.4 17.9792 15.2688 18.3146 15.0063 18.6062C14.7146 18.8687 14.3792 19 14 19C13.6209 19 13.2854 18.8687 12.9938 18.6062L8.40002 13.9687L3.80627 18.6062C3.51461 18.8687 3.17919 19 2.80002 19C2.42086 19 2.08544 18.8687 1.79377 18.6062C1.53127 18.3146 1.40002 17.9792 1.40002 17.6C1.40002 17.2208 1.53127 16.8854 1.79377 16.5937L6.43127 12L1.79377 7.40625C1.53127 7.11458 1.40002 6.77917 1.40002 6.4C1.40002 6.02083 1.53127 5.68542 1.79377 5.39375C2.08544 5.13125 2.42086 5 2.80002 5C3.17919 5 3.51461 5.13125 3.80627 5.39375L8.40002 10.0312L12.9938 5.39375C13.2854 5.13125 13.6209 5 14 5C14.3792 5 14.7146 5.13125 15.0063 5.39375C15.2688 5.68542 15.4 6.02083 15.4 6.4C15.4 6.77917 15.2688 7.11458 15.0063 7.40625L10.3688 12L15.0063 16.5937Z"/>
+                                        </svg>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Upcoming Birthdays -->
+                <div class="section-card birthday-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Upcoming Birthdays</h3>
+                    </div>
+                    <div class="section-content">
+                        <div style="padding: 16px;">
+                            <div class="birthday-carousel-container">
+                                <div class="birthday-cards" id="birthdayCarousel">
+                                    <div class="birthday-card">
+                                        <div class="birthday-avatar pink">AS</div>
+                                        <div class="birthday-info">
+                                            <h4>Akash Singh</h4>
+                                            <p class="role">Analyst, Tech</p>
+                                        </div>
+                                        <div class="birthday-date">
+                                            <div class="label">Birthday</div>
+                                            <div class="date">06 Jun , In 4 Days</div>
+                                        </div>
+                                    </div>
+                                    <div class="birthday-card">
+                                        <div class="birthday-avatar blue">AK</div>
+                                        <div class="birthday-info">
+                                            <h4>Ayush Kumar</h4>
+                                            <p class="role">Analyst, Tech</p>
+                                        </div>
+                                        <div class="birthday-date">
+                                            <div class="label">Birthday</div>
+                                            <div class="date">06 Jun 1998, In 4 Days</div>
+                                        </div>
+                                    </div>
+                                    <div class="birthday-card">
+                                        <div class="birthday-avatar pink">PM</div>
+                                        <div class="birthday-info">
+                                            <h4>Prachi Mehta</h4>
+                                            <p class="role">Designer, UI/UX</p>
+                                        </div>
+                                        <div class="birthday-date">
+                                            <div class="label">Birthday</div>
+                                            <div class="date">08 Jun , In 6 Days</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-dots">
+                                    <div class="carousel-dot active" data-slide="0"></div>
+                                    <div class="carousel-dot" data-slide="1"></div>
+                                    <div class="carousel-dot" data-slide="2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Announcements -->
+                        <div class="announcement-carousel-container">
+                            <div class="announcement-cards" id="announcementCarousel">
+                                <div class="announcement-card">
+                                    <p class="announcement-date">06 Jun 2025</p>
+                                    <h4 class="announcement-title">Announcement for diwali holiday</h4>
+                                    <div class="announcement-content">
+                                        🎉 Exciting News! 🎉<br><br>
+                                        We are thrilled to announce that in celebration of Diwali, our office will be closed on November 12th. This is a wonderful opportunity for everyone to enjoy the festivities with family and friends.<br><br>
+                                        Wishing you all a joyful and prosperous Diwali! 🪔✨
+                                    </div>
+                                </div>
+                                <div class="announcement-card">
+                                    <p class="announcement-date">06 Jun 2025</p>
+                                    <h4 class="announcement-title">Team Building Event</h4>
+                                    <div class="announcement-content">
+                                        🎊 Team Building Alert! 🎊<br><br>
+                                        Join us for our quarterly team building event on Friday. We'll have fun activities, team challenges, and a great lunch together. Don't miss this opportunity to bond with your colleagues!<br><br>
+                                        Looking forward to seeing everyone there! 🌟
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Contribution -->
+                <div class="section-card">
+                    <div class="contribution-header">
+                        <h3 class="section-title">Team Contribution</h3>
+                        <div class="contribution-filters">
+                            <div class="filter-tabs">
+                                <button class="tab-btn active">Billable</button>
+                                <button class="tab-btn">Non Billable</button>
+                            </div>
+                            <select class="filter-dropdown">
+                                <option>This Month</option>
+                                <option>This Quarter</option>
+                                <option>This Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="contribution-content">
+                        <div class="team-header">
+                            <div class="team-name">Design Team (My Team)</div>
+                            <div class="team-stats">
+                                <span>43hr</span>
+                                <span>₹40,000</span>
+                                <span>43%</span>
+                            </div>
+                        </div>
+
+                        <div style="background: white; border-radius: 16px; border: 1px solid var(--slate-200); padding: 16px;">
+                            <div class="member-row first-row">
+                                <div class="member-info">
+                                    <svg class="expand-arrow" width="18" height="18" fill="black" viewBox="0 0 18 18">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z"/>
+                                    </svg>
+                                    <div class="member-avatar red">AS</div>
+                                    <div class="member-name">Abhishek Singh</div>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <span class="member-metric">43hr</span>
+                                    <span class="member-metric">₹40,000</span>
+                                    <span class="member-metric">43%</span>
+                                </div>
+                            </div>
+
+                            <div class="member-row">
+                                <div class="member-info">
+                                    <svg class="expand-arrow collapsed" width="18" height="18" fill="black" viewBox="0 0 18 18">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z"/>
+                                    </svg>
+                                    <div class="member-avatar blue">DS</div>
+                                    <div class="member-name">Dipanshu Singh</div>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <span class="member-metric">43hr</span>
+                                    <span class="member-metric">₹40,000</span>
+                                    <span class="member-metric">43%</span>
+                                </div>
+                            </div>
+
+                            <div class="member-row">
+                                <div class="member-info">
+                                    <svg class="expand-arrow collapsed" width="18" height="18" fill="black" viewBox="0 0 18 18">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z"/>
+                                    </svg>
+                                    <div class="member-avatar purple">AK</div>
+                                    <div class="member-name">Ayush Kumar</div>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <span class="member-metric">43hr</span>
+                                    <span class="member-metric">₹40,000</span>
+                                    <span class="member-metric">43%</span>
+                                </div>
+                            </div>
+
+                            <div class="member-row">
+                                <div class="member-info">
+                                    <svg class="expand-arrow collapsed" width="18" height="18" fill="black" viewBox="0 0 18 18">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z"/>
+                                    </svg>
+                                    <div class="member-avatar orange">PV</div>
+                                    <div class="member-name">Prachi verma</div>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <span class="member-metric">43hr</span>
+                                    <span class="member-metric">₹40,000</span>
+                                    <span class="member-metric">43%</span>
+                                </div>
+                            </div>
+
+                            <div class="member-row">
+                                <div class="member-info">
+                                    <svg class="expand-arrow collapsed" width="18" height="18" fill="black" viewBox="0 0 18 18">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z"/>
+                                    </svg>
+                                    <div class="member-avatar green">CA</div>
+                                    <div class="member-name">Chirag Arora</div>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <span class="member-metric">43hr</span>
+                                    <span class="member-metric">₹40,000</span>
+                                    <span class="member-metric">43%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-btn[data-tab]').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                const parentTabGroup = this.closest('.custom-tabs');
+                
+                // Remove active class from all tabs in this group
+                parentTabGroup.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show selected tab content
+                const targetContent = document.getElementById(tabId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // Filter tabs functionality
+        document.querySelectorAll('.filter-tabs .tab-btn').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const parentTabGroup = this.closest('.filter-tabs');
+                if (parentTabGroup) {
+                    parentTabGroup.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Expand/collapse functionality for team members
+        document.querySelectorAll('.expand-arrow').forEach(arrow => {
+            arrow.addEventListener('click', function() {
+                if (this.classList.contains('collapsed')) {
+                    this.classList.remove('collapsed');
+                    this.classList.add('expanded');
+                } else if (this.classList.contains('expanded')) {
+                    this.classList.remove('expanded');
+                    this.classList.add('collapsed');
+                } else {
+                    this.classList.add('expanded');
+                }
+            });
+        });
+
+        // Birthday Carousel functionality
+        let currentBirthdaySlide = 0;
+        const birthdayCards = document.querySelectorAll('#birthdayCarousel .birthday-card');
+        const birthdayDots = document.querySelectorAll('.carousel-dot');
+        const birthdayCarousel = document.getElementById('birthdayCarousel');
+
+        function updateBirthdayCarousel() {
+            // Update carousel position
+            if (window.innerWidth <= 1400) {
+                // Stack vertically on smaller screens
+                birthdayCarousel.style.transform = 'translateY(0)';
+            } else {
+                const cardWidth = 397; // card width + gap
+                birthdayCarousel.style.transform = `translateX(-${currentBirthdaySlide * cardWidth}px)`;
+            }
+            
+            // Update dots
+            birthdayDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentBirthdaySlide);
+            });
+        }
+
+        // Dot click functionality
+        birthdayDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentBirthdaySlide = index;
+                updateBirthdayCarousel();
+            });
+        });
+
+        // Auto-rotate birthday carousel
+        setInterval(() => {
+            currentBirthdaySlide = (currentBirthdaySlide + 1) % birthdayCards.length;
+            updateBirthdayCarousel();
+        }, 5000);
+
+        // Announcement Carousel functionality
+        let currentAnnouncementSlide = 0;
+        const announcementCards = document.querySelectorAll('#announcementCarousel .announcement-card');
+        const announcementCarousel = document.getElementById('announcementCarousel');
+
+        function updateAnnouncementCarousel() {
+            if (window.innerWidth <= 1400) {
+                // Stack vertically on smaller screens
+                announcementCarousel.style.transform = 'translateY(0)';
+            } else {
+                const cardWidth = 498; // card width + gap
+                announcementCarousel.style.transform = `translateX(-${currentAnnouncementSlide * cardWidth}px)`;
+            }
+        }
+
+        // Auto-rotate announcement carousel
+        setInterval(() => {
+            currentAnnouncementSlide = (currentAnnouncementSlide + 1) % announcementCards.length;
+            updateAnnouncementCarousel();
+        }, 7000);
+
+        // Action button functionality
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Action button clicked');
+            });
+        });
+
+        // Pagination functionality
+        document.querySelectorAll('.pagination-btn:not(.disabled)').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Pagination clicked');
+            });
+        });
+
+        // Responsive carousel updates
+        window.addEventListener('resize', () => {
+            updateBirthdayCarousel();
+            updateAnnouncementCarousel();
+        });
+
+        // Initialize carousels
+        updateBirthdayCarousel();
+        updateAnnouncementCarousel();
+    </script>
+
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

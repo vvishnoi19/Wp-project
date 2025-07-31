@@ -1,0 +1,968 @@
+
+        :root {
+            --primary-blue: #224FB1;
+            --slate-800: #1E293B;
+            --slate-600: #475569;
+            --slate-500: #64748B;
+            --slate-200: #E2E8F0;
+            --slate-100: #F1F5F9;
+            --green-600: #16A34A;
+            --green-50: #F0FDF4;
+            --red-600: #DC2626;
+            --purple-600: #9333EA;
+            --yellow-600: #CA8A04;
+            --gray-100: #F3F4F6;
+            --gray-300: #D1D5DB;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: var(--slate-800);
+            font-size: 14px;
+        }
+
+        .dashboard-container {
+            display: flex;
+        }
+
+        /* Header Styles */
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+        .main-content{
+        width: 100%;
+        max-width: 100%;
+        }
+        
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-title h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--slate-800);
+            margin: 0;
+        }
+
+        .header-separator {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--slate-300);
+        }
+
+        .team-label {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--slate-500);
+        }
+
+        .team-tabs {
+            background-color: var(--slate-100);
+            border-radius: 8px;
+            padding: 4px;
+            display: flex;
+            gap: 4px;
+        }
+
+        .team-tab {
+            padding: 6px 12px;
+            border: none;
+            background: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .team-tab.active {
+            background-color: white;
+            color: black;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .team-tab:not(.active) {
+            color: var(--slate-500);
+        }
+
+        /* Stat Cards */
+        .stat-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            border: 1.5px solid #DBEAFE;
+            box-shadow: 0 10px 15px -3px rgba(34, 79, 177, 0.06), 0 4px 6px -4px rgba(34, 79, 177, 0.06);
+            overflow: hidden;
+        }
+
+        .stat-card-header {
+            padding: 24px 24px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .stat-card-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--slate-600);
+        }
+
+        .stat-card-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--primary-blue);
+        }
+
+        .stat-card-content {
+            padding: 0 24px 24px;
+        }
+
+        .stat-card-value {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--slate-800);
+            letter-spacing: -0.6px;
+        }
+
+        /* Progress Section */
+        .progress-section {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--slate-200);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .progress-bar-container {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 32px;
+        }
+
+        .progress-bar-segment {
+            height: 40px;
+            border-radius: 6px;
+        }
+
+        .progress-bar-billable {
+            background-color: var(--green-600);
+            flex: 1;
+        }
+
+        .progress-bar-non-billable {
+            background-color: var(--slate-100);
+            width: 507px;
+        }
+
+        .progress-legend {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .legend-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--slate-500);
+        }
+
+        .legend-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--slate-300);
+        }
+
+        .legend-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--slate-800);
+        }
+
+ 
+   
+        /* table section css */
+   
+        /* Header Styles */
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-title h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--slate-800);
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header-separator {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--slate-300);
+        }
+
+        .team-label {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--slate-500);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .team-tabs {
+            background-color: var(--slate-100);
+            border-radius: 8px;
+            padding: 4px;
+            display: flex;
+            gap: 0;
+        }
+
+        .team-tab {
+            padding: 6px 12px;
+            border: none;
+            background: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .team-tab.active {
+            background-color: white;
+            color: black;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .team-tab:not(.active) {
+            color: var(--slate-500);
+        }
+
+        /* Stat Cards */
+        .stat-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            border: 1.5px solid var(--blue-200);
+            box-shadow: 0 10px 15px -3px rgba(34, 79, 177, 0.06), 0 4px 6px -4px rgba(34, 79, 177, 0.06);
+            overflow: hidden;
+        }
+
+        .stat-card-header {
+            padding: 24px 24px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .stat-card-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--slate-600);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-card-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--primary-blue);
+        }
+
+        .stat-card-content {
+            padding: 0 24px 24px;
+        }
+
+        .stat-card-value {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--slate-800);
+            letter-spacing: -0.6px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Progress Section */
+        .progress-section {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--slate-200);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .progress-bar-container {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .progress-bar-billable {
+            background-color: var(--green-600);
+            height: 40px;
+            border-radius: 6px;
+            flex: 1;
+        }
+
+        .progress-bar-non-billable {
+            background-color: var(--slate-100);
+            height: 40px;
+            border-radius: 6px;
+            width: 507px;
+        }
+
+        .progress-legend {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .legend-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--slate-500);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .legend-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--slate-300);
+        }
+
+        .legend-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--slate-800);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Table Section */
+        .table-section {
+            margin-bottom: 24px;
+        }
+
+        .table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .table-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--slate-800);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .activity-tabs {
+            background-color: var(--slate-100);
+            border-radius: 8px;
+            padding: 4px;
+            display: flex;
+        }
+
+        .activity-tab {
+            padding: 6px 12px;
+            border: none;
+            background: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .activity-tab.active {
+            background-color: white;
+            color: black;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .activity-tab:not(.active) {
+            color: var(--slate-500);
+        }
+
+        /* Data Table */
+        .data-table {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--slate-200);
+            overflow: hidden;
+        }
+
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            padding: 12px 16px;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-gray);
+            text-align: left;
+            border-bottom: 1px solid var(--slate-200);
+            background-color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .data-table td {
+            padding: 12px 16px;
+            font-size: 14px;
+            color: var(--text-black);
+            border-bottom: 1px solid var(--slate-200);
+            vertical-align: middle;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .data-table tbody tr:hover {
+            background-color: #fafafa;
+        }
+
+        .data-table tbody tr:nth-child(even) {
+            background-color: var(--slate-50);
+        }
+
+        .expand-btn {
+            background-color: var(--slate-100);
+            border: none;
+            border-radius: 6px;
+            padding: 6px;
+            width: 34px;
+            height: 32px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-black);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .expand-icon {
+            width: 8px;
+            height: 4px;
+            margin-left: 2px;
+        }
+
+        .billable-indicator {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .billable-yes {
+            background-color: var(--primary-blue);
+        }
+
+        .billable-no {
+            background-color: var(--gray-300);
+        }
+
+        .billable-icon {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .project-color {
+            font-weight: 600;
+        }
+
+        .project-crm { color: #D73965; }
+        .project-ui-testing { color: #9F50B7; }
+        .project-prototype { color: #6040B1; }
+        .project-user-research { color: #759D48; }
+        .project-accessibility { color: #D4B207; }
+        .project-dashboard { color: #4D79E6; }
+
+        /* Pagination */
+        .pagination-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            border-top: 1px solid var(--slate-200);
+            background-color: white;
+        }
+
+        .pagination-info {
+            font-size: 14px;
+            color: var(--slate-500);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .pagination-controls {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .rows-per-page {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .rows-per-page select {
+            padding: 8px 32px 8px 12px;
+            border: 1px solid var(--slate-200);
+            border-radius: 6px;
+            font-size: 14px;
+            background: white;
+            color: var(--slate-800);
+            width: 72px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .pagination-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pagination-btn {
+            width: 32px;
+            height: 32px;
+            border: 1px solid var(--slate-200);
+            background: white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pagination-btn:hover:not(.disabled) {
+            background-color: var(--slate-50);
+        }
+
+        .pagination-btn.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .pagination-btn svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--primary-blue);
+        }
+
+        .page-info {
+            font-size: 14px;
+            color: var(--slate-800);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .dashboard-container {
+                padding: 16px;
+            }
+
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .stat-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .progress-legend {
+                flex-direction: column;
+                gap: 16px;
+                align-items: flex-start;
+            }
+
+            .progress-bar-container {
+                flex-direction: column;
+            }
+
+            .progress-bar-non-billable {
+                width: 100%;
+            }
+
+            .data-table {
+                overflow-x: auto;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 8px 12px;
+                font-size: 12px;
+                min-width: 100px;
+            }
+
+            .pagination-controls {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .table-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-tabs {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .activity-tabs {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .legend-item {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Sort icons */
+        .sort-icon {
+            width: 16px;
+            height: 16px;
+            margin-left: 8px;
+            stroke: var(--slate-500);
+        }
+
+
+
+
+
+        /*------- progress bar ----------- */
+
+
+        
+        :root {
+            --timetrack-white: #ffffff;
+            --timetrack-slate-100: #f1f5f9;
+            --timetrack-slate-200: #e2e8f0;
+            --timetrack-slate-500: #64748b;
+            --timetrack-slate-800: #1e293b;
+            --timetrack-green-600: #16a34a;
+            --timetrack-border: #e2e8f0;
+            --timetrack-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+          
+        }
+
+        /* Main Widget Container */
+        .timetrack-widget-container {
+            background: var(--timetrack-white);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 100%;
+            position: relative;
+            box-shadow: var(--timetrack-shadow);
+        }
+
+        .timetrack-widget-border {
+            position: absolute;
+            inset: 0;
+            border: 1px solid var(--timetrack-border);
+            border-radius: 12px;
+            pointer-events: none;
+        }
+
+        .timetrack-widget-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .timetrack-widget-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 24px;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Progress Bar Section */
+        .timetrack-progress-section {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .timetrack-progress-container {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .timetrack-progress-bar-active {
+            flex: 1;
+            background: var(--timetrack-green-600);
+            height: 40px;
+            min-height: 1px;
+            min-width: 1px;
+            border-radius: 6px;
+        }
+
+        .timetrack-progress-bar-inactive {
+            background: var(--timetrack-slate-100);
+            border-radius: 6px;
+            align-self: stretch;
+            width: 507px;
+            min-height: 40px;
+        }
+
+        /* Stats Section */
+        .timetrack-stats-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /* Billable Stats */
+        .timetrack-billable-stats {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .timetrack-billable-label {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: var(--timetrack-slate-500);
+            white-space: nowrap;
+        }
+
+        .timetrack-separator-dot {
+            width: 6px;
+            height: 6px;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .timetrack-separator-circle {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .timetrack-billable-time {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: var(--timetrack-slate-800);
+            white-space: nowrap;
+        }
+
+        .timetrack-billable-amount {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: var(--timetrack-slate-800);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        /* Non-Billable Stats */
+        .timetrack-nonbillable-stats {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .timetrack-nonbillable-label {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: var(--timetrack-slate-500);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .timetrack-nonbillable-time {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: var(--timetrack-slate-800);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 16px;
+            }
+
+            .timetrack-widget-content {
+                padding: 20px;
+                gap: 16px;
+            }
+
+            .timetrack-progress-section {
+                gap: 24px;
+            }
+
+            .timetrack-progress-container {
+                gap: 8px;
+            }
+
+            .timetrack-progress-bar-inactive {
+                width: 300px;
+            }
+
+            .timetrack-stats-section {
+                flex-direction: column;
+                gap: 16px;
+                align-items: flex-start;
+            }
+
+            .timetrack-billable-stats,
+            .timetrack-nonbillable-stats {
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timetrack-progress-bar-inactive {
+                width: 200px;
+            }
+
+            .timetrack-billable-stats,
+            .timetrack-nonbillable-stats {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .timetrack-billable-label,
+            .timetrack-nonbillable-label,
+            .timetrack-billable-time,
+            .timetrack-billable-amount,
+            .timetrack-nonbillable-time {
+                font-size: 14px;
+            }
+        }
+
+        /* Hover Effects */
+        .timetrack-widget-container:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.2s ease;
+        }
+
+        /* Animation for progress bar */
+        .timetrack-progress-bar-active {
+            animation: timetrack-slideIn 1s ease-out;
+        }
+
+        @keyframes timetrack-slideIn {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+            to {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
+        /* Accessibility */
+        .timetrack-widget-container:focus-within {
+            outline: 2px solid var(--timetrack-green-600);
+            outline-offset: 2px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .timetrack-widget-container {
+                box-shadow: none;
+                border: 1px solid #000;
+            }
+        }
+  

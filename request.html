@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Requests Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/request.css">
+   
+</head>
+<body>
+
+    <div class="main-container">
+        <div id="sidebar-container"></div>
+     <div class="container">
+        <!-- Header Controls -->
+        <div class="requests-dashboard-header-controls">
+            <div class="requests-dashboard-page-title">All Requests</div>
+            
+            <div class="requests-dashboard-main-tabs">
+                <button class="requests-dashboard-main-tab" data-main-tab="team-requests">
+                    <div class="requests-dashboard-main-tab-text">My Team's Request</div>
+                </button>
+                <button class="requests-dashboard-main-tab active" data-main-tab="my-requests">
+                    <div class="requests-dashboard-main-tab-text">My Requests</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Sub Tabs -->
+        <div class="requests-dashboard-sub-tabs-container">
+            <div class="requests-dashboard-sub-tabs">
+                <div class="requests-dashboard-sub-tab active" data-sub-tab="leave-requests">
+                    <div class="requests-dashboard-sub-tab-text">Leave Requests</div>
+                </div>
+                <div class="requests-dashboard-sub-tab" data-sub-tab="attendance-requests">
+                    <div class="requests-dashboard-sub-tab-text">Attendance Requests</div>
+                </div>
+                <div class="requests-dashboard-sub-tab" data-sub-tab="asset-requests">
+                    <div class="requests-dashboard-sub-tab-text">Asset Request</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leave Requests Tab Content -->
+        <div id="leave-requests-content" class="requests-dashboard-tab-content active">
+            <div class="requests-dashboard-table-container">
+                <div class="requests-dashboard-table-content">
+                    <!-- Table Header -->
+                    <div class="requests-dashboard-table-header">
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-leave-type">
+                            <div class="requests-dashboard-header-text">Leave Type</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-start-date">
+                            <div class="requests-dashboard-header-text">Start Date</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-end-date">
+                            <div class="requests-dashboard-header-text">End Date</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-days">
+                            <div class="requests-dashboard-header-text">Days</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-description">
+                            <div class="requests-dashboard-header-text">Description</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-status">
+                            <div class="requests-dashboard-header-text">Status</div>
+                        </div>
+                    </div>
+
+                    <!-- Table Data -->
+                    <div class="requests-dashboard-table-row">
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-leave-type">
+                            <div class="requests-dashboard-data-text">Sick Leave (SL)</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-start-date">
+                            <div class="requests-dashboard-data-text">2025-05-22(first-half)</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-end-date">
+                            <div class="requests-dashboard-data-text">2025-05-27 (first-half)</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-days">
+                            <div class="requests-dashboard-data-text">2</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-description">
+                            <div class="requests-dashboard-data-text">I am not feeling well. I'm experiencing stomach pain and won't be able to come to the office today.</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-status">
+                            <span class="requests-dashboard-status-tag requests-dashboard-status-requested">Requested</span>
+                        </div>
+                        <div class="requests-dashboard-action-cell">
+                            <button class="requests-dashboard-action-button">
+                                <svg class="requests-dashboard-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="#224FB1"/>
+                                    <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="#224FB1"/>
+                                    <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="requests-dashboard-table-row">
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-leave-type">
+                            <div class="requests-dashboard-data-text">Vacation Leave (VL)</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-start-date">
+                            <div class="requests-dashboard-data-text">2025-06-15(first-half)</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-end-date">
+                            <div class="requests-dashboard-data-text">2025-06-20 (first-half)</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-days">
+                            <div class="requests-dashboard-data-text">5</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-description">
+                            <div class="requests-dashboard-data-text">I'm going on a family trip to the beach and will be unavailable during this time.</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-status">
+                            <span class="requests-dashboard-status-tag requests-dashboard-status-requested">Requested</span>
+                        </div>
+                        <div class="requests-dashboard-action-cell">
+                            <button class="requests-dashboard-action-button">
+                                <svg class="requests-dashboard-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="#224FB1"/>
+                                    <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="#224FB1"/>
+                                    <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="requests-dashboard-table-row">
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-leave-type">
+                            <div class="requests-dashboard-data-text">Personal Leave (PL)</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-start-date">
+                            <div class="requests-dashboard-data-text">2025-07-10(first-half)</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-end-date">
+                            <div class="requests-dashboard-data-text">2025-07-11 (first-half)</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-days">
+                            <div class="requests-dashboard-data-text">1</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-description">
+                            <div class="requests-dashboard-data-text">I have a personal matter to attend to and will need a day off.</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-status">
+                            <span class="requests-dashboard-status-tag requests-dashboard-status-approved">Approved</span>
+                        </div>
+                        <div class="requests-dashboard-action-cell">
+                            <button class="requests-dashboard-action-button">
+                                <svg class="requests-dashboard-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="#224FB1"/>
+                                    <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.373 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="#224FB1"/>
+                                    <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attendance Requests Tab Content -->
+        <div id="attendance-requests-content" class="requests-dashboard-tab-content">
+            <div class="requests-dashboard-table-container">
+                <div class="requests-dashboard-table-content">
+                    <div class="requests-dashboard-table-header">
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-attendance-description">
+                            <div class="requests-dashboard-header-text">Description</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-date">
+                            <div class="requests-dashboard-header-text">Date</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-check-in">
+                            <div class="requests-dashboard-header-text">Check In</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-check-out">
+                            <div class="requests-dashboard-header-text">Check Out</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-working-hours">
+                            <div class="requests-dashboard-header-text">Working Hours</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-attendance-status">
+                            <div class="requests-dashboard-header-text">Status</div>
+                        </div>
+                    </div>
+
+                    <div class="requests-dashboard-table-row">
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-attendance-description">
+                            <div class="requests-dashboard-data-text">Request for Attendance: I would like to formally request attendance for the upcoming client site visit scheduled for next week. This visit is crucial for our ongoing project and will provide an opportunity to strengthen our relationship with the client. Please let me know if you need any further details.</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-date">
+                            <div class="requests-dashboard-data-text">12/09/2025</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-check-in">
+                            <div class="requests-dashboard-data-text">09:28 AM</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-check-out">
+                            <div class="requests-dashboard-data-text">07:00 PM</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-working-hours">
+                            <div class="requests-dashboard-data-text">09:02 Hrs</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-attendance-status">
+                            <span class="requests-dashboard-status-tag requests-dashboard-status-requested">Requested</span>
+                        </div>
+                        <div class="requests-dashboard-action-cell">
+                            <button class="requests-dashboard-action-button">
+                                <svg class="requests-dashboard-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="#224FB1"/>
+                                    <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.373 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="#224FB1"/>
+                                    <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="requests-dashboard-table-row">
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-attendance-description">
+                            <div class="requests-dashboard-data-text">Request for Attendance: I would like to formally request attendance for the upcoming client site visit scheduled for next week. This visit is crucial for our ongoing project and will provide an opportunity to strengthen our relationship with the client. Please let me know if you need any further details.</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-date">
+                            <div class="requests-dashboard-data-text">12/09/2025</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-check-in">
+                            <div class="requests-dashboard-data-text">09:20 AM</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-check-out">
+                            <div class="requests-dashboard-data-text">07:00 PM</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-working-hours">
+                            <div class="requests-dashboard-data-text">09:20 Hrs</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-attendance-status">
+                            <span class="requests-dashboard-status-tag requests-dashboard-status-requested">Requested</span>
+                        </div>
+                        <div class="requests-dashboard-action-cell">
+                            <button class="requests-dashboard-action-button">
+                                <svg class="requests-dashboard-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="#224FB1"/>
+                                    <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.373 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="#224FB1"/>
+                                    <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="requests-dashboard-table-row">
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-attendance-description">
+                            <div class="requests-dashboard-data-text">Request for Attendance: I would like to formally request attendance for the upcoming client site visit scheduled for next week. This visit is crucial for our ongoing project and will provide an opportunity to strengthen our relationship with the client. Please let me know if you need any further details.</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-date">
+                            <div class="requests-dashboard-data-text">12/09/2025</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-check-in">
+                            <div class="requests-dashboard-data-text">09:25 AM</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-check-out">
+                            <div class="requests-dashboard-data-text">07:00 PM</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-working-hours">
+                            <div class="requests-dashboard-data-text">09:05 Hrs</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-attendance-status">
+                            <span class="requests-dashboard-status-tag requests-dashboard-status-approved">Approved</span>
+                        </div>
+                        <div class="requests-dashboard-action-cell">
+                            <button class="requests-dashboard-action-button">
+                                <svg class="requests-dashboard-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="#224FB1"/>
+                                    <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.373 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="#224FB1"/>
+                                    <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asset Request Tab Content -->
+        <div id="asset-requests-content" class="requests-dashboard-tab-content">
+            <div class="requests-dashboard-table-container">
+                <div class="requests-dashboard-table-content">
+                    <div class="requests-dashboard-table-header">
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-asset-id">
+                            <div class="requests-dashboard-header-text">Asset Id</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-serial-number">
+                            <div class="requests-dashboard-header-text">Asset Serial Number</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-asset-type">
+                            <div class="requests-dashboard-header-text">Asset Type</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-assigned-on">
+                            <div class="requests-dashboard-header-text">Assigned On</div>
+                        </div>
+                        <div class="requests-dashboard-header-cell requests-dashboard-col-asset-status">
+                            <div class="requests-dashboard-header-text">Status</div>
+                        </div>
+                    </div>
+
+                    <div class="requests-dashboard-table-row">
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-asset-id">
+                            <div class="requests-dashboard-data-text">#123456</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-serial-number">
+                            <div class="requests-dashboard-data-text">C02D3GQ5MD6M</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-asset-type">
+                            <div class="requests-dashboard-data-text">Macbook</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-assigned-on">
+                            <div class="requests-dashboard-data-text">30/05/2025</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-asset-status">
+                            <span class="requests-dashboard-status-tag requests-dashboard-status-requested">Requested</span>
+                        </div>
+                        <div class="requests-dashboard-action-cell">
+                            <button class="requests-dashboard-action-button">
+                                <svg class="requests-dashboard-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="#224FB1"/>
+                                    <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.373 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="#224FB1"/>
+                                    <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="requests-dashboard-table-row">
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-asset-id">
+                            <div class="requests-dashboard-data-text">#234567</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-serial-number">
+                            <div class="requests-dashboard-data-text">C02D3GQ5MD7N</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-asset-type">
+                            <div class="requests-dashboard-data-text">iPhone</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-assigned-on">
+                            <div class="requests-dashboard-data-text">15/07/2025</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-asset-status">
+                            <span class="requests-dashboard-status-tag requests-dashboard-status-returned">Returned</span>
+                        </div>
+                        <div class="requests-dashboard-action-cell">
+                            <button class="requests-dashboard-action-button">
+                                <svg class="requests-dashboard-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="#224FB1"/>
+                                    <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.373 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="#224FB1"/>
+                                    <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="requests-dashboard-table-row">
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-asset-id">
+                            <div class="requests-dashboard-data-text">#345678</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-serial-number">
+                            <div class="requests-dashboard-data-text">C02D3GQ5MD8O</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-asset-type">
+                            <div class="requests-dashboard-data-text">iPad</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-assigned-on">
+                            <div class="requests-dashboard-data-text">20/07/2025</div>
+                        </div>
+                        <div class="requests-dashboard-data-cell requests-dashboard-col-asset-status">
+                            <span class="requests-dashboard-status-tag requests-dashboard-status-assigned">Assigned</span>
+                        </div>
+                        <div class="requests-dashboard-action-cell">
+                            <button class="requests-dashboard-action-button">
+                                <svg class="requests-dashboard-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="#224FB1"/>
+                                    <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.373 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="#224FB1"/>
+                                    <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="#224FB1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="requests-dashboard-pagination-container">
+            <div class="requests-dashboard-pagination-left">Showing 1-3 of 3</div>
+            
+            <div class="requests-dashboard-pagination-right">
+                <div class="requests-dashboard-rows-per-page">
+                    <div class="requests-dashboard-rows-label">Rows per page</div>
+                    <select class="requests-dashboard-rows-select">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                
+                <div class="requests-dashboard-page-info">Page 1 of 1</div>
+                
+                <div class="requests-dashboard-pagination-buttons">
+                    <button class="requests-dashboard-pagination-btn disabled">
+                        <svg class="requests-dashboard-pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="requests-dashboard-pagination-btn disabled">
+                        <svg class="requests-dashboard-pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M10 12L6 8L10 4" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="requests-dashboard-pagination-btn disabled">
+                        <svg class="requests-dashboard-pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M6 12L10 8L6 4" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="requests-dashboard-pagination-btn disabled">
+                        <svg class="requests-dashboard-pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+          
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMainTabs();
+            initializeSubTabs();
+            initializePagination();
+            initializeHoverEffects();
+        });
+
+        // Main tab switching functionality
+        function initializeMainTabs() {
+            const mainTabs = document.querySelectorAll('.requests-dashboard-main-tab');
+            
+            mainTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabData = this.getAttribute('data-main-tab');
+                    
+                    // Remove active class from all main tabs
+                    mainTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    console.log(`Switched to main tab: ${tabData}`);
+                });
+            });
+        }
+
+        // Sub tab switching functionality
+        function initializeSubTabs() {
+            const subTabs = document.querySelectorAll('.requests-dashboard-sub-tab');
+            
+            subTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabData = this.getAttribute('data-sub-tab');
+                    
+                    // Remove active class from all sub tabs
+                    subTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked sub tab
+                    this.classList.add('active');
+                    
+                    // Hide all tab contents
+                    const tabContents = document.querySelectorAll('.requests-dashboard-tab-content');
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Show selected tab content
+                    const selectedContent = document.getElementById(tabData + '-content');
+                    if (selectedContent) {
+                        selectedContent.classList.add('active');
+                    }
+                    
+                    console.log(`Switched to sub tab: ${tabData}`);
+                });
+            });
+        }
+
+        // Pagination functionality
+        function initializePagination() {
+            const rowsSelect = document.querySelector('.requests-dashboard-rows-select');
+            const paginationBtns = document.querySelectorAll('.requests-dashboard-pagination-btn:not(.disabled)');
+            
+            if (rowsSelect) {
+                rowsSelect.addEventListener('change', function() {
+                    console.log(`Rows per page changed to: ${this.value}`);
+                });
+            }
+
+            paginationBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    console.log('Pagination button clicked');
+                });
+            });
+        }
+
+        // Action button functionality
+        document.addEventListener('click', function(event) {
+            if (event.target.closest('.requests-dashboard-action-button')) {
+                console.log('Action button clicked');
+            }
+        });
+
+        // Hover effects
+        function initializeHoverEffects() {
+            // Tab hover effects
+            const allTabs = document.querySelectorAll('.requests-dashboard-main-tab, .requests-dashboard-sub-tab');
+            allTabs.forEach(tab => {
+                tab.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.opacity = '0.7';
+                    }
+                });
+
+                tab.addEventListener('mouseleave', function() {
+                    this.style.opacity = '1';
+                });
+            });
+
+            // Action button hover effects
+            const actionButtons = document.querySelectorAll('.requests-dashboard-action-button');
+            actionButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)';
+                    this.style.transition = 'transform 0.2s';
+                });
+
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Pagination button hover effects (for enabled buttons only)
+            const paginationBtns = document.querySelectorAll('.requests-dashboard-pagination-btn:not(.disabled)');
+            paginationBtns.forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-1px)';
+                    this.style.transition = 'transform 0.2s';
+                });
+
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        }
+    </script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

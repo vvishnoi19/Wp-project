@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/report.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div id="sidebar-container"></div>
+        <div class="container">
+        <!-- Header Controls -->
+        <div class="header-controls">
+            <div class="header-left">
+                <h1 class="header-title">Reports</h1>
+                <div class="flagged-section">
+                    <span class="flagged-text">Flagged</span>
+                    <span class="flagged-badge">4</span>
+                </div>
+                <div class="filter-dropdown">
+                    <span>Employee</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="filter-dropdown">
+                    <span>Project</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="filter-dropdown">
+                    <span>Tag</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="filter-dropdown">
+                    <span>Client</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="date-picker">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M5.33333 1.33333V4M10.6667 1.33333V4M2 6.66667H14M3.33333 3.33333H12.6667C13.403 3.33333 14 3.93029 14 4.66667V13.3333C14 14.0697 13.403 14.6667 12.6667 14.6667H3.33333C2.59695 14.6667 2 14.0697 2 13.3333V4.66667C2 3.93029 2.59695 3.33333 3.33333 3.33333Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>This year</span>
+                </div>
+                <button class="export-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 10.6667V2.66667M8 2.66667L5.33333 5.33333M8 2.66667L10.6667 5.33333M2.66667 10.6667V12C2.66667 12.3536 2.80714 12.6928 3.05719 12.9428C3.30724 13.1929 3.64638 13.3333 4 13.3333H12C12.3536 13.3333 12.6928 13.1929 12.9428 12.9428C13.1929 12.6928 13.3333 12.3536 13.3333 12V10.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Export</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="metric-cards">
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">Total Billing</div>
+                    <svg class="metric-icon" viewBox="0 0 24 24" fill="none">
+                        <path d="M19.5 22.5H4.5C3.67125 22.5 3 21.8287 3 21V14.25C3 13.4212 3.67125 12.75 4.5 12.75H8.49975V12C8.49975 11.1712 9.17175 10.5 9.99975 10.5H14.0002V9C14.0002 8.17125 14.6715 7.5 15.5002 7.5H19.5C20.3288 7.5 21 8.17125 21 9V21C21 21.8287 20.3288 22.5 19.5 22.5Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="metric-content">
+                    <div class="metric-value">$5000</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">Total Revenue</div>
+                    <svg class="metric-icon" viewBox="0 0 24 24" fill="none">
+                        <path d="M19.5 22.5H4.5C3.67125 22.5 3 21.8287 3 21V14.25C3 13.4212 3.67125 12.75 4.5 12.75H8.49975V12C8.49975 11.1712 9.17175 10.5 9.99975 10.5H14.0002V9C14.0002 8.17125 14.6715 7.5 15.5002 7.5H19.5C20.3288 7.5 21 8.17125 21 9V21C21 21.8287 20.3288 22.5 19.5 22.5Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="metric-content">
+                    <div class="metric-value">$4567</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="chart-section">
+            <div class="chart-header">
+                <div class="chart-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Hours</span>
+                        <span class="stat-dot"></span>
+                        <span class="stat-value">139:15:26</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Billable Hours</span>
+                        <span class="stat-dot"></span>
+                        <span class="stat-value">111:15:26</span>
+                    </div>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <div class="legend-bar total"></div>
+                        <span>Total Hours</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-bar billable"></div>
+                        <span>Billable Hours</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-content">
+                <div class="chart-container">
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 146px;"></div>
+                            <div class="chart-bar billable" style="height: 75px;"></div>
+                        </div>
+                        <span class="chart-label">Jan</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 270px;"></div>
+                            <div class="chart-bar billable" style="height: 218px;"></div>
+                        </div>
+                        <span class="chart-label">Feb</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 240px;"></div>
+                            <div class="chart-bar billable" style="height: 189px;"></div>
+                        </div>
+                        <span class="chart-label">Mar</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 157px;"></div>
+                            <div class="chart-bar billable" style="height: 110px;"></div>
+                        </div>
+                        <span class="chart-label">Apr</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 202px;"></div>
+                            <div class="chart-bar billable" style="height: 162px;"></div>
+                        </div>
+                        <span class="chart-label">May</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 65px;"></div>
+                            <div class="chart-bar billable" style="height: 52px;"></div>
+                        </div>
+                        <span class="chart-label">Jun</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 1px;"></div>
+                            <div class="chart-bar billable" style="height: 1px;"></div>
+                        </div>
+                        <span class="chart-label">Jul</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 1px;"></div>
+                            <div class="chart-bar billable" style="height: 1px;"></div>
+                        </div>
+                        <span class="chart-label">Aug</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 1px;"></div>
+                            <div class="chart-bar billable" style="height: 1px;"></div>
+                        </div>
+                        <span class="chart-label">Sep</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 1px;"></div>
+                            <div class="chart-bar billable" style="height: 1px;"></div>
+                        </div>
+                        <span class="chart-label">Oct</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 1px;"></div>
+                            <div class="chart-bar billable" style="height: 1px;"></div>
+                        </div>
+                        <span class="chart-label">Nov</span>
+                    </div>
+                    <div class="chart-month">
+                        <div class="chart-bars">
+                            <div class="chart-bar total" style="height: 1px;"></div>
+                            <div class="chart-bar billable" style="height: 1px;"></div>
+                        </div>
+                        <span class="chart-label">Dec</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Report Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Report</h3>
+                    <div class="custom-tabs">
+                        <button class="tab-btn active" data-tab="employee-report">Employee</button>
+                        <button class="tab-btn" data-tab="project-report">Project</button>
+                    </div>
+                </div>
+
+                <!-- Employee Report Tab -->
+                <div class="tab-content active" id="employee-report">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Duration</th>
+                                <th>Revenue</th>
+                                <th>Running x</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ayush Kumar</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Lee</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>James Smith</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maria Garcia</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>David Johnson</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Emily Davis</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Michael Brown</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Anna Wilson</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Robert Jones</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jessica Taylor</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Charles Martinez</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sophia Clark</td>
+                                <td>598:48:41</td>
+                                <td>$1234</td>
+                                <td>2.2</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Project Report Tab -->
+                <div class="tab-content" id="project-report">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Duration</th>
+                                <th>Revenue</th>
+                                <th>Running x</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="project-crm">CRM Design</span></td>
+                                <td>298:24:20</td>
+                                <td>$2567</td>
+                                <td>1.8</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="project-ui-testing">UI Testing</span></td>
+                                <td>156:12:15</td>
+                                <td>$1234</td>
+                                <td>2.1</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="project-prototype">Prototype Development</span></td>
+                                <td>89:45:30</td>
+                                <td>$890</td>
+                                <td>1.5</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="project-accessibility">Accessibility Audit</span></td>
+                                <td>67:30:12</td>
+                                <td>$675</td>
+                                <td>2.3</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="project-dashboard">Dashboard Redesign</span></td>
+                                <td>45:18:25</td>
+                                <td>$567</td>
+                                <td>1.9</td>
+                                <td>
+                                    <svg class="expand-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container">
+                    <div class="pagination-info">Showing 1-10 of 20</div>
+                    <div class="pagination-controls">
+                        <button class="pagination-btn simple disabled">Previous</button>
+                        <button class="pagination-btn simple disabled">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Entry Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Detailed Entry</h3>
+                    <div class="custom-tabs">
+                        <button class="tab-btn active" data-tab="all-entry">All Entry</button>
+                        <button class="tab-btn" data-tab="red-flag-entry">Red Flag Entry</button>
+                    </div>
+                </div>
+
+                <!-- All Entry Tab -->
+                <div class="tab-content active" id="all-entry">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Project</th>
+                                <th>Time</th>
+                                <th>Duration</th>
+                                <th>Date</th>
+                                <th>Revenue</th>
+                                <th>Billable</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>working on client feedbacks from extras section</td>
+                                <td><span class="project-crm">CRM Design</span></td>
+                                <td>15:32 - 19:52</td>
+                                <td>04:20:45</td>
+                                <td>12/09/2025</td>
+                                <td>$123</td>
+                                <td>
+                                    <div class="billable-indicator inactive">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-approved">Approved</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>working on client feedbacks from extras section</td>
+                                <td><span class="project-prototype">Prototype Development</span></td>
+                                <td>15:32 - 19:52</td>
+                                <td>04:20:45</td>
+                                <td>12/09/2025</td>
+                                <td>$123</td>
+                                <td>
+                                    <div class="billable-indicator inactive">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-approved">Approved</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>working on client feedbacks from extras section</td>
+                                <td><span class="project-user-research">User Research</span></td>
+                                <td>15:32 - 19:52</td>
+                                <td>04:20:45</td>
+                                <td>12/09/2025</td>
+                                <td>$123</td>
+                                <td>
+                                    <div class="billable-indicator active">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-approved">Approved</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>working on client feedbacks from extras section</td>
+                                <td><span class="project-accessibility">Accessibility Audit</span></td>
+                                <td>15:32 - 19:52</td>
+                                <td>04:20:45</td>
+                                <td>12/09/2025</td>
+                                <td>$123</td>
+                                <td>
+                                    <div class="billable-indicator active">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-approved">Approved</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>working on client feedbacks from extras section</td>
+                                <td><span class="project-dashboard">Dashboard Redesign</span></td>
+                                <td>15:32 - 19:52</td>
+                                <td>04:20:45</td>
+                                <td>12/09/2025</td>
+                                <td>$123</td>
+                                <td>
+                                    <div class="billable-indicator active">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-approved">Approved</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>working on client feedbacks from extras section</td>
+                                <td><span class="project-crm">CRM Design</span></td>
+                                <td>15:32 - 19:52</td>
+                                <td>04:20:45</td>
+                                <td>12/09/2025</td>
+                                <td>$123</td>
+                                <td>
+                                    <div class="billable-indicator active">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-approved">Approved</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>working on client feedbacks from extras section</td>
+                                <td><span class="project-ui-testing">UI Testing</span></td>
+                                <td>15:32 - 19:52</td>
+                                <td>04:20:45</td>
+                                <td>12/09/2025</td>
+                                <td>$123</td>
+                                <td>
+                                    <div class="billable-indicator active">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-approved">Approved</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>working on client feedbacks from extras section</td>
+                                <td><span class="project-prototype">Prototype Development</span></td>
+                                <td>15:32 - 19:52</td>
+                                <td>04:20:45</td>
+                                <td>12/09/2025</td>
+                                <td>$123</td>
+                                <td>
+                                    <div class="billable-indicator active">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-approved">Approved</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Red Flag Entry Tab -->
+                <div class="tab-content" id="red-flag-entry">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Project</th>
+                                <th>Time</th>
+                                <th>Duration</th>
+                                <th>Date</th>
+                                <th>Revenue</th>
+                                <th>Billable</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="red-flag-row">
+                                <td>
+                                    <div style="display: flex; align-items: center;">
+                                        <svg class="red-flag-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M12.6667 5.96667L6.00001 3.08333V2.29167C6.00001 1.95 5.71668 1.66667 5.37501 1.66667C5.03334 1.66667 4.75001 1.95 4.75001 2.29167V17.7083C4.75001 18.05 5.03334 18.3333 5.37501 18.3333C5.71668 18.3333 6.00001 18.05 6.00001 17.7083V14.4083L12.85 11.025C14.2417 10.3083 14.9833 9.38333 14.9417 8.40833C14.9 7.43333 14.0917 6.56667 12.6667 5.96667Z" fill="currentColor"/>
+                                        </svg>
+                                        <span>working on client feedbacks from extras section</span>
+                                    </div>
+                                </td>
+                                <td><span class="project-ui-testing">UI Testing</span></td>
+                                <td><span class="time-red">15:32 - 19:52</span></td>
+                                <td><span class="time-red">04:20:45</span></td>
+                                <td>12/09/2025</td>
+                                <td>$123</td>
+                                <td>
+                                    <div class="billable-indicator active">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-pending">Approval Pending</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="red-flag-row">
+                                <td>
+                                    <div style="display: flex; align-items: center;">
+                                        <svg class="red-flag-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M12.6667 5.96667L6.00001 3.08333V2.29167C6.00001 1.95 5.71668 1.66667 5.37501 1.66667C5.03334 1.66667 4.75001 1.95 4.75001 2.29167V17.7083C4.75001 18.05 5.03334 18.3333 5.37501 18.3333C5.71668 18.3333 6.00001 18.05 6.00001 17.7083V14.4083L12.85 11.025C14.2417 10.3083 14.9833 9.38333 14.9417 8.40833C14.9 7.43333 14.0917 6.56667 12.6667 5.96667Z" fill="currentColor"/>
+                                        </svg>
+                                        <span>working on client feedbacks from extras section</span>
+                                    </div>
+                                </td>
+                                <td><span class="project-crm">CRM Design</span></td>
+                                <td><span class="time-red">14:20 - 18:45</span></td>
+                                <td><span class="time-red">04:25:12</span></td>
+                                <td>11/09/2025</td>
+                                <td>$156</td>
+                                <td>
+                                    <div class="billable-indicator active">
+                                        <svg class="billable-icon" viewBox="0 0 20 20" fill="none">
+                                            <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td><span class="status-tag status-pending">Approval Pending</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                            <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container">
+                    <div class="pagination-info">Showing 1-10 of 20</div>
+                    <div class="pagination-controls">
+                        <div class="rows-per-page">
+                            <span>Rows per page</span>
+                            <select>
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                            </select>
+                        </div>
+                        <div class="page-info">Page 1 of 10</div>
+                        <div class="pagination-nav">
+                            <button class="pagination-btn disabled">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-btn disabled">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-btn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-btn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-btn[data-tab]').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                const parentSection = this.closest('.section-card');
+                
+                // Remove active class from all tabs in this section
+                parentSection.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all tab content in this section
+                parentSection.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show selected tab content
+                const targetContent = parentSection.querySelector(`#${tabId}`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // Export button functionality
+        document.querySelector('.export-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Export functionality triggered');
+            // Add export logic here
+        });
+
+        // Filter dropdown functionality
+        document.querySelectorAll('.filter-dropdown').forEach(dropdown => {
+            dropdown.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Filter dropdown clicked:', this.textContent.trim());
+                // Add dropdown logic here
+            });
+        });
+
+        // Action button functionality
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Action button clicked');
+                // Add action logic here
+            });
+        });
+
+        // Pagination functionality
+        document.querySelectorAll('.pagination-btn:not(.disabled)').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Pagination clicked');
+                // Add pagination logic here
+            });
+        });
+
+        // Expand/collapse functionality for report rows
+        document.querySelectorAll('.expand-icon').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const row = this.closest('tr');
+                console.log('Expand/collapse row:', row);
+                // Add expand/collapse logic here
+            });
+        });
+
+        // Rows per page select functionality
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                console.log('Rows per page changed to:', this.value);
+                // Add rows per page logic here
+            });
+        });
+
+        // Initialize tooltips if using Bootstrap
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

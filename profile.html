@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile Dashboard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    
+    
+     <link rel="stylesheet" href="./assets/css/profile/style.css">
+     <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- <link rel="stylesheet" href="../Leave/style.css"> -->
+     <link rel="stylesheet" href="./assets/css/attendence.css">
+  
+      
+ 
+</head>
+<body>
+    <div class="main-container">
+        <div id="sidebar-container"></div>
+        <div class="main-content">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="d-flex justify-content-between align-items-start">
+                <div class="flex-grow-1">
+                    <div class="d-flex align-items-center flex-wrap mb-1">
+                        <h1 class="profile-name mb-0">Abhishek Singh</h1>
+                        <span class="status-badge">Full-time</span>
+                    </div>
+                    <div class="profile-title">Design Manager</div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg class="contact-icon" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span class="contact-text">9567896556</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" fill="none" viewBox="0 0 20 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3 4l7 5 7-5M3 4v8a2 2 0 002 2h10a2 2 0 002-2V4M3 4a2 2 0 012-2h10a2 2 0 012 2"/>
+                            </svg>
+                            <span class="contact-text">john.doe@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="edit-btn">
+                    <svg class="edit-icon" fill="none" viewBox="0 0 16 16">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12 4L8 8l-4 4v4h4l4-4 4-4-4-4zM8 8l4-4"/>
+                    </svg>
+                    Edit Profile
+                </a>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="profile">Profile</button>
+                <button class="tab-btn" data-tab="AR-MyReq">Attendance</button>
+                <button class="tab-btn" data-tab="leaves">Leaves</button>
+                <button class="tab-btn" data-tab="Report">Report</button>
+            </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content active" id="profile" data-tab="profile">
+            <div class="placeholder-content"></div>
+        </div>
+
+        <div class="tab-content" id="attendance" data-tab="AR-MyReq">
+            <div class="placeholder-content">
+                
+            </div>
+        </div>
+
+        <div class="tab-content" id="leaves" data-tab="leaves">
+            <div class="placeholder-content">
+              
+            </div>
+        </div>
+
+        <div class="tab-content" id="report" data-tab="report">
+            <div class="placeholder-content">
+             
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript for Tab Functionality -->
+    <script>
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     const tabButtons = document.querySelectorAll('.tab-btn');
+        //     const tabContents = document.querySelectorAll('.tab-content');
+
+        //     function switchTab(targetTab) {
+        //         // Remove active class from all buttons and contents
+        //         tabButtons.forEach(btn => btn.classList.remove('active'));
+        //         tabContents.forEach(content => content.classList.remove('active'));
+
+        //         // Add active class to clicked button and corresponding content
+        //         const activeButton = document.querySelector(`[data-tab="${targetTab}"]`);
+        //         const activeContent = document.getElementById(targetTab);
+
+        //         if (activeButton && activeContent) {
+        //             activeButton.classList.add('active');
+        //             activeContent.classList.add('active');
+        //         }
+        //     }
+
+        //     // Add click event listeners to tab buttons
+        //     tabButtons.forEach(button => {
+        //         button.addEventListener('click', function() {
+        //             const targetTab = this.getAttribute('data-tab');
+        //             switchTab(targetTab);
+        //         });
+        //     });
+
+        //     // Handle keyboard navigation
+        //     tabButtons.forEach((button, index) => {
+        //         button.addEventListener('keydown', function(e) {
+        //             let targetIndex = index;
+
+        //             switch(e.key) {
+        //                 case 'ArrowLeft':
+        //                     e.preventDefault();
+        //                     targetIndex = index > 0 ? index - 1 : tabButtons.length - 1;
+        //                     break;
+        //                 case 'ArrowRight':
+        //                     e.preventDefault();
+        //                     targetIndex = index < tabButtons.length - 1 ? index + 1 : 0;
+        //                     break;
+        //                 case 'Enter':
+        //                 case ' ':
+        //                     e.preventDefault();
+        //                     this.click();
+        //                     return;
+        //                 default:
+        //                     return;
+        //             }
+
+        //             tabButtons[targetIndex].focus();
+        //             tabButtons[targetIndex].click();
+        //         });
+        //     });
+
+        //     tabButtons.forEach(button => {
+        //         button.setAttribute('tabindex', '0');
+        //     });
+
+           
+        //     const editBtn = document.querySelector('.edit-btn');
+        //     if (editBtn) {
+        //         editBtn.addEventListener('click', function(e) {
+        //             e.preventDefault();
+        //             alert('Edit Profile functionality would be implemented here.');
+        //         });
+        //     }
+        // });
+
+        // function handleResize() {
+        //     const tabNavigation = document.querySelector('.tab-navigation');
+        //     if (window.innerWidth <= 768) {
+        //         tabNavigation.style.overflowX = 'auto';
+        //     } else {
+        //         tabNavigation.style.overflowX = 'visible';
+        //     }
+        // }
+
+        // window.addEventListener('resize', handleResize);
+        // handleResize(); // Call on initial load
+
+     
+        // fetching sidebar
+
+
+
+
+// Tab switching functionality
+        function switchTab(tabName) {
+            console.log('Switching to tab:', tabName);
+            
+            // Update tab buttons
+            const tabs = document.querySelectorAll('.attendance-tab-button');
+            tabs.forEach(tab => {
+                if (tab.dataset.tab === tabName) {
+                    tab.classList.remove('inactive');
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                    tab.classList.add('inactive');
+                }
+            });
+            
+            // Update tab content
+            const tabContents = document.querySelectorAll('.attendance-tab-content');
+            tabContents.forEach(content => {
+                if (content.id === tabName + '-content') {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+            
+            currentTab = tabName;
+            console.log(`Switched to ${tabName} tab`);
+        }
+
+
+
+function loadTab(tabName) {
+
+  document.querySelectorAll('.tab-btn').forEach(tab => tab.classList.remove('active'));
+
+  const activeTab = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+  if (activeTab) activeTab.classList.add('active');
+
+ 
+  document.querySelectorAll('.tab-content').forEach(tab => {
+    tab.style.display = 'none';
+  });
+
+
+  const targetTabContent = document.querySelector(`.tab-content[data-tab="${tabName}"]`);
+  console.log(targetTabContent)
+  if (targetTabContent) targetTabContent.style.display = 'block';
+
+ 
+  fetch(`./${tabName}.html`)
+    .then(response => response.text())
+    .then(html => {
+      const placeholder = targetTabContent?.querySelector('.placeholder-content');
+      if (placeholder) {
+        placeholder.innerHTML = html;
+      }
+    })
+    .catch(err => {
+      const placeholder = targetTabContent?.querySelector('.placeholder-content');
+      if (placeholder) {
+        placeholder.innerHTML = `<p>Error loading content.</p>`;
+      }
+      console.error('Tab load error:', err);
+    });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const tabName = button.getAttribute('data-tab');
+      loadTab(tabName);
+    });
+  });
+  
+  loadTab('profile'); 
+});
+
+    </script>
+ 
+ 
+ <script src="./assets/js/script.js"></script>
+</body>
+</html>

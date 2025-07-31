@@ -1,0 +1,190 @@
+
+        <!-- Header -->
+        <div class="dashboard-header">
+            <div class="header-title">
+                <h1>Daily Status Report</h1>
+                <div class="header-separator"></div>
+                <span class="team-label">Design Team</span>
+            </div>
+            <div class="team-tabs">
+                <button class="team-tab active">My Team</button>
+                <button class="team-tab">Only Me</button>
+                <button class="team-tab">All Employee</button>
+            </div>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="stat-cards">
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <div class="stat-card-title">Total Hours Logged Today</div>
+                    <div class="stat-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">19:00:28</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <div class="stat-card-title">Billable Hours</div>
+                    <div class="stat-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">9 hrs 15 mins</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <div class="stat-card-title">Today's Billing</div>
+                    <div class="stat-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M3 3h18v18H3zM8 8h8v8H8z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">$4567</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <div class="stat-card-title">Top Project</div>
+                    <div class="stat-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1v7z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">UI Design – 22 hrs</div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <div class="timetrack-widget-container">
+        <div class="timetrack-widget-border"></div>
+        <div class="timetrack-widget-inner">
+            <div class="timetrack-widget-content">
+                <div class="timetrack-progress-section">
+                    <!-- Progress Bar -->
+                    <div class="timetrack-progress-container">
+                        <div class="timetrack-progress-bar-active"></div>
+                        <div class="timetrack-progress-bar-inactive"></div>
+                    </div>
+
+                    <!-- Stats Container -->
+                    <div class="timetrack-stats-section">
+                        <!-- Billable Stats -->
+                        <div class="timetrack-billable-stats">
+                            <div class="timetrack-billable-label">Today's Billable</div>
+                            <div class="timetrack-separator-dot">
+                                <svg class="timetrack-separator-circle" fill="none" preserveAspectRatio="none" viewBox="0 0 6 6">
+                                    <circle cx="3" cy="3" fill="#CBD5E1" r="3"/>
+                                </svg>
+                            </div>2
+                            <div class="timetrack-billable-time">9hrs: 18 min</div>
+                            <div class="timetrack-separator-dot">
+                                <svg class="timetrack-separator-circle" fill="none" preserveAspectRatio="none" viewBox="0 0 6 6">
+                                    <circle cx="3" cy="3" fill="#CBD5E1" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="timetrack-billable-amount">$4567</div>
+                        </div>
+
+                        <!-- Non-Billable Stats -->
+                        <div class="timetrack-nonbillable-stats">
+                            <div class="timetrack-nonbillable-label">Non Billable</div>
+                            <div class="timetrack-separator-dot">
+                                <svg class="timetrack-separator-circle" fill="none" preserveAspectRatio="none" viewBox="0 0 6 6">
+                                    <circle cx="3" cy="3" fill="#CBD5E1" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="timetrack-nonbillable-time">5Hrs: 14 min</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to add interactivity if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Billing Time Tracker Widget loaded');
+            
+            // Add click handler for potential expansion
+            const widget = document.querySelector('.timetrack-widget-container');
+            widget.addEventListener('click', function() {
+                console.log('Time tracker widget clicked');
+                // Could add functionality like expanding details, navigating to full timesheet, etc.
+            });
+
+            // Simulate real-time updates (for demonstration)
+            function updateTimeDisplay() {
+                const timeElements = document.querySelectorAll('.timetrack-billable-time, .timetrack-nonbillable-time');
+                // In a real app, this would fetch actual time data
+                console.log('Time display could be updated here with real data');
+            }
+
+            // Update every minute (for demonstration purposes)
+            // setInterval(updateTimeDisplay, 60000);
+
+            // Add keyboard navigation support
+            widget.setAttribute('tabindex', '0');
+            widget.setAttribute('role', 'button');
+            widget.setAttribute('aria-label', 'Time tracking summary for today');
+
+            widget.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    widget.click();
+                }
+            });
+
+            // Accessibility announcements
+            const billableTime = document.querySelector('.timetrack-billable-time').textContent;
+            const billableAmount = document.querySelector('.timetrack-billable-amount').textContent;
+            const nonBillableTime = document.querySelector('.timetrack-nonbillable-time').textContent;
+
+            widget.setAttribute('aria-description', 
+                `Today's billable time: ${billableTime}, amount: ${billableAmount}. Non-billable time: ${nonBillableTime}`
+            );
+        });
+
+        // Function to format time (could be used for real-time updates)
+        function formatTime(hours, minutes) {
+            return `${hours}hrs: ${minutes} min`;
+        }
+
+        // Function to format currency (could be used for real-time updates)
+        function formatCurrency(amount) {
+            return `$${amount.toLocaleString()}`;
+        }
+
+        // Example function to update widget with new data
+        function updateTimeTracker(billableHours, billableMinutes, amount, nonBillableHours, nonBillableMinutes) {
+            document.querySelector('.timetrack-billable-time').textContent = formatTime(billableHours, billableMinutes);
+            document.querySelector('.timetrack-billable-amount').textContent = formatCurrency(amount);
+            document.querySelector('.timetrack-nonbillable-time').textContent = formatTime(nonBillableHours, nonBillableMinutes);
+            
+            console.log('Time tracker updated with new data');
+        }
+
+        // Example usage (commented out):
+        // updateTimeTracker(9, 18, 4567, 5, 14);
+    </script>

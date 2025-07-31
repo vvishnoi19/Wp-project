@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/employees/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div id="sidebar-container"></div>
+        <div class="container">
+        <!-- Header Controls -->
+        <div class="header-controls">
+            <h1 class="header-title">All Employees</h1>
+            <div class="header-right">
+                <div class="custom-tabs">
+                    <button class="tab-btn active" data-tab="my-team">My Team</button>
+                    <button class="tab-btn" data-tab="all-employee">All Employee</button>
+                </div>
+                <button class="add-employee-btn">
+                    <svg class="add-icon" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 3.33333V12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.33333 8H12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add Employee</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search and Filter Controls -->
+        <div class="search-filter-controls">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+            <div class="filter-controls">
+                <div class="filter-dropdown">
+                    <span>Sort By</span>
+                    <svg class="chevron-down" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                    </svg>
+                </div>
+                <div class="filter-dropdown">
+                    <span>Department</span>
+                    <svg class="chevron-down" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                    </svg>
+                </div>
+                <div class="filter-dropdown">
+                    <span>Gender</span>
+                    <svg class="chevron-down" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content: My Team -->
+        <div class="tab-content active" id="my-team">
+            <div class="employee-grid">
+                <!-- First Row -->
+                <div class="employee-row">
+                    <div class="employee-card">
+                        <div class="profile-avatar">AK</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">Ayush Kumar</a>
+                            <p class="employee-title">UI/UX Designer</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">john.doe@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9567896556</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-card">
+                        <div class="profile-avatar">PM</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">Prachi Mehta</a>
+                            <p class="employee-title">UI/UX Designer</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">prachi.m@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9876543210</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-card">
+                        <div class="profile-avatar">CA</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">Chirag Arora</a>
+                            <p class="employee-title">UI/UX Designer</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">chirag.a@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9123456789</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-card">
+                        <div class="profile-avatar">DS</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">Dipanshu Singh</a>
+                            <p class="employee-title">UI/UX Designer</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">dipanshu.s@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9456789123</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-card">
+                        <div class="profile-avatar">RJ</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">Raj Patel</a>
+                            <p class="employee-title">UI/UX Designer</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">raj.patel@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9789456123</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <div class="employee-row">
+                    <div class="employee-card">
+                        <div class="profile-avatar">AS</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">Ananya Sharma</a>
+                            <p class="employee-title">UI/UX Designer</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">ananya.s@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9321654987</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-card">
+                        <div class="profile-avatar">VK</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">Vikram Kumar</a>
+                            <p class="employee-title">UI/UX Designer</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">vikram.k@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9654321789</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hidden Cards (placeholder for responsive design) -->
+                    <div class="employee-card hidden">
+                        <div class="profile-avatar">--</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">--</a>
+                            <p class="employee-title">--</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">--</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">--</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-card hidden">
+                        <div class="profile-avatar">--</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">--</a>
+                            <p class="employee-title">--</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">--</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">--</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-card hidden">
+                        <div class="profile-avatar">--</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">--</a>
+                            <p class="employee-title">--</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">--</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content: All Employee -->
+        <div class="tab-content" id="all-employee">
+            <div class="employee-grid">
+                <!-- All Employee content would be dynamically loaded here -->
+                <div class="employee-row">
+                    <div class="employee-card">
+                        <div class="profile-avatar">JD</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">John Doe</a>
+                            <p class="employee-title">Front-end Developer</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">john.doe@company.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9876543210</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-card">
+                        <div class="profile-avatar">MS</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">Maria Santos</a>
+                            <p class="employee-title">Product Manager</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">maria.s@company.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9123456789</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-card">
+                        <div class="profile-avatar">AL</div>
+                        <div class="employee-info">
+                            <a href="#" class="employee-name">Alex Lee</a>
+                            <p class="employee-title">Backend Developer</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 1H2.33333C1.59695 1 1 1.59695 1 2.33333V10.3333C1 11.0697 1.59695 11.6667 2.33333 11.6667H13C13.7364 11.6667 14.3333 11.0697 14.3333 10.3333V2.33333C14.3333 1.59695 13.7364 1 13 1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                    <path d="M14.3333 3L8.35333 6.8C8.14751 6.92895 7.90954 6.99734 7.66667 6.99734C7.42379 6.99734 7.18582 6.92895 6.98 6.8L1 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                                </svg>
+                                <span class="contact-text">alex.lee@company.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6495 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.608 13.3983 14.6301 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1775 3.46004 8.56668C2.33336 6.82748 1.6322 4.84734 1.41337 2.78668C1.39671 2.60233 1.41862 2.41652 1.4777 2.2411C1.53679 2.06567 1.63175 1.90447 1.75655 1.76776C1.88134 1.63105 2.03324 1.52182 2.20256 1.44703C2.37189 1.37224 2.55493 1.33352 2.74004 1.33335H4.74004C5.06357 1.33016 5.37723 1.44473 5.62254 1.6557C5.86786 1.86667 6.02809 2.15964 6.07337 2.48001C6.15779 3.12006 6.31434 3.7485 6.54004 4.35335C6.62973 4.59196 6.64915 4.85129 6.59597 5.1006C6.5428 5.34991 6.41928 5.57875 6.24004 5.76001L5.39337 6.60668C6.34241 8.27571 7.72434 9.65764 9.39337 10.6067L10.24 9.76001C10.4213 9.58077 10.6501 9.45725 10.8994 9.40408C11.1488 9.35091 11.4081 9.37032 11.6467 9.46001C12.2516 9.68571 12.88 9.84227 13.52 9.92668C13.8439 9.97237 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.9531 14.6667 11.28Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="contact-text">9321654987</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-btn[data-tab]').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show selected tab content
+                const targetContent = document.getElementById(tabId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // Add Employee button functionality
+        document.querySelector('.add-employee-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Add Employee clicked');
+            // Add employee modal or redirect logic here
+        });
+
+        // Filter dropdown functionality
+        document.querySelectorAll('.filter-dropdown').forEach(dropdown => {
+            dropdown.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Filter dropdown clicked:', this.textContent.trim());
+                // Add dropdown logic here
+            });
+        });
+
+        // Search functionality
+        document.querySelector('.search-input').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            console.log('Searching for:', searchTerm);
+            
+            // Filter employee cards based on search term
+            document.querySelectorAll('.employee-card:not(.hidden)').forEach(card => {
+                const name = card.querySelector('.employee-name').textContent.toLowerCase();
+                const title = card.querySelector('.employee-title').textContent.toLowerCase();
+                const email = card.querySelector('.contact-text').textContent.toLowerCase();
+                
+                const matches = name.includes(searchTerm) || 
+                               title.includes(searchTerm) || 
+                               email.includes(searchTerm);
+                
+                card.style.display = matches ? 'flex' : 'none';
+            });
+        });
+
+        // Employee name click functionality
+        document.querySelectorAll('.employee-name').forEach(nameLink => {
+            nameLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Employee clicked:', this.textContent);
+                // Add employee profile navigation logic here
+            });
+        });
+
+        // Card hover effects (enhanced with JavaScript if needed)
+        document.querySelectorAll('.employee-card:not(.hidden)').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                // Add any additional hover effects here if needed
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                // Add any additional hover effects here if needed
+            });
+        });
+
+        // Initialize tooltips if using Bootstrap
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Responsive grid adjustments
+        function handleResponsiveGrid() {
+            const screenWidth = window.innerWidth;
+            const hiddenCards = document.querySelectorAll('.employee-card.hidden');
+            
+            // Show/hide cards based on screen size (if needed for responsive behavior)
+            if (screenWidth < 768) {
+                // Mobile: show fewer cards or adjust layout
+            } else if (screenWidth < 992) {
+                // Tablet: medium layout
+            } else {
+                // Desktop: full layout
+            }
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', handleResponsiveGrid);
+        
+        // Initialize on page load
+        handleResponsiveGrid();
+
+    </script>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

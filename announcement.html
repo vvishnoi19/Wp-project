@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements List Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./assets/css/announcement.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    <div class="main-container">
+        <div id="sidebar-container"></div>
+        <!-- Header -->
+         <div class="container">
+        <div class="header">
+            <h1 class="page-title">Announcements List</h1>
+        </div>
+        <!-- Sub Header Controls -->
+        <div class="sub-header">
+            <div class="left-controls">
+                <!-- Search Input -->
+                <div class="search-container">
+                    <div class="search-field">
+                        <div class="search-content">
+                            <div class="search-inner">
+                                <input type="text" class="search-input" placeholder="Search" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Filter -->
+                <div class="status-filter" onclick="handleStatusFilter()">
+                    <span class="filter-text">Status</span>
+                    <svg class="chevron-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M4 6L8 10L12 6" stroke="#1E293B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="right-controls">
+                <!-- Date Picker -->
+                <div class="date-picker-container">
+                    <div class="date-field">
+                        <div class="date-content">
+                            <div class="date-inner">
+                                <div class="calendar-icon-wrap">
+                                    <svg class="calendar-icon" fill="none" viewBox="0 0 16 16">
+                                        <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                        <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                        <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                        <path d="M2 6.66667H14" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    </svg>
+                                </div>
+                                <span class="date-text">Oct 17, 2024 - Nov 6, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Announcement Button -->
+                <button class="add-button" onclick="handleAddAnnouncement()">
+                    <svg class="plus-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M8 3.33333V12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.33333 8H12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="button-text">Add Announcement</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content">
+        <!-- Table Container -->
+        <div class="table-container">
+            <!-- Table Header -->
+            <div class="table-header">
+                <div class="header-cell owner">
+                    <span class="header-text">Owner</span>
+                </div>
+                <div class="header-cell subject">
+                    <span class="header-text">Subject</span>
+                </div>
+                <div class="header-cell message">
+                    <span class="header-text">Message</span>
+                </div>
+                <div class="header-cell from-date">
+                    <span class="header-text">From Date</span>
+                </div>
+                <div class="header-cell to-date">
+                    <span class="header-text">To Date</span>
+                </div>
+                <div class="header-cell status">
+                    <span class="header-text">Status</span>
+                </div>
+                <div class="header-cell actions"></div>
+            </div>
+
+            <!-- Table Rows -->
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Announcement</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag active">Active</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row1')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Diwali Holiday</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag active">Active</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row2')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Diwali Holiday</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag active">Active</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row3')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Raksha Bandhan</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag inactive">Inactive</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row4')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Raksha Bandhan</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag inactive">Inactive</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row5')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Raksha Bandhan</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag active">Active</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row6')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Raksha Bandhan</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag active">Active</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row7')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Diwali Holiday</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag inactive">Inactive</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row8')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Raksha Bandhan</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag inactive">Inactive</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row9')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Diwali Holiday</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag active">Active</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row10')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Raksha Bandhan</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag active">Active</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row11')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Raksha Bandhan</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag active">Active</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row12')">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <span class="pagination-info">Showing 1-10 of 20</span>
+            
+            <div class="pagination-right">
+                <div class="rows-per-page">
+                    <span class="rows-label">Rows per page</span>
+                    <div class="rows-select-container">
+                        <div class="rows-select">
+                            <div class="select-field">
+                                <div class="select-content">
+                                    <span class="select-text">10</span>
+                                    <div class="select-icon-wrapper">
+                                        <svg class="chevron-up-down-icon" fill="none" viewBox="0 0 16 16">
+                                            <path d="M4.66667 10L8 13.3333L11.3333 10M4.66667 6L8 2.66667L11.3333 6" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <span class="page-info">Page 1 of 10</span>
+                
+                <div class="pagination-buttons">
+                    <button class="pagination-btn disabled" onclick="handlePagination('first')">
+                        <svg class="pagination-icon" fill="none" viewBox="0 0 16 16">
+                            <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="pagination-btn disabled" onclick="handlePagination('prev')">
+                        <svg class="pagination-icon" fill="none" viewBox="0 0 16 16">
+                            <path d="M10 12L6 8L10 4" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="pagination-btn" onclick="handlePagination('next')">
+                        <svg class="pagination-icon" fill="none" viewBox="0 0 16 16">
+                            <path d="M6 12L10 8L6 4" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="pagination-btn" onclick="handlePagination('last')">
+                        <svg class="pagination-icon" fill="none" viewBox="0 0 16 16">
+                            <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        // Search functionality
+        function initializeSearch() {
+            const searchInput = document.querySelector('.search-input');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const tableRows = document.querySelectorAll('.table-row');
+                
+                tableRows.forEach(row => {
+                    const cells = row.querySelectorAll('.data-text');
+                    let hasMatch = false;
+                    
+                    cells.forEach(cell => {
+                        if (cell.textContent.toLowerCase().includes(searchTerm)) {
+                            hasMatch = true;
+                        }
+                    });
+                    
+                    if (hasMatch || searchTerm === '') {
+                        row.style.display = 'flex';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    console.log('Search submitted:', this.value);
+                }
+            });
+        }
+
+        // Status filter functionality
+        function handleStatusFilter() {
+            console.log('Status filter clicked');
+            // Add dropdown functionality here
+        }
+
+        // Date picker functionality
+        function initializeDatePicker() {
+            const datePicker = document.querySelector('.date-field');
+            
+            datePicker.addEventListener('click', function() {
+                console.log('Date picker clicked');
+                // Add date picker functionality here
+            });
+        }
+
+        // Add announcement functionality
+        function handleAddAnnouncement() {
+            console.log('Add Announcement button clicked');
+            // Add announcement creation logic here
+        }
+
+        // Action button functionality
+        function handleAction(rowId) {
+            console.log(`Action clicked for ${rowId}`);
+            // Add action menu functionality here
+        }
+
+        // Pagination functionality
+        function handlePagination(action) {
+            console.log(`Pagination action: ${action}`);
+            // Add pagination logic here
+        }
+
+        // Rows per page functionality
+        function initializeRowsSelect() {
+            const selectField = document.querySelector('.select-field');
+            
+            selectField.addEventListener('click', function() {
+                console.log('Rows per page dropdown clicked');
+                // Add dropdown functionality here
+            });
+        }
+
+        // Button hover effects
+        function initializeButtonEffects() {
+            // Add button hover effects
+            const addButton = document.querySelector('.add-button');
+            
+            addButton.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-1px)';
+            });
+
+            addButton.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+
+            // Action button effects
+            const actionButtons = document.querySelectorAll('.action-button');
+            
+            actionButtons.forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)';
+                });
+
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Pagination button effects
+            const paginationBtns = document.querySelectorAll('.pagination-btn:not(.disabled)');
+            
+            paginationBtns.forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-1px)';
+                });
+
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Filter button effects
+            const statusFilter = document.querySelector('.status-filter');
+            
+            statusFilter.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#f9fafb';
+            });
+
+            statusFilter.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#ffffff';
+            });
+        }
+
+        // Initialize all functionality when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSearch();
+            initializeDatePicker();
+            initializeRowsSelect();
+            initializeButtonEffects();
+        });
+
+
+                // fetching sidebar
+
+    </script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
