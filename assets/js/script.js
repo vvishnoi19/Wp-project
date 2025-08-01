@@ -58,15 +58,15 @@ fetch('./header.html')
 
 
 
-   document.addEventListener("DOMContentLoaded", function () {
-    const navItems = document.querySelectorAll(".Nav-item");
-console.log("hii this is my nav")
-    navItems.forEach(item => {
-        item.addEventListener("click", () => {
+//    document.addEventListener("DOMContentLoaded", function () {
+//     const navItems = document.querySelectorAll(".Nav-item");
+// console.log("hii this is my nav")
+//     navItems.forEach(item => {
+//         item.addEventListener("click", () => {
            
-            navItems.forEach(i => i.classList.remove("active"));
-            item.classList.add("active");
-        });
-    });
-});
+//             navItems.forEach(i => i.classList.remove("active"));
+//             item.classList.add("active");
+//         });
+//     });
+// });
 

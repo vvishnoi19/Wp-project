@@ -100,139 +100,7 @@
             </div>
 
             <!-- Table Rows -->
-            <div class="table-row">
-                <div class="data-cell owner">
-                    <span class="data-text">Ayush Kumar</span>
-                </div>
-                <div class="data-cell subject">
-                    <span class="data-text">Announcement</span>
-                </div>
-                <div class="data-cell message">
-                    <span class="data-text">working on client feedbacks from extras section</span>
-                </div>
-                <div class="data-cell from-date">
-                    <span class="data-text">12/09/2025</span>
-                </div>
-                <div class="data-cell to-date">
-                    <span class="data-text">12/09/2025</span>
-                </div>
-                <div class="data-cell status">
-                    <div class="status-tag active">Active</div>
-                </div>
-                <div class="data-cell actions">
-                    <button class="action-button" onclick="handleAction(id,event)">
-                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                       <div class="dm-container" id="dm-row2" style="display:none;" >
-                           
-        <div class="dm-dropdown-menu" >
-            <div class="dm-section">
-                <div class="dm-section-content">
-                    <div class="dm-section-inner">
-                        <!-- Edit Announcement Menu Item -->
-                        <div class="dm-menu-item">
-                            <div class="dm-menu-item-content">
-                                <div class="dm-menu-item-inner">
-                                    <div class="dm-menu-text">
-                                        <p>Edit Announcement</p>
-                                    </div>
-                                    <div class="dm-icon-container">
-                                        <div class="dm-icon-wrapper">
-                                            <div class="dm-icon-svg-wrapper">
-                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 15 15">
-                                                    <g>
-                                                        <path
-                                                            d="M13.7827 4.2076C14.1352 3.85522 14.3332 3.37725 14.3333 2.87884C14.3334 2.38043 14.1354 1.90241 13.783 1.54994C13.4307 1.19746 12.9527 0.999412 12.4543 0.999349C11.9559 0.999286 11.4778 1.19722 11.1254 1.5496L2.22804 10.4489C2.07325 10.6033 1.95878 10.7933 1.8947 11.0023L1.01404 13.9036C0.996808 13.9613 0.995507 14.0225 1.01027 14.0808C1.02504 14.1392 1.05532 14.1924 1.0979 14.2349C1.14049 14.2775 1.19378 14.3076 1.25214 14.3223C1.3105 14.337 1.37174 14.3356 1.42937 14.3183L4.33137 13.4383C4.54015 13.3748 4.73015 13.261 4.8847 13.1069L13.7827 4.2076Z"
-                                                            stroke="#1E293B"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            stroke-width="0.833333"
-                                                        />
-                                                        <path
-                                                            d="M9.66675 2.99935L12.3334 5.66602"
-                                                            stroke="#1E293B"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            stroke-width="0.833333"
-                                                        />
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Delete Announcement Menu Item -->
-                        <div class="dm-menu-item delete" onclick="openDeleteModal()">
-                            <div class="dm-menu-item-content">
-                                <div class="dm-menu-item-inner">
-                                    <div class="dm-menu-text">
-                                        <p>Delete Announcement</p>
-                                    </div>
-                                    <div class="dm-icon-container">
-                                        <div class="dm-icon-wrapper-delete">
-                                            <div class="dm-icon-svg-wrapper-delete">
-                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 14 15">
-                                                    <g>
-                                                        <path
-                                                            d="M1 3.66602H13"
-                                                            stroke="#1E293B"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            stroke-width="0.833333"
-                                                        />
-                                                        <path
-                                                            d="M11.6667 3.66602V12.9993C11.6667 13.666 11 14.3327 10.3333 14.3327H3.66667C3 14.3327 2.33333 13.666 2.33333 12.9993V3.66602"
-                                                            stroke="#1E293B"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            stroke-width="0.833333"
-                                                        />
-                                                        <path
-                                                            d="M4.33333 3.66602V2.33268C4.33333 1.66602 5 0.999349 5.66667 0.999349H8.33333C9 0.999349 9.66667 1.66602 9.66667 2.33268V3.66602"
-                                                            stroke="#1E293B"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            stroke-width="0.833333"
-                                                        />
-                                                        <path
-                                                            d="M5.66667 6.99935V10.9993"
-                                                            stroke="#1E293B"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            stroke-width="0.833333"
-                                                        />
-                                                        <path
-                                                            d="M8.33333 6.99935V10.9993"
-                                                            stroke="#1E293B"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            stroke-width="0.833333"
-                                                        />
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Border and Shadow -->
-        <div class="dm-dropdown-border"></div>
-    </div>
-                </div>
-            </div>
+          
 
             <div class="table-row">
                 <div class="data-cell owner">
@@ -368,7 +236,6 @@
     </div>
                 </div>
             </div>
-
             <div class="table-row">
                 <div class="data-cell owner">
                     <span class="data-text">Ayush Kumar</span>
@@ -389,17 +256,256 @@
                     <div class="status-tag active">Active</div>
                 </div>
                 <div class="data-cell actions">
-                    <button class="action-button" onclick="handleAction('row3')">
+                    <button class="action-button" onclick="handleAction('row2',event)">
                         <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
                             <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
                             <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    
+                     <!-- delete modal -->
+                        <div class="dm-container" id="dm-row2" style="display:none;" >
+                           
+        <div class="dm-dropdown-menu" >
+            <div class="dm-section">
+                <div class="dm-section-content">
+                    <div class="dm-section-inner">
+                        <!-- Edit Announcement Menu Item -->
+                        <div class="dm-menu-item">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Edit Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper">
+                                            <div class="dm-icon-svg-wrapper">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 15 15">
+                                                    <g>
+                                                        <path
+                                                            d="M13.7827 4.2076C14.1352 3.85522 14.3332 3.37725 14.3333 2.87884C14.3334 2.38043 14.1354 1.90241 13.783 1.54994C13.4307 1.19746 12.9527 0.999412 12.4543 0.999349C11.9559 0.999286 11.4778 1.19722 11.1254 1.5496L2.22804 10.4489C2.07325 10.6033 1.95878 10.7933 1.8947 11.0023L1.01404 13.9036C0.996808 13.9613 0.995507 14.0225 1.01027 14.0808C1.02504 14.1392 1.05532 14.1924 1.0979 14.2349C1.14049 14.2775 1.19378 14.3076 1.25214 14.3223C1.3105 14.337 1.37174 14.3356 1.42937 14.3183L4.33137 13.4383C4.54015 13.3748 4.73015 13.261 4.8847 13.1069L13.7827 4.2076Z"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M9.66675 2.99935L12.3334 5.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delete Announcement Menu Item -->
+                        <div class="dm-menu-item delete" onclick="openDeleteModal()">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Delete Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper-delete">
+                                            <div class="dm-icon-svg-wrapper-delete">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 14 15">
+                                                    <g>
+                                                        <path
+                                                            d="M1 3.66602H13"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M11.6667 3.66602V12.9993C11.6667 13.666 11 14.3327 10.3333 14.3327H3.66667C3 14.3327 2.33333 13.666 2.33333 12.9993V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M4.33333 3.66602V2.33268C4.33333 1.66602 5 0.999349 5.66667 0.999349H8.33333C9 0.999349 9.66667 1.66602 9.66667 2.33268V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M5.66667 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M8.33333 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Border and Shadow -->
+        <div class="dm-dropdown-border"></div>
+    </div>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="data-cell owner">
+                    <span class="data-text">Ayush Kumar</span>
+                </div>
+                <div class="data-cell subject">
+                    <span class="data-text">Diwali Holiday</span>
+                </div>
+                <div class="data-cell message">
+                    <span class="data-text">working on client feedbacks from extras section</span>
+                </div>
+                <div class="data-cell from-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell to-date">
+                    <span class="data-text">12/09/2025</span>
+                </div>
+                <div class="data-cell status">
+                    <div class="status-tag active">Active</div>
+                </div>
+                <div class="data-cell actions">
+                    <button class="action-button" onclick="handleAction('row2',event)">
+                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                     <!-- delete modal -->
+                        <div class="dm-container" id="dm-row2" style="display:none;" >
+                           
+        <div class="dm-dropdown-menu" >
+            <div class="dm-section">
+                <div class="dm-section-content">
+                    <div class="dm-section-inner">
+                        <!-- Edit Announcement Menu Item -->
+                        <div class="dm-menu-item">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Edit Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper">
+                                            <div class="dm-icon-svg-wrapper">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 15 15">
+                                                    <g>
+                                                        <path
+                                                            d="M13.7827 4.2076C14.1352 3.85522 14.3332 3.37725 14.3333 2.87884C14.3334 2.38043 14.1354 1.90241 13.783 1.54994C13.4307 1.19746 12.9527 0.999412 12.4543 0.999349C11.9559 0.999286 11.4778 1.19722 11.1254 1.5496L2.22804 10.4489C2.07325 10.6033 1.95878 10.7933 1.8947 11.0023L1.01404 13.9036C0.996808 13.9613 0.995507 14.0225 1.01027 14.0808C1.02504 14.1392 1.05532 14.1924 1.0979 14.2349C1.14049 14.2775 1.19378 14.3076 1.25214 14.3223C1.3105 14.337 1.37174 14.3356 1.42937 14.3183L4.33137 13.4383C4.54015 13.3748 4.73015 13.261 4.8847 13.1069L13.7827 4.2076Z"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M9.66675 2.99935L12.3334 5.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delete Announcement Menu Item -->
+                        <div class="dm-menu-item delete" onclick="openDeleteModal()">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Delete Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper-delete">
+                                            <div class="dm-icon-svg-wrapper-delete">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 14 15">
+                                                    <g>
+                                                        <path
+                                                            d="M1 3.66602H13"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M11.6667 3.66602V12.9993C11.6667 13.666 11 14.3327 10.3333 14.3327H3.66667C3 14.3327 2.33333 13.666 2.33333 12.9993V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M4.33333 3.66602V2.33268C4.33333 1.66602 5 0.999349 5.66667 0.999349H8.33333C9 0.999349 9.66667 1.66602 9.66667 2.33268V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M5.66667 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M8.33333 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Border and Shadow -->
+        <div class="dm-dropdown-border"></div>
+    </div>
                 </div>
             </div>
 
+         
             <div class="table-row">
                 <div class="data-cell owner">
                     <span class="data-text">Ayush Kumar</span>
@@ -420,13 +526,117 @@
                     <div class="status-tag inactive">Inactive</div>
                 </div>
                 <div class="data-cell actions">
-                    <button class="action-button" onclick="handleAction('row4')">
+                    <button class="action-button" onclick="handleAction('row2',event)">
                         <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
                             <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
                             <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
                             <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                     <div class="dm-container" id="dm-row2" style="display:none;" >
+                           
+        <div class="dm-dropdown-menu" >
+            <div class="dm-section">
+                <div class="dm-section-content">
+                    <div class="dm-section-inner">
+                        <!-- Edit Announcement Menu Item -->
+                        <div class="dm-menu-item">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Edit Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper">
+                                            <div class="dm-icon-svg-wrapper">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 15 15">
+                                                    <g>
+                                                        <path
+                                                            d="M13.7827 4.2076C14.1352 3.85522 14.3332 3.37725 14.3333 2.87884C14.3334 2.38043 14.1354 1.90241 13.783 1.54994C13.4307 1.19746 12.9527 0.999412 12.4543 0.999349C11.9559 0.999286 11.4778 1.19722 11.1254 1.5496L2.22804 10.4489C2.07325 10.6033 1.95878 10.7933 1.8947 11.0023L1.01404 13.9036C0.996808 13.9613 0.995507 14.0225 1.01027 14.0808C1.02504 14.1392 1.05532 14.1924 1.0979 14.2349C1.14049 14.2775 1.19378 14.3076 1.25214 14.3223C1.3105 14.337 1.37174 14.3356 1.42937 14.3183L4.33137 13.4383C4.54015 13.3748 4.73015 13.261 4.8847 13.1069L13.7827 4.2076Z"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M9.66675 2.99935L12.3334 5.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delete Announcement Menu Item -->
+                        <div class="dm-menu-item delete" onclick="openDeleteModal()">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Delete Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper-delete">
+                                            <div class="dm-icon-svg-wrapper-delete">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 14 15">
+                                                    <g>
+                                                        <path
+                                                            d="M1 3.66602H13"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M11.6667 3.66602V12.9993C11.6667 13.666 11 14.3327 10.3333 14.3327H3.66667C3 14.3327 2.33333 13.666 2.33333 12.9993V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M4.33333 3.66602V2.33268C4.33333 1.66602 5 0.999349 5.66667 0.999349H8.33333C9 0.999349 9.66667 1.66602 9.66667 2.33268V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M5.66667 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M8.33333 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Border and Shadow -->
+        <div class="dm-dropdown-border"></div>
+    </div>
                 </div>
             </div>
 
@@ -457,6 +667,110 @@
                             <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                     <div class="dm-container" id="dm-row2" style="display:none;" >
+                           
+        <div class="dm-dropdown-menu" >
+            <div class="dm-section">
+                <div class="dm-section-content">
+                    <div class="dm-section-inner">
+                        <!-- Edit Announcement Menu Item -->
+                        <div class="dm-menu-item">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Edit Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper">
+                                            <div class="dm-icon-svg-wrapper">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 15 15">
+                                                    <g>
+                                                        <path
+                                                            d="M13.7827 4.2076C14.1352 3.85522 14.3332 3.37725 14.3333 2.87884C14.3334 2.38043 14.1354 1.90241 13.783 1.54994C13.4307 1.19746 12.9527 0.999412 12.4543 0.999349C11.9559 0.999286 11.4778 1.19722 11.1254 1.5496L2.22804 10.4489C2.07325 10.6033 1.95878 10.7933 1.8947 11.0023L1.01404 13.9036C0.996808 13.9613 0.995507 14.0225 1.01027 14.0808C1.02504 14.1392 1.05532 14.1924 1.0979 14.2349C1.14049 14.2775 1.19378 14.3076 1.25214 14.3223C1.3105 14.337 1.37174 14.3356 1.42937 14.3183L4.33137 13.4383C4.54015 13.3748 4.73015 13.261 4.8847 13.1069L13.7827 4.2076Z"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M9.66675 2.99935L12.3334 5.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delete Announcement Menu Item -->
+                        <div class="dm-menu-item delete" onclick="openDeleteModal()">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Delete Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper-delete">
+                                            <div class="dm-icon-svg-wrapper-delete">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 14 15">
+                                                    <g>
+                                                        <path
+                                                            d="M1 3.66602H13"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M11.6667 3.66602V12.9993C11.6667 13.666 11 14.3327 10.3333 14.3327H3.66667C3 14.3327 2.33333 13.666 2.33333 12.9993V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M4.33333 3.66602V2.33268C4.33333 1.66602 5 0.999349 5.66667 0.999349H8.33333C9 0.999349 9.66667 1.66602 9.66667 2.33268V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M5.66667 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M8.33333 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Border and Shadow -->
+        <div class="dm-dropdown-border"></div>
+    </div>
                 </div>
             </div>
 
@@ -487,68 +801,114 @@
                             <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                     <div class="dm-container" id="dm-row2" style="display:none;" >
+                           
+        <div class="dm-dropdown-menu" >
+            <div class="dm-section">
+                <div class="dm-section-content">
+                    <div class="dm-section-inner">
+                        <!-- Edit Announcement Menu Item -->
+                        <div class="dm-menu-item">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Edit Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper">
+                                            <div class="dm-icon-svg-wrapper">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 15 15">
+                                                    <g>
+                                                        <path
+                                                            d="M13.7827 4.2076C14.1352 3.85522 14.3332 3.37725 14.3333 2.87884C14.3334 2.38043 14.1354 1.90241 13.783 1.54994C13.4307 1.19746 12.9527 0.999412 12.4543 0.999349C11.9559 0.999286 11.4778 1.19722 11.1254 1.5496L2.22804 10.4489C2.07325 10.6033 1.95878 10.7933 1.8947 11.0023L1.01404 13.9036C0.996808 13.9613 0.995507 14.0225 1.01027 14.0808C1.02504 14.1392 1.05532 14.1924 1.0979 14.2349C1.14049 14.2775 1.19378 14.3076 1.25214 14.3223C1.3105 14.337 1.37174 14.3356 1.42937 14.3183L4.33137 13.4383C4.54015 13.3748 4.73015 13.261 4.8847 13.1069L13.7827 4.2076Z"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M9.66675 2.99935L12.3334 5.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delete Announcement Menu Item -->
+                        <div class="dm-menu-item delete" onclick="openDeleteModal()">
+                            <div class="dm-menu-item-content">
+                                <div class="dm-menu-item-inner">
+                                    <div class="dm-menu-text">
+                                        <p>Delete Announcement</p>
+                                    </div>
+                                    <div class="dm-icon-container">
+                                        <div class="dm-icon-wrapper-delete">
+                                            <div class="dm-icon-svg-wrapper-delete">
+                                                <svg class="dm-icon-svg" preserveAspectRatio="none" viewBox="0 0 14 15">
+                                                    <g>
+                                                        <path
+                                                            d="M1 3.66602H13"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M11.6667 3.66602V12.9993C11.6667 13.666 11 14.3327 10.3333 14.3327H3.66667C3 14.3327 2.33333 13.666 2.33333 12.9993V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M4.33333 3.66602V2.33268C4.33333 1.66602 5 0.999349 5.66667 0.999349H8.33333C9 0.999349 9.66667 1.66602 9.66667 2.33268V3.66602"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M5.66667 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                        <path
+                                                            d="M8.33333 6.99935V10.9993"
+                                                            stroke="#1E293B"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="0.833333"
+                                                        />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Border and Shadow -->
+        <div class="dm-dropdown-border"></div>
+    </div>
                 </div>
             </div>
 
-            <div class="table-row">
-                <div class="data-cell owner">
-                    <span class="data-text">Ayush Kumar</span>
-                </div>
-                <div class="data-cell subject">
-                    <span class="data-text">Raksha Bandhan</span>
-                </div>
-                <div class="data-cell message">
-                    <span class="data-text">working on client feedbacks from extras section</span>
-                </div>
-                <div class="data-cell from-date">
-                    <span class="data-text">12/09/2025</span>
-                </div>
-                <div class="data-cell to-date">
-                    <span class="data-text">12/09/2025</span>
-                </div>
-                <div class="data-cell status">
-                    <div class="status-tag active">Active</div>
-                </div>
-                <div class="data-cell actions">
-                    <button class="action-button" onclick="handleAction('row7')">
-                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="table-row">
-                <div class="data-cell owner">
-                    <span class="data-text">Ayush Kumar</span>
-                </div>
-                <div class="data-cell subject">
-                    <span class="data-text">Diwali Holiday</span>
-                </div>
-                <div class="data-cell message">
-                    <span class="data-text">working on client feedbacks from extras section</span>
-                </div>
-                <div class="data-cell from-date">
-                    <span class="data-text">12/09/2025</span>
-                </div>
-                <div class="data-cell to-date">
-                    <span class="data-text">12/09/2025</span>
-                </div>
-                <div class="data-cell status">
-                    <div class="status-tag inactive">Inactive</div>
-                </div>
-                <div class="data-cell actions">
-                    <button class="action-button" onclick="handleAction('row8')">
-                        <svg class="ellipsis-icon" fill="none" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="15.8333" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="4.16667" cy="10" r="0.833333" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+        
 
 
         
