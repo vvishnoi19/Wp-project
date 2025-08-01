@@ -1,4 +1,4 @@
-fetch('../sidebar.html')
+fetch('./sidebar.html')
 .then(res=>res.text())
 .then(data=>{document.getElementById('sidebar-container').innerHTML=data;
 
@@ -31,17 +31,7 @@ fetch('./header.html')
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const navItems = document.querySelectorAll(".Nav-item");
 
-    navItems.forEach(item => {
-        item.addEventListener("click", () => {
-           
-            navItems.forEach(i => i.classList.remove("active"));
-            this.classList.add("active");
-        });
-    });
-});
 
   const overlay = document.getElementById('modalOverlay');
   const closeBtn = document.getElementById('close-icon');
@@ -67,4 +57,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+
+   document.addEventListener("DOMContentLoaded", function () {
+    const navItems = document.querySelectorAll(".Nav-item");
+console.log("hii this is my nav")
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+           
+            navItems.forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+});
 

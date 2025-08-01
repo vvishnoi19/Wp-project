@@ -426,14 +426,7 @@
             --asset-mgmt-border-radius: 6px;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            font-size: var(--asset-mgmt-font-size);
-            background-color: var(--asset-mgmt-white);
-            color: var(--asset-mgmt-slate-800);
-            line-height: 1.5;
-            min-height: 100vh;
-        }
+   
 
         .asset-mgmt-main-container {
             padding: 32px;

@@ -35,11 +35,13 @@ body{
     display: flex;
     flex-direction: column;
     border-right: 1px solid #3672d3;
-    position: relative;
+        overflow-y: auto;
+    height: 100vh;
+    scrollbar-width: none;
 }
 .sidebar-container{
     height: 100vh;
-    position: fixed;
+  
 }
 
 /* Logo Section */
@@ -106,6 +108,15 @@ body{
     text-decoration: none;
     transition: all 0.2s ease;
     cursor: pointer;
+}
+.nav-icon{
+
+     width: 2rem;
+  height: 2rem;
+
+}
+.Nav-item.active{
+    background-color: #2465cd;
 }
 
 .nav-list .nav-name{
