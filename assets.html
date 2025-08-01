@@ -4,25 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+     <link rel="stylesheet" href="./assets/css/Modals/assetmodal.css">
     <link rel="stylesheet" href="./assets/css/assets.css">
+   
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-       <div class="main-container">
 
-        <div id="sidebar-container"></div>
+    <div class="main-container">
+             <div id="sidebar-container"></div>
 <div class="container">
-       <div class="dashboard-header">
-            <h1 class="dashboard-title">Asset Management</h1>
-            <div class="tab-container">
-                <button class="tab-btn active" data-tab="MY-Assets.html">My Assets</button>
-                <button class="tab-btn" data-tab="My-Team-Assets.html">My Team's Assets</button>
+        <!-- Header Controls -->
+        <div class="asset-mgmt-header-controls">
+            <div class="asset-mgmt-page-title">Asset Management</div>
+            
+            <div class="asset-mgmt-main-tabs">
+                <button class="asset-mgmt-main-tab active" data-main-tab="my-assets"  onclick="showTab('tab1')">
+                    <div class="asset-mgmt-main-tab-text">My Assets</div>
+                </button>
+                <button class="asset-mgmt-main-tab " data-main-tab="team-assets" onclick="showTab('tab2')">
+                    <div class="asset-mgmt-main-tab-text" >My Team's Assets</div>
+                </button>
             </div>
         </div>
 
-            <!-- Data Table -->
-            <div class="data-table-container">
+        <!-- Search and Controls -->
+       
+
+            <div id="tab1" class="tab-content">
+                 <div class="asset-mgmt-controls-container">
+
+            <div class="asset-mgmt-search-filters">
+                <input type="text" class="asset-mgmt-search-input" placeholder="Search">
+                <button class="asset-mgmt-filter-button">
+                    <span class="asset-mgmt-filter-text">Asset Type</span>
+                    <svg class="asset-mgmt-chevron-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                    </svg>
+                </button>
+                <button class="asset-mgmt-filter-button">
+                    <span class="asset-mgmt-filter-text">Team</span>
+                    <svg class="asset-mgmt-chevron-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                    </svg>
+                </button>
+            </div>
+            <button class="asset-create-btn" onclick="openModal()">+create asset request</button>
+        </div>
+                 <div class="data-table-container">
                 <table class="data-table table">
                     <thead class="table-header">
                         <tr>
@@ -197,49 +226,707 @@
                         </tr>
                     </tbody>
                 </table>
+              
+                </div>
+
+            </div>
+            <div id="tab2" class="tab-content" style="display: none;">
+
+                  <div class="asset-mgmt-controls-container">
+
+            <div class="asset-mgmt-search-filters">
+                <input type="text" class="asset-mgmt-search-input" placeholder="Search">
+                <button class="asset-mgmt-filter-button">
+                    <span class="asset-mgmt-filter-text">Asset Type</span>
+                    <svg class="asset-mgmt-chevron-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                    </svg>
+                </button>
+                <button class="asset-mgmt-filter-button">
+                    <span class="asset-mgmt-filter-text">Team</span>
+                    <svg class="asset-mgmt-chevron-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33333"/>
+                    </svg>
+                </button>
+            </div>
+            
+        
+                            <div class="asset-mgmt-sub-tabs">
+                <button class="asset-mgmt-sub-tab active" data-sub-tab="assigned">
+                    <div class="asset-mgmt-sub-tab-text">Assigned</div>
+                </button>
+                <button class="asset-mgmt-sub-tab" data-sub-tab="requested">
+                    <div class="asset-mgmt-sub-tab-text">Requested</div>
+                    <div class="asset-mgmt-badge">4</div>
+                </button>
+                <button class="asset-mgmt-sub-tab" data-sub-tab="rejected">
+                    <div class="asset-mgmt-sub-tab-text">Rejected</div>
+                </button>
+            </div>
+            </div>
+     
+
+        <!-- Assigned Tab Content -->
+        <div id="assigned-content" class="asset-mgmt-tab-content active">
+            
+            <div class="asset-mgmt-table-container">
+                <div class="asset-mgmt-table-content">
+                    <!-- Table Header -->
+                    <div class="asset-mgmt-table-header">
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-header-text">Request Id</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-header-text">Team Member</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-header-text">Asset Type</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-header-text">Assigned On</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-action"></div>
+                    </div>
+
+                    <!-- Table Data -->
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#123456</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Ayush Kumar</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">Macbook</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">30/05/2025</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#234567</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Riya Sharma</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">iPhone</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">15/07/2025</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#345678</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Vikram Singh</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">iPad</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">20/07/2025</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#456789</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Sneha Gupta</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">AirPods</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">05/08/2025</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 
-                <!-- Pagination -->
-                <div class="pagination-container">
-                    <div class="pagination-info">
-                        Showing 1-10 of 20
-                    </div>
-                    <div class="pagination-controls">
-                        <div class="rows-control">
-                            <label>Rows per page</label>
-                            <select class="rows-select" id="rowsSelect">
-                                <option value="10">10</option>
-                                <option value="20">20</option>
-                                <option value="50">50</option>
-                            </select>
+            </div>
+        </div>
+
+        <!-- Requested Tab Content -->
+        <div id="requested-content" class="asset-mgmt-tab-content">
+            <div class="asset-mgmt-table-container">
+                <div class="asset-mgmt-table-content">
+                    <div class="asset-mgmt-table-header">
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-header-text">Request Id</div>
                         </div>
-                        <div class="page-info">Page 1 of 10</div>
-                        <div class="pagination-buttons">
-                            <button class="pagination-btn disabled" id="firstPage">
-                                <svg fill="none" viewBox="0 0 16 16">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.333 11.333L4 8l3.333-3.333M12 11.333L8.667 8 12 4.667"/>
-                                </svg>
-                            </button>
-                            <button class="pagination-btn disabled" id="prevPage">
-                                <svg fill="none" viewBox="0 0 16 16">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M10 12L6 8l4-4"/>
-                                </svg>
-                            </button>
-                            <button class="pagination-btn" id="nextPage">
-                                <svg fill="none" viewBox="0 0 16 16">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M6 12l4-4-4-4"/>
-                                </svg>
-                            </button>
-                            <button class="pagination-btn" id="lastPage">
-                                <svg fill="none" viewBox="0 0 16 16">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M4 11.333L7.333 8 4 4.667M8.667 11.333L12 8l-3.333-3.333"/>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-header-text">Team Member</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-header-text">Asset Type</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-header-text">Request Date</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-action"></div>
+                    </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#789012</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Karan Mehta</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">Magic Keyboard</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">15/11/2025</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
                                 </svg>
                             </button>
                         </div>
                     </div>
-                </div>
-                </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#890123</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Anjali Kapoor</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">Magic Mouse</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">20/12/2025</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#901234</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Siddharth Roy</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">HomePod</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">01/02/2026</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#012345</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Neha Bhatia</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">Apple TV</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">10/03/2026</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </body>
-          <script src="./assets/js/script.js"></script>
+        </div>
+
+        <!-- Rejected Tab Content -->
+        <div id="rejected-content" class="asset-mgmt-tab-content">
+            <div class="asset-mgmt-table-container">
+                <div class="asset-mgmt-table-content">
+                    <div class="asset-mgmt-table-header">
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-header-text">Request Id</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-header-text">Team Member</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-header-text">Asset Type</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-header-text">Request Date</div>
+                        </div>
+                        <div class="asset-mgmt-header-cell asset-mgmt-col-action"></div>
+                    </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#567890</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Rahul Verma</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">Apple Watch</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">10/09/2025</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#678901</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Priya Das</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">AirTag</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">12/10/2025</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="asset-mgmt-table-row">
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-request-id">
+                            <div class="asset-mgmt-data-text">#987654</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-team-member">
+                            <div class="asset-mgmt-data-text">Rohit Singh</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-asset-type">
+                            <div class="asset-mgmt-data-text">Mac Mini</div>
+                        </div>
+                        <div class="asset-mgmt-data-cell asset-mgmt-col-date">
+                            <div class="asset-mgmt-data-text">15/04/2026</div>
+                        </div>
+                        <div class="asset-mgmt-action-cell">
+                            <button class="asset-mgmt-action-button">
+                                <svg class="asset-mgmt-ellipsis-icon" fill="none" viewBox="0 0 20 20">
+                                    <g>
+                                        <path d="M10.0004 10.8317C10.4606 10.8317 10.8337 10.4586 10.8337 9.99837C10.8337 9.53814 10.4606 9.16504 10.0004 9.16504C9.54017 9.16504 9.16707 9.53814 9.16707 9.99837C9.16707 10.4586 9.54017 10.8317 10.0004 10.8317Z" fill="currentColor"/>
+                                        <path d="M15.8337 10.8317C16.294 10.8317 16.6671 10.4586 16.6671 9.99837C16.6671 9.53814 16.294 9.16504 15.8337 9.16504C15.3735 9.16504 15.0004 9.53814 15.0004 9.99837C15.0004 10.4586 15.3735 10.8317 15.8337 10.8317Z" fill="currentColor"/>
+                                        <path d="M4.16707 10.8317C4.62731 10.8317 5.00041 10.4586 5.00041 9.99837C5.00041 9.53814 4.62731 9.16504 4.16707 9.16504C3.70684 9.16504 3.33374 9.53814 3.33374 9.99837C3.33374 10.4586 3.70684 10.8317 4.16707 10.8317Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+           </div>
+
+           <!-- Pagination -->
+        <div class="asset-mgmt-pagination-container">
+            <div class="asset-mgmt-pagination-left">Showing 1-10 of 20</div>
+            
+            <div class="asset-mgmt-pagination-right">
+                <div class="asset-mgmt-rows-per-page">
+                    <div class="asset-mgmt-rows-label">Rows per page</div>
+                    <select class="asset-mgmt-rows-select">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                
+                <div class="asset-mgmt-page-info">Page 1 of 10</div>
+                
+                <div class="asset-mgmt-pagination-buttons">
+                    <button class="asset-mgmt-pagination-btn disabled">
+                        <svg class="asset-mgmt-pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="asset-mgmt-pagination-btn disabled">
+                        <svg class="asset-mgmt-pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="asset-mgmt-pagination-btn disabled">
+                        <svg class="asset-mgmt-pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="asset-mgmt-pagination-btn disabled">
+                        <svg class="asset-mgmt-pagination-icon" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+  
+
+            </div>
+
+
+            <!--______________________ modal-container___________________ -->
+            <div id="modalOverlay"  class="modal-overlay"   style="display: none;">
+            <div class="modal-container" id="Modal-container">
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h2 class="modal-title">Create Asset Requests</h2>
+            <button class="close-button" aria-label="Close modal" id="close-icon">
+                <svg class="close-icon" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+                
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+            <form id="assetRequestForm">
+                <!-- Asset Type Field -->
+                <div class="form-group" id="assetTypeGroup">
+                    <label for="assetType" class="form-label">
+                        Asset Type<span class="required">*</span>
+                    </label>
+                    <div class="select-container">
+                        <select id="assetType" name="assetType" class="form-select" required>
+                            <option value="">Select Asset Type</option>
+                            <option value="macbook" selected>Macbook</option>
+                            <option value="iphone">iPhone</option>
+                            <option value="ipad">iPad</option>
+                            <option value="airpods">AirPods</option>
+                            <option value="apple-watch">Apple Watch</option>
+                            <option value="airtag">AirTag</option>
+                            <option value="magic-keyboard">Magic Keyboard</option>
+                            <option value="magic-mouse">Magic Mouse</option>
+                            <option value="homepod">HomePod</option>
+                            <option value="apple-tv">Apple TV</option>
+                            <option value="mac-mini">Mac Mini</option>
+                            <option value="monitor">Monitor</option>
+                            <option value="webcam">Webcam</option>
+                            <option value="headphones">Headphones</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="select-arrow">
+                            <svg fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8 10l4 4 4-4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description Field -->
+                <div class="form-group" id="descriptionGroup">
+                    <label for="description" class="form-label">
+                        Description<span class="required">*</span>
+                    </label>
+                    <textarea 
+                        id="description" 
+                        name="description" 
+                        class="form-textarea" 
+                        placeholder="Explain briefly why you're taking leave..."
+                        required
+                        rows="4"
+                    ></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary">
+                Cancel
+            </button>
+            <button type="submit" form="assetRequestForm" class="btn btn-primary" id="submitBtn">
+                Submit
+            </button>
+        </div>
+                </div>
+
+                </div>
+
+
+
+     
+  
+
+   
+   
+    </div>
+ 
+
+    <script>
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMainTabs();
+            initializeSubTabs();
+            initializePagination();
+            initializeHoverEffects();
+        });
+
+        // Main tab switching functionality
+        function initializeMainTabs() {
+            const mainTabs = document.querySelectorAll('.asset-mgmt-main-tab');
+            
+            mainTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabData = this.getAttribute('data-main-tab');
+                    
+                    // Remove active class from all main tabs
+                    mainTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    console.log(`Switched to main tab: ${tabData}`);
+                });
+            });
+        }
+
+        // Sub tab switching functionality
+        function initializeSubTabs() {
+            const subTabs = document.querySelectorAll('.asset-mgmt-sub-tab');
+            
+            subTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabData = this.getAttribute('data-sub-tab');
+                    
+                    // Remove active class from all sub tabs
+                    subTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked sub tab
+                    this.classList.add('active');
+                    
+                    // Hide all tab contents
+                    const tabContents = document.querySelectorAll('.asset-mgmt-tab-content');
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Show selected tab content
+                    const selectedContent = document.getElementById(tabData + '-content');
+                    if (selectedContent) {
+                        selectedContent.classList.add('active');
+                    }
+                    
+                    console.log(`Switched to sub tab: ${tabData}`);
+                });
+            });
+        }
+
+        // Pagination functionality
+        function initializePagination() {
+            const rowsSelect = document.querySelector('.asset-mgmt-rows-select');
+            const paginationBtns = document.querySelectorAll('.asset-mgmt-pagination-btn:not(.disabled)');
+            
+            if (rowsSelect) {
+                rowsSelect.addEventListener('change', function() {
+                    console.log(`Rows per page changed to: ${this.value}`);
+                });
+            }
+
+            paginationBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    console.log('Pagination button clicked');
+                });
+            });
+        }
+
+
+        // Hover effects
+        function initializeHoverEffects() {
+            // Tab hover effects
+            const allTabs = document.querySelectorAll('.asset-mgmt-main-tab, .asset-mgmt-sub-tab');
+            allTabs.forEach(tab => {
+                tab.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.opacity = '0.7';
+                    }
+                });
+
+                tab.addEventListener('mouseleave', function() {
+                    this.style.opacity = '1';
+                });
+            });
+
+            // Action button hover effects
+            const actionButtons = document.querySelectorAll('.asset-mgmt-action-button');
+            actionButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)';
+                    this.style.transition = 'transform 0.2s';
+                });
+
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Filter button hover effects
+            const filterButtons = document.querySelectorAll('.asset-mgmt-filter-button');
+            filterButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#f8fafc';
+                    this.style.transition = 'background-color 0.2s';
+                });
+
+                button.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = 'var(--asset-mgmt-white)';
+                });
+            });
+        }
+
+    </script>
+
+    
+<script>
+function showTab(tabId) {
+  // Hide all tab contents
+  var contents = document.querySelectorAll('.tab-content');
+  contents.forEach(function(content) {
+    content.style.display = 'none';
+  });
+
+  // Show the selected tab
+  var activeTab = document.getElementById(tabId);
+  if (activeTab) {
+    activeTab.style.display = 'block';
+  }
+}
+// modal container
+
+const overlay = document.getElementById('modalOverlay');
+  const closeBtn = document.getElementById('close-icon');
+
+  // Open Modal (e.g. on button click)
+  function openModal() {
+    overlay.style.display = 'flex';
+  }
+
+  // Close Modal
+  function closeModal() {
+    overlay.style.display = 'none';
+  }
+
+  // Attach event to close icon
+  closeBtn.addEventListener('click', closeModal);
+
+  // Optional: Close modal if clicking outside the modal box
+  window.addEventListener('click', function (e) {
+    if (e.target === overlay) {
+      closeModal();
+    }
+  });
+
+
+</script>
+
+<script src="./assets/js/script.js"></script>
+</body>
 </html>

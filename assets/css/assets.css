@@ -91,6 +91,16 @@
             margin-bottom: 1rem;
             gap: 1rem;
         }
+        .asset-create-btn{
+            padding: 15px;
+            background-color: #415c96;
+            border-radius: 7px;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border: 7px;
+        }
 
         .search-container {
             width: 290px;
@@ -439,6 +449,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 15px;
             width: 100%;
         }
 
@@ -550,6 +561,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 20px;
             width: 100%;
         }
 

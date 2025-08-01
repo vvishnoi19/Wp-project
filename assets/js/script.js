@@ -43,4 +43,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+  const overlay = document.getElementById('modalOverlay');
+  const closeBtn = document.getElementById('close-icon');
+
+  // Open Modal (e.g. on button click)
+  function openModal() {
+    overlay.style.display = 'flex';
+  }
+
+  // Close Modal
+  function closeModal() {
+    overlay.style.display = 'none';
+  }
+
+  // Attach event to close icon
+  closeBtn.addEventListener('click', closeModal);
+
+  // Optional: Close modal if clicking outside the modal box
+  window.addEventListener('click', function (e) {
+    if (e.target === overlay) {
+      closeModal();
+    }
+  });
+
+
 
