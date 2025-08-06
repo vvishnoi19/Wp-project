@@ -1,5 +1,7 @@
       /*----------------add  modal --------------*/
-
+body{
+    background-color: white;
+}
 
         .modal-container {
             background: var(--white);

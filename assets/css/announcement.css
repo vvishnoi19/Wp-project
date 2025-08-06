@@ -26,8 +26,7 @@
         body {
             font-family: 'Inter', sans-serif;
             font-size: var(--font-size);
-            background-color: var(--background);
-            color: var(--slate-800);
+          background-color: white;
             line-height: 1.5;
             padding: 0;
             
@@ -259,7 +258,7 @@
         .table-container {
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            overflow: hidden;
+           
             width: 100%;
         }
 

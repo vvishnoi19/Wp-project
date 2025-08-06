@@ -1,25 +1,26 @@
-fetch('./sidebar.html')
-.then(res=>res.text())
-.then(data=>{document.getElementById('sidebar-container').innerHTML=data;
+// fetch('sidebar.html')
+// .then(res=>res.text())
+// .then(data=>{document.getElementById('sidebar-container').innerHTML=data;
 
-})
-.catch(err=>{
+// })
+// .catch(err=>{
 
-    document.getElementById('sidebar-container').innerHTML=`<p>Error loading content</p>`
-})
+//     document.getElementById('sidebar-container').innerHTML=`<p>Error loading content</p>`
+// })
 
 
 
-fetch('./header.html')
+fetch('header.html')
 .then(res=>res.text())
 .then(data=>{document.getElementById('header').innerHTML=data;
-
 })
 .catch(err=>{
-
     document.getElementById('header').innerHTML=`<p>Error loading content</p>`
 })
-     fetch('./pagination.html')
+
+
+
+fetch('pagination.html')
 .then(res=>res.text())
 .then(data=>{document.getElementById('pagination').innerHTML=data;
 
@@ -28,9 +29,6 @@ fetch('./header.html')
 
     document.getElementById('pagination').innerHTML=`<p>Error loading content</p>`
 })
-
-
-
 
 
   const overlay = document.getElementById('modalOverlay');
@@ -58,15 +56,26 @@ fetch('./header.html')
 
 
 
-//    document.addEventListener("DOMContentLoaded", function () {
-//     const navItems = document.querySelectorAll(".Nav-item");
-// console.log("hii this is my nav")
-//     navItems.forEach(item => {
-//         item.addEventListener("click", () => {
-           
-//             navItems.forEach(i => i.classList.remove("active"));
-//             item.classList.add("active");
-//         });
-//     });
-// });
+
+  // document.addEventListener("DOMContentLoaded", function () {
+  //     const navItems = document.querySelectorAll(".nav-item");
+
+  //     navItems.forEach(item => {
+  //         item.addEventListener("click", function () {
+  //             navItems.forEach(i => i.classList.remove("active"));
+  //             this.classList.add("active");
+  //         });
+  //     });
+  // });
+
+
+
+
+
+   
+
+
+
+
+
 

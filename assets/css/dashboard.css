@@ -34,13 +34,7 @@
             --red-600: #DC2626;
         }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--slate-50);
-            color: var(--slate-800);
-            font-size: 14px;
-            line-height: 1.5;
-        }
+     
 
         .dashboard-container {
             

@@ -4,726 +4,1320 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leave Management Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/leave.css">
-  
-
+   <link rel="stylesheet" href="./assets/css/leave.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <link rel="stylesheet" href="./assets/css/dropdown.css">
+    <link rel="stylesheet" href="./assets/css/profile/modal.css">
+   <link rel="stylesheet" href="./assets/css/Modals/leave-req.css">
+   <link rel="stylesheet" href="./assets/css/Modals/reqemp.css">
+   <link rel="stylesheet" href="./assets/css/Modals/edit-profile.css">
+   
 </head>
 <body>
     <div class="main-container">
-        <!-- Header Section -->
-         <div id="sidebar-container"></div>
-         <div class="container">
-        <div class="header-section">
-            <!-- Overview Header -->
-            <div class="overview-header">
-                <h1 class="overview-title">Leave Overview</h1>
-                
-                <!-- Top Tabs -->
-                <div class="tabs-container" id="overviewTabs">
-                    <button class="tab-button active" data-tab="my-leave">My Leave</button>
-                    <button class="tab-button" data-tab="team-leave">My Team's leave</button>
-                    <button class="tab-button" data-tab="holidays">Holidays</button>
+        <div id="sidebar-container">  <div class="sidebar">
+           
+            <div class="logo-section">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="./Images/main-logo.png" alt="">
+                    </div>
                 </div>
             </div>
 
-            <!-- Leave Overview Cards -->
-            <div class="overview-cards" id="overviewContent">
-                <!-- My Leave Content -->
-                <div class="tab-pane active" id="my-leave-content">
-                    <div class="leave-card">
-                        <h2 class="card-title">Casual Leave (CL)</h2>
-                        <div class="progress-section">
-                            <!-- Allocated Leave -->
-                            <div class="progress-item">
-                                <div class="progress-bar allocated"></div>
-                                <div class="progress-label">
-                                    <span class="progress-text">Allocated Leave</span>
-                                    <span class="progress-value">12</span>
-                                </div>
-                            </div>
-
-                            <!-- Available and Taken Row -->
-                            <div class="progress-row">
-                                <div class="progress-item">
-                                    <div class="progress-bar available"></div>
-                                    <div class="progress-label">
-                                        <span class="progress-text">Available Leave</span>
-                                        <span class="progress-value">8</span>
-                                    </div>
-                                </div>
-                                <div class="progress-item">
-                                    <div class="progress-bar taken"></div>
-                                    <div class="progress-label">
-                                        <span class="progress-text">Leave Taken</span>
-                                        <span class="progress-value">4</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="card-description">Leave for urgent or unforeseen personal matters.</p>
-                    </div>
-
-                    <div class="leave-card">
-                        <h2 class="card-title">Sick Leave (SL)</h2>
-                        <div class="progress-section">
-                            <!-- Allocated Leave -->
-                            <div class="progress-item">
-                                <div class="progress-bar allocated"></div>
-                                <div class="progress-label">
-                                    <span class="progress-text">Allocated Leave</span>
-                                    <span class="progress-value">12</span>
-                                </div>
-                            </div>
-
-                            <!-- Available and Taken Row -->
-                            <div class="progress-row">
-                                <div class="progress-item">
-                                    <div class="progress-bar available"></div>
-                                    <div class="progress-label">
-                                        <span class="progress-text">Available Leave</span>
-                                        <span class="progress-value">8</span>
-                                    </div>
-                                </div>
-                                <div class="progress-item">
-                                    <div class="progress-bar taken"></div>
-                                    <div class="progress-label">
-                                        <span class="progress-text">Leave Taken</span>
-                                        <span class="progress-value">4</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="card-description">Leave for urgent or unforeseen personal matters.</p>
-                    </div>
-                </div>
-
-                <!-- Team Leave Content -->
-                <div class="tab-pane" id="team-leave-content">
-                    <div class="leave-card">
-                        <h2 class="card-title">Team Leave Overview</h2>
-                        <div class="progress-section">
-                            <div class="progress-item">
-                                <div class="progress-bar allocated"></div>
-                                <div class="progress-label">
-                                    <span class="progress-text">Total Team Members</span>
-                                    <span class="progress-value">15</span>
-                                </div>
-                            </div>
-                            <div class="progress-row">
-                                <div class="progress-item">
-                                    <div class="progress-bar available"></div>
-                                    <div class="progress-label">
-                                        <span class="progress-text">Available</span>
-                                        <span class="progress-value">12</span>
-                                    </div>
-                                </div>
-                                <div class="progress-item">
-                                    <div class="progress-bar taken"></div>
-                                    <div class="progress-label">
-                                        <span class="progress-text">On Leave</span>
-                                        <span class="progress-value">3</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="card-description">Overview of your team's leave status and availability.</p>
-                    </div>
-                </div>
-
-                <!-- Holidays Content -->
-                <div class="tab-pane" id="holidays-content">
-                    <div class="leave-card">
-                        <h2 class="card-title">Upcoming Holidays</h2>
-                        <div class="progress-section">
-                            <div class="progress-item">
-                                <div class="progress-bar allocated"></div>
-                                <div class="progress-label">
-                                    <span class="progress-text">This Month</span>
-                                    <span class="progress-value">3</span>
-                                </div>
-                            </div>
-                            <div class="progress-row">
-                                <div class="progress-item">
-                                    <div class="progress-bar available"></div>
-                                    <div class="progress-label">
-                                        <span class="progress-text">Next Month</span>
-                                        <span class="progress-value">2</span>
-                                    </div>
-                                </div>
-                                <div class="progress-item">
-                                    <div class="progress-bar taken"></div>
-                                    <div class="progress-label">
-                                        <span class="progress-text">This Quarter</span>
-                                        <span class="progress-value">8</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="card-description">Company holidays and important dates to remember.</p>
-                    </div>
-                </div>
+            <nav class="navigation">
+                  <ul class="nav-list">
+                    <li>
+                        <a href="/dashboard.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="3" width="7" height="9"/>
+                                <rect x="14" y="3" width="7" height="5"/>
+                                <rect x="14" y="12" width="7" height="9"/>
+                                <rect x="3" y="16" width="7" height="5"/>
+                            </svg>
+                            <span class="nav-name">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            <span class="nav-name">Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/employees.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <span class="nav-name">All Employees</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/daily-status.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                            <span class="nav-name">Daily Status Report</span>
+                        </a>
+                    </li>
+                 
+                    <li>
+                        <a href="/report.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 0 0 4.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 0 1-15.357-2m15.357 2H15"/>
+                                <rect x="8" y="8" width="18" height="18" rx="2"/>
+                            </svg>
+                            <span class="nav-name">All Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/project.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                                <circle cx="12" cy="13" r="2"/>
+                            </svg>
+                            <span class="nav-name">Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/attendence.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                                <path d="M8 14h.01"/>
+                                <path d="M12 14h.01"/>
+                                <path d="M16 14h.01"/>
+                                <path d="M8 18h.01"/>
+                                <path d="M12 18h.01"/>
+                                <path d="M16 18h.01"/>
+                            </svg>
+                            <span class="nav-name">Attendance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/leave.html" class="nav-item active">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M8 2v4"/>
+                                <path d="M16 2v4"/>
+                                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <path d="M3 10h18"/>
+                                <path d="M8 14h.01"/>
+                                <path d="M12 14h.01"/>
+                                <path d="M16 14h.01"/>
+                                <path d="M8 18h.01"/>
+                                <path d="M12 18h.01"/>
+                                <path d="M16 18h.01"/>
+                            </svg>
+                            <span class="nav-name">Leaves</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/announcement.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M7 7h10v3l2 2-2 2v3H7v-3l-2-2 2-2V7z"/>
+                                <path d="M11 7V4a1 1 0 0 1 1-1h0a1 1 0 0 1 1 1v3"/>
+                                <path d="M7 7L5.5 5.5"/>
+                                <path d="M17 7l1.5-1.5"/>
+                                 <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <path d="M7 17l-1.5 1.5"/>
+                                <path d="M17 17l1.5 1.5"/>
+                            </svg>
+                            <span class="nav-name">Announcement</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/request.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                                <path d="M16 10l4 4"/>
+                                <path d="M16 14l4-4"/>
+                            </svg>
+                            <span class="nav-name">All Requests</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/payroll.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                 <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <polyline points="11,18 12,19 13,18"/>
+                                <polyline points="11,6 12,5 13,6"/>
+                            </svg>
+                            <span class="nav-name">Payroll</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/assets.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                            <span class="nav-name">Assets</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+</div>
+</div>
+        <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="header-title">Leave Overview</h1>
+            <div class="main-tabs">
+                <button class="main-tab active" data-tab="my-leave">My Leave</button>
+                <button class="main-tab" data-tab="team-leave">My Team's leave</button>
+                <button class="main-tab" data-tab="holidays">Holidays</button>
             </div>
         </div>
-        <div class="main-content">
-        <!-- Leaves Section -->
-        <div class="leaves-section">
-            <!-- Leaves Header -->
-            <div class="leaves-header">
-                <h2 class="leaves-title">Leaves</h2>
-                
-                <div class="leaves-controls">
-                    <!-- Status Tabs -->
-                    <div class="tabs-container" id="statusTabs">
-                        <button class="tab-button active" data-tab="approved">Approved</button>
-                        <button class="tab-button" data-tab="requested">
-                            Requested
-                            <span class="badge">4</span>
-                        </button>
-                        <button class="tab-button" data-tab="rejected">Rejected</button>
+
+        <!-- My Leave Tab Content -->
+        <div id="my-leave" class="tab-content active">
+              <!-- Leaves Tab Content -->
+        <div id="leaves-content" class="tab-content-custom">
+        
+         <div class="leave-overview-dashboard">
+      
+        <!-- Leave Cards Section -->
+        <div class="leave-overview-cards">
+            <div class="leave-overview-card">
+                <h3 class="leave-overview-card-title">Casual Leave (CL)</h3>
+                <div class="leave-progress-wrapper">
+                    <div class="progress-item-wrapper">
+                        <div class="progress-bar-section progress-allocated-bar"></div>
+                        <div class="progress-label-section">
+                            <span class="progress-label-text">Allocated Leave</span>
+                            <span class="progress-label-value">12</span>
+                        </div>
                     </div>
-                    
-                    <!-- Create Button -->
-                    <button class="create-button" onclick="createLeaveRequest()">
-                        <svg class="create-icon" fill="none" viewBox="0 0 16 16">
-                            <path d="M8 3.33333V12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3.33333 8H12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span class="create-text">Create Leave Request</span>
-                    </button>
+                    <div class="progress-row-section">
+                        <div class="progress-item-wrapper" style="flex: 1;">
+                            <div class="progress-bar-section progress-available-bar"></div>
+                            <div class="progress-label-section">
+                                <span class="progress-label-text">Available Leave</span>
+                                <span class="progress-label-value">8</span>
+                            </div>
+                        </div>
+                        <div class="progress-item-wrapper" style="width: 120px;">
+                            <div class="progress-bar-section progress-taken-bar"></div>
+                            <div class="progress-label-section">
+                                <span class="progress-label-text">Leave Taken</span>
+                                <span class="progress-label-value">4</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <p class="leave-overview-description">Leave for urgent or unforeseen personal matters.</p>
             </div>
 
-            <!-- Table Container -->
-            <div class="table-container">
-                <table class="table">
-                    <thead class="table-header">
+            <div class="leave-overview-card">
+                <h3 class="leave-overview-card-title">Sick Leave (SL)</h3>
+                <div class="leave-progress-wrapper">
+                    <div class="progress-item-wrapper">
+                        <div class="progress-bar-section progress-allocated-bar"></div>
+                        <div class="progress-label-section">
+                            <span class="progress-label-text">Allocated Leave</span>
+                            <span class="progress-label-value">12</span>
+                        </div>
+                    </div>
+                    <div class="progress-row-section">
+                        <div class="progress-item-wrapper" style="flex: 1;">
+                            <div class="progress-bar-section progress-available-bar"></div>
+                            <div class="progress-label-section">
+                                <span class="progress-label-text">Available Leave</span>
+                                <span class="progress-label-value">8</span>
+                            </div>
+                        </div>
+                        <div class="progress-item-wrapper" style="width: 120px;">
+                            <div class="progress-bar-section progress-taken-bar"></div>
+                            <div class="progress-label-section">
+                                <span class="progress-label-text">Leave Taken</span>
+                                <span class="progress-label-value">4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="leave-overview-description">Leave for urgent or unforeseen personal matters.</p>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="leave-table-section">
+            <div class="leave-table-header-section">
+                <h2 class="leave-table-section-title">All Leaves</h2>
+                <div class="leave-overview-tabs">
+                   
+                    <button class="leave-overview-tab active" data-tab="approved">
+                        <span>Approved</span>
+                    </button>
+                     <button class="leave-overview-tab " data-tab="requested">
+                        <span>Requested</span>
+                        <span class="leave-tab-badge">4</span>
+                    </button>
+                    <button class="leave-overview-tab" data-tab="rejected">
+                        <span>Rejected</span>
+                    </button>
+                      <button class="create-leave-btn" data-open-modal="create-leave-req">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 3.33333V12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.33333 8H12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="create-leave-btn-text" >Create Leave Request</span>
+            </button>
+                </div>
+               
+            </div>
+
+            <div class="leave-table-container" id="leaveTableContainer">
+                <table class="leave-overview-table">
+                    <thead class="leave-table-head">
                         <tr>
-                            <th >Leave Type</th>
-                            <th >Start Date</th>
-                            <th>End Date</th>
-                            <th>Days</th>
-                            <th>Description</th>
-                            <th >Applied On</th>
-                            <th >Approved By</th>
-                            <th ></th>
+                            <th style="width: 200px;">Leave Type</th>
+                            <th style="width: 160px;">Start Date</th>
+                            <th style="width: 160px;">End Date</th>
+                            <th style="width: 100px;">Days</th>
+                            <th style="width: 300px;">Description</th>
+                            <th class="col-remark" style="width: 250px;">Remark</th>
+                            <th style="width: 160px;">Applied On</th>
+                            <th class="col-approved-by" style="width: 150px;">Approved By</th>
+                            <th style="width: 64px;"></th>
                         </tr>
                     </thead>
-                    <tbody class="table-body" id="tableBody">
-                        <!-- Approved Tab Content -->
-                        <tr class="tab-content active" data-status="approved">
-                            <td>Sick Leave (SL)</td>
-                            <td>2025-05-22</td>
-                            <td>2025-05-22</td>
-                            <td>2</td>
-                            <td>Family vacation</td>
-                            <td>2025-05-22</td>
-                            <td>Sandeep Kumar</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="tab-content active" data-status="approved">
+                    <tbody class="leave-table-body">
+                      
+                        <tr class="tab-data" data-tab="requested">
                             <td>Vacation Leave (VL)</td>
                             <td>2025-05-22</td>
                             <td>2025-05-22</td>
                             <td>5</td>
-                            <td>I'm going on a family trip to the beach and will be unavailable during this time.</td>
+                            <td class="leave-table-description" title="I'm going on a family trip to the beach and will be unavailable during this time.">I'm going on a family trip to the beach and will be unavailable during this time.</td>
+                            <td class="col-remark leave-table-remark" title=""></td>
                             <td>2025-05-22</td>
-                            <td>Sandeep Kumar</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="tab-content active" data-status="approved">
-                            <td>Personal Leave (PL)</td>
-                            <td>2025-05-22</td>
-                            <td>2025-05-22</td>
-                            <td>1</td>
-                            <td>I have a personal matter to attend to and will need a day off.</td>
-                            <td>2025-05-22</td>
-                            <td>Sandeep Kumar</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="tab-content active" data-status="approved">
-                            <td>Medical Leave (ML)</td>
-                            <td>2025-05-22</td>
-                            <td>2025-05-22</td>
-                            <td>4</td>
-                            <td>I need to undergo a medical procedure and will require several days for recovery.</td>
-                            <td>2025-05-22</td>
-                            <td>Sandeep Kumar</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="tab-content active" data-status="approved">
-                            <td>Paternity Leave (PL)</td>
-                            <td>2025-05-22</td>
-                            <td>2025-05-22</td>
-                            <td>7</td>
-                            <td>I will need time off to support my partner and care for our newborn.</td>
-                            <td>2025-05-22</td>
-                            <td>Sandeep Kumar</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
+                            <td class="col-approved-by"></td>
+                            <td>
+                              <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" id="action"   aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+
+        <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+         
+                  <div class="dropdown-item" role="menuitem" tabindex="0" >
+                    <div class="dropdown-item-content" data-open-modal="leave-details">
+                        <div class="dropdown-item-text poppins">View Details</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>  
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0" >
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">approve</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">rejectt</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
                             </td>
                         </tr>
 
-                        <!-- Requested Tab Content -->
-                        <tr class="tab-content" data-status="requested">
-                            <td>Emergency Leave</td>
-                            <td>2025-06-01</td>
-                            <td>2025-06-02</td>
-                            <td>2</td>
-                            <td>Family emergency requiring immediate attention.</td>
-                            <td>2025-05-28</td>
-                            <td>Pending</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="tab-content" data-status="requested">
-                            <td>Annual Leave</td>
-                            <td>2025-06-15</td>
-                            <td>2025-06-20</td>
-                            <td>6</td>
-                            <td>Planning a vacation with family during summer break.</td>
-                            <td>2025-05-25</td>
-                            <td>Pending</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="tab-content" data-status="requested">
-                            <td>Sick Leave (SL)</td>
-                            <td>2025-06-03</td>
-                            <td>2025-06-03</td>
-                            <td>1</td>
-                            <td>Feeling unwell and need to rest for recovery.</td>
-                            <td>2025-06-02</td>
-                            <td>Pending</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="tab-content" data-status="requested">
-                            <td>Personal Leave</td>
-                            <td>2025-06-10</td>
-                            <td>2025-06-11</td>
-                            <td>2</td>
-                            <td>Need to attend to personal matters requiring my presence.</td>
-                            <td>2025-06-05</td>
-                            <td>Pending</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
+                        <!-- Approved Tab Data -->
+                 
+                        <tr class="tab-data" data-tab="approved" style="display: none;">
+                            <td>Vacation Leave (VL)</td>
+                            <td>2025-05-22</td>
+                            <td>2025-05-22</td>
+                            <td>5</td>
+                            <td class="leave-table-description" title="I'm going on a family trip to the beach and will be unavailable during this time.">I'm going on a family trip to the beach and will be unavailable during this time.</td>
+                            <td class="col-remark leave-table-remark" title=""></td>
+                            <td>2025-05-22</td>
+                            <td class="col-approved-by">Sandeep Kumar</td>
+                            <td>
+                                    <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" id="action"   aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+
+        <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+         
+                  <div class="dropdown-item" role="menuitem" tabindex="0">
+                    <div class="dropdown-item-content" data-open-modal="approved">
+                        <div class="dropdown-item-text poppins">View Details</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
                             </td>
                         </tr>
 
-                        <!-- Rejected Tab Content -->
-                        <tr class="tab-content" data-status="rejected">
-                            <td>Vacation Leave</td>
-                            <td>2025-05-10</td>
-                            <td>2025-05-15</td>
-                            <td>6</td>
-                            <td>Request denied due to project deadlines and team commitments.</td>
-                            <td>2025-05-05</td>
-                            <td>Sandeep Kumar</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="tab-content" data-status="rejected">
-                            <td>Personal Leave</td>
-                            <td>2025-04-28</td>
-                            <td>2025-04-30</td>
-                            <td>3</td>
-                            <td>Request rejected due to insufficient advance notice provided.</td>
-                            <td>2025-04-27</td>
-                            <td>Sandeep Kumar</td>
-                            <td class="table-cell-actions">
-                                <button class="action-button" onclick="showActionMenu(this)">
-                                    <svg class="action-icon" fill="none" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="4.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                        <circle cx="10" cy="15.5" r="1.25" fill="#224FB1" stroke="#224FB1" stroke-width="1.5625"/>
-                                    </svg>
-                                </button>
-                            </td>
+                        <!-- Rejected Tab Data -->
+                  
+                        <tr class="tab-data" data-tab="rejected" style="display: none;">
+                            <td>Vacation Leave (VL)</td>
+                            <td>2025-05-22</td>
+                            <td>2025-05-22</td>
+                            <td>5</td>
+                            <td class="leave-table-description" title="I'm going on a family trip to the beach and will be unavailable during this time.">I'm going on a family trip to the beach and will be unavailable during this time.</td>
+                            <td class="col-remark leave-table-remark" title="Unfortunately, your request for a family vacation has been denied due to scheduling conflicts. Please consider resubmitting your request for a later date.">Unfortunately, your request for a family vacation has been denied due to scheduling conflicts. Please consider resubmitting your request for a later date.</td>
+                            <td>2025-05-22</td>
+                            <td class="col-approved-by">Sandeep Kumar</td>
+                            <td>
+                                      <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" id="action"   aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+
+        <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+         
+                  <div class="dropdown-item" role="menuitem" tabindex="0">
+                    <div class="dropdown-item-content" data-open-modal="rejected">
+                        <div class="dropdown-item-text poppins">View Details</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>                 </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
 
-            <!-- Pagination -->
-            <div class="pagination-container">
-                <div class="pagination-info">Showing 1-10 of 20</div>
-                
-                <div class="pagination-controls">
-                    <div class="rows-per-page">
-                        <label>Rows per page</label>
-                        <select class="rows-select" onchange="changeRowsPerPage(this.value)">
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                        </select>
+        <!-- Pagination -->
+        <div class="leave-pagination-section">
+            <span class="leave-pagination-info">Showing 1-10 of 20</span>
+            <div class="leave-pagination-controls">
+                <div class="leave-rows-control">
+                    <label>Rows per page</label>
+                    <select class="leave-rows-select">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                    </select>
+                </div>
+                <span class="leave-page-info">Page 1 of 10</span>
+                <div class="leave-pagination-buttons">
+                    <button class="leave-pagination-btn" disabled>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="leave-pagination-btn" disabled>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="leave-pagination-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="leave-pagination-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+  
+        </div>
+
+          
+        </div>
+
+        <!-- Team Leave Tab Content -->
+        <div id="team-leave" class="tab-content">
+            <div class="table-section">
+                <div class="table-header">
+                    <div class="sub-tabs">
+                        <button class="sub-tab active" data-teamtab="summary">Team Leave Summary</button>
+                        <button class="sub-tab" data-teamtab="requests">
+                            Team Leave Requests
+                            <span class="badge">10</span>
+                        </button>
                     </div>
-                    
-                    <div class="page-info">Page 1 of 10</div>
-                    
-                    <div class="pagination-buttons">
-                        <button class="pagination-button" disabled onclick="firstPage()">
-                            <svg class="pagination-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <button class="pagination-button" disabled onclick="prevPage()">
-                            <svg class="pagination-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <button class="pagination-button" onclick="nextPage()">
-                            <svg class="pagination-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <button class="pagination-button" onclick="lastPage()">
-                            <svg class="pagination-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
+                </div>
+
+                <!-- Team Summary -->
+                <div id="summary" class="sub-content active">
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr class="table-header-row">
+                                    <th class="table-header-cell">Team Member</th>
+                                    <th class="table-header-cell">Designation</th>
+                                    <th class="table-header-cell">Total Leave Entitlement</th>
+                                    <th class="table-header-cell">Leave Taken</th>
+                                    <th class="table-header-cell">Available Leave</th>
+                                    <th class="table-header-cell" style="width: 400px;">
+                                        <div style="display: flex; align-items: center; gap: 24px;">
+                                            <span style="display: flex; align-items: center; gap: 6px;">
+                                                Available Leave
+                                                <div style="width: 12px; height: 12px; background: #22c55e; border-radius: 50%;"></div>
+                                            </span>
+                                            <span style="display: flex; align-items: center; gap: 6px;">
+                                                Leave Taken
+                                                <div style="width: 12px; height: 12px; background: #334155; border-radius: 50%;"></div>
+                                            </span>
+                                        </div>
+                                    </th>
+                                    <th class="table-header-cell">Last Leave Taken On</th>
+                                    <th class="table-header-cell"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td class="table-cell">Ayush Kumar</td>
+                                    <td class="table-cell">UI/UX Designer</td>
+                                    <td class="table-cell">24</td>
+                                    <td class="table-cell">8.0</td>
+                                    <td class="table-cell">16</td>
+                                    <td class="table-cell">
+                                        <div class="team-progress-bar">
+                                            <div class="team-progress-available" style="width: 120px;"></div>
+                                            <div class="team-progress-taken" style="width: 80px;"></div>
+                                        </div>
+                                    </td>
+                                    <td class="table-cell">May 15, 2025</td>
+                                    <td class="table-cell">
+                                        <button class="action-button">
+                                            <svg class="ellipsis-icon" viewBox="0 0 20 20" fill="none">
+                                                <circle cx="10" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="4.16667" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="15.8333" cy="10" r="1.25" fill="#224FB1"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">Maya Singh</td>
+                                    <td class="table-cell">Frontend Developer</td>
+                                    <td class="table-cell">24</td>
+                                    <td class="table-cell">7.5</td>
+                                    <td class="table-cell">16.5</td>
+                                    <td class="table-cell">
+                                        <div class="team-progress-bar">
+                                            <div class="team-progress-available" style="width: 130px;"></div>
+                                            <div class="team-progress-taken" style="width: 70px;"></div>
+                                        </div>
+                                    </td>
+                                    <td class="table-cell">June 20, 2024</td>
+                                    <td class="table-cell">
+                                        <button class="action-button">
+                                            <svg class="ellipsis-icon" viewBox="0 0 20 20" fill="none">
+                                                <circle cx="10" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="4.16667" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="15.8333" cy="10" r="1.25" fill="#224FB1"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">Karan Mehta</td>
+                                    <td class="table-cell">Digital Marketer</td>
+                                    <td class="table-cell">24</td>
+                                    <td class="table-cell">8.5</td>
+                                    <td class="table-cell">15.5</td>
+                                    <td class="table-cell">
+                                        <div class="team-progress-bar">
+                                            <div class="team-progress-available" style="width: 125px;"></div>
+                                            <div class="team-progress-taken" style="width: 75px;"></div>
+                                        </div>
+                                    </td>
+                                    <td class="table-cell">February 18, 2023</td>
+                                    <td class="table-cell">
+                                        <button class="action-button">
+                                            <svg class="ellipsis-icon" viewBox="0 0 20 20" fill="none">
+                                                <circle cx="10" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="4.16667" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="15.8333" cy="10" r="1.25" fill="#224FB1"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Team Requests -->
+                <div id="requests" class="sub-content">
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr class="table-header-row">
+                                    <th class="table-header-cell">Employee Name</th>
+                                    <th class="table-header-cell">Leave Type</th>
+                                    <th class="table-header-cell">Start Date</th>
+                                    <th class="table-header-cell">End Date</th>
+                                    <th class="table-header-cell">Days</th>
+                                    <th class="table-header-cell">Description</th>
+                                    <th class="table-header-cell"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td class="table-cell">Ayush Kumar</td>
+                                    <td class="table-cell">Sick Leave (SL)</td>
+                                    <td class="table-cell">2025-05-22 (first-half)</td>
+                                    <td class="table-cell">2025-05-27 (first-half)</td>
+                                    <td class="table-cell">2</td>
+                                    <td class="table-cell description">I am not feeling well. I'm experiencing stomach pain and won't be able to come to the office today.</td>
+                                    <td class="table-cell">
+                                        <button class="action-button">
+                                            <svg class="ellipsis-icon" viewBox="0 0 20 20" fill="none">
+                                                <circle cx="10" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="4.16667" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="15.8333" cy="10" r="1.25" fill="#224FB1"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">Chirag Arrora</td>
+                                    <td class="table-cell">Vacation Leave (VL)</td>
+                                    <td class="table-cell">2025-06-15 (first-half)</td>
+                                    <td class="table-cell">2025-06-20 (first-half)</td>
+                                    <td class="table-cell">5</td>
+                                    <td class="table-cell description">I'm going on a family trip to the beach and will be unavailable during this time.</td>
+                                    <td class="table-cell">
+                                        <button class="action-button">
+                                            <svg class="ellipsis-icon" viewBox="0 0 20 20" fill="none">
+                                                <circle cx="10" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="4.16667" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="15.8333" cy="10" r="1.25" fill="#224FB1"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">Dipanshu Singh</td>
+                                    <td class="table-cell">Personal Leave (PL)</td>
+                                    <td class="table-cell">2025-07-10 (first-half)</td>
+                                    <td class="table-cell">2025-07-11 (first-half)</td>
+                                    <td class="table-cell">1</td>
+                                    <td class="table-cell description">I have a personal matter to attend to and will need a day off.</td>
+                                    <td class="table-cell">
+                                        <button class="action-button">
+                                            <svg class="ellipsis-icon" viewBox="0 0 20 20" fill="none">
+                                                <circle cx="10" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="4.16667" cy="10" r="1.25" fill="#224FB1"/>
+                                                <circle cx="15.8333" cy="10" r="1.25" fill="#224FB1"/>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <div class="pagination-left">Showing 1-3 of 20</div>
+                    <div class="pagination-right">
+                        <div class="rows-per-page">
+                            <span>Rows per page</span>
+                            <select class="rows-select">
+                                <option>10</option>
+                                <option>20</option>
+                                <option>50</option>
+                            </select>
+                        </div>
+                        <div class="page-info">Page 1 of 7</div>
+                        <div class="pagination-buttons">
+                            <button class="pagination-button" disabled>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 16 16">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-button" disabled>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 16 16">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 12L6 8L10 4"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-button">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 16 16">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L10 8L6 4"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-button">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 16 16">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Holidays Tab Content -->
+        <div id="holidays" class="tab-content">
+         
+          <div class="table-container">
+            <table class="table">
+                <thead class="table-header">
+                    <tr class="table-row">
+                        <th>Holiday Name</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td class="table-cell holiday-name">New Year's Day</td>
+                        <td class="table-cell date">2025-01-01</td>
+                        <td class="table-cell date">2025-01-01</td>
+                        <td class="table-cell description">Celebration of the new year.</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-cell holiday-name">Martin Luther King Jr. Day</td>
+                        <td class="table-cell date">2025-01-15</td>
+                        <td class="table-cell date">2025-01-15</td>
+                        <td class="table-cell description">Honoring the civil rights leader.</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-cell holiday-name">Valentine's Day</td>
+                        <td class="table-cell date">2025-02-14</td>
+                        <td class="table-cell date">2025-02-14</td>
+                        <td class="table-cell description">Celebrating love and affection.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+         <div class="pagination">
+            <div class="pagination-left">Showing 1-3 of 20</div>
+            <div class="pagination-right">
+                <div class="rows-per-page">
+                    <span>Rows per page</span>
+                    <select class="rows-select">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                <div class="page-info">Page 1 of 10</div>
+                <div class="pagination-buttons">
+                    <button class="pagination-button" disabled title="First page">
+                        <svg fill="none" viewBox="0 0 16 16">
+                            <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="pagination-button" disabled title="Previous page">
+                        <svg fill="none" viewBox="0 0 16 16">
+                            <path d="M10 12L6 8L10 4" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="pagination-button" title="Next page">
+                        <svg fill="none" viewBox="0 0 16 16">
+                            <path d="M6 12L10 8L6 4" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="pagination-button" title="Last page">
+                        <svg fill="none" viewBox="0 0 16 16">
+                            <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="#105427" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            
+        </div>
+
+
+
+
         </div>
     </div>
+        </div>
 
-    <script>
-        // Tab switching functionality for overview tabs
-        document.getElementById('overviewTabs').addEventListener('click', function(e) {
-            if (e.target.classList.contains('tab-button')) {
-                const targetTab = e.target.getAttribute('data-tab');
-                
-                // Remove active class from all overview tab buttons
-                document.querySelectorAll('#overviewTabs .tab-button').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Add active class to clicked tab
-                e.target.classList.add('active');
-                
-                // Hide all tab panes
-                document.querySelectorAll('#overviewContent .tab-pane').forEach(pane => {
-                    pane.classList.remove('active');
-                });
-                
-                // Show target tab pane
-                document.getElementById(targetTab + '-content').classList.add('active');
-                
-                // Add fade-in animation
-                document.getElementById(targetTab + '-content').classList.add('fade-in');
-                setTimeout(() => {
-                    document.getElementById(targetTab + '-content').classList.remove('fade-in');
-                }, 300);
-                
-                console.log('Switched to overview tab:', targetTab);
-            }
-        });
+ 
+    <div  class="modal-overlay" data-modal-id="leave-details" style="display: none;" data-close-on-click="true">
+     <div class="modal-container">
+        <!-- Header -->
+        <div class="modal-header">
+            <div class="header-content">
+                <div class="header-title">Leave Details</div>
+                <button class="close-button" data-close-modal>
+                    <svg class="close-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M12.8534 12.1462C12.8998 12.1927 12.9367 12.2478 12.9618 12.3085C12.987 12.3692 12.9999 12.4343 12.9999 12.5C12.9999 12.5657 12.987 12.6307 12.9618 12.6914C12.9367 12.7521 12.8998 12.8073 12.8534 12.8537C12.8069 12.9002 12.7518 12.937 12.6911 12.9622C12.6304 12.9873 12.5653 13.0003 12.4996 13.0003C12.4339 13.0003 12.3689 12.9873 12.3082 12.9622C12.2475 12.937 12.1923 12.9002 12.1459 12.8537L7.99963 8.70687L3.85338 12.8537C3.75956 12.9476 3.63231 13.0003 3.49963 13.0003C3.36694 13.0003 3.2397 12.9476 3.14588 12.8537C3.05206 12.7599 2.99935 12.6327 2.99935 12.5C2.99935 12.3673 3.05206 12.2401 3.14588 12.1462L7.29275 7.99999L3.14588 3.85374C3.05206 3.75992 2.99935 3.63268 2.99935 3.49999C2.99935 3.36731 3.05206 3.24006 3.14588 3.14624C3.2397 3.05242 3.36694 2.99972 3.49963 2.99972C3.63231 2.99972 3.75956 3.05242 3.85338 3.14624L7.99963 7.29312L12.1459 3.14624C12.2397 3.05242 12.3669 2.99972 12.4996 2.99972C12.6323 2.99972 12.7596 3.05242 12.8534 3.14624C12.9472 3.24006 12.9999 3.36731 12.9999 3.49999C12.9999 3.63268 12.9472 3.75992 12.8534 3.85374L8.7065 7.99999L12.8534 12.1462Z" fill="#1B1B1B"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
-        // Tab switching functionality for status tabs
-        document.getElementById('statusTabs').addEventListener('click', function(e) {
-            if (e.target.classList.contains('tab-button') || e.target.closest('.tab-button')) {
-                const button = e.target.closest('.tab-button') || e.target;
-                const targetStatus = button.getAttribute('data-tab');
-                
-                // Remove active class from all status tab buttons
-                document.querySelectorAll('#statusTabs .tab-button').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Add active class to clicked tab
-                button.classList.add('active');
-                
-                // Hide all table rows
-                document.querySelectorAll('.tab-content').forEach(row => {
-                    row.classList.remove('active');
-                });
-                
-                // Show rows for the selected status
-                document.querySelectorAll(`[data-status="${targetStatus}"]`).forEach(row => {
-                    row.classList.add('active');
-                });
-                
-                console.log('Switched to status tab:', targetStatus);
-                
-                // Update pagination info based on visible rows
-                updatePaginationInfo(targetStatus);
-            }
-        });
-
-        // Update pagination info based on active tab
-        function updatePaginationInfo(status) {
-            const visibleRows = document.querySelectorAll(`[data-status="${status}"]`).length;
-            const paginationInfo = document.querySelector('.pagination-info');
-            const pageInfo = document.querySelector('.page-info');
-            
-            let infoText = '';
-            let pageText = '';
-            
-            switch(status) {
-                case 'approved':
-                    infoText = `Showing 1-${Math.min(5, visibleRows)} of ${visibleRows}`;
-                    pageText = `Page 1 of ${Math.ceil(visibleRows / 10)}`;
-                    break;
-                case 'requested':
-                    infoText = `Showing 1-${Math.min(4, visibleRows)} of ${visibleRows}`;
-                    pageText = `Page 1 of ${Math.ceil(visibleRows / 10)}`;
-                    break;
-                case 'rejected':
-                    infoText = `Showing 1-${Math.min(2, visibleRows)} of ${visibleRows}`;
-                    pageText = `Page 1 of ${Math.ceil(visibleRows / 10)}`;
-                    break;
-                default:
-                    infoText = 'Showing 1-10 of 20';
-                    pageText = 'Page 1 of 10';
-            }
-            
-            paginationInfo.textContent = infoText;
-            pageInfo.textContent = pageText;
-        }
-
-        // Create leave request function
-        function createLeaveRequest() {
-            console.log('Create Leave Request clicked');
-            alert('Opening Create Leave Request form...\n\nThis would typically open a modal or navigate to a form page.');
-        }
-
-        // Action menu function
-        function showActionMenu(button) {
-            console.log('Action menu clicked for row');
-            
-            // Create a simple context menu simulation
-            const rect = button.getBoundingClientRect();
-            const menu = document.createElement('div');
-            menu.style.cssText = `
-                position: fixed;
-                top: ${rect.bottom + 5}px;
-                left: ${rect.left - 100}px;
-                background: white;
-                border: 1px solid #e2e8f0;
-                border-radius: 6px;
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-                min-width: 120px;
-                font-family: Inter, sans-serif;
-                font-size: 14px;
-            `;
-            
-            menu.innerHTML = `
-                <div style="padding: 8px 0;">
-                    <button style="width: 100%; padding: 8px 16px; border: none; background: none; text-align: left; cursor: pointer; color: #334155;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='none'" onclick="viewDetails(); removeMenu();">View Details</button>
-                    <button style="width: 100%; padding: 8px 16px; border: none; background: none; text-align: left; cursor: pointer; color: #334155;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='none'" onclick="editRequest(); removeMenu();">Edit</button>
-                    <button style="width: 100%; padding: 8px 16px; border: none; background: none; text-align: left; cursor: pointer; color: #ef4444;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='none'" onclick="deleteRequest(); removeMenu();">Delete</button>
+        <!-- Content -->
+        <div class="modal-content">
+            <div class="employee-info">
+                <!-- Employee Header -->
+                <div class="employee-header">
+                    <div class="employee-details">
+                        <h2 class="employee-name">Ayush Kumar</h2>
+                        <p class="employee-designation">UI/UX Designer</p>
+                    </div>
+                    <div class="status-tag">Requested</div>
                 </div>
-            `;
-            
-            document.body.appendChild(menu);
-            
-            // Close menu when clicking outside
-            setTimeout(() => {
-                document.addEventListener('click', function closeMenu(e) {
-                    if (!menu.contains(e.target)) {
-                        menu.remove();
-                        document.removeEventListener('click', closeMenu);
-                    }
-                });
-            }, 100);
-        }
 
-        // Menu action functions
-        function removeMenu() {
-            const menu = document.querySelector('div[style*="position: fixed"]');
-            if (menu) menu.remove();
-        }
+                <!-- Details Card -->
+                <div class="details-card">
+                    <!-- Leave Type and Start Date -->
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Leave Type</div>
+                            <div class="info-value">Sick Leave (SL)</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Start Date</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                    </div>
 
-        function viewDetails() {
-            console.log('View Details clicked');
-            alert('Opening leave request details...');
-        }
+                    <!-- End Date and Requested Days -->
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">End Date</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Requested Days</div>
+                            <div class="info-value">2 Days</div>
+                        </div>
+                    </div>
 
-        function editRequest() {
-            console.log('Edit Request clicked');
-            alert('Opening edit form...');
-        }
+                    <!-- Available Leave and Applied On -->
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Available Leave</div>
+                            <div class="info-value">4.5 Days</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Applied On</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                    </div>
 
-        function deleteRequest() {
-            console.log('Delete Request clicked');
-            if (confirm('Are you sure you want to delete this leave request?')) {
-                alert('Leave request deleted successfully!');
-            }
-        }
+                    <!-- Description -->
+                    <div class="info-description">
+                        <div class="info-label">Description</div>
+                        <div class="info-value">Medical leave – doctor appointment</div>
+                    </div>
 
-        // Pagination functions
-        function changeRowsPerPage(value) {
-            console.log('Rows per page changed to:', value);
-            // Update pagination info based on new rows per page
-            const currentTab = document.querySelector('#statusTabs .tab-button.active').getAttribute('data-tab');
-            updatePaginationInfo(currentTab);
-        }
+                    <!-- Document Attached -->
+                    <div class="info-document">
+                        <div class="info-label">Document Attached</div>
+                        <div class="file-container">
+                            <div class="file-info">
+                                <svg class="pdf-icon" fill="none" viewBox="0 0 32 32">
+                                    <path d="M8 0C6.9 0 6 0.9 6 2V30C6 31.1 6.9 32 8 32H28C29.1 32 30 31.1 30 30V8L22 0H8Z" fill="#E2E5E7"/>
+                                    <path d="M24 8H30L22 0V6C22 7.1 22.9 8 24 8Z" fill="#B0B7BD"/>
+                                    <path d="M30 14L24 8H30V14Z" fill="#CAD1D8"/>
+                                    <path d="M26 26C26 26.55 25.55 27 25 27H3C2.45 27 2 26.55 2 26V16C2 15.45 2.45 15 3 15H25C25.55 15 26 15.45 26 16V26Z" fill="#F15642"/>
+                                    <path d="M6.36235 18.9463C6.36235 18.6823 6.57035 18.3943 6.90535 18.3943H8.75235C9.79235 18.3943 10.7284 19.0903 10.7284 20.4243C10.7284 21.6883 9.79235 22.3923 8.75235 22.3923H7.41735V23.4483C7.41735 23.8003 7.19335 23.9993 6.90535 23.9993C6.64135 23.9993 6.36235 23.8003 6.36235 23.4483V18.9463ZM7.41735 19.4013V21.3933H8.75235C9.28835 21.3933 9.71235 20.9203 9.71235 20.4243C9.71235 19.8653 9.28835 19.4013 8.75235 19.4013H7.41735Z" fill="white"/>
+                                    <path d="M12.2931 23.9986C12.0291 23.9986 11.7411 23.8546 11.7411 23.5036V18.9616C11.7411 18.6746 12.0291 18.4656 12.2931 18.4656H14.1241C17.7781 18.4656 17.6981 23.9986 14.1961 23.9986H12.2931ZM12.7971 19.4416V23.0236H14.1241C16.2831 23.0236 16.3791 19.4416 14.1241 19.4416H12.7971Z" fill="white"/>
+                                    <path d="M18.9955 19.5066V20.7776H21.0345C21.3225 20.7776 21.6105 21.0656 21.6105 21.3446C21.6105 21.6086 21.3225 21.8246 21.0345 21.8246H18.9955V23.5036C18.9955 23.7836 18.7965 23.9986 18.5165 23.9986C18.1645 23.9986 17.9495 23.7836 17.9495 23.5036V18.9616C17.9495 18.6746 18.1655 18.4656 18.5165 18.4656H21.3235C21.6755 18.4656 21.8835 18.6746 21.8835 18.9616C21.8835 19.2176 21.6755 19.5056 21.3235 19.5056H18.9955V19.5066Z" fill="white"/>
+                                    <path d="M25 27H6V28H25C25.55 28 26 27.55 26 27V26C26 26.55 25.55 27 25 27Z" fill="#CAD1D8"/>
+                                </svg>
+                                <div class="file-details">
+                                    <div class="file-name">Download Certificate.pdf</div>
+                                    <div class="file-size">5 MB</div>
+                                </div>
+                            </div>
+                            <svg class="download-icon" fill="none" viewBox="0 0 16 16" onclick="downloadFile()">
+                                <mask fill="white" id="path-1-inside-1_21_1142">
+                                    <path d="M6.58535 12.0813C6.77109 12.2672 6.99162 12.4146 7.23436 12.5152C7.47709 12.6158 7.73727 12.6676 8.00002 12.6676C8.26277 12.6676 8.52295 12.6158 8.76568 12.5152C9.00842 12.4146 9.22895 12.2672 9.41469 12.0813L11.5554 9.94067C11.6701 9.81373 11.7317 9.64752 11.7273 9.47644C11.7229 9.30536 11.6529 9.14253 11.5318 9.02165C11.4106 8.90077 11.2476 8.8311 11.0765 8.82707C10.9055 8.82304 10.7394 8.88496 10.6127 9L8.66202 10.9513L8.66669 0.666667C8.66669 0.489856 8.59645 0.320286 8.47142 0.195262C8.3464 0.0702379 8.17683 0 8.00002 0C7.82321 0 7.65364 0.0702379 7.52862 0.195262C7.40359 0.320286 7.33335 0.489856 7.33335 0.666667L7.32735 10.9387L5.38735 9C5.26226 8.875 5.09263 8.8048 4.91578 8.80487C4.73894 8.80493 4.56936 8.87524 4.44435 9.00033C4.31935 9.12543 4.24916 9.29506 4.24922 9.4719C4.24928 9.64875 4.31959 9.81833 4.44469 9.94333L6.58535 12.0813Z"/>
+                                </mask>
+                                <path d="M6.58535 12.0813C6.77109 12.2672 6.99162 12.4146 7.23436 12.5152C7.47709 12.6158 7.73727 12.6676 8.00002 12.6676C8.26277 12.6676 8.52295 12.6158 8.76568 12.5152C9.00842 12.4146 9.22895 12.2672 9.41469 12.0813L11.5554 9.94067C11.6701 9.81373 11.7317 9.64752 11.7273 9.47644C11.7229 9.30536 11.6529 9.14253 11.5318 9.02165C11.4106 8.90077 11.2476 8.8311 11.0765 8.82707C10.9055 8.82304 10.7394 8.88496 10.6127 9L8.66202 10.9513L8.66669 0.666667C8.66669 0.489856 8.59645 0.320286 8.47142 0.195262C8.3464 0.0702379 8.17683 0 8.00002 0C7.82321 0 7.65364 0.0702379 7.52862 0.195262C7.40359 0.320286 7.33335 0.489856 7.33335 0.666667L7.32735 10.9387L5.38735 9C5.26226 8.875 5.09263 8.8048 4.91578 8.80487C4.73894 8.80493 4.56936 8.87524 4.44435 9.00033C4.31935 9.12543 4.24916 9.29506 4.24922 9.4719C4.24928 9.64875 4.31959 9.81833 4.44469 9.94333L6.58535 12.0813Z" fill="#475569"/>
+                                <mask fill="white" id="path-3-inside-2_21_1142">
+                                    <path d="M15.3333 10.6668C15.1565 10.6668 14.987 10.737 14.8619 10.8621C14.7369 10.9871 14.6667 11.1567 14.6667 11.3335V14.0001C14.6667 14.1769 14.5964 14.3465 14.4714 14.4715C14.3464 14.5966 14.1768 14.6668 14 14.6668H2C1.82319 14.6668 1.65362 14.5966 1.5286 14.4715C1.40357 14.3465 1.33333 14.1769 1.33333 14.0001V11.3335C1.33333 11.1567 1.2631 10.9871 1.13807 10.8621C1.01305 10.737 0.843478 10.6668 0.666667 10.6668C0.489856 10.6668 0.320286 10.737 0.195262 10.8621C0.0702379 10.9871 0 11.1567 0 11.3335L0 14.0001C0 14.5306 0.210714 15.0393 0.585786 15.4143C0.960859 15.7894 1.46957 16.0001 2 16.0001H14C14.5304 16.0001 15.0391 15.7894 15.4142 15.4143C15.7893 15.0393 16 14.5306 16 14.0001V11.3335C16 11.1567 15.9298 10.9871 15.8047 10.8621C15.6797 10.737 15.5101 10.6668 15.3333 10.6668Z"/>
+                                </mask>
+                                <path d="M15.3333 10.6668C15.1565 10.6668 14.987 10.737 14.8619 10.8621C14.7369 10.9871 14.6667 11.1567 14.6667 11.3335V14.0001C14.6667 14.1769 14.5964 14.3465 14.4714 14.4715C14.3464 14.5966 14.1768 14.6668 14 14.6668H2C1.82319 14.6668 1.65362 14.5966 1.5286 14.4715C1.40357 14.3465 1.33333 14.1769 1.33333 14.0001V11.3335C1.33333 11.1567 1.2631 10.9871 1.13807 10.8621C1.01305 10.737 0.843478 10.6668 0.666667 10.6668C0.489856 10.6668 0.320286 10.737 0.195262 10.8621C0.0702379 10.9871 0 11.1567 0 11.3335L0 14.0001C0 14.5306 0.210714 15.0393 0.585786 15.4143C0.960859 15.7894 1.46957 16.0001 2 16.0001H14C14.5304 16.0001 15.0391 15.7894 15.4142 15.4143C15.7893 15.0393 16 14.5306 16 14.0001V11.3335C16 11.1567 15.9298 10.9871 15.8047 10.8621C15.6797 10.737 15.5101 10.6668 15.3333 10.6668Z" fill="#475569"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        function firstPage() {
-            console.log('First page clicked');
-        }
+        <!-- Footer -->
+        <div class="modal-footer">
+            <button class="btn-cancel" onclick="cancelRequest()">
+                <svg class="btn-icon" fill="none" viewBox="0 0 16 16">
+                    <g clipPath="url(#clip0_21_1146)">
+                        <path d="M8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.33333 8 1.33333C4.3181 1.33333 1.33333 4.3181 1.33333 8C1.33333 11.6819 4.3181 14.6667 8 14.6667Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33"/>
+                        <path d="M3.2666 3.26693L12.7333 12.7336" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_21_1146">
+                            <rect fill="white" height="16" width="16"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="btn-text">Cancel Request</div>
+            </button>
+            <button class="btn-edit" onclick="editRequest()">
+                <svg class="btn-icon" fill="none" viewBox="0 0 16 16">
+                    <path d="M13.7826 4.20825C14.1351 3.85587 14.3331 3.3779 14.3332 2.87949C14.3333 2.38108 14.1353 1.90306 13.783 1.55059C13.4306 1.19811 12.9526 1.00006 12.4542 1C11.9558 0.999937 11.4778 1.19787 11.1253 1.55025L2.22796 10.4496C2.07317 10.6039 1.9587 10.7939 1.89462 11.0029L1.01396 13.9043C0.996726 13.9619 0.995425 14.0232 1.01019 14.0815C1.02496 14.1398 1.05524 14.1931 1.09782 14.2356C1.1404 14.2781 1.1937 14.3083 1.25206 14.323C1.31042 14.3376 1.37166 14.3362 1.42929 14.3189L4.33129 13.4389C4.54007 13.3754 4.73007 13.2616 4.88462 13.1076L13.7826 4.20825Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33"/>
+                    <path d="M9.6665 3L12.3332 5.66667" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33"/>
+                </svg>
+                <div class="btn-text">Edit Request</div>
+            </button>
+        </div>
+    </div>
+</div>
+ 
+    <div  class="modal-overlay" data-modal-id="rejected" style="display: none;" data-close-on-click="true">
+     <div class="modal-container">
+        <!-- Header -->
+        <div class="modal-header">
+            <div class="header-content">
+                <div class="header-title">Leave Details</div>
+                <button class="close-button" data-close-modal>
+                    <svg class="close-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M12.8534 12.1462C12.8998 12.1927 12.9367 12.2478 12.9618 12.3085C12.987 12.3692 12.9999 12.4343 12.9999 12.5C12.9999 12.5657 12.987 12.6307 12.9618 12.6914C12.9367 12.7521 12.8998 12.8073 12.8534 12.8537C12.8069 12.9002 12.7518 12.937 12.6911 12.9622C12.6304 12.9873 12.5653 13.0003 12.4996 13.0003C12.4339 13.0003 12.3689 12.9873 12.3082 12.9622C12.2475 12.937 12.1923 12.9002 12.1459 12.8537L7.99963 8.70687L3.85338 12.8537C3.75956 12.9476 3.63231 13.0003 3.49963 13.0003C3.36694 13.0003 3.2397 12.9476 3.14588 12.8537C3.05206 12.7599 2.99935 12.6327 2.99935 12.5C2.99935 12.3673 3.05206 12.2401 3.14588 12.1462L7.29275 7.99999L3.14588 3.85374C3.05206 3.75992 2.99935 3.63268 2.99935 3.49999C2.99935 3.36731 3.05206 3.24006 3.14588 3.14624C3.2397 3.05242 3.36694 2.99972 3.49963 2.99972C3.63231 2.99972 3.75956 3.05242 3.85338 3.14624L7.99963 7.29312L12.1459 3.14624C12.2397 3.05242 12.3669 2.99972 12.4996 2.99972C12.6323 2.99972 12.7596 3.05242 12.8534 3.14624C12.9472 3.24006 12.9999 3.36731 12.9999 3.49999C12.9999 3.63268 12.9472 3.75992 12.8534 3.85374L8.7065 7.99999L12.8534 12.1462Z" fill="#1B1B1B"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
-        function prevPage() {
-            console.log('Previous page clicked');
-        }
+        <!-- Content -->
+        <div class="modal-content">
+            <div class="employee-info">
+                <!-- Employee Header -->
+                <div class="employee-header">
+                    <div class="employee-details">
+                        <h2 class="employee-name">Ayush Kumar</h2>
+                        <p class="employee-designation">UI/UX Designer</p>
+                    </div>
+                    <div class="status-tag">Rejected</div>
+                </div>
 
-        function nextPage() {
-            console.log('Next page clicked');
-        }
+                <!-- Details Card -->
+                <div class="details-card">
+                    <!-- Leave Type and Start Date -->
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Leave Type</div>
+                            <div class="info-value">Sick Leave (SL)</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Start Date</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                    </div>
 
-        function lastPage() {
-            console.log('Last page clicked');
-        }
+                    <!-- End Date and Requested Days -->
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">End Date</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Requested Days</div>
+                            <div class="info-value">2 Days</div>
+                        </div>
+                    </div>
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Leave Management Dashboard loaded');
-            
-            // Initialize with default pagination info
-            updatePaginationInfo('approved');
-            
-            // Add smooth transitions to all interactive elements
-            document.querySelectorAll('.tab-button, .create-button, .action-button, .pagination-button').forEach(element => {
-                element.style.transition = 'all 0.2s ease';
-            });
-        });
+                    <!-- Available Leave and Applied On -->
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Available Leave</div>
+                            <div class="info-value">4.5 Days</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Applied On</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                    </div>
 
-        // Responsive behavior
-        function handleResponsiveLayout() {
-            const screenWidth = window.innerWidth;
-            
-            if (screenWidth < 768) {
-                console.log('Mobile layout active');
-                
-                // Adjust table for mobile
-                const table = document.querySelector('.table');
-                if (table) {
-                    table.style.fontSize = '12px';
-                }
-            } else {
-                console.log('Desktop layout active');
-                
-                // Reset table font size
-                const table = document.querySelector('.table');
-                if (table) {
-                    table.style.fontSize = '14px';
-                }
-            }
-        }
+                    <!-- Description -->
+                    <div class="info-description">
+                        <div class="info-label">Description</div>
+                        <div class="info-value">Medical leave – doctor appointment</div>
+                    </div>
 
-        // Handle window resize
-        window.addEventListener('resize', handleResponsiveLayout);
-        
-        // Initialize responsive behavior
-        handleResponsiveLayout();
+                    <!-- Document Attached -->
+                    <div class="info-document">
+                        <div class="info-label">Document Attached</div>
+                        <div class="file-container">
+                            <div class="file-info">
+                                <svg class="pdf-icon" fill="none" viewBox="0 0 32 32">
+                                    <path d="M8 0C6.9 0 6 0.9 6 2V30C6 31.1 6.9 32 8 32H28C29.1 32 30 31.1 30 30V8L22 0H8Z" fill="#E2E5E7"/>
+                                    <path d="M24 8H30L22 0V6C22 7.1 22.9 8 24 8Z" fill="#B0B7BD"/>
+                                    <path d="M30 14L24 8H30V14Z" fill="#CAD1D8"/>
+                                    <path d="M26 26C26 26.55 25.55 27 25 27H3C2.45 27 2 26.55 2 26V16C2 15.45 2.45 15 3 15H25C25.55 15 26 15.45 26 16V26Z" fill="#F15642"/>
+                                    <path d="M6.36235 18.9463C6.36235 18.6823 6.57035 18.3943 6.90535 18.3943H8.75235C9.79235 18.3943 10.7284 19.0903 10.7284 20.4243C10.7284 21.6883 9.79235 22.3923 8.75235 22.3923H7.41735V23.4483C7.41735 23.8003 7.19335 23.9993 6.90535 23.9993C6.64135 23.9993 6.36235 23.8003 6.36235 23.4483V18.9463ZM7.41735 19.4013V21.3933H8.75235C9.28835 21.3933 9.71235 20.9203 9.71235 20.4243C9.71235 19.8653 9.28835 19.4013 8.75235 19.4013H7.41735Z" fill="white"/>
+                                    <path d="M12.2931 23.9986C12.0291 23.9986 11.7411 23.8546 11.7411 23.5036V18.9616C11.7411 18.6746 12.0291 18.4656 12.2931 18.4656H14.1241C17.7781 18.4656 17.6981 23.9986 14.1961 23.9986H12.2931ZM12.7971 19.4416V23.0236H14.1241C16.2831 23.0236 16.3791 19.4416 14.1241 19.4416H12.7971Z" fill="white"/>
+                                    <path d="M18.9955 19.5066V20.7776H21.0345C21.3225 20.7776 21.6105 21.0656 21.6105 21.3446C21.6105 21.6086 21.3225 21.8246 21.0345 21.8246H18.9955V23.5036C18.9955 23.7836 18.7965 23.9986 18.5165 23.9986C18.1645 23.9986 17.9495 23.7836 17.9495 23.5036V18.9616C17.9495 18.6746 18.1655 18.4656 18.5165 18.4656H21.3235C21.6755 18.4656 21.8835 18.6746 21.8835 18.9616C21.8835 19.2176 21.6755 19.5056 21.3235 19.5056H18.9955V19.5066Z" fill="white"/>
+                                    <path d="M25 27H6V28H25C25.55 28 26 27.55 26 27V26C26 26.55 25.55 27 25 27Z" fill="#CAD1D8"/>
+                                </svg>
+                                <div class="file-details">
+                                    <div class="file-name">Download Certificate.pdf</div>
+                                    <div class="file-size">5 MB</div>
+                                </div>
+                            </div>
+                            <svg class="download-icon" fill="none" viewBox="0 0 16 16" onclick="downloadFile()">
+                                <mask fill="white" id="path-1-inside-1_21_1142">
+                                    <path d="M6.58535 12.0813C6.77109 12.2672 6.99162 12.4146 7.23436 12.5152C7.47709 12.6158 7.73727 12.6676 8.00002 12.6676C8.26277 12.6676 8.52295 12.6158 8.76568 12.5152C9.00842 12.4146 9.22895 12.2672 9.41469 12.0813L11.5554 9.94067C11.6701 9.81373 11.7317 9.64752 11.7273 9.47644C11.7229 9.30536 11.6529 9.14253 11.5318 9.02165C11.4106 8.90077 11.2476 8.8311 11.0765 8.82707C10.9055 8.82304 10.7394 8.88496 10.6127 9L8.66202 10.9513L8.66669 0.666667C8.66669 0.489856 8.59645 0.320286 8.47142 0.195262C8.3464 0.0702379 8.17683 0 8.00002 0C7.82321 0 7.65364 0.0702379 7.52862 0.195262C7.40359 0.320286 7.33335 0.489856 7.33335 0.666667L7.32735 10.9387L5.38735 9C5.26226 8.875 5.09263 8.8048 4.91578 8.80487C4.73894 8.80493 4.56936 8.87524 4.44435 9.00033C4.31935 9.12543 4.24916 9.29506 4.24922 9.4719C4.24928 9.64875 4.31959 9.81833 4.44469 9.94333L6.58535 12.0813Z"/>
+                                </mask>
+                                <path d="M6.58535 12.0813C6.77109 12.2672 6.99162 12.4146 7.23436 12.5152C7.47709 12.6158 7.73727 12.6676 8.00002 12.6676C8.26277 12.6676 8.52295 12.6158 8.76568 12.5152C9.00842 12.4146 9.22895 12.2672 9.41469 12.0813L11.5554 9.94067C11.6701 9.81373 11.7317 9.64752 11.7273 9.47644C11.7229 9.30536 11.6529 9.14253 11.5318 9.02165C11.4106 8.90077 11.2476 8.8311 11.0765 8.82707C10.9055 8.82304 10.7394 8.88496 10.6127 9L8.66202 10.9513L8.66669 0.666667C8.66669 0.489856 8.59645 0.320286 8.47142 0.195262C8.3464 0.0702379 8.17683 0 8.00002 0C7.82321 0 7.65364 0.0702379 7.52862 0.195262C7.40359 0.320286 7.33335 0.489856 7.33335 0.666667L7.32735 10.9387L5.38735 9C5.26226 8.875 5.09263 8.8048 4.91578 8.80487C4.73894 8.80493 4.56936 8.87524 4.44435 9.00033C4.31935 9.12543 4.24916 9.29506 4.24922 9.4719C4.24928 9.64875 4.31959 9.81833 4.44469 9.94333L6.58535 12.0813Z" fill="#475569"/>
+                                <mask fill="white" id="path-3-inside-2_21_1142">
+                                    <path d="M15.3333 10.6668C15.1565 10.6668 14.987 10.737 14.8619 10.8621C14.7369 10.9871 14.6667 11.1567 14.6667 11.3335V14.0001C14.6667 14.1769 14.5964 14.3465 14.4714 14.4715C14.3464 14.5966 14.1768 14.6668 14 14.6668H2C1.82319 14.6668 1.65362 14.5966 1.5286 14.4715C1.40357 14.3465 1.33333 14.1769 1.33333 14.0001V11.3335C1.33333 11.1567 1.2631 10.9871 1.13807 10.8621C1.01305 10.737 0.843478 10.6668 0.666667 10.6668C0.489856 10.6668 0.320286 10.737 0.195262 10.8621C0.0702379 10.9871 0 11.1567 0 11.3335L0 14.0001C0 14.5306 0.210714 15.0393 0.585786 15.4143C0.960859 15.7894 1.46957 16.0001 2 16.0001H14C14.5304 16.0001 15.0391 15.7894 15.4142 15.4143C15.7893 15.0393 16 14.5306 16 14.0001V11.3335C16 11.1567 15.9298 10.9871 15.8047 10.8621C15.6797 10.737 15.5101 10.6668 15.3333 10.6668Z"/>
+                                </mask>
+                                <path d="M15.3333 10.6668C15.1565 10.6668 14.987 10.737 14.8619 10.8621C14.7369 10.9871 14.6667 11.1567 14.6667 11.3335V14.0001C14.6667 14.1769 14.5964 14.3465 14.4714 14.4715C14.3464 14.5966 14.1768 14.6668 14 14.6668H2C1.82319 14.6668 1.65362 14.5966 1.5286 14.4715C1.40357 14.3465 1.33333 14.1769 1.33333 14.0001V11.3335C1.33333 11.1567 1.2631 10.9871 1.13807 10.8621C1.01305 10.737 0.843478 10.6668 0.666667 10.6668C0.489856 10.6668 0.320286 10.737 0.195262 10.8621C0.0702379 10.9871 0 11.1567 0 11.3335L0 14.0001C0 14.5306 0.210714 15.0393 0.585786 15.4143C0.960859 15.7894 1.46957 16.0001 2 16.0001H14C14.5304 16.0001 15.0391 15.7894 15.4142 15.4143C15.7893 15.0393 16 14.5306 16 14.0001V11.3335C16 11.1567 15.9298 10.9871 15.8047 10.8621C15.6797 10.737 15.5101 10.6668 15.3333 10.6668Z" fill="#475569"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        // Enhanced interaction feedback
-        document.querySelectorAll('.tab-button').forEach(button => {
-            button.addEventListener('mouseenter', function() {
-                if (!this.classList.contains('active')) {
-                    this.style.backgroundColor = '#f8fafc';
-                }
-            });
-            
-            button.addEventListener('mouseleave', function() {
-                if (!this.classList.contains('active')) {
-                    this.style.backgroundColor = 'transparent';
-                }
-            });
-        });
+  
+    </div>
+</div>
+    <div  class="modal-overlay" data-modal-id="approved" style="display: none;" data-close-on-click="true">
+     <div class="modal-container">
+        <!-- Header -->
+        <div class="modal-header">
+            <div class="header-content">
+                <div class="header-title">Leave Details</div>
+                <button class="close-button" data-close-modal>
+                    <svg class="close-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M12.8534 12.1462C12.8998 12.1927 12.9367 12.2478 12.9618 12.3085C12.987 12.3692 12.9999 12.4343 12.9999 12.5C12.9999 12.5657 12.987 12.6307 12.9618 12.6914C12.9367 12.7521 12.8998 12.8073 12.8534 12.8537C12.8069 12.9002 12.7518 12.937 12.6911 12.9622C12.6304 12.9873 12.5653 13.0003 12.4996 13.0003C12.4339 13.0003 12.3689 12.9873 12.3082 12.9622C12.2475 12.937 12.1923 12.9002 12.1459 12.8537L7.99963 8.70687L3.85338 12.8537C3.75956 12.9476 3.63231 13.0003 3.49963 13.0003C3.36694 13.0003 3.2397 12.9476 3.14588 12.8537C3.05206 12.7599 2.99935 12.6327 2.99935 12.5C2.99935 12.3673 3.05206 12.2401 3.14588 12.1462L7.29275 7.99999L3.14588 3.85374C3.05206 3.75992 2.99935 3.63268 2.99935 3.49999C2.99935 3.36731 3.05206 3.24006 3.14588 3.14624C3.2397 3.05242 3.36694 2.99972 3.49963 2.99972C3.63231 2.99972 3.75956 3.05242 3.85338 3.14624L7.99963 7.29312L12.1459 3.14624C12.2397 3.05242 12.3669 2.99972 12.4996 2.99972C12.6323 2.99972 12.7596 3.05242 12.8534 3.14624C12.9472 3.24006 12.9999 3.36731 12.9999 3.49999C12.9999 3.63268 12.9472 3.75992 12.8534 3.85374L8.7065 7.99999L12.8534 12.1462Z" fill="#1B1B1B"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
-        // Keyboard navigation support
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Tab') {
-                console.log('Tab navigation');
-            }
-            
-            if (e.key === 'Escape') {
-                // Close any open menus
-                const menu = document.querySelector('div[style*="position: fixed"]');
-                if (menu) menu.remove();
-            }
-        });
+        <!-- Content -->
+        <div class="modal-content">
+            <div class="employee-info">
+                <!-- Employee Header -->
+                <div class="employee-header">
+                    <div class="employee-details">
+                        <h2 class="employee-name">Ayush Kumar</h2>
+                        <p class="employee-designation">UI/UX Designer</p>
+                    </div>
+                    <div class="status-tag">approved</div>
+                </div>
 
-    </script>
+                <!-- Details Card -->
+                <div class="details-card">
+                    <!-- Leave Type and Start Date -->
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Leave Type</div>
+                            <div class="info-value">Sick Leave (SL)</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Start Date</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                    </div>
+
+                    <!-- End Date and Requested Days -->
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">End Date</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Requested Days</div>
+                            <div class="info-value">2 Days</div>
+                        </div>
+                    </div>
+
+                    <!-- Available Leave and Applied On -->
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Available Leave</div>
+                            <div class="info-value">4.5 Days</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Applied On</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="info-description">
+                        <div class="info-label">Description</div>
+                        <div class="info-value">Medical leave – doctor appointment</div>
+                    </div>
+
+                    <!-- Document Attached -->
+                    <div class="info-document">
+                        <div class="info-label">Document Attached</div>
+                        <div class="file-container">
+                            <div class="file-info">
+                                <svg class="pdf-icon" fill="none" viewBox="0 0 32 32">
+                                    <path d="M8 0C6.9 0 6 0.9 6 2V30C6 31.1 6.9 32 8 32H28C29.1 32 30 31.1 30 30V8L22 0H8Z" fill="#E2E5E7"/>
+                                    <path d="M24 8H30L22 0V6C22 7.1 22.9 8 24 8Z" fill="#B0B7BD"/>
+                                    <path d="M30 14L24 8H30V14Z" fill="#CAD1D8"/>
+                                    <path d="M26 26C26 26.55 25.55 27 25 27H3C2.45 27 2 26.55 2 26V16C2 15.45 2.45 15 3 15H25C25.55 15 26 15.45 26 16V26Z" fill="#F15642"/>
+                                    <path d="M6.36235 18.9463C6.36235 18.6823 6.57035 18.3943 6.90535 18.3943H8.75235C9.79235 18.3943 10.7284 19.0903 10.7284 20.4243C10.7284 21.6883 9.79235 22.3923 8.75235 22.3923H7.41735V23.4483C7.41735 23.8003 7.19335 23.9993 6.90535 23.9993C6.64135 23.9993 6.36235 23.8003 6.36235 23.4483V18.9463ZM7.41735 19.4013V21.3933H8.75235C9.28835 21.3933 9.71235 20.9203 9.71235 20.4243C9.71235 19.8653 9.28835 19.4013 8.75235 19.4013H7.41735Z" fill="white"/>
+                                    <path d="M12.2931 23.9986C12.0291 23.9986 11.7411 23.8546 11.7411 23.5036V18.9616C11.7411 18.6746 12.0291 18.4656 12.2931 18.4656H14.1241C17.7781 18.4656 17.6981 23.9986 14.1961 23.9986H12.2931ZM12.7971 19.4416V23.0236H14.1241C16.2831 23.0236 16.3791 19.4416 14.1241 19.4416H12.7971Z" fill="white"/>
+                                    <path d="M18.9955 19.5066V20.7776H21.0345C21.3225 20.7776 21.6105 21.0656 21.6105 21.3446C21.6105 21.6086 21.3225 21.8246 21.0345 21.8246H18.9955V23.5036C18.9955 23.7836 18.7965 23.9986 18.5165 23.9986C18.1645 23.9986 17.9495 23.7836 17.9495 23.5036V18.9616C17.9495 18.6746 18.1655 18.4656 18.5165 18.4656H21.3235C21.6755 18.4656 21.8835 18.6746 21.8835 18.9616C21.8835 19.2176 21.6755 19.5056 21.3235 19.5056H18.9955V19.5066Z" fill="white"/>
+                                    <path d="M25 27H6V28H25C25.55 28 26 27.55 26 27V26C26 26.55 25.55 27 25 27Z" fill="#CAD1D8"/>
+                                </svg>
+                                <div class="file-details">
+                                    <div class="file-name">Download Certificate.pdf</div>
+                                    <div class="file-size">5 MB</div>
+                                </div>
+                            </div>
+                            <svg class="download-icon" fill="none" viewBox="0 0 16 16" onclick="downloadFile()">
+                                <mask fill="white" id="path-1-inside-1_21_1142">
+                                    <path d="M6.58535 12.0813C6.77109 12.2672 6.99162 12.4146 7.23436 12.5152C7.47709 12.6158 7.73727 12.6676 8.00002 12.6676C8.26277 12.6676 8.52295 12.6158 8.76568 12.5152C9.00842 12.4146 9.22895 12.2672 9.41469 12.0813L11.5554 9.94067C11.6701 9.81373 11.7317 9.64752 11.7273 9.47644C11.7229 9.30536 11.6529 9.14253 11.5318 9.02165C11.4106 8.90077 11.2476 8.8311 11.0765 8.82707C10.9055 8.82304 10.7394 8.88496 10.6127 9L8.66202 10.9513L8.66669 0.666667C8.66669 0.489856 8.59645 0.320286 8.47142 0.195262C8.3464 0.0702379 8.17683 0 8.00002 0C7.82321 0 7.65364 0.0702379 7.52862 0.195262C7.40359 0.320286 7.33335 0.489856 7.33335 0.666667L7.32735 10.9387L5.38735 9C5.26226 8.875 5.09263 8.8048 4.91578 8.80487C4.73894 8.80493 4.56936 8.87524 4.44435 9.00033C4.31935 9.12543 4.24916 9.29506 4.24922 9.4719C4.24928 9.64875 4.31959 9.81833 4.44469 9.94333L6.58535 12.0813Z"/>
+                                </mask>
+                                <path d="M6.58535 12.0813C6.77109 12.2672 6.99162 12.4146 7.23436 12.5152C7.47709 12.6158 7.73727 12.6676 8.00002 12.6676C8.26277 12.6676 8.52295 12.6158 8.76568 12.5152C9.00842 12.4146 9.22895 12.2672 9.41469 12.0813L11.5554 9.94067C11.6701 9.81373 11.7317 9.64752 11.7273 9.47644C11.7229 9.30536 11.6529 9.14253 11.5318 9.02165C11.4106 8.90077 11.2476 8.8311 11.0765 8.82707C10.9055 8.82304 10.7394 8.88496 10.6127 9L8.66202 10.9513L8.66669 0.666667C8.66669 0.489856 8.59645 0.320286 8.47142 0.195262C8.3464 0.0702379 8.17683 0 8.00002 0C7.82321 0 7.65364 0.0702379 7.52862 0.195262C7.40359 0.320286 7.33335 0.489856 7.33335 0.666667L7.32735 10.9387L5.38735 9C5.26226 8.875 5.09263 8.8048 4.91578 8.80487C4.73894 8.80493 4.56936 8.87524 4.44435 9.00033C4.31935 9.12543 4.24916 9.29506 4.24922 9.4719C4.24928 9.64875 4.31959 9.81833 4.44469 9.94333L6.58535 12.0813Z" fill="#475569"/>
+                                <mask fill="white" id="path-3-inside-2_21_1142">
+                                    <path d="M15.3333 10.6668C15.1565 10.6668 14.987 10.737 14.8619 10.8621C14.7369 10.9871 14.6667 11.1567 14.6667 11.3335V14.0001C14.6667 14.1769 14.5964 14.3465 14.4714 14.4715C14.3464 14.5966 14.1768 14.6668 14 14.6668H2C1.82319 14.6668 1.65362 14.5966 1.5286 14.4715C1.40357 14.3465 1.33333 14.1769 1.33333 14.0001V11.3335C1.33333 11.1567 1.2631 10.9871 1.13807 10.8621C1.01305 10.737 0.843478 10.6668 0.666667 10.6668C0.489856 10.6668 0.320286 10.737 0.195262 10.8621C0.0702379 10.9871 0 11.1567 0 11.3335L0 14.0001C0 14.5306 0.210714 15.0393 0.585786 15.4143C0.960859 15.7894 1.46957 16.0001 2 16.0001H14C14.5304 16.0001 15.0391 15.7894 15.4142 15.4143C15.7893 15.0393 16 14.5306 16 14.0001V11.3335C16 11.1567 15.9298 10.9871 15.8047 10.8621C15.6797 10.737 15.5101 10.6668 15.3333 10.6668Z"/>
+                                </mask>
+                                <path d="M15.3333 10.6668C15.1565 10.6668 14.987 10.737 14.8619 10.8621C14.7369 10.9871 14.6667 11.1567 14.6667 11.3335V14.0001C14.6667 14.1769 14.5964 14.3465 14.4714 14.4715C14.3464 14.5966 14.1768 14.6668 14 14.6668H2C1.82319 14.6668 1.65362 14.5966 1.5286 14.4715C1.40357 14.3465 1.33333 14.1769 1.33333 14.0001V11.3335C1.33333 11.1567 1.2631 10.9871 1.13807 10.8621C1.01305 10.737 0.843478 10.6668 0.666667 10.6668C0.489856 10.6668 0.320286 10.737 0.195262 10.8621C0.0702379 10.9871 0 11.1567 0 11.3335L0 14.0001C0 14.5306 0.210714 15.0393 0.585786 15.4143C0.960859 15.7894 1.46957 16.0001 2 16.0001H14C14.5304 16.0001 15.0391 15.7894 15.4142 15.4143C15.7893 15.0393 16 14.5306 16 14.0001V11.3335C16 11.1567 15.9298 10.9871 15.8047 10.8621C15.6797 10.737 15.5101 10.6668 15.3333 10.6668Z" fill="#475569"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+    </div>
+</div>
+
+<!-- leave request modal -->
+
+<div class="modal-overlay" id="leave-req-modal" data-modal-id="create-leave-req" style="display: none;" data-close-on-click="true">
+    <div class="modal-container leave-request-modal-container">
+        <!-- Header -->
+        <div class="leave-request-header">
+            <h2 class="leave-request-title">Create Leave Request</h2>
+            <button class="leave-request-close-button" data-close-modal>
+                <svg class="leave-request-close-icon" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6L18 18"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Body -->
+        <div class="leave-request-body">
+            <form class="leave-request-form-grid" id="leaveRequestForm">
+                <!-- Leave Type -->
+                <div class="leave-request-form-field">
+                    <label class="leave-request-label">Leave Type*</label>
+                    <div class="leave-request-select-container">
+                        <select class="leave-request-select" required>
+                            <option value="">Select leave type</option>
+                            <option value="sick">Sick Leave (SL)</option>
+                            <option value="vacation">Vacation Leave (VL)</option>
+                            <option value="personal">Personal Leave (PL)</option>
+                            <option value="maternity">Maternity Leave</option>
+                            <option value="paternity">Paternity Leave</option>
+                            <option value="emergency">Emergency Leave</option>
+                        </select>
+                        <svg class="leave-request-select-icon" fill="none" viewBox="0 0 16 16">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Date Range -->
+                <div class="leave-request-form-row">
+                    <div class="leave-request-form-field">
+                        <label class="leave-request-label">From Date*</label>
+                        <div class="leave-request-date-container">
+                            <input type="text" class="leave-request-date-input" placeholder="dd/mm/yyyy" required>
+                            <svg class="leave-request-calendar-icon" fill="none" viewBox="0 0 16 16">
+                                <path d="M5.33333 1.33333V4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                <path d="M10.6667 1.33333V4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                <path d="M2 6.66667H14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="leave-request-form-field">
+                        <label class="leave-request-label">To Date*</label>
+                        <div class="leave-request-date-container">
+                            <input type="text" class="leave-request-date-input" placeholder="dd/mm/yyyy" required>
+                            <svg class="leave-request-calendar-icon" fill="none" viewBox="0 0 16 16">
+                                <path d="M5.33333 1.33333V4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                <path d="M10.6667 1.33333V4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                <path d="M2 6.66667H14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duration -->
+                <div class="leave-request-form-row">
+                    <div class="leave-request-form-field">
+                        <label class="leave-request-label">Start Duration*</label>
+                        <div class="leave-request-select-container">
+                            <select class="leave-request-select" required>
+                                <option value="full-day" selected>Full Day</option>
+                                <option value="first-half">First Half</option>
+                                <option value="second-half">Second Half</option>
+                            </select>
+                            <svg class="leave-request-select-icon" fill="none" viewBox="0 0 16 16">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="leave-request-form-field">
+                        <label class="leave-request-label">End Duration*</label>
+                        <div class="leave-request-select-container">
+                            <select class="leave-request-select" required>
+                                <option value="full-day" selected>Full Day</option>
+                                <option value="first-half">First Half</option>
+                                <option value="second-half">Second Half</option>
+                            </select>
+                            <svg class="leave-request-select-icon" fill="none" viewBox="0 0 16 16">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="leave-request-form-field">
+                    <label class="leave-request-label">Description*</label>
+                    <textarea class="leave-request-textarea" placeholder="Explain briefly why you're taking leave..." required></textarea>
+                </div>
+
+                <!-- Attachment -->
+                <div class="leave-request-form-field">
+                    <label class="leave-request-label">Attachment (optional)</label>
+                    <div class="leave-request-file-upload">
+                        <div class="leave-request-file-input">
+                            <span>No file chosen</span>
+                        </div>
+                        <button type="button" class="leave-request-upload-button" onclick="triggerFileUpload()">
+                            <svg class="leave-request-upload-icon" fill="none" viewBox="0 0 16 16">
+                                <path d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                <path d="M11.3333 5.33333L8 2L4.66667 5.33333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                <path d="M8 2V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                            </svg>
+                            Upload
+                        </button>
+                        <input type="file" id="fileInput" style="display: none;" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="leave-request-footer">
+            <button type="button" class="leave-request-button leave-request-button-cancel" data-close-modal>
+                Cancel
+            </button>
+            <button type="submit" form="leaveRequestForm" class="leave-request-button leave-request-button-submit">
+                Submit Request
+            </button>
+        </div>
+    </div>
+    
+    </div>
+
+
+
+
+
+
+    </div>
+    <script src="./assets/js/leaves.js"></script>
     <script src="./assets/js/script.js"></script>
-   
+    <script src="./assets/js/dropdown.js"></script>
+    <script src="./assets/js/modal.js"></script>
+    <script>
+         function switchLeaveTab(tabName) {
+            // Update tab buttons
+            document.querySelectorAll('.leave-overview-tab').forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.dataset.tab === tabName) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            // Update table container class for column visibility
+            const tableContainer = document.getElementById('leaveTableContainer');
+            tableContainer.className = `leave-table-container tab-${tabName}`;
+            
+            // Hide all table rows
+            document.querySelectorAll('.tab-data').forEach(row => {
+                row.style.display = 'none';
+            });
+            
+            // Show rows for selected tab
+            document.querySelectorAll(`[data-tab="${tabName}"]`).forEach(row => {
+                if (row.classList.contains('tab-data')) {
+                    row.style.display = 'table-row';
+                }
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up tab click handlers
+            document.querySelectorAll('.leave-overview-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    switchLeaveTab(this.dataset.tab);
+                });
+            });
+            
+            
+        });
+    </script>
 </body>
 </html>

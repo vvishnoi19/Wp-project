@@ -2,24 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Profile Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/profile/style.css">
-   <link rel="stylesheet" href="./assets/css/style.css">
-   <link rel="stylesheet" href="./assets/css/dropdown.css">
-   <link rel="stylesheet" href="./assets/css/profile/modal.css">
-   <link rel="stylesheet" href="./assets/css/Modals/leave-req.css">
-   <link rel="stylesheet" href="./assets/css/Modals/reqemp.css">
-   <link rel="stylesheet" href="./assets/css/Modals/edit-profile.css">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>emp details</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/Modals/alert.css">
+    <link rel="stylesheet" href="./assets/css/profile/style.css">
+        <link rel="stylesheet" href="./assets/css/employees/details.css">
+        <link rel="stylesheet" href="./assets/css/dropdown.css">
+        <link rel="stylesheet" href="./assets/css/Modals/reqemp.css">
 </head>
 <body>
-  <div class="main-container">
-    <div id="sidebar-container">
-          <div class="sidebar">
+    <div class="main-container">
+        <div id="sidebar-container">  <div class="sidebar">
            
             <div class="logo-section">
                 <div class="logo">
@@ -32,7 +27,7 @@
             <nav class="navigation">
                   <ul class="nav-list">
                     <li>
-                        <a href="/dashboard.html" class="nav-item">
+                        <a href="/dashboard.html" class="nav-item ">
                             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <rect x="3" y="3" width="7" height="9"/>
                                 <rect x="14" y="3" width="7" height="5"/>
@@ -43,7 +38,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/profile.html" class="nav-item active">
+                        <a href="/profile.html" class="nav-item">
                             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                                 <circle cx="12" cy="7" r="4"/>
@@ -52,7 +47,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/employees.html" class="nav-item">
+                        <a href="/employees.html" class="nav-item active">
                             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                                 <circle cx="9" cy="7" r="4"/>
@@ -177,148 +172,199 @@
                 </ul>
             </nav>
 </div>
-
-    </div>
+</div>
     <div class="container">
-        <!-- Profile Header -->
-        <div class="card card-custom mb-4">
-            <div class="card-body p-4">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div class="flex-grow-1">
-                        <div class="d-flex align-items-center gap-2 mb-1">
-                            <h1 class="h3 fw-semibold mb-0">Abhishek Singh</h1>
-                            <span class="employment-status">Full-time</span>
+        <!-- Header -->
+        <div class="header">
+            <h1 class="header-title">Employees Details</h1>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <span>All Employee</span>
+            <svg class="breadcrumb-separator" fill="none" viewBox="0 0 20 20">
+                <path d="M7.5 15L12.5 10L7.5 5" stroke="#16151C" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Employees Details</span>
+        </div>
+
+        <!-- Employee Profile Card -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <div class="profile-name-section">
+                        <div class="profile-name-row">
+                            <div class="profile-name">Ayush Kumar</div>
+                            <div class="employment-tag">Full-time</div>
                         </div>
-                        <h2 class="h5 fw-semibold mb-4">Design Manager</h2>
-                        
-                        <div class="d-flex gap-4">
-                            <div class="d-flex align-items-center gap-2">
-                                <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 20 20">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                </svg>
-                                <span class="contact-item">9567896556</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 20 20">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                </svg>
-                                <span class="contact-item">john.doe@gmail.com</span>
-                            </div>
+                        <div class="profile-role">UI/UX Designer</div>
+                    </div>
+                    <div class="profile-contact-row">
+                        <div class="profile-contact-item">
+                            <svg width="20" height="20" fill="none" stroke="#334155" viewBox="0 0 20 20">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M18.3337 14.1003V16.6003C18.3346 16.8324 18.2871 17.0621 18.1941 17.2747C18.1011 17.4874 17.9648 17.6783 17.7937 17.8352C17.6227 17.9921 17.4208 18.1115 17.201 18.1859C16.9811 18.2602 16.7482 18.2878 16.517 18.267C13.9527 17.9883 11.4895 17.1121 9.32535 15.7086C7.31187 14.4292 5.6048 12.7221 4.32535 10.7086C2.917 8.53462 2.04055 6.05945 1.76702 3.48362C1.74619 3.25317 1.77358 3.02092 1.84743 2.80164C1.92129 2.58236 2.03999 2.38086 2.19599 2.20997C2.35199 2.03908 2.54186 1.90254 2.75351 1.80905C2.96517 1.71556 3.19397 1.66717 3.42535 1.66695H5.92535C6.32977 1.66297 6.72184 1.80618 7.02849 2.06989C7.33513 2.33361 7.53542 2.69982 7.59202 3.10028C7.69754 3.90034 7.89323 4.68589 8.17535 5.44195C8.28747 5.74022 8.31174 6.06438 8.24527 6.37602C8.17881 6.68766 8.0244 6.97371 7.80035 7.20028L6.74202 8.25862C7.92831 10.3449 9.65573 12.0723 11.742 13.2586L12.8004 12.2003C13.0269 11.9762 13.313 11.8218 13.6246 11.7554C13.9363 11.6889 14.2604 11.7132 14.5587 11.8253C15.3147 12.1074 16.1003 12.3031 16.9004 12.4086C17.3052 12.4657 17.6749 12.6696 17.9391 12.9815C18.2034 13.2934 18.3438 13.6916 18.3337 14.1003Z"/>
+                            </svg>
+                            <span>9567896556</span>
+                        </div>
+                        <div class="profile-contact-item">
+                            <svg width="20" height="20" fill="none" stroke="#334155" viewBox="0 0 20 20">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" d="M15.9999 0.999756H2.66654C1.74607 0.999756 0.999878 1.74595 0.999878 2.66642V12.6664C0.999878 13.5869 1.74607 14.3331 2.66654 14.3331H15.9999C16.9204 14.3331 17.6665 13.5869 17.6665 12.6664V2.66642C17.6665 1.74595 16.9204 0.999756 15.9999 0.999756Z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" d="M17.6665 3.49976L10.1915 8.24976C9.93427 8.41094 9.63681 8.49643 9.33321 8.49643C9.02961 8.49643 8.73215 8.41094 8.47488 8.24976L0.999878 3.49976"/>
+                            </svg>
+                            <span>john.doe@gmail.com</span>
                         </div>
                     </div>
-                    
-                    <button class="btn btn-edit d-flex align-items-center gap-1" data-open-modal="edit-profile">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 15 15">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33" d="M11.013 1.27L13.746 4.003m-2.47-2.733l-7.84 7.84a1 1 0 00-.293.707V12h3.183a1 1 0 00.707-.293l7.84-7.84-2.733-2.733z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33" d="M9.667 3L12.333 5.667"/>
-                        </svg>
-                        <span>Edit Profile</span>
-                    </button>
                 </div>
+                <button class="edit-button">
+                    <svg class="icon" fill="none" stroke="#224FB1" viewBox="0 0 16 16">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33" d="M13.7826 4.20825C14.1351 3.85587 14.3331 3.3779 14.3332 2.87949C14.3333 2.38108 14.1353 1.90306 13.783 1.55059C13.4306 1.19811 12.9526 1.00006 12.4542 1C11.9558 0.999937 11.4778 1.19787 11.1253 1.55025L2.22796 10.4496C2.07317 10.6039 1.9587 10.7939 1.89462 11.0029L1.01396 13.9043C0.996726 13.9619 0.995425 14.0232 1.01019 14.0815C1.02496 14.1398 1.05524 14.1931 1.09782 14.2356C1.1404 14.2781 1.1937 14.3083 1.25206 14.323C1.31042 14.3376 1.37166 14.3362 1.42929 14.3189L4.33129 13.4389C4.54007 13.3754 4.73007 13.2616 4.88462 13.1076L13.7826 4.20825Z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33" d="M9.6665 3L12.3332 5.66667"/>
+                    </svg>
+                    Edit Profile
+                </button>
             </div>
         </div>
 
-        <!-- Main Tabs -->
-        <div class="border-bottom mb-4">
-            <div class="d-flex">
-                <button class="main-tab  active" data-tab="profile">Profile</button>
-                <button class="main-tab" data-tab="attendance">Attendance</button>
-                <button class="main-tab" data-tab="leaves">Leaves</button>  
-                <button class="main-tab" data-tab="report">Report</button>
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <div class="tab-list">
+                <button class="tab-item active" data-tab="profile">Profile</button>
+                <button class="tab-item" data-tab="attendance">Attendance</button>
+                <button class="tab-item" data-tab="leaves">Leaves</button>
+                <button class="tab-item" data-tab="report">Report</button>
+                <button class="tab-item" data-tab="requests">Requests</button>
+                <button class="tab-item" data-tab="contribution">Contribution</button>
             </div>
         </div>
 
-        <!-- Profile Tab Content -->
-        <div id="profile-content" class="tab-content-custom active">
-            <div class="row g-4">
+        <!-- Tab Content -->
+        <!-- Profile Tab -->
+        <div id="profile" class="tab-content active">
+            <div class="details-grid">
                 <!-- Personal Details -->
-                <div class="col-12">
-                     <h3 class="h5 fw-semibold mb-3">Personal Details</h3>
-                    <div class="card card-custom">
-                       
-                        <div class="card-body p-4">
-                            
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Date of Birth</div>
-                                    <div class="small text-muted">20/05/2000</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Gender</div>
-                                    <div class="small text-muted">Male</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Marital Status</div>
-                                    <div class="small text-muted">Unmarried</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Children</div>
-                                    <div class="small text-muted">0</div>
-                                </div>
+                <div class="details-section">
+                    <div class="section-title">Personal Details</div>
+                    <div class="section-content">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Date of Birth</div>
+                                <div class="info-value">20/05/2000</div>
                             </div>
-                            <div class="row g-3">
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Phone</div>
-                                    <div class="small text-muted">+91 9765432124</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Work Phone</div>
-                                    <div class="small text-muted">+91 9765432124</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Personal Email</div>
-                                    <div class="small text-muted">ayush.kumar@webninjaz.com</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Work Email</div>
-                                    <div class="small text-muted">ayush.kumar@webninjaz.com</div>
-                                </div>
+                            <div class="info-item">
+                                <div class="info-label">Gender</div>
+                                <div class="info-value">Male</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Marital Status</div>
+                                <div class="info-value">Unmarried</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Children</div>
+                                <div class="info-value">0</div>
+                            </div>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Phone</div>
+                                <div class="info-value">+91 9765432124</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Work Phone</div>
+                                <div class="info-value">+91 9765432124</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Personal Email</div>
+                                <div class="info-value">ayush.kumar@webninjaz.com</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Work Email</div>
+                                <div class="info-value">ayush.kumar@webninjaz.com</div>
+                            </div>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Emergency Contact Name</div>
+                                <div class="info-value">Rahul Kumar</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Emergency Contact Number</div>
+                                <div class="info-value">+91 9765432124</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Emergency Contact Relations</div>
+                                <div class="info-value">Brother</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Qualification</div>
+                                <div class="info-value">B.Tech in Computer Science</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Work Information -->
-                <div class="col-12">
-                     <h3 class="h5 fw-semibold mb-3">Work Information</h3>
-                    <div class="card card-custom">
-                        <div class="card-body p-4">
-                           
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Department</div>
-                                    <div class="small text-muted">Tech</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Job Title</div>
-                                    <div class="small text-muted">Associate Analyst (Tech)</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Employee Type</div>
-                                    <div class="small text-muted">Intern</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Reporting Manager</div>
-                                    <div class="small text-muted">Sandeep Kumar</div>
-                                </div>
+                <div class="details-section">
+                    <div class="section-title">Work Information</div>
+                    <div class="section-content">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Department</div>
+                                <div class="info-value">Tech</div>
                             </div>
-                            <div class="row g-3">
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Work Location</div>
-                                    <div class="small text-muted">Noida</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Joining Date</div>
-                                    <div class="small text-muted">Feb 21, 2024</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">End Date</div>
-                                    <div class="small text-muted">None</div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="fw-medium text-dark">Salary</div>
-                                    <div class="small text-muted">₹17,000</div>
-                                </div>
+                            <div class="info-item">
+                                <div class="info-label">Job Title</div>
+                                <div class="info-value">Associate Analyst (Tech)</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Employee Type</div>
+                                <div class="info-value">Intern</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Reporting Manager</div>
+                                <div class="info-value">Sandeep Kumar</div>
+                            </div>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Work Location</div>
+                                <div class="info-value">Noida</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Joining Date</div>
+                                <div class="info-value">Feb 21, 2024</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">End Date</div>
+                                <div class="info-value">None</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Salary</div>
+                                <div class="info-value">₹17,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bank Details -->
+                <div class="details-section">
+                    <div class="section-title">Bank Details</div>
+                    <div class="section-content">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Bank Name</div>
+                                <div class="info-value">HDFC Bank</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Account Number</div>
+                                <div class="info-value">**********7890</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Branch</div>
+                                <div class="info-value">Noida Sector 18</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Bank Address</div>
+                                <div class="info-value">G-34, Sector 18, Noida</div>
                             </div>
                         </div>
                     </div>
@@ -326,20 +372,9 @@
             </div>
         </div>
 
-        <!-- Attendance Tab Content -->
-        <div id="attendance-content" class="tab-content-custom">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="h4 fw-semibold">Attendance Records</h2>
-                <div class="sub-tabs-container">
-                    <button class="sub-tab active" data-subtab="records">Attendance Records</button>
-                    <button class="sub-tab" data-subtab="requests">My Requests</button>
-                </div>
-            </div>
-
-            <!-- Attendance Records Sub-tab -->
-            <div id="records-content" class="sub-tab-content active">
-            
-            <div class="calendar-container">
+        <!-- Attendance Tab -->
+        <div id="attendance" class="tab-content">
+           <div class="calendar-container">
                 <div class="calendar-header">
                     <h4 class="calendar-year">2025</h4>
                     <div class="navigation-buttons">
@@ -687,151 +722,20 @@
                     <!-- March through December... -->
                 </div>
             </div>
-       
-            </div>
-
-            <!-- My Requests Sub-tab -->
-            <div id="requests-content" class="sub-tab-content ">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h3 class="h4 fw-semibold">My Requests</h3>
-                    <button class="btn btn-create d-flex align-items-center gap-1" data-open-modal="profile-leave-details" >
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 16 16">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 3.33333V12.6667M3.33333 8H12.6667"/>
-                        </svg>
-                        <span>Create Attendance Request</span>
-                    </button>
-                </div>
-
-                <div class="card card-custom">
-                    <div class="table-responsive">
-                        <table class="table table-custom mb-0">
-                            <thead>
-                                <tr>
-                                    <th style="width: 400px;">Description</th>
-                                    <th>Date</th>
-                                    <th>Check In</th>
-                                    <th>Check Out</th>
-                                    <th>Working Hours</th>
-                                    <th>Status</th>
-                                    <th class="text-center" style="width: 64px;">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="text-description">
-                                            Request for Attendance: I would like to formally request attendance for the upcoming client site visit scheduled for next week. This visit is crucial for our ongoing project and will provide an opportunity to strengthen our relationship with the client. Please let me know if you need any further details.
-                                        </div>
-                                    </td>
-                                    <td>12/09/2025</td>
-                                    <td>09:28 AM</td>
-                                    <td>07:00 PM</td>
-                                    <td>09:02 Hrs</td>
-                                    <td><span class="status-badge status-requested">Requested</span></td>
-                                    <td class="text-center action-btn">
-                                        <button class="btn btn-sm btn-link p-1">
-                                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="text-description">
-                                            Request for Late Check-in: Due to unexpected traffic conditions and public transport delays, I arrived at the office later than usual. I would like to request approval for my late check-in today.
-                                        </div>
-                                    </td>
-                                    <td>11/09/2025</td>
-                                    <td>09:45 AM</td>
-                                    <td>07:00 PM</td>
-                                    <td>09:15 Hrs</td>
-                                    <td><span class="status-badge status-approved">Approved</span></td>
-                                    <td class="text-center action-btn">
-                                        <button class="btn btn-sm btn-link p-1">
-                                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="text-description">
-                                            Request for Work From Home: I need to work from home tomorrow due to a family emergency. I will be available online during regular working hours and can attend all scheduled meetings via video call.
-                                        </div>
-                                    </td>
-                                    <td>10/09/2025</td>
-                                    <td>09:00 AM</td>
-                                    <td>06:00 PM</td>
-                                    <td>09:00 Hrs</td>
-                                    <td><span class="status-badge status-approved">Approved</span></td>
-                                    <td class="text-center action-btn">
-                                        <button class="btn btn-sm btn-link p-1">
-                                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <!-- Pagination -->
-                    <div class="pagination-custom d-flex justify-content-between align-items-center">
-                        <div class="small text-muted">Showing 1-10 of 20</div>
-                        <div class="d-flex align-items-center gap-4">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="small text-dark">Rows per page</span>
-                                <select class="form-select form-select-sm">
-                                    <option>10</option>
-                                    <option>25</option>
-                                    <option>50</option>
-                                </select>
-                            </div>
-                            <div class="small text-dark">Page 1 of 10</div>
-                            <div class="d-flex gap-2">
-                                <button class="nav-btn" disabled>
-                                    <svg width="16" height="16" fill="none" stroke="#105427" viewBox="0 0 16 16">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667"/>
-                                    </svg>
-                                </button>
-                                <button class="nav-btn" disabled>
-                                    <svg width="16" height="16" fill="none" stroke="#105427" viewBox="0 0 16 16">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 12L6 8L10 4"/>
-                                    </svg>
-                                </button>
-                                <button class="nav-btn">
-                                    <svg width="16" height="16" fill="none" stroke="#105427" viewBox="0 0 16 16">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L10 8L6 4"/>
-                                    </svg>
-                                </button>
-                                <button class="nav-btn">
-                                    <svg width="16" height="16" fill="none" stroke="#105427" viewBox="0 0 16 16">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <!-- Leaves Tab Content -->
-        <div id="leaves-content" class="tab-content-custom">
-        
+        <!-- Leaves Tab -->
+        <div id="leaves" class="tab-content">
          <div class="leave-overview-dashboard">
         <!-- Header Section -->
         <div class="leave-overview-header">
             <h1 class="leave-overview-title">Leave Overview</h1>
-            <button class="create-leave-btn" data-open-modal="create-leave-req">
+            <button class="create-leave-btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M8 3.33333V12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M3.33333 8H12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span class="create-leave-btn-text" >Create Leave Request</span>
+                <span class="create-leave-btn-text">Create Leave Request</span>
             </button>
         </div>
 
@@ -971,9 +875,9 @@
                         </div>
                     </div>
                 </div>
-                  <div class="dropdown-item" role="menuitem" tabindex="0">
+                  <div class="dropdown-item" role="menuitem" tabindex="0" data-open-modal="alert">
                     <div class="dropdown-item-content">
-                        <div class="dropdown-item-text poppins">rejectt</div>
+                        <div class="dropdown-item-text poppins">reject</div>
                         <div class="dropdown-item-icon">
                             <!-- Eye icon -->
                         </div>
@@ -1011,7 +915,7 @@
             <div class="dropdown-section">
          
                   <div class="dropdown-item" role="menuitem" tabindex="0">
-                    <div class="dropdown-item-content" data-open-modal="approved">
+                    <div class="dropdown-item-content" data-open-modal="approved" data-open-modal="approved">
                         <div class="dropdown-item-text poppins">View Details</div>
                         <div class="dropdown-item-icon">
                             <!-- Eye icon -->
@@ -1049,7 +953,7 @@
             <div class="dropdown-section">
          
                   <div class="dropdown-item" role="menuitem" tabindex="0">
-                    <div class="dropdown-item-content" data-open-modal="rejected">
+                    <div class="dropdown-item-content" data-open-modal="rejected" data-open-modal="rejected">
                         <div class="dropdown-item-text poppins">View Details</div>
                         <div class="dropdown-item-icon">
                             <!-- Eye icon -->
@@ -1102,15 +1006,17 @@
                 </div>
             </div>
         </div>
-    </div>
+  
 
         
   
         </div>
+  
+        </div>
+    
 
-        <!-- Report Tab Content -->
-        <div id="report-content" class="tab-content-custom">
-        
+        <!-- Report Tab -->
+        <div id="report" class="tab-content">
         <!-- Header Controls -->
         <div class="header-controls">
             <div class="header-left">
@@ -1325,8 +1231,8 @@
                             </td>
                             <td><span class="status-tag approved">Approved</span></td>
                             <td>
-                                      <div class="action-wrapper" style="position: relative;">
-        <button class="action-btn" id="action"   aria-haspopup="true" aria-expanded="false">
+                                <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" aria-haspopup="true" aria-expanded="false">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
                 <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
@@ -1336,7 +1242,7 @@
 
         <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
             <div class="dropdown-section">
-                  <div class="dropdown-item" role="menuitem" tabindex="0">
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
                     <div class="dropdown-item-content">
                         <div class="dropdown-item-text poppins">Delete</div>
                         <div class="dropdown-item-icon">
@@ -1347,8 +1253,6 @@
             </div>
         </div>
     </div>
-                  
-                               
                             </td>
                         </tr>
                         <tr class="table-row flagged">
@@ -1374,8 +1278,8 @@
                             </td>
                             <td><span class="status-tag pending">Approval Pending</span></td>
                             <td>
-                                                 <div class="action-wrapper" style="position: relative;">
-        <button class="action-btn" id="action"   aria-haspopup="true" aria-expanded="false">
+                                 <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" aria-haspopup="true" aria-expanded="false">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
                 <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
@@ -1385,24 +1289,7 @@
 
         <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
             <div class="dropdown-section">
-         
-                  <div class="dropdown-item" role="menuitem" tabindex="0" >
-                    <div class="dropdown-item-content">
-                        <div class="dropdown-item-text poppins">Approve</div>
-                        <div class="dropdown-item-icon">
-                            <!-- Eye icon -->
-                        </div>  
-                    </div>
-                </div>
-                  <div class="dropdown-item" role="menuitem" tabindex="0" >
-                    <div class="dropdown-item-content">
-                        <div class="dropdown-item-text poppins">Reject</div>
-                        <div class="dropdown-item-icon">
-                            <!-- Eye icon -->
-                        </div>
-                    </div>
-                </div>
-                  <div class="dropdown-item" role="menuitem" tabindex="0">
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
                     <div class="dropdown-item-content">
                         <div class="dropdown-item-text poppins">Delete</div>
                         <div class="dropdown-item-icon">
@@ -1460,85 +1347,676 @@
             </div>
       
     </div>
+
         </div>
 
 
-
-          <div  class="modal-overlay" data-modal-id="profile-leave-details" style="display: none;" data-close-on-click="true">
-     <div class="modal-container">
+        <!-- Requests Tab -->
+           <div id="requests" class="tab-content">
+              <div class="requests-container">
         <!-- Header -->
-        <div class="modal-header">
-            <div class="header-content">
-                <div class="header-title">Attendance Requests Details</div>
-                <button class="close-button" data-close-modal>
-                    <svg class="close-icon" fill="none" viewBox="0 0 16 16">
-                        <path d="M12.8534 12.1462C12.8998 12.1927 12.9367 12.2478 12.9618 12.3085C12.987 12.3692 12.9999 12.4343 12.9999 12.5C12.9999 12.5657 12.987 12.6307 12.9618 12.6914C12.9367 12.7521 12.8998 12.8073 12.8534 12.8537C12.8069 12.9002 12.7518 12.937 12.6911 12.9622C12.6304 12.9873 12.5653 13.0003 12.4996 13.0003C12.4339 13.0003 12.3689 12.9873 12.3082 12.9622C12.2475 12.937 12.1923 12.9002 12.1459 12.8537L7.99963 8.70687L3.85338 12.8537C3.75956 12.9476 3.63231 13.0003 3.49963 13.0003C3.36694 13.0003 3.2397 12.9476 3.14588 12.8537C3.05206 12.7599 2.99935 12.6327 2.99935 12.5C2.99935 12.3673 3.05206 12.2401 3.14588 12.1462L7.29275 7.99999L3.14588 3.85374C3.05206 3.75992 2.99935 3.63268 2.99935 3.49999C2.99935 3.36731 3.05206 3.24006 3.14588 3.14624C3.2397 3.05242 3.36694 2.99972 3.49963 2.99972C3.63231 2.99972 3.75956 3.05242 3.85338 3.14624L7.99963 7.29312L12.1459 3.14624C12.2397 3.05242 12.3669 2.99972 12.4996 2.99972C12.6323 2.99972 12.7596 3.05242 12.8534 3.14624C12.9472 3.24006 12.9999 3.36731 12.9999 3.49999C12.9999 3.63268 12.9472 3.75992 12.8534 3.85374L8.7065 7.99999L12.8534 12.1462Z" fill="#1B1B1B"/>
-                    </svg>
-                </button>
+        <div class="requests-header">
+            <h1 class="requests-title">Requests List</h1>
+            <div class="requests-tabs-container">
+                <div class="requests-tab active" data-tab="work-time">
+                    <span>Work Time</span>
+                    <div class="requests-badge">2</div>
+                </div>
+                <div class="requests-tab inactive" data-tab="sub-leaves">
+                    <span>Leaves</span>
+                    <div class="requests-badge">4</div>
+                </div>
+                <div class="requests-tab inactive" data-tab="assets">
+                    <span>Assets</span>
+                    <div class="requests-badge">5</div>
+                </div>
             </div>
         </div>
 
-        <!-- Content -->
-        <div class="modal-content">
-            <div class="employee-info">
-                <!-- Employee Header -->
-                <div class="employee-header">
-                    <div class="employee-details">
-                        <h2 class="employee-name">Ayush Kumar</h2>
-                        <p class="employee-designation">UI/UX Designer</p>
+        <!-- Work Time Tab Content -->
+        <div id="work-time" class="requests-tab-content active">
+            <div class="requests-table-container">
+                <table class="requests-table">
+                    <thead class="requests-table-header">
+                        <tr>
+                            <th>Description</th>
+                            <th>Project</th>
+                            <th>Start Time</th>
+                            <th>Duration</th>
+                            <th>Date</th>
+                            <th>Billing</th>
+                            <th>Billable</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="requests-table-row">
+                            <td class="requests-table-cell">
+                                <div style="display: flex; align-items: center;">
+                                    <svg class="requests-flag-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M12.666 5.96667L5.99935 3.08333V2.29167C5.99935 1.95 5.71602 1.66667 5.37435 1.66667C5.03268 1.66667 4.74935 1.95 4.74935 2.29167V17.7083C4.74935 18.05 5.03268 18.3333 5.37435 18.3333C5.71602 18.3333 5.99935 18.05 5.99935 17.7083V14.4083L12.8493 11.025C12.8493 11.025 12.8493 11.025 12.8577 11.025C14.241 10.3083 14.9827 9.38333 14.941 8.40833C14.8993 7.43333 14.091 6.56667 12.666 5.96667Z" fill="#DC2626"/>
+                                    </svg>
+                                    <span class="requests-description-cell">working on client feedbacks from extras section</span>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell requests-project-cell">UI Testing</td>
+                            <td class="requests-table-cell requests-time-cell">15:32 - 19:52</td>
+                            <td class="requests-table-cell requests-time-cell">04:20:45</td>
+                            <td class="requests-table-cell">12/09/2025</td>
+                            <td class="requests-table-cell">$123</td>
+                            <td class="requests-table-cell">
+                                <div class="requests-billable-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999C12.5131 6.97968 12.6241 7.18054 12.7969 7.31838C12.9698 7.45622 13.1903 7.51975 13.41 7.49499C13.6297 7.47024 13.8305 7.35923 13.9684 7.18638C14.1062 7.01354 14.1698 6.79301 14.145 6.57333C14.0497 5.73161 13.6632 4.94967 13.0524 4.36274C12.4416 3.77582 11.6448 3.42083 10.8 3.35916V2.49999C10.8 2.27898 10.7122 2.06702 10.5559 1.91074C10.3996 1.75446 10.1877 1.66666 9.96666 1.66666C9.74565 1.66666 9.53369 1.75446 9.37741 1.91074C9.22113 2.06702 9.13333 2.27898 9.13333 2.49999V3.36749C8.27916 3.44679 7.48061 3.82584 6.87913 4.43748C6.27764 5.04913 5.91204 5.85392 5.84706 6.7093C5.78208 7.56468 6.02193 8.41546 6.52412 9.11094C7.02631 9.80643 7.75844 10.3017 8.59083 10.5092L11.0075 11.1075C11.4741 11.226 11.8814 11.5107 12.153 11.9082C12.4246 12.3058 12.5418 12.7887 12.4826 13.2665C12.4233 13.7443 12.1918 14.184 11.8314 14.5032C11.4709 14.8223 11.0064 14.999 10.525 15H9.475C8.98851 14.9996 8.51924 14.8199 8.157 14.4952C7.79476 14.1705 7.56499 13.7235 7.51166 13.24C7.48691 13.0203 7.3759 12.8195 7.20305 12.6816C7.11747 12.6134 7.01928 12.5626 6.91409 12.5323C6.8089 12.502 6.69878 12.4927 6.59 12.505C6.37031 12.5297 6.16945 12.6408 6.03161 12.8136C5.89377 12.9865 5.83024 13.207 5.855 13.4267C5.94909 14.2569 6.32652 15.0293 6.92369 15.6137C7.52086 16.1982 8.30125 16.5588 9.13333 16.635V17.5C9.13333 17.721 9.22113 17.933 9.37741 18.0893C9.53369 18.2455 9.74565 18.3333 9.96666 18.3333C10.1877 18.3333 10.3996 18.2455 10.5559 18.0893C10.7122 17.933 10.8 17.721 10.8 17.5V16.64C11.7146 16.5758 12.5709 16.167 13.1958 15.496C13.8207 14.825 14.1676 13.9419 14.1667 13.025Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell">
+                                <div class="requests-status-tag">Approval Pending</div>
+                            </td>
+                            <td class="requests-table-cell">
+                                 <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+
+        <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Approve</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
                     </div>
-                    <div class="status-tag">Requested</div>
                 </div>
-
-                <!-- Details Card -->
-                <div class="details-card">
-                    <!-- Leave Type and Start Date -->
-                    <div class="info-row">
-                        <div class="info-item">
-                            <div class="info-label">Date</div>
-                            <div class="info-value">2025-9-10</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">Day</div>
-                            <div class="info-value">monday</div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Reject</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
                         </div>
                     </div>
-
-                    <!-- End Date and Requested Days -->
-                    <div class="info-row">
-                        <div class="info-item">
-                            <div class="info-label">End Date</div>
-                            <div class="info-value">2025-05-22</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">Requested Days</div>
-                            <div class="info-value">2 Days</div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Delete</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
                         </div>
                     </div>
-
-                    <!-- Available Leave and Applied On -->
-                    <div class="info-row">
-                        <div class="info-item">
-                            <div class="info-label">Available Leave</div>
-                            <div class="info-value">4.5 Days</div>
-                        </div>
-                    </div>
-
-                    <!-- Description -->
-                    <div class="info-description">
-                        <div class="info-label">Description</div>
-                        <div class="info-value">Request for Attendance: I would like to formally request attendance for the upcoming client site visit scheduled for next week. This visit is crucial for our ongoing project and will provide an opportunity to strengthen our relationship with the client. Please let me know if you need any further details.</div>
-                    </div>
-
-                
                 </div>
             </div>
         </div>
     </div>
-</div>
+                            </td>
+                        </tr>
+                        <tr class="requests-table-row">
+                            <td class="requests-table-cell">
+                                <div style="display: flex; align-items: center;">
+                                    <svg class="requests-flag-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M12.666 5.96667L5.99935 3.08333V2.29167C5.99935 1.95 5.71602 1.66667 5.37435 1.66667C5.03268 1.66667 4.74935 1.95 4.74935 2.29167V17.7083C4.74935 18.05 5.03268 18.3333 5.37435 18.3333C5.71602 18.3333 5.99935 18.05 5.99935 17.7083V14.4083L12.8493 11.025C12.8493 11.025 12.8493 11.025 12.8577 11.025C14.241 10.3083 14.9827 9.38333 14.941 8.40833C14.8993 7.43333 14.091 6.56667 12.666 5.96667Z" fill="#DC2626"/>
+                                    </svg>
+                                    <span class="requests-description-cell">working on client feedbacks from extras section</span>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell requests-project-cell">UI Testing</td>
+                            <td class="requests-table-cell requests-time-cell">15:32 - 19:52</td>
+                            <td class="requests-table-cell requests-time-cell">04:20:45</td>
+                            <td class="requests-table-cell">12/09/2025</td>
+                            <td class="requests-table-cell">$123</td>
+                            <td class="requests-table-cell">
+                                <div class="requests-billable-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999C12.5131 6.97968 12.6241 7.18054 12.7969 7.31838C12.9698 7.45622 13.1903 7.51975 13.41 7.49499C13.6297 7.47024 13.8305 7.35923 13.9684 7.18638C14.1062 7.01354 14.1698 6.79301 14.145 6.57333C14.0497 5.73161 13.6632 4.94967 13.0524 4.36274C12.4416 3.77582 11.6448 3.42083 10.8 3.35916V2.49999C10.8 2.27898 10.7122 2.06702 10.5559 1.91074C10.3996 1.75446 10.1877 1.66666 9.96666 1.66666C9.74565 1.66666 9.53369 1.75446 9.37741 1.91074C9.22113 2.06702 9.13333 2.27898 9.13333 2.49999V3.36749C8.27916 3.44679 7.48061 3.82584 6.87913 4.43748C6.27764 5.04913 5.91204 5.85392 5.84706 6.7093C5.78208 7.56468 6.02193 8.41546 6.52412 9.11094C7.02631 9.80643 7.75844 10.3017 8.59083 10.5092L11.0075 11.1075C11.4741 11.226 11.8814 11.5107 12.153 11.9082C12.4246 12.3058 12.5418 12.7887 12.4826 13.2665C12.4233 13.7443 12.1918 14.184 11.8314 14.5032C11.4709 14.8223 11.0064 14.999 10.525 15H9.475C8.98851 14.9996 8.51924 14.8199 8.157 14.4952C7.79476 14.1705 7.56499 13.7235 7.51166 13.24C7.48691 13.0203 7.3759 12.8195 7.20305 12.6816C7.11747 12.6134 7.01928 12.5626 6.91409 12.5323C6.8089 12.502 6.69878 12.4927 6.59 12.505C6.37031 12.5297 6.16945 12.6408 6.03161 12.8136C5.89377 12.9865 5.83024 13.207 5.855 13.4267C5.94909 14.2569 6.32652 15.0293 6.92369 15.6137C7.52086 16.1982 8.30125 16.5588 9.13333 16.635V17.5C9.13333 17.721 9.22113 17.933 9.37741 18.0893C9.53369 18.2455 9.74565 18.3333 9.96666 18.3333C10.1877 18.3333 10.3996 18.2455 10.5559 18.0893C10.7122 17.933 10.8 17.721 10.8 17.5V16.64C11.7146 16.5758 12.5709 16.167 13.1958 15.496C13.8207 14.825 14.1676 13.9419 14.1667 13.025Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell">
+                                <div class="requests-status-tag">Approval Pending</div>
+                            </td>
+                            <td class="requests-table-cell">
+                                                   <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+
+       <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Approve</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Reject</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Delete</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            </td>
+                        </tr>
+                        <!-- <tr class="requests-table-row">
+                            <td class="requests-table-cell">
+                                <div style="display: flex; align-items: center;">
+                                    <svg class="requests-flag-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M12.666 5.96667L5.99935 3.08333V2.29167C5.99935 1.95 5.71602 1.66667 5.37435 1.66667C5.03268 1.66667 4.74935 1.95 4.74935 2.29167V17.7083C4.74935 18.05 5.03268 18.3333 5.37435 18.3333C5.71602 18.3333 5.99935 18.05 5.99935 17.7083V14.4083L12.8493 11.025C12.8493 11.025 12.8493 11.025 12.8577 11.025C14.241 10.3083 14.9827 9.38333 14.941 8.40833C14.8993 7.43333 14.091 6.56667 12.666 5.96667Z" fill="#DC2626"/>
+                                    </svg>
+                                    <span class="requests-description-cell">working on client feedbacks from extras section</span>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell requests-project-cell">UI Testing</td>
+                            <td class="requests-table-cell requests-time-cell">15:32 - 19:52</td>
+                            <td class="requests-table-cell requests-time-cell">04:20:45</td>
+                            <td class="requests-table-cell">12/09/2025</td>
+                            <td class="requests-table-cell">$123</td>
+                            <td class="requests-table-cell">
+                                <div class="requests-billable-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999C12.5131 6.97968 12.6241 7.18054 12.7969 7.31838C12.9698 7.45622 13.1903 7.51975 13.41 7.49499C13.6297 7.47024 13.8305 7.35923 13.9684 7.18638C14.1062 7.01354 14.1698 6.79301 14.145 6.57333C14.0497 5.73161 13.6632 4.94967 13.0524 4.36274C12.4416 3.77582 11.6448 3.42083 10.8 3.35916V2.49999C10.8 2.27898 10.7122 2.06702 10.5559 1.91074C10.3996 1.75446 10.1877 1.66666 9.96666 1.66666C9.74565 1.66666 9.53369 1.75446 9.37741 1.91074C9.22113 2.06702 9.13333 2.27898 9.13333 2.49999V3.36749C8.27916 3.44679 7.48061 3.82584 6.87913 4.43748C6.27764 5.04913 5.91204 5.85392 5.84706 6.7093C5.78208 7.56468 6.02193 8.41546 6.52412 9.11094C7.02631 9.80643 7.75844 10.3017 8.59083 10.5092L11.0075 11.1075C11.4741 11.226 11.8814 11.5107 12.153 11.9082C12.4246 12.3058 12.5418 12.7887 12.4826 13.2665C12.4233 13.7443 12.1918 14.184 11.8314 14.5032C11.4709 14.8223 11.0064 14.999 10.525 15H9.475C8.98851 14.9996 8.51924 14.8199 8.157 14.4952C7.79476 14.1705 7.56499 13.7235 7.51166 13.24C7.48691 13.0203 7.3759 12.8195 7.20305 12.6816C7.11747 12.6134 7.01928 12.5626 6.91409 12.5323C6.8089 12.502 6.69878 12.4927 6.59 12.505C6.37031 12.5297 6.16945 12.6408 6.03161 12.8136C5.89377 12.9865 5.83024 13.207 5.855 13.4267C5.94909 14.2569 6.32652 15.0293 6.92369 15.6137C7.52086 16.1982 8.30125 16.5588 9.13333 16.635V17.5C9.13333 17.721 9.22113 17.933 9.37741 18.0893C9.53369 18.2455 9.74565 18.3333 9.96666 18.3333C10.1877 18.3333 10.3996 18.2455 10.5559 18.0893C10.7122 17.933 10.8 17.721 10.8 17.5V16.64C11.7146 16.5758 12.5709 16.167 13.1958 15.496C13.8207 14.825 14.1676 13.9419 14.1667 13.025Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell">
+                                <div class="requests-status-tag">Approval Pending</div>
+                            </td>
+                            <td class="requests-table-cell">
+                                <button class="requests-action-button">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <circle cx="10" cy="10" r="1" fill="#224FB1"/>
+                                        <circle cx="16" cy="10" r="1" fill="#224FB1"/>
+                                        <circle cx="4" cy="10" r="1" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="requests-table-row">
+                            <td class="requests-table-cell">
+                                <div style="display: flex; align-items: center;">
+                                    <svg class="requests-flag-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M12.666 5.96667L5.99935 3.08333V2.29167C5.99935 1.95 5.71602 1.66667 5.37435 1.66667C5.03268 1.66667 4.74935 1.95 4.74935 2.29167V17.7083C4.74935 18.05 5.03268 18.3333 5.37435 18.3333C5.71602 18.3333 5.99935 18.05 5.99935 17.7083V14.4083L12.8493 11.025C12.8493 11.025 12.8493 11.025 12.8577 11.025C14.241 10.3083 14.9827 9.38333 14.941 8.40833C14.8993 7.43333 14.091 6.56667 12.666 5.96667Z" fill="#DC2626"/>
+                                    </svg>
+                                    <span class="requests-description-cell">working on client feedbacks from extras section</span>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell requests-project-cell">UI Testing</td>
+                            <td class="requests-table-cell requests-time-cell">15:32 - 19:52</td>
+                            <td class="requests-table-cell requests-time-cell">04:20:45</td>
+                            <td class="requests-table-cell">12/09/2025</td>
+                            <td class="requests-table-cell">$123</td>
+                            <td class="requests-table-cell">
+                                <div class="requests-billable-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999C12.5131 6.97968 12.6241 7.18054 12.7969 7.31838C12.9698 7.45622 13.1903 7.51975 13.41 7.49499C13.6297 7.47024 13.8305 7.35923 13.9684 7.18638C14.1062 7.01354 14.1698 6.79301 14.145 6.57333C14.0497 5.73161 13.6632 4.94967 13.0524 4.36274C12.4416 3.77582 11.6448 3.42083 10.8 3.35916V2.49999C10.8 2.27898 10.7122 2.06702 10.5559 1.91074C10.3996 1.75446 10.1877 1.66666 9.96666 1.66666C9.74565 1.66666 9.53369 1.75446 9.37741 1.91074C9.22113 2.06702 9.13333 2.27898 9.13333 2.49999V3.36749C8.27916 3.44679 7.48061 3.82584 6.87913 4.43748C6.27764 5.04913 5.91204 5.85392 5.84706 6.7093C5.78208 7.56468 6.02193 8.41546 6.52412 9.11094C7.02631 9.80643 7.75844 10.3017 8.59083 10.5092L11.0075 11.1075C11.4741 11.226 11.8814 11.5107 12.153 11.9082C12.4246 12.3058 12.5418 12.7887 12.4826 13.2665C12.4233 13.7443 12.1918 14.184 11.8314 14.5032C11.4709 14.8223 11.0064 14.999 10.525 15H9.475C8.98851 14.9996 8.51924 14.8199 8.157 14.4952C7.79476 14.1705 7.56499 13.7235 7.51166 13.24C7.48691 13.0203 7.3759 12.8195 7.20305 12.6816C7.11747 12.6134 7.01928 12.5626 6.91409 12.5323C6.8089 12.502 6.69878 12.4927 6.59 12.505C6.37031 12.5297 6.16945 12.6408 6.03161 12.8136C5.89377 12.9865 5.83024 13.207 5.855 13.4267C5.94909 14.2569 6.32652 15.0293 6.92369 15.6137C7.52086 16.1982 8.30125 16.5588 9.13333 16.635V17.5C9.13333 17.721 9.22113 17.933 9.37741 18.0893C9.53369 18.2455 9.74565 18.3333 9.96666 18.3333C10.1877 18.3333 10.3996 18.2455 10.5559 18.0893C10.7122 17.933 10.8 17.721 10.8 17.5V16.64C11.7146 16.5758 12.5709 16.167 13.1958 15.496C13.8207 14.825 14.1676 13.9419 14.1667 13.025Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell">
+                                <div class="requests-status-tag">Approval Pending</div>
+                            </td>
+                            <td class="requests-table-cell">
+                                <button class="requests-action-button">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <circle cx="10" cy="10" r="1" fill="#224FB1"/>
+                                        <circle cx="16" cy="10" r="1" fill="#224FB1"/>
+                                        <circle cx="4" cy="10" r="1" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="requests-table-row">
+                            <td class="requests-table-cell">
+                                <div style="display: flex; align-items: center;">
+                                    <svg class="requests-flag-icon" viewBox="0 0 20 20" fill="none">
+                                        <path d="M12.666 5.96667L5.99935 3.08333V2.29167C5.99935 1.95 5.71602 1.66667 5.37435 1.66667C5.03268 1.66667 4.74935 1.95 4.74935 2.29167V17.7083C4.74935 18.05 5.03268 18.3333 5.37435 18.3333C5.71602 18.3333 5.99935 18.05 5.99935 17.7083V14.4083L12.8493 11.025C12.8493 11.025 12.8493 11.025 12.8577 11.025C14.241 10.3083 14.9827 9.38333 14.941 8.40833C14.8993 7.43333 14.091 6.56667 12.666 5.96667Z" fill="#DC2626"/>
+                                    </svg>
+                                    <span class="requests-description-cell">working on client feedbacks from extras section</span>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell requests-project-cell">UI Testing</td>
+                            <td class="requests-table-cell requests-time-cell">15:32 - 19:52</td>
+                            <td class="requests-table-cell requests-time-cell">04:20:45</td>
+                            <td class="requests-table-cell">12/09/2025</td>
+                            <td class="requests-table-cell">$123</td>
+                            <td class="requests-table-cell">
+                                <div class="requests-billable-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999C12.5131 6.97968 12.6241 7.18054 12.7969 7.31838C12.9698 7.45622 13.1903 7.51975 13.41 7.49499C13.6297 7.47024 13.8305 7.35923 13.9684 7.18638C14.1062 7.01354 14.1698 6.79301 14.145 6.57333C14.0497 5.73161 13.6632 4.94967 13.0524 4.36274C12.4416 3.77582 11.6448 3.42083 10.8 3.35916V2.49999C10.8 2.27898 10.7122 2.06702 10.5559 1.91074C10.3996 1.75446 10.1877 1.66666 9.96666 1.66666C9.74565 1.66666 9.53369 1.75446 9.37741 1.91074C9.22113 2.06702 9.13333 2.27898 9.13333 2.49999V3.36749C8.27916 3.44679 7.48061 3.82584 6.87913 4.43748C6.27764 5.04913 5.91204 5.85392 5.84706 6.7093C5.78208 7.56468 6.02193 8.41546 6.52412 9.11094C7.02631 9.80643 7.75844 10.3017 8.59083 10.5092L11.0075 11.1075C11.4741 11.226 11.8814 11.5107 12.153 11.9082C12.4246 12.3058 12.5418 12.7887 12.4826 13.2665C12.4233 13.7443 12.1918 14.184 11.8314 14.5032C11.4709 14.8223 11.0064 14.999 10.525 15H9.475C8.98851 14.9996 8.51924 14.8199 8.157 14.4952C7.79476 14.1705 7.56499 13.7235 7.51166 13.24C7.48691 13.0203 7.3759 12.8195 7.20305 12.6816C7.11747 12.6134 7.01928 12.5626 6.91409 12.5323C6.8089 12.502 6.69878 12.4927 6.59 12.505C6.37031 12.5297 6.16945 12.6408 6.03161 12.8136C5.89377 12.9865 5.83024 13.207 5.855 13.4267C5.94909 14.2569 6.32652 15.0293 6.92369 15.6137C7.52086 16.1982 8.30125 16.5588 9.13333 16.635V17.5C9.13333 17.721 9.22113 17.933 9.37741 18.0893C9.53369 18.2455 9.74565 18.3333 9.96666 18.3333C10.1877 18.3333 10.3996 18.2455 10.5559 18.0893C10.7122 17.933 10.8 17.721 10.8 17.5V16.64C11.7146 16.5758 12.5709 16.167 13.1958 15.496C13.8207 14.825 14.1676 13.9419 14.1667 13.025Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td class="requests-table-cell">
+                                <div class="requests-status-tag">Approval Pending</div>
+                            </td>
+                            <td class="requests-table-cell">
+                                <button class="requests-action-button">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <circle cx="10" cy="10" r="1" fill="#224FB1"/>
+                                        <circle cx="16" cy="10" r="1" fill="#224FB1"/>
+                                        <circle cx="4" cy="10" r="1" fill="#224FB1"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Leaves Tab Content -->
+        <div id="sub-leaves" class="requests-tab-content">
+            <div class="requests-table-container">
+                <table class="requests-table">
+                    <thead class="requests-table-header">
+                        <tr>
+                            <th>Leave Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Days</th>
+                            <th>Description</th>
+                            <th>Applied On</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="requests-table-row">
+                            <td class="requests-table-cell requests-leave-type-cell">Sick Leave (SL)</td>
+                            <td class="requests-table-cell requests-date-cell">2025-05-22</td>
+                            <td class="requests-table-cell requests-date-cell">2025-05-22</td>
+                            <td class="requests-table-cell requests-days-cell">2</td>
+                            <td class="requests-table-cell requests-description-long">Family vacation</td>
+                            <td class="requests-table-cell requests-date-cell">2025-05-22</td>
+                            <td class="requests-table-cell">
+                                <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+    <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+                  <div class="dropdown-item" role="menuitem" tabindex="0">
+                    <div class="dropdown-item-content" data-open-modal="leave-details">
+                        <div class="dropdown-item-text poppins" >View Details</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0" >
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Approve</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0">
+                    <div class="dropdown-item-content" data-open-modal="alert">
+                        <div class="dropdown-item-text poppins" >Reject</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+       
+    </div>
+                            </td>
+                        </tr>
+                    
+                     
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Assets Tab Content -->
+        <div id="assets" class="requests-tab-content">
+            <div class="requests-table-container">
+                <table class="requests-table">
+                    <thead class="requests-table-header">
+                        <tr>
+                            <th>Request Id</th>
+                            <th>Asset Type</th>
+                            <th>Description</th>
+                            <th>Request Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="requests-table-row">
+                            <td class="requests-table-cell requests-id-cell">#123456</td>
+                            <td class="requests-table-cell requests-asset-type-cell">Macbook</td>
+                            <td class="requests-table-cell requests-description-long">Need a Laptop</td>
+                            <td class="requests-table-cell requests-date-cell">30/05/2025</td>
+                            <td class="requests-table-cell">
+                                          <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+    <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+                 
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Approve</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Reject</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+       
+    </div>
+         
+                            </td>
+                        </tr>
+                        <tr class="requests-table-row">
+                            <td class="requests-table-cell requests-id-cell">#234567</td>
+                            <td class="requests-table-cell requests-asset-type-cell">iPhone</td>
+                            <td class="requests-table-cell requests-description-long">Need a Laptop</td>
+                            <td class="requests-table-cell requests-date-cell">15/07/2025</td>
+                            <td class="requests-table-cell">
+                                          <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+    <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+                 
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Approve</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Reject</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+       
+    </div>
+         
+                            </td>
+                        </tr>
+                  
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="requests-pagination">
+            <div class="requests-pagination-left">
+                Showing 1-10 of 20
+            </div>
+            <div class="requests-pagination-right">
+                <div class="requests-rows-per-page">
+                    <label>Rows per page</label>
+                    <select class="requests-rows-select">
+                        <option>10</option>
+                        <option>25</option>
+                        <option>50</option>
+                    </select>
+                </div>
+                <div class="requests-page-info">
+                    Page 1 of 10
+                </div>
+                <div class="requests-pagination-buttons">
+                    <button class="requests-pagination-button" disabled>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="#224FB1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="requests-pagination-button" disabled>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10 12L6 8L10 4" stroke="#224FB1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="requests-pagination-button">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="#224FB1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="requests-pagination-button">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="#224FB1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <!-- Contribution Tab -->
+        <div id="contribution" class="tab-content">
+            <div class="contribution-header">
+                <div class="table-title">Project Contribution</div>
+                <div class="date-picker">
+                    <svg width="16" height="16" fill="none" stroke="#1E293B" viewBox="0 0 16 16">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M5.33333 1.33333V4"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M10.6667 1.33333V4"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M2 6.66667H14"/>
+                    </svg>
+                    This Month
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-label">Total Tracked Hour</div>
+                        <svg class="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6V12L16 14"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">19:00:28</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-label">Total Billing</div>
+                        <svg class="stat-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.5 22.5H4.5C3.67125 22.5 3 21.8287 3 21V14.25C3 13.4212 3.67125 12.75 4.5 12.75H8.49975V12C8.49975 11.1712 9.17175 10.5 9.99975 10.5H14.0002V9C14.0002 8.17125 14.6715 7.5 15.5002 7.5H19.5C20.3288 7.5 21 8.17125 21 9V21C21 21.8287 20.3288 22.5 19.5 22.5ZM8.49975 14.25H4.5V21H8.49975V14.25ZM14.0002 12H9.99975V21H14.0002V12ZM15.5002 21H19.5V9H15.5002V11.25V21ZM14.2395 4.2165C11.4173 8.3775 6.186 9.72675 6.186 9.72675C5.78475 9.8295 5.376 9.58725 5.27325 9.186C5.1705 8.78475 5.41275 8.376 5.814 8.27325C5.814 8.27325 10.7955 7.011 13.2308 3.01275L11.7555 3C11.3415 2.99625 11.0085 2.65725 11.0122 2.24325C11.016 1.82925 11.355 1.49625 11.769 1.5L14.979 1.5285C15.3885 1.5315 15.7192 1.86225 15.7222 2.27175L15.75 5.4075C15.7537 5.8215 15.4208 6.1605 15.0068 6.16425C14.5928 6.168 14.2537 5.835 14.25 5.421L14.2395 4.2165Z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">$4567</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-label">Billable Hours</div>
+                        <svg class="stat-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.075 12.339V7.17554C20.075 6.03772 19.1492 5.11194 18.0117 5.11194H14.1643V4.22021C14.1643 3.0824 13.2385 2.15662 12.1011 2.15662H4.38428C2.79419 2.15662 1.5 3.45081 1.5 5.04126V15.3849C1.5 17.6089 3.30908 19.4183 5.53345 19.4183H12.9961C13.9063 20.8718 15.5173 21.8434 17.3547 21.8434C20.1921 21.8434 22.5 19.5352 22.5 16.6978C22.5 14.8602 21.5284 13.2491 20.075 12.339ZM12.3625 17.9183H5.53345C4.13672 17.9183 3 16.782 3 15.3849V5.04126C3 4.27771 3.62109 3.65662 4.38428 3.65662H12.1011C12.4116 3.65662 12.6643 3.9093 12.6643 4.22021V5.11194H5.04126C4.62671 5.11194 4.29126 5.44775 4.29126 5.86194C4.29126 6.27612 4.62671 6.61194 5.04126 6.61194H18.0117C18.3223 6.61194 18.575 6.86462 18.575 7.17554V11.7055C18.183 11.6096 17.7758 11.5532 17.3547 11.5532C14.5181 11.5532 12.2102 13.8611 12.2102 16.6978C12.2102 17.1189 12.2666 17.5263 12.3625 17.9183ZM17.3547 20.3434C15.345 20.3434 13.7102 18.7079 13.7102 16.6978C13.7102 14.688 15.345 13.0532 17.3547 13.0532C19.3645 13.0532 21 14.688 21 16.6978C21 18.7079 19.3645 20.3434 17.3547 20.3434Z"/>
+                            <path d="M18.6299 15.9478H18.1047V15.3977C18.1047 14.9835 17.7693 14.6477 17.3547 14.6477C16.9402 14.6477 16.6047 14.9835 16.6047 15.3977V16.6978C16.6047 17.1119 16.9402 17.4478 17.3547 17.4478H18.6299C19.0444 17.4478 19.3799 17.1119 19.3799 16.6978C19.3799 16.2836 19.0444 15.9478 18.6299 15.9478Z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">9 hrs 15 mins</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-label">Top Project</div>
+                        <svg class="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13C20 18 16.5 20.5 12.34 21.95C12.1222 22.0238 11.8855 22.0203 11.67 21.94C7.5 20.5 4 18 4 13V6C4 5.73478 4.10536 5.48043 4.29289 5.29289C4.48043 5.10536 4.73478 5 5 5C7 5 9.5 3.8 11.24 2.28C11.4519 2.099 11.7214 1.99955 12 1.99955C12.2786 1.99955 12.5481 2.099 12.76 2.28C14.51 3.81 17 5 19 5C19.2652 5 19.5196 5.10536 19.7071 5.29289C19.8946 5.48043 20 5.73478 20 6V13Z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12L11 14L15 10"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">UI Design – 22 hrs</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-name">Algoquant-WebApp</div>
+                        <div class="billing-info">
+                            <div class="billing-label">Total Billing</div>
+                            <div class="billing-dot"></div>
+                            <div class="billing-amount">$400</div>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-bars">
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress-left">
+                                <span class="progress-tracked">Total Tracked</span>
+                                <span class="progress-hours">(240 Hr)</span>
+                            </div>
+                            <div class="progress-percentage">43%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-name">E-Commerce Platform</div>
+                        <div class="billing-info">
+                            <div class="billing-label">Total Billing</div>
+                            <div class="billing-dot"></div>
+                            <div class="billing-amount">$350</div>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-bars">
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress-left">
+                                <span class="progress-tracked">Total Tracked</span>
+                                <span class="progress-hours">(210 Hr)</span>
+                            </div>
+                            <div class="progress-percentage">70%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-name">Mobile App Design</div>
+                        <div class="billing-info">
+                            <div class="billing-label">Total Billing</div>
+                            <div class="billing-dot"></div>
+                            <div class="billing-amount">$280</div>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-bars">
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-filled"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                            <div class="progress-bar-item progress-empty"></div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress-left">
+                                <span class="progress-tracked">Total Tracked</span>
+                                <span class="progress-hours">(120 Hr)</span>
+                            </div>
+                            <div class="progress-percentage">30%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
- 
+
+    <!-- modal -->
+     
     <div  class="modal-overlay" data-modal-id="leave-details" style="display: none;" data-close-on-click="true">
      <div class="modal-container">
         <!-- Header -->
@@ -1671,8 +2149,65 @@
         </div>
     </div>
 </div>
- 
-    <div  class="modal-overlay" data-modal-id="rejected" style="display: none;" data-close-on-click="true">
+
+
+
+<!-- alert modal -->
+     <div class="modal-overlay alertModal" id="alert-modal" data-modal-id="alert" style="display: none;" data-close-on-click="true">
+        <div class="alert-dialog">
+            <div class="dialog-content">
+                <!-- Warning Icon -->
+                <div class="icon-container">
+                    <div class="icon-inner">
+                        <svg class="warning-icon" viewBox="0 0 42 42" preserveAspectRatio="none">
+                            <g>
+                                <path
+                                    d="M35.8511 6.15107C31.9126 2.21261 26.5709 0 21.0011 0C15.4312 0 10.0895 2.21261 6.15107 6.15107C2.21261 10.0895 0 15.4312 0 21.0011C0 26.5709 2.21261 31.9126 6.15107 35.8511C10.0895 39.7895 15.4312 42.0021 21.0011 42.0021C26.5709 42.0021 31.9126 39.7895 35.8511 35.8511C39.7895 31.9126 42.0021 26.5709 42.0021 21.0011C42.0021 15.4312 39.7895 10.0895 35.8511 6.15107ZM33.7361 33.7361C31.2162 36.2472 28.0089 37.9553 24.5189 38.6448C21.029 39.3342 17.413 38.9741 14.1275 37.6099C10.8421 36.2457 8.03458 33.9386 6.05947 30.9798C4.08437 28.0211 3.03027 24.5435 3.03027 20.9861C3.03027 17.4287 4.08437 13.951 6.05947 10.9923C8.03458 8.03357 10.8421 5.72644 14.1275 4.36223C17.413 2.99801 21.029 2.63791 24.5189 3.32738C28.0089 4.01685 31.2162 5.72498 33.7361 8.23607C35.4142 9.90833 36.7456 11.8954 37.6541 14.0833C38.5626 16.2713 39.0303 18.617 39.0303 20.9861C39.0303 23.3551 38.5626 25.7009 37.6541 27.8888C36.7456 30.0767 35.4142 32.0638 33.7361 33.7361ZM27.3611 16.7561L23.1161 21.0011L27.3611 25.2461C27.6404 25.5271 27.7973 25.9073 27.7973 26.3036C27.7973 26.6998 27.6404 27.08 27.3611 27.3611C27.08 27.6404 26.6998 27.7973 26.3036 27.7973C25.9073 27.7973 25.5271 27.6404 25.2461 27.3611L21.0011 23.1161L16.7561 27.3611C16.475 27.6404 16.0949 27.7973 15.6986 27.7973C15.3023 27.7973 14.9221 27.6404 14.6411 27.3611C14.3617 27.08 14.2049 26.6998 14.2049 26.3036C14.2049 25.9073 14.3617 25.5271 14.6411 25.2461L18.8861 21.0011L14.6411 16.7561C14.3953 16.4691 14.2669 16.1 14.2815 15.7225C14.2961 15.345 14.4526 14.9869 14.7197 14.7197C14.9869 14.4526 15.345 14.2961 15.7225 14.2815C16.1 14.2669 16.4691 14.3953 16.7561 14.6411L21.0011 18.8861L25.2461 14.6411C25.533 14.3953 25.9021 14.2669 26.2797 14.2815C26.6572 14.2961 27.0153 14.4526 27.2824 14.7197C27.5496 14.9869 27.7061 15.345 27.7206 15.7225C27.7352 16.1 27.6068 16.4691 27.3611 16.7561Z"
+                                    fill="#FF4949"
+                                />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Dialog Title -->
+                <div class="dialog-title">
+                    <p>Are you sure you want to reject this leave request</p>
+                </div>
+
+                <!-- Message Content -->
+                <div class="message-content">
+                    <div class="field-label">
+                        <p>Remark</p>
+                    </div>
+                    <div class="field-container">
+                        <div class="field-inner">
+                            <div class="field-content">
+                                <textarea 
+                                    class="field-textarea" 
+                                    placeholder="Enter remark"
+                                    rows="6"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Button Container -->
+                <div class="button-container">
+                    <button class="cancel-button" onclick="closeDialog()">
+                        <div class="cancel-button-text" data-close-modal="">Cancel</div>
+                    </button>
+                    <button class="reject-button" onclick="confirmReject()">
+                        <div class="reject-button-text">Yes, Reject</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- rejected -->
+  
+        <div  class="modal-overlay" data-modal-id="rejected" style="display: none;" data-close-on-click="true">
      <div class="modal-container">
         <!-- Header -->
         <div class="modal-header">
@@ -1778,9 +2313,9 @@
             </div>
         </div>
 
-  
     </div>
 </div>
+  <!-- approved -->
     <div  class="modal-overlay" data-modal-id="approved" style="display: none;" data-close-on-click="true">
      <div class="modal-container">
         <!-- Header -->
@@ -1891,552 +2426,16 @@
     </div>
 </div>
 
-<!-- leave request modal -->
 
-<div class="modal-overlay" id="leave-req-modal" data-modal-id="create-leave-req" style="display: none;" data-close-on-click="true">
-    <div class="modal-container leave-request-modal-container">
-        <!-- Header -->
-        <div class="leave-request-header">
-            <h2 class="leave-request-title">Create Leave Request</h2>
-            <button class="leave-request-close-button" data-close-modal>
-                <svg class="leave-request-close-icon" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6L18 18"/>
-                </svg>
-            </button>
-        </div>
 
-        <!-- Body -->
-        <div class="leave-request-body">
-            <form class="leave-request-form-grid" id="leaveRequestForm">
-                <!-- Leave Type -->
-                <div class="leave-request-form-field">
-                    <label class="leave-request-label">Leave Type*</label>
-                    <div class="leave-request-select-container">
-                        <select class="leave-request-select" required>
-                            <option value="">Select leave type</option>
-                            <option value="sick">Sick Leave (SL)</option>
-                            <option value="vacation">Vacation Leave (VL)</option>
-                            <option value="personal">Personal Leave (PL)</option>
-                            <option value="maternity">Maternity Leave</option>
-                            <option value="paternity">Paternity Leave</option>
-                            <option value="emergency">Emergency Leave</option>
-                        </select>
-                        <svg class="leave-request-select-icon" fill="none" viewBox="0 0 16 16">
-                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Date Range -->
-                <div class="leave-request-form-row">
-                    <div class="leave-request-form-field">
-                        <label class="leave-request-label">From Date*</label>
-                        <div class="leave-request-date-container">
-                            <input type="text" class="leave-request-date-input" placeholder="dd/mm/yyyy" required>
-                            <svg class="leave-request-calendar-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M5.33333 1.33333V4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                <path d="M10.6667 1.33333V4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                <path d="M2 6.66667H14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="leave-request-form-field">
-                        <label class="leave-request-label">To Date*</label>
-                        <div class="leave-request-date-container">
-                            <input type="text" class="leave-request-date-input" placeholder="dd/mm/yyyy" required>
-                            <svg class="leave-request-calendar-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M5.33333 1.33333V4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                <path d="M10.6667 1.33333V4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                <path d="M2 6.66667H14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Duration -->
-                <div class="leave-request-form-row">
-                    <div class="leave-request-form-field">
-                        <label class="leave-request-label">Start Duration*</label>
-                        <div class="leave-request-select-container">
-                            <select class="leave-request-select" required>
-                                <option value="full-day" selected>Full Day</option>
-                                <option value="first-half">First Half</option>
-                                <option value="second-half">Second Half</option>
-                            </select>
-                            <svg class="leave-request-select-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="leave-request-form-field">
-                        <label class="leave-request-label">End Duration*</label>
-                        <div class="leave-request-select-container">
-                            <select class="leave-request-select" required>
-                                <option value="full-day" selected>Full Day</option>
-                                <option value="first-half">First Half</option>
-                                <option value="second-half">Second Half</option>
-                            </select>
-                            <svg class="leave-request-select-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Description -->
-                <div class="leave-request-form-field">
-                    <label class="leave-request-label">Description*</label>
-                    <textarea class="leave-request-textarea" placeholder="Explain briefly why you're taking leave..." required></textarea>
-                </div>
-
-                <!-- Attachment -->
-                <div class="leave-request-form-field">
-                    <label class="leave-request-label">Attachment (optional)</label>
-                    <div class="leave-request-file-upload">
-                        <div class="leave-request-file-input">
-                            <span>No file chosen</span>
-                        </div>
-                        <button type="button" class="leave-request-upload-button" onclick="triggerFileUpload()">
-                            <svg class="leave-request-upload-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                <path d="M11.3333 5.33333L8 2L4.66667 5.33333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                <path d="M8 2V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                            </svg>
-                            Upload
-                        </button>
-                        <input type="file" id="fileInput" style="display: none;" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <!-- Footer -->
-        <div class="leave-request-footer">
-            <button type="button" class="leave-request-button leave-request-button-cancel" data-close-modal>
-                Cancel
-            </button>
-            <button type="submit" form="leaveRequestForm" class="leave-request-button leave-request-button-submit">
-                Submit Request
-            </button>
-        </div>
     </div>
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/employee.js"></script>
     
-    </div>
-<div class="modal-overlay" id="leave-req-modal" data-modal-id="edit-profile" style="display: none;" data-close-on-click="true">
-    <div class="modal-container edit-profile-modal-container">
-        <!-- Header -->
-        <div class="edit-profile-header">
-            <h2 class="edit-profile-title">Edit Profile Detail's</h2>
-            <button class="edit-profile-close-button" data-close-modal>
-                <svg class="edit-profile-close-icon" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6L18 18"/>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Body -->
-        <div class="edit-profile-body">
-            <!-- Stepper -->
-            <div class="edit-profile-stepper">
-                <div class="edit-profile-step">
-                    <div class="edit-profile-step-shape active" id="step-1-shape">
-                        <div class="edit-profile-step-dot" id="step-1-dot"></div>
-                        <svg class="edit-profile-step-check" id="step-1-check" style="display: none;" fill="none" viewBox="0 0 15 15">
-                            <path d="M6.0001 9.35153L4.0243 7.37573L3.1759 8.22413L6.0001 11.0483L11.8243 5.22413L10.9759 4.37573L6.0001 9.35153Z" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <div class="edit-profile-step-label active" id="step-1-label">Personal Details</div>
-                    <div class="edit-profile-step-connector inactive" id="connector-1"></div>
-                </div>
-
-                <div class="edit-profile-step">
-                    <div class="edit-profile-step-shape inactive" id="step-2-shape">
-                        <div class="edit-profile-step-dot" id="step-2-dot" style="display: none;"></div>
-                        <svg class="edit-profile-step-check" id="step-2-check" style="display: none;" fill="none" viewBox="0 0 15 15">
-                            <path d="M6.0001 9.35153L4.0243 7.37573L3.1759 8.22413L6.0001 11.0483L11.8243 5.22413L10.9759 4.37573L6.0001 9.35153Z" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <div class="edit-profile-step-label inactive" id="step-2-label">Emergency Contact Details</div>
-                    <div class="edit-profile-step-connector inactive" id="connector-2"></div>
-                </div>
-
-                <div class="edit-profile-step">
-                    <div class="edit-profile-step-shape inactive" id="step-3-shape">
-                        <div class="edit-profile-step-dot" id="step-3-dot" style="display: none;"></div>
-                        <svg class="edit-profile-step-check" id="step-3-check" style="display: none;" fill="none" viewBox="0 0 15 15">
-                            <path d="M6.0001 9.35153L4.0243 7.37573L3.1759 8.22413L6.0001 11.0483L11.8243 5.22413L10.9759 4.37573L6.0001 9.35153Z" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <div class="edit-profile-step-label inactive" id="step-3-label">Bank Account Details</div>
-                </div>
-            </div>
-
-            <!-- Step 1: Personal Details -->
-            <div class="edit-profile-form-content active" id="step-1-content">
-                <h3 class="edit-profile-section-title">Personal Details</h3>
-                <div class="edit-profile-form-grid">
-                    <!-- Full Name -->
-                    <div class="edit-profile-form-field full-width">
-                        <label class="edit-profile-label">Full Name</label>
-                        <input type="text" class="edit-profile-input readonly" value="Ayush Kumar" readonly>
-                    </div>
-
-                    <!-- Date of Birth & Gender -->
-                    <div class="edit-profile-form-row">
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Date Of Birth</label>
-                            <div class="edit-profile-input-container">
-                                <input type="text" class="edit-profile-input" value="04/07/2025">
-                                <svg class="edit-profile-date-icon" fill="none" viewBox="0 0 16 16">
-                                    <path d="M5.33333 1.33333V4M10.6667 1.33333V4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                    <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                    <path d="M2 6.66667H14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Gender</label>
-                            <div class="edit-profile-input-container">
-                                <select class="edit-profile-select">
-                                    <option value="male" selected>Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <svg class="edit-profile-select-icon" fill="none" viewBox="0 0 16 16">
-                                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Children & Marital Status -->
-                    <div class="edit-profile-form-row">
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Children</label>
-                            <input type="number" class="edit-profile-input" value="0">
-                        </div>
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Marital Status</label>
-                            <div class="edit-profile-input-container">
-                                <select class="edit-profile-select">
-                                    <option value="unmarried" selected>Unmarried</option>
-                                    <option value="married">Married</option>
-                                    <option value="divorced">Divorced</option>
-                                    <option value="widowed">Widowed</option>
-                                </select>
-                                <svg class="edit-profile-select-icon" fill="none" viewBox="0 0 16 16">
-                                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mobile Number & Email -->
-                    <div class="edit-profile-form-row">
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Mobile Number</label>
-                            <input type="tel" class="edit-profile-input" value="(219) 555-0114">
-                        </div>
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Email</label>
-                            <input type="email" class="edit-profile-input" value="michelle.rivera@example.com">
-                        </div>
-                    </div>
-
-                    <!-- Work Mobile & Work Email -->
-                    <div class="edit-profile-form-row">
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Work Mobile</label>
-                            <input type="tel" class="edit-profile-input readonly" value="(219) 555-0114" readonly>
-                        </div>
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Work Email</label>
-                            <input type="email" class="edit-profile-input readonly" value="michelle.rivera@example.com" readonly>
-                        </div>
-                    </div>
-
-                    <!-- Highest Education & Address -->
-                    <div class="edit-profile-form-row">
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Highest Education</label>
-                            <div class="edit-profile-input-container">
-                                <select class="edit-profile-select">
-                                    <option value="btech-cse" selected>B.Tech CSE</option>
-                                    <option value="btech-ece">B.Tech ECE</option>
-                                    <option value="btech-me">B.Tech ME</option>
-                                    <option value="mtech">M.Tech</option>
-                                    <option value="mba">MBA</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <svg class="edit-profile-select-icon" fill="none" viewBox="0 0 16 16">
-                                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Address</label>
-                            <input type="text" class="edit-profile-input" value="123 Maple Street, Noida, Uttar Pradesh, 201301">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 2: Emergency Contact Details -->
-            <div class="edit-profile-form-content" id="step-2-content">
-                <h3 class="edit-profile-section-title">Emergency Contact Details</h3>
-                <div class="edit-profile-form-grid">
-                    <!-- Emergency Contact Name -->
-                    <div class="edit-profile-form-field full-width">
-                        <label class="edit-profile-label">Emergency Contact Name</label>
-                        <input type="text" class="edit-profile-input" value="Ayush Kumar">
-                    </div>
-
-                    <!-- Emergency Contact Number & Relation -->
-                    <div class="edit-profile-form-row">
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Emergency Contact Number</label>
-                            <input type="tel" class="edit-profile-input" value="(219) 555-0114">
-                        </div>
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Relation</label>
-                            <div class="edit-profile-input-container">
-                                <select class="edit-profile-select">
-                                    <option value="brother" selected>Brother</option>
-                                    <option value="sister">Sister</option>
-                                    <option value="father">Father</option>
-                                    <option value="mother">Mother</option>
-                                    <option value="spouse">Spouse</option>
-                                    <option value="friend">Friend</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <svg class="edit-profile-select-icon" fill="none" viewBox="0 0 16 16">
-                                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 3: Bank Account Details -->
-            <div class="edit-profile-form-content" id="step-3-content">
-                <h3 class="edit-profile-section-title">Bank Account Details</h3>
-                <div class="edit-profile-form-grid">
-                    <!-- Bank Name & Account Number -->
-                    <div class="edit-profile-form-row">
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Bank Name</label>
-                            <div class="edit-profile-input-container">
-                                <select class="edit-profile-select">
-                                    <option value="sbi" selected>State Bank of India</option>
-                                    <option value="hdfc">HDFC Bank</option>
-                                    <option value="icici">ICICI Bank</option>
-                                    <option value="axis">Axis Bank</option>
-                                    <option value="pnb">Punjab National Bank</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <svg class="edit-profile-select-icon" fill="none" viewBox="0 0 16 16">
-                                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Account Number</label>
-                            <input type="text" class="edit-profile-input" value="986860001234">
-                        </div>
-                    </div>
-
-                    <!-- Branch & IFSC Code -->
-                    <div class="edit-profile-form-row">
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">Branch</label>
-                            <input type="text" class="edit-profile-input" value="Noida Utter Pradesh">
-                        </div>
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">IFSC Code</label>
-                            <input type="text" class="edit-profile-input" value="SBIN0001234">
-                        </div>
-                    </div>
-
-                    <!-- Bank Address -->
-                    <div class="edit-profile-form-field full-width">
-                        <label class="edit-profile-label">Bank Address</label>
-                        <input type="text" class="edit-profile-input" value="State Bank of India, 78 Commerce Road, Noida, Uttar Pradesh, 201301, India">
-                    </div>
-
-                    <!-- PAN Number & UAN -->
-                    <div class="edit-profile-form-row">
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">PAN Number</label>
-                            <input type="text" class="edit-profile-input" value="XYZP1234567A">
-                        </div>
-                        <div class="edit-profile-form-field">
-                            <label class="edit-profile-label">UAN</label>
-                            <input type="text" class="edit-profile-input" value="UAN1234567890">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="edit-profile-footer">
-            <button class="edit-profile-button edit-profile-button-cancel" onclick="cancelModal()">
-                Cancel
-            </button>
-            <div class="edit-profile-button-group">
-                <button class="edit-profile-button edit-profile-button-secondary" id="prev-button" onclick="previousStep()" style="display: none;">
-                    Previous
-                </button>
-                <button class="edit-profile-button edit-profile-button-primary" id="next-button" onclick="nextStep()">
-                    Next
-                </button>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    </div>
-
-    <!-- modals -->
-<!-- leave request modal -->
-
-
-  <script src="./assets/js/profile.js"></script>
-<script src="./assets/js/modal.js"></script>
-  <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/dropdown.js"></script>
-
-      <script>
-        let currentStep = 1;
-        const totalSteps = 3;
-
-        function updateStepper() {
-            for (let i = 1; i <= totalSteps; i++) {
-                const shape = document.getElementById(`step-${i}-shape`);
-                const label = document.getElementById(`step-${i}-label`);
-                const dot = document.getElementById(`step-${i}-dot`);
-                const check = document.getElementById(`step-${i}-check`);
-                const content = document.getElementById(`step-${i}-content`);
-
-                // Reset classes
-                shape.className = 'edit-profile-step-shape';
-                label.className = 'edit-profile-step-label';
-
-                // Hide content
-                content.classList.remove('active');
-
-                if (i < currentStep) {
-                    // Completed step
-                    shape.classList.add('completed');
-                    label.classList.add('completed');
-                    dot.style.display = 'none';
-                    check.style.display = 'block';
-                } else if (i === currentStep) {
-                    // Current step
-                    shape.classList.add('active');
-                    label.classList.add('active');
-                    dot.style.display = 'block';
-                    check.style.display = 'none';
-                    content.classList.add('active');
-                } else {
-                    // Future step
-                    shape.classList.add('inactive');
-                    label.classList.add('inactive');
-                    dot.style.display = 'none';
-                    check.style.display = 'none';
-                }
-            }
-
-            // Update connectors
-            for (let i = 1; i < totalSteps; i++) {
-                const connector = document.getElementById(`connector-${i}`);
-                if (i < currentStep) {
-                    connector.className = 'edit-profile-step-connector active';
-                } else {
-                    connector.className = 'edit-profile-step-connector inactive';
-                }
-            }
-        }
-
-        function updateButtons() {
-            const prevButton = document.getElementById('prev-button');
-            const nextButton = document.getElementById('next-button');
-
-            if (currentStep === 1) {
-                prevButton.style.display = 'none';
-                nextButton.textContent = 'Next';
-            } else if (currentStep === totalSteps) {
-                prevButton.style.display = 'block';
-                nextButton.textContent = 'Submit';
-            } else {
-                prevButton.style.display = 'block';
-                nextButton.textContent = 'Next';
-            }
-        }
-
-        function nextStep() {
-            if (currentStep < totalSteps) {
-                currentStep++;
-                updateStepper();
-                updateButtons();
-            } else {
-                // Submit form
-                alert('Profile details submitted successfully!');
-                closeModal();
-            }
-        }
-
-        function previousStep() {
-            if (currentStep > 1) {
-                currentStep--;
-                updateStepper();
-                updateButtons();
-            }
-        }
-
- 
-
-        // Initialize the modal
-        document.addEventListener('DOMContentLoaded', function() {
-            updateStepper();
-            updateButtons();
-        });
-
-        // Handle form validation and input interactions
-        document.querySelectorAll('.edit-profile-input, .edit-profile-select').forEach(element => {
-            element.addEventListener('focus', function() {
-                this.style.borderColor = 'var(--edit-profile-primary-blue)';
-                this.style.boxShadow = '0 0 0 3px rgba(34, 79, 177, 0.1)';
-            });
-
-            element.addEventListener('blur', function() {
-                this.style.borderColor = 'var(--edit-profile-slate-200)';
-                this.style.boxShadow = 'none';
-            });
-        });
-
-        // Handle keyboard navigation
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                cancelModal();
-            } else if (event.key === 'Enter' && event.ctrlKey) {
-                nextStep();
-            }
-        });
-         document.addEventListener("DOMContentLoaded", function () {
-      const navItems = document.querySelectorAll(".nav-item");
-
-      navItems.forEach(item => {
-          item.addEventListener("click", function () {
-              navItems.forEach(i => i.classList.remove("active"));
-              this.classList.add("active");
-          });
-      });
-  });
-    </script>
-
+    <script src="./assets/js/profile.js"></script>
+    <script src="./assets/js/dropdown.js"></script>
+    <script src="./assets/js/script.js"></script>
+    
+    
 </body>
 </html>

@@ -6,559 +6,1095 @@
     <title>Attendance Overview Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="./assets/css/attendence.css">
+   <link rel="stylesheet" href="./assets/css/employees/details.css">
      <link rel="stylesheet" href="./assets/css/style.css">
+      <link rel="stylesheet" href="./assets/css/Modals/milestone.css">
+     <link rel="stylesheet" href="./assets/css/Modals/reqemp.css">
+     <link rel="stylesheet" href="./assets/css/dropdown.css">
+    
+    
+    
 </head>
+
 <body>
     <div class="main-container">
-        <div id="sidebar-container"></div>
+        <div id="sidebar-container">  <div class="sidebar">
+           
+            <div class="logo-section">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="./Images/main-logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navigation">
+                  <ul class="nav-list">
+                    <li>
+                        <a href="/dashboard.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="3" width="7" height="9"/>
+                                <rect x="14" y="3" width="7" height="5"/>
+                                <rect x="14" y="12" width="7" height="9"/>
+                                <rect x="3" y="16" width="7" height="5"/>
+                            </svg>
+                            <span class="nav-name">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            <span class="nav-name">Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/employees.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <span class="nav-name">All Employees</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/daily-status.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                            <span class="nav-name">Daily Status Report</span>
+                        </a>
+                    </li>
+                 
+                    <li>
+                        <a href="/report.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 0 0 4.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 0 1-15.357-2m15.357 2H15"/>
+                                <rect x="8" y="8" width="18" height="18" rx="2"/>
+                            </svg>
+                            <span class="nav-name">All Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/project.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                                <circle cx="12" cy="13" r="2"/>
+                            </svg>
+                            <span class="nav-name">Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/attendence.html" class="nav-item active">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                                <path d="M8 14h.01"/>
+                                <path d="M12 14h.01"/>
+                                <path d="M16 14h.01"/>
+                                <path d="M8 18h.01"/>
+                                <path d="M12 18h.01"/>
+                                <path d="M16 18h.01"/>
+                            </svg>
+                            <span class="nav-name">Attendance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/leave.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M8 2v4"/>
+                                <path d="M16 2v4"/>
+                                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <path d="M3 10h18"/>
+                                <path d="M8 14h.01"/>
+                                <path d="M12 14h.01"/>
+                                <path d="M16 14h.01"/>
+                                <path d="M8 18h.01"/>
+                                <path d="M12 18h.01"/>
+                                <path d="M16 18h.01"/>
+                            </svg>
+                            <span class="nav-name">Leaves</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/announcement.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M7 7h10v3l2 2-2 2v3H7v-3l-2-2 2-2V7z"/>
+                                <path d="M11 7V4a1 1 0 0 1 1-1h0a1 1 0 0 1 1 1v3"/>
+                                <path d="M7 7L5.5 5.5"/>
+                                <path d="M17 7l1.5-1.5"/>
+                                 <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <path d="M7 17l-1.5 1.5"/>
+                                <path d="M17 17l1.5 1.5"/>
+                            </svg>
+                            <span class="nav-name">Announcement</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/request.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                                <path d="M16 10l4 4"/>
+                                <path d="M16 14l4-4"/>
+                            </svg>
+                            <span class="nav-name">All Requests</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/payroll.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                 <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <polyline points="11,18 12,19 13,18"/>
+                                <polyline points="11,6 12,5 13,6"/>
+                            </svg>
+                            <span class="nav-name">Payroll</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/assets.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                            <span class="nav-name">Assets</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+</div>
+</div>
         <div class="main-content">
-            <!-- <div id="header"></div> -->
-
-        <!-- Calendar Section -->
-        <div class="calendar-section">
-            <!-- Calendar Header -->
-            <div class="calendar-header">
-                <h3 class="calendar-title">April 2025</h3>
-                <div class="calendar-nav">
-                    <button class="nav-button" onclick="previousMonth()">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M10 12L6 8L10 4"/>
-                        </svg>
-                        Back
-                    </button>
-                    <button class="nav-button" onclick="nextMonth()">
-                        Next
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M6 4L10 8L6 12"/>
-                        </svg>
-                    </button>
+       
+                <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <div class="nav-title active" data-main-tab="overview">Attendance Overview</div>
+                <div class="requests-section">
+                    <div class="nav-title" data-main-tab="requests">Attendance Requests</div>
+                    <div class="badge">4</div>
                 </div>
             </div>
-
-            <!-- Legend -->
-            <div class="legend-section">
-                <p class="legend-note">Note:</p>
-                
-                <!-- Holiday -->
-                <div class="legend-item">
-                    <svg class="legend-icon" viewBox="0 0 16 15" fill="none">
-                        <path d="M8.66797 14.0078C8.50391 14.3177 8.23958 14.4818 7.875 14.5C7.52865 14.4818 7.26432 14.3177 7.08203 14.0078L5.33203 10.3984L1.39453 9.79687C1.04818 9.74219 0.820313 9.55078 0.710938 9.22266C0.601563 8.8763 0.674479 8.57552 0.929688 8.32031L3.77344 5.50391L3.08984 1.51172C3.05339 1.16536 3.17188 0.882812 3.44531 0.664062C3.73698 0.463542 4.04688 0.445312 4.375 0.609375L7.875 2.46875L11.4023 0.609375C11.7122 0.445312 12.013 0.463542 12.3047 0.664062C12.5964 0.882812 12.7148 1.16536 12.6602 1.51172L12.0039 5.50391L14.8477 8.32031C15.0846 8.57552 15.1576 8.8763 15.0664 9.22266C14.9388 9.55078 14.7018 9.74219 14.3555 9.79687L10.418 10.3984L8.66797 14.0078Z" fill="#6C5FFC"/>
-                    </svg>
-                    <svg class="legend-icon" viewBox="0 0 13 15" fill="none">
-                        <path d="M12.0039 6.87109C12.168 7.05339 12.25 7.26302 12.25 7.5C12.25 7.73698 12.168 7.94661 12.0039 8.12891L7.62891 12.5039C7.44661 12.668 7.23698 12.75 7 12.75C6.76302 12.75 6.55339 12.668 6.37109 12.5039C6.20703 12.3216 6.125 12.112 6.125 11.875C6.125 11.638 6.20703 11.4284 6.37109 11.2461L9.26953 8.375H0.875C0.619792 8.375 0.410156 8.29297 0.246094 8.12891C0.0820312 7.96484 0 7.75521 0 7.5C0 7.24479 0.0820312 7.03516 0.246094 6.87109C0.410156 6.70703 0.619792 6.625 0.875 6.625H9.26953L6.37109 3.75391C6.20703 3.57161 6.125 3.36198 6.125 3.125C6.125 2.88802 6.20703 2.67839 6.37109 2.49609C6.55339 2.33203 6.76302 2.25 7 2.25C7.23698 2.25 7.44661 2.33203 7.62891 2.49609L12.0039 6.87109Z" fill="#99A5B5"/>
-                    </svg>
-                    <p class="legend-text">Holiday</p>
-                </div>
-
-                <!-- Day Off -->
-                <div class="legend-item">
-                    <svg class="legend-icon" viewBox="0 0 13 15" fill="none">
-                        <path d="M3.5 14.5C3.75521 14.5 3.96484 14.418 4.12891 14.2539C4.29297 14.0898 4.375 13.8802 4.375 13.625V12.75H7.875V13.625C7.875 13.8802 7.95703 14.0898 8.12109 14.2539C8.28516 14.418 8.49479 14.5 8.75 14.5C9.00521 14.5 9.21484 14.418 9.37891 14.2539C9.54297 14.0898 9.625 13.8802 9.625 13.625V12.75H10.9375C11.3021 12.7318 11.612 12.6042 11.8672 12.3672C12.1042 12.112 12.2318 11.8021 12.25 11.4375V10.125H0V11.4375C0.0182292 11.8021 0.145833 12.112 0.382812 12.3672C0.638021 12.6042 0.947917 12.7318 1.3125 12.75H2.625V13.625C2.625 13.8802 2.70703 14.0898 2.87109 14.2539C3.03516 14.418 3.24479 14.5 3.5 14.5ZM0 9.25H12.25V1.8125C12.2318 1.44792 12.1042 1.13802 11.8672 0.882812C11.612 0.645833 11.3021 0.518229 10.9375 0.5H1.3125C0.947917 0.518229 0.638021 0.645833 0.382812 0.882812C0.145833 1.13802 0.0182292 1.44792 0 1.8125V9.25ZM2.1875 7.5C1.91406 7.48177 1.76823 7.33594 1.75 7.0625V5.3125C1.76823 5.03906 1.91406 4.89323 2.1875 4.875H10.0625C10.3359 4.89323 10.4818 5.03906 10.5 5.3125V7.0625C10.4818 7.33594 10.3359 7.48177 10.0625 7.5H2.1875Z" fill="#1ABC9C"/>
-                    </svg>
-                    <svg class="legend-icon" viewBox="0 0 13 15" fill="none">
-                        <path d="M12.0039 6.87109C12.168 7.05339 12.25 7.26302 12.25 7.5C12.25 7.73698 12.168 7.94661 12.0039 8.12891L7.62891 12.5039C7.44661 12.668 7.23698 12.75 7 12.75C6.76302 12.75 6.55339 12.668 6.37109 12.5039C6.20703 12.3216 6.125 12.112 6.125 11.875C6.125 11.638 6.20703 11.4284 6.37109 11.2461L9.26953 8.375H0.875C0.619792 8.375 0.410156 8.29297 0.246094 8.12891C0.0820312 7.96484 0 7.75521 0 7.5C0 7.24479 0.0820312 7.03516 0.246094 6.87109C0.410156 6.70703 0.619792 6.625 0.875 6.625H9.26953L6.37109 3.75391C6.20703 3.57161 6.125 3.36198 6.125 3.125C6.125 2.88802 6.20703 2.67839 6.37109 2.49609C6.55339 2.33203 6.76302 2.25 7 2.25C7.23698 2.25 7.44661 2.33203 7.62891 2.49609L12.0039 6.87109Z" fill="#99A5B5"/>
-                    </svg>
-                    <p class="legend-text">Day Off</p>
-                </div>
-
-                <div class="legend-divider"></div>
-
-                <!-- Present -->
-                <div class="legend-item">
-                    <svg class="legend-icon" viewBox="0 0 13 15" fill="none">
-                        <path d="M12.0039 11.6289C12.168 11.4466 12.25 11.237 12.25 11C12.25 10.763 12.168 10.5534 12.0039 10.3711L5.00391 3.37109C4.82161 3.20703 4.61198 3.125 4.375 3.125C4.13802 3.125 3.92839 3.20703 3.74609 3.37109L0.246094 6.87109C0.0820312 7.05339 0 7.26302 0 7.5C0 7.73698 0.0820312 7.94661 0.246094 8.12891C0.428385 8.29297 0.638021 8.375 0.875 8.375C1.11198 8.375 1.32161 8.29297 1.50391 8.12891L4.375 5.23047L10.7461 11.6289C10.9284 11.793 11.138 11.875 11.375 11.875C11.612 11.875 11.8216 11.793 12.0039 11.6289Z" fill="#34B53A"/>
-                    </svg>
-                    <svg class="legend-icon" viewBox="0 0 13 15" fill="none">
-                        <path d="M12.0039 6.87109C12.168 7.05339 12.25 7.26302 12.25 7.5C12.25 7.73698 12.168 7.94661 12.0039 8.12891L7.62891 12.5039C7.44661 12.668 7.23698 12.75 7 12.75C6.76302 12.75 6.55339 12.668 6.37109 12.5039C6.20703 12.3216 6.125 12.112 6.125 11.875C6.125 11.638 6.20703 11.4284 6.37109 11.2461L9.26953 8.375H0.875C0.619792 8.375 0.410156 8.29297 0.246094 8.12891C0.0820312 7.96484 0 7.75521 0 7.5C0 7.24479 0.0820312 7.03516 0.246094 6.87109C0.410156 6.70703 0.619792 6.625 0.875 6.625H9.26953L6.37109 3.75391C6.20703 3.57161 6.125 3.36198 6.125 3.125C6.125 2.88802 6.20703 2.67839 6.37109 2.49609C6.55339 2.33203 6.76302 2.25 7 2.25C7.23698 2.25 7.44661 2.33203 7.62891 2.49609L12.0039 6.87109Z" fill="#99A5B5"/>
-                    </svg>
-                    <p class="legend-text">Present</p>
-                </div>
-
-                <div class="legend-divider"></div>
-
-                <!-- Half Day -->
-                <div class="legend-item">
-                    <svg class="legend-icon" viewBox="0 0 16 15" fill="none">
-                        <path d="M7.875 4.21875L8.61328 3.83594L10.9375 2.57812L10.4727 5.25781L10.3359 6.02344L10.9102 6.59766L12.8242 8.48437L10.1992 8.86719L9.40625 9.00391L9.05078 9.71484L7.875 12.1211V4.21875ZM12.6602 1.51172C12.7148 1.16536 12.5964 0.882812 12.3047 0.664062C12.013 0.463542 11.7031 0.445312 11.375 0.609375L7.875 2.46875L4.375 0.609375C4.04688 0.445312 3.73698 0.463542 3.44531 0.664062C3.17188 0.882812 3.05339 1.16536 3.08984 1.51172L3.77344 5.50391L0.929688 8.32031C0.674479 8.57552 0.601563 8.8763 0.710938 9.22266C0.820313 9.55078 1.04818 9.74219 1.39453 9.79687L5.33203 10.3984L7.08203 14.0078C7.26432 14.3177 7.52865 14.4818 7.875 14.5C8.23958 14.4818 8.50391 14.3177 8.66797 14.0078L10.418 10.3984L14.3555 9.79687C14.7018 9.74219 14.9388 9.55078 15.0664 9.22266C15.1576 8.8763 15.0846 8.57552 14.8477 8.32031L12.0039 5.50391L12.6602 1.51172Z" fill="#80CAFF"/>
-                    </svg>
-                    <svg class="legend-icon" viewBox="0 0 13 15" fill="none">
-                        <path d="M12.0039 6.87109C12.168 7.05339 12.25 7.26302 12.25 7.5C12.25 7.73698 12.168 7.94661 12.0039 8.12891L7.62891 12.5039C7.44661 12.668 7.23698 12.75 7 12.75C6.76302 12.75 6.55339 12.668 6.37109 12.5039C6.20703 12.3216 6.125 12.112 6.125 11.875C6.125 11.638 6.20703 11.4284 6.37109 11.2461L9.26953 8.375H0.875C0.619792 8.375 0.410156 8.29297 0.246094 8.12891C0.0820312 7.96484 0 7.75521 0 7.5C0 7.24479 0.0820312 7.03516 0.246094 6.87109C0.410156 6.70703 0.619792 6.625 0.875 6.625H9.26953L6.37109 3.75391C6.20703 3.57161 6.125 3.36198 6.125 3.125C6.125 2.88802 6.20703 2.67839 6.37109 2.49609C6.55339 2.33203 6.76302 2.25 7 2.25C7.23698 2.25 7.44661 2.33203 7.62891 2.49609L12.0039 6.87109Z" fill="#99A5B5"/>
-                    </svg>
-                    <p class="legend-text">Half Day</p>
-                </div>
-
-                <div class="legend-divider"></div>
-
-                <!-- Late -->
-                <div class="legend-item">
-                    <svg class="legend-icon" viewBox="0 0 14 15" fill="none">
-                        <path d="M7 0.5C8.27604 0.518229 9.44271 0.828125 10.5 1.42969C11.5573 2.04948 12.4141 2.90625 13.0703 4C13.6901 5.11198 14 6.27865 14 7.5C14 8.72135 13.6901 9.88802 13.0703 11C12.4141 12.0938 11.5573 12.9505 10.5 13.5703C9.44271 14.1719 8.27604 14.4818 7 14.5C5.72396 14.4818 4.55729 14.1719 3.5 13.5703C2.44271 12.9505 1.58594 12.0938 0.929688 11C0.309896 9.88802 0 8.72135 0 7.5C0 6.27865 0.309896 5.11198 0.929688 4C1.58594 2.90625 2.44271 2.04948 3.5 1.42969C4.55729 0.828125 5.72396 0.518229 7 0.5ZM7 11C7.40104 10.9635 7.61979 10.7448 7.65625 10.3438V7.28125C7.61979 6.88021 7.40104 6.66146 7 6.625C6.59896 6.66146 6.38021 6.88021 6.34375 7.28125V10.3438C6.38021 10.7448 6.59896 10.9635 7 11ZM6.125 4.875C6.125 5.13021 6.20703 5.33984 6.37109 5.50391C6.53516 5.66797 6.74479 5.75 7 5.75C7.25521 5.75 7.46484 5.66797 7.62891 5.50391C7.79297 5.33984 7.875 5.13021 7.875 4.875C7.875 4.61979 7.79297 4.41016 7.62891 4.24609C7.46484 4.08203 7.25521 4 7 4C6.74479 4 6.53516 4.08203 6.37109 4.24609C6.20703 4.41016 6.125 4.61979 6.125 4.875Z" fill="#FFB200"/>
-                    </svg>
-                    <svg class="legend-icon" viewBox="0 0 13 15" fill="none">
-                        <path d="M12.0039 6.87109C12.168 7.05339 12.25 7.26302 12.25 7.5C12.25 7.73698 12.168 7.94661 12.0039 8.12891L7.62891 12.5039C7.44661 12.668 7.23698 12.75 7 12.75C6.76302 12.75 6.55339 12.668 6.37109 12.5039C6.20703 12.3216 6.125 12.112 6.125 11.875C6.125 11.638 6.20703 11.4284 6.37109 11.2461L9.26953 8.375H0.875C0.619792 8.375 0.410156 8.29297 0.246094 8.12891C0.0820312 7.96484 0 7.75521 0 7.5C0 7.24479 0.0820312 7.03516 0.246094 6.87109C0.410156 6.70703 0.619792 6.625 0.875 6.625H9.26953L6.37109 3.75391C6.20703 3.57161 6.125 3.36198 6.125 3.125C6.125 2.88802 6.20703 2.67839 6.37109 2.49609C6.55339 2.33203 6.76302 2.25 7 2.25C7.23698 2.25 7.44661 2.33203 7.62891 2.49609L12.0039 6.87109Z" fill="#99A5B5"/>
-                    </svg>
-                    <p class="legend-text">Late</p>
-                </div>
-
-                <div class="legend-divider"></div>
-
-                <!-- Absent -->
-                <div class="legend-item">
-                    <svg class="legend-icon" viewBox="0 0 11 15" fill="none">
-                        <path d="M9.37891 10.3711C9.54297 10.5534 9.625 10.763 9.625 11C9.625 11.237 9.54297 11.4466 9.37891 11.6289C9.19661 11.793 8.98698 11.875 8.75 11.875C8.51302 11.875 8.30339 11.793 8.12109 11.6289L5.25 8.73047L2.37891 11.6289C2.19661 11.793 1.98698 11.875 1.75 11.875C1.51302 11.875 1.30339 11.793 1.12109 11.6289C0.957031 11.4466 0.875 11.237 0.875 11C0.875 10.763 0.957031 10.5534 1.12109 10.3711L4.01953 7.5L1.12109 4.62891C0.957031 4.44661 0.875 4.23698 0.875 4C0.875 3.76302 0.957031 3.55339 1.12109 3.37109C1.30339 3.20703 1.51302 3.125 1.75 3.125C1.98698 3.125 2.19661 3.20703 2.37891 3.37109L5.25 6.26953L8.12109 3.37109C8.30339 3.20703 8.51302 3.125 8.75 3.125C8.98698 3.125 9.19661 3.20703 9.37891 3.37109C9.54297 3.55339 9.625 3.76302 9.625 4C9.625 4.23698 9.54297 4.44661 9.37891 4.62891L6.48047 7.5L9.37891 10.3711Z" fill="#FF3A29"/>
-                    </svg>
-                    <svg class="legend-icon" viewBox="0 0 13 15" fill="none">
-                        <path d="M12.0039 6.87109C12.168 7.05339 12.25 7.26302 12.25 7.5C12.25 7.73698 12.168 7.94661 12.0039 8.12891L7.62891 12.5039C7.44661 12.668 7.23698 12.75 7 12.75C6.76302 12.75 6.55339 12.668 6.37109 12.5039C6.20703 12.3216 6.125 12.112 6.125 11.875C6.125 11.638 6.20703 11.4284 6.37109 11.2461L9.26953 8.375H0.875C0.619792 8.375 0.410156 8.29297 0.246094 8.12891C0.0820312 7.96484 0 7.75521 0 7.5C0 7.24479 0.0820312 7.03516 0.246094 6.87109C0.410156 6.70703 0.619792 6.625 0.875 6.625H9.26953L6.37109 3.75391C6.20703 3.57161 6.125 3.36198 6.125 3.125C6.125 2.88802 6.20703 2.67839 6.37109 2.49609C6.55339 2.33203 6.76302 2.25 7 2.25C7.23698 2.25 7.44661 2.33203 7.62891 2.49609L12.0039 6.87109Z" fill="#99A5B5"/>
-                    </svg>
-                    <p class="legend-text">Absent</p>
-                </div>
-
-                <div class="legend-divider"></div>
-
-                <!-- On Leave -->
-                <div class="legend-item">
-                    <svg class="legend-icon" viewBox="0 0 18 15" fill="none">
-                        <path d="M10.418 11.3555L5.08594 13.3516C4.61198 13.5339 4.14714 13.5065 3.69141 13.2695L2.43359 12.668C2.28776 12.5768 2.20573 12.4492 2.1875 12.2852C2.1875 12.1211 2.26042 11.9935 2.40625 11.9023L6.42578 9.30469L3.71875 7.9375L2.13281 8.64844C1.8776 8.75781 1.63151 8.7487 1.39453 8.62109L0.492188 8.18359C0.236979 8.0013 0.191406 7.77344 0.355469 7.5L2.35156 5.17578C2.53385 4.97526 2.76172 4.875 3.03516 4.875H6.78125C6.92708 4.875 7.0638 4.90234 7.19141 4.95703L14.6562 8.70312C15.9505 9.3776 16.862 10.3984 17.3906 11.7656C17.5182 12.1302 17.4818 12.4492 17.2812 12.7227C17.0807 13.0143 16.7891 13.1693 16.4062 13.1875H14.8477C14.2826 13.1875 13.7539 13.0599 13.2617 12.8047L10.418 11.3555ZM0 1.375C0 1.11979 0.0820312 0.910156 0.246094 0.746094C0.410156 0.582031 0.619792 0.5 0.875 0.5H16.625C16.8802 0.5 17.0898 0.582031 17.2539 0.746094C17.418 0.910156 17.5 1.11979 17.5 1.375C17.5 1.63021 17.418 1.83984 17.2539 2.00391C17.0898 2.16797 16.8802 2.25 16.625 2.25H0.875C0.619792 2.25 0.410156 2.16797 0.246094 2.00391C0.0820312 1.83984 0 1.63021 0 1.375Z" fill="#9747FF"/>
-                    </svg>
-                    <svg class="legend-icon" viewBox="0 0 13 15" fill="none">
-                        <path d="M12.0039 6.87109C12.168 7.05339 12.25 7.26302 12.25 7.5C12.25 7.73698 12.168 7.94661 12.0039 8.12891L7.62891 12.5039C7.44661 12.668 7.23698 12.75 7 12.75C6.76302 12.75 6.55339 12.668 6.37109 12.5039C6.20703 12.3216 6.125 12.112 6.125 11.875C6.125 11.638 6.20703 11.4284 6.37109 11.2461L9.26953 8.375H0.875C0.619792 8.375 0.410156 8.29297 0.246094 8.12891C0.0820312 7.96484 0 7.75521 0 7.5C0 7.24479 0.0820312 7.03516 0.246094 6.87109C0.410156 6.70703 0.619792 6.625 0.875 6.625H9.26953L6.37109 3.75391C6.20703 3.57161 6.125 3.36198 6.125 3.125C6.125 2.88802 6.20703 2.67839 6.37109 2.49609C6.55339 2.33203 6.76302 2.25 7 2.25C7.23698 2.25 7.44661 2.33203 7.62891 2.49609L12.0039 6.87109Z" fill="#99A5B5"/>
-                    </svg>
-                    <p class="legend-text">On Leave</p>
-                </div>
-
-                <div class="legend-divider"></div>
-            </div>
-
-            <!-- Attendance Table -->
-            <div class="table-container">
-                <table class="attendance-table">
-                    <thead class="table-header">
-                        <tr id="table-header-row">
-                            <th style="text-align: left; width: 200px;">Employee</th>
-                            <!-- Days will be generated by JavaScript -->
-                        </tr>
-                    </thead>
-                    <tbody id="attendance-table-body">
-                        <!-- Employee rows will be generated by JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination-section">
-                <p class="pagination-info" id="pagination-info">Showing 1-10 of 20</p>
-                <div class="pagination-controls">
-                    <div class="rows-per-page">
-                        <p class="rows-per-page-text " style="width: 300px;">Rows per page</p>
-                        <select class="rows-select" id="rows-select">
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                        </select>
-                    </div>
-                    <p class="page-info" id="page-info">Page 1 of 10</p>
-                    <div class="pagination-buttons">
-                        <button class="pagination-button" id="first-page" disabled>
-                            <svg fill="none" viewBox="0 0 16 16">
-                                <path d="M11 12L7 8L11 4M5 12L1 8L5 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <button class="pagination-button" id="prev-page" disabled>
-                            <svg fill="none" viewBox="0 0 16 16">
-                                <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <button class="pagination-button" id="next-page">
-                            <svg fill="none" viewBox="0 0 16 16">
-                                <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <button class="pagination-button" id="last-page">
-                            <svg fill="none" viewBox="0 0 16 16">
-                                <path d="M5 4L9 8L5 12M11 4L15 8L11 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+            
+            <div class="tabs-container" id="sub-tabs">
+                <!-- Sub tabs will be populated by JavaScript -->
             </div>
         </div>
+
+        <!-- Main Content -->
+     
+            <!-- Overview Tab Content -->
+            <div class="tab-content active" id="overview-content">
+                <!-- My Team Sub-tab -->
+                <div class="tab-content active" id="overview-my-team">
+                    <!-- Statistics Cards -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-card-title">Team Size</div>
+                                <div class="stat-card-icon">👥</div>
+                            </div>
+                            <div class="stat-card-value">20</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-card-title">Present Team members</div>
+                                <div class="stat-card-icon">✓</div>
+                            </div>
+                            <div class="stat-card-value">14</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-card-title">Absent Team members</div>
+                                <div class="stat-card-icon">✗</div>
+                            </div>
+                            <div class="stat-card-value">6</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-card-title">Members on leave</div>
+                                <div class="stat-card-icon">🏠</div>
+                            </div>
+                            <div class="stat-card-value">2</div>
+                        </div>
+                    </div>
+
+                    <!-- Calendar -->
+                    <div class="calendar-header">
+                        <div class="calendar-title">April 2025</div>
+                        <div class="calendar-nav">
+                            <button class="nav-btn">
+                                <span class="icon chevron-left"></span>
+                                Back
+                            </button>
+                            <button class="nav-btn">
+                                Next
+                                <span class="icon chevron-right"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="legend">
+                        <div class="legend-item">
+                            <strong>Note:</strong>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: #6C5FFC;"></div>
+                            Holiday
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: #1ABC9C;"></div>
+                            Day Off
+                        </div>
+                        <div class="legend-divider"></div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: #34B53A;"></div>
+                            Present
+                        </div>
+                        <div class="legend-divider"></div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: #80CAFF;"></div>
+                            Half Day
+                        </div>
+                        <div class="legend-divider"></div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: #FFB200;"></div>
+                            Late
+                        </div>
+                        <div class="legend-divider"></div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: #FF3A29;"></div>
+                            Absent
+                        </div>
+                        <div class="legend-divider"></div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: #9747FF;"></div>
+                            On Leave
+                        </div>
+                    </div>
+
+                    <!-- Calendar Grid -->
+                    <div class="calendar-grid">
+                        <div class="calendar-header-row">
+                            <div class="calendar-header-cell">Employee</div>
+                            <div class="calendar-header-cell">1</div>
+                            <div class="calendar-header-cell">2</div>
+                            <div class="calendar-header-cell">3</div>
+                            <div class="calendar-header-cell">4</div>
+                            <div class="calendar-header-cell">5</div>
+                            <div class="calendar-header-cell">6</div>
+                            <div class="calendar-header-cell">7</div>
+                            <div class="calendar-header-cell">8</div>
+                            <div class="calendar-header-cell">9</div>
+                            <div class="calendar-header-cell">10</div>
+                            <div class="calendar-header-cell">11</div>
+                            <div class="calendar-header-cell">12</div>
+                            <div class="calendar-header-cell">13</div>
+                            <div class="calendar-header-cell">14</div>
+                            <div class="calendar-header-cell">15</div>
+                            <div class="calendar-header-cell">16</div>
+                            <div class="calendar-header-cell">17</div>
+                            <div class="calendar-header-cell">18</div>
+                            <div class="calendar-header-cell">19</div>
+                            <div class="calendar-header-cell">20</div>
+                            <div class="calendar-header-cell">21</div>
+                            <div class="calendar-header-cell">22</div>
+                            <div class="calendar-header-cell">23</div>
+                            <div class="calendar-header-cell">24</div>
+                            <div class="calendar-header-cell">25</div>
+                            <div class="calendar-header-cell">26</div>
+                            <div class="calendar-header-cell">27</div>
+                            <div class="calendar-header-cell">28</div>
+                            <div class="calendar-header-cell">29</div>
+                            <div class="calendar-header-cell">30</div>
+                            <div class="calendar-header-cell">31</div>
+                        </div>
+                        
+                        <!-- Employee rows will be populated by JavaScript -->
+                        <div id="calendar-rows"></div>
+                    </div>
+                </div>
+
+                <!-- Only Me Sub-tab -->
+                <div class="tab-content" id="overview-only-me">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-card-title">Total Working Project</div>
+                                <div class="stat-card-icon">📊</div>
+                            </div>
+                            <div class="stat-card-value">8</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-card-title">Total Work Hour</div>
+                                <div class="stat-card-icon">⏰</div>
+                            </div>
+                            <div class="stat-card-value">139:15:26</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-card-title">Total Break Time</div>
+                                <div class="stat-card-icon">📅</div>
+                            </div>
+                            <div class="stat-card-value">22:15:26</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <div class="stat-card-title">Leave Taken This Month</div>
+                                <div class="stat-card-icon">🏠</div>
+                            </div>
+                            <div class="stat-card-value">2</div>
+                        </div>
+                    </div>
+                      <div class="calendar-wrapper">
+        <!-- Header -->
+        <div class="header-section">
+            <h1 class="year-title">2025</h1>
+            <div class="nav-controls">
+                <button class="nav-button">
+                    <span class="chevron-left"></span>
+                    Back
+                </button>
+                <button class="nav-button">
+                    Next
+                    <span class="chevron-right"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="status-legend">
+            <div class="legend-label">Note:</div>
+            <div class="legend-color" style="background-color: #6C5FFC;"></div>
+            <div class="legend-group">Holiday</div>
+            <div class="legend-color" style="background-color: #1ABC9C;"></div>
+            <div class="legend-group">Day Off</div>
+            <div class="legend-separator"></div>
+            <div class="legend-color" style="background-color: #34B53A;"></div>
+            <div class="legend-group">Present</div>
+            <div class="legend-separator"></div>
+            <div class="legend-color" style="background-color: #80CAFF;"></div>
+            <div class="legend-group">Half Day</div>
+            <div class="legend-separator"></div>
+            <div class="legend-color" style="background-color: #FFB200;"></div>
+            <div class="legend-group">Late</div>
+            <div class="legend-separator"></div>
+            <div class="legend-color" style="background-color: #FF3A29;"></div>
+            <div class="legend-group">Absent</div>
+            <div class="legend-separator"></div>
+            <div class="legend-color" style="background-color: #9747FF;"></div>
+            <div class="legend-group">On Leave</div>
+        </div>
+
+        <!-- Calendar Table -->
+        <div class="calendar-table">
+            <!-- Header Row -->
+            <div class="table-header">
+                <div class="month-header">Month</div>
+                <div class="day-header">1</div>
+                <div class="day-header">2</div>
+                <div class="day-header">3</div>
+                <div class="day-header">4</div>
+                <div class="day-header">5</div>
+                <div class="day-header">6</div>
+                <div class="day-header">7</div>
+                <div class="day-header">8</div>
+                <div class="day-header">9</div>
+                <div class="day-header">10</div>
+                <div class="day-header">11</div>
+                <div class="day-header">12</div>
+                <div class="day-header">13</div>
+                <div class="day-header">14</div>
+                <div class="day-header">15</div>
+                <div class="day-header">16</div>
+                <div class="day-header">17</div>
+                <div class="day-header">18</div>
+                <div class="day-header">19</div>
+                <div class="day-header">20</div>
+                <div class="day-header">21</div>
+                <div class="day-header">22</div>
+                <div class="day-header">23</div>
+                <div class="day-header">24</div>
+                <div class="day-header">25</div>
+                <div class="day-header">26</div>
+                <div class="day-header">27</div>
+                <div class="day-header">28</div>
+                <div class="day-header">29</div>
+                <div class="day-header">30</div>
+                <div class="day-header">31</div>
+            </div>
+
+            <!-- Employee Row 1 - January -->
+            <div class="employee-row">
+                <div class="month-cell">January</div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-holiday">★</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-dayoff">☐</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-late">⚠</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-absent">✗</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-leave">🏠</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-holiday">★</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+            </div>
+
+            <!-- Employee Row 2 - February -->
+            <div class="employee-row">
+                <div class="month-cell">February</div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-holiday">★</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-dayoff">☐</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-late">⚠</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-absent">✗</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-leave">🏠</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-holiday">★</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+            </div>
+
+            <!-- Employee Row 3 - March -->
+            <div class="employee-row">
+                <div class="month-cell">March</div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-holiday">★</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-dayoff">☐</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-late">⚠</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-absent">✗</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-leave">🏠</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-holiday">★</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+                <div class="day-cell"><div class="status-indicator status-present">✓</div></div>
+            </div>
         </div>
     </div>
 
-    <script>
-        // Employee data
-        const employeeData = {
-            'my-team': [
-                {
-                    id: 1,
-                    name: "Ayush Kumar",
-                    initials: "AK",
-                    avatarColor: "avatar-pink",
-                    attendance: [
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present', 
-                        'holiday', 'present', 'present', 'dayoff', 'present', 'present', 'present', 
-                        'present', 'late', 'present', 'present', 'present', 'absent', 'present', 
-                        'present', 'present', 'leave', 'present', 'present', 'holiday', 'present', 
-                        'present', 'present', 'present'
-                    ]
-                },
-                {
-                    id: 2,
-                    name: "Chirag Arora",
-                    initials: "AK", 
-                    avatarColor: "avatar-blue",
-                    attendance: [
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present',
-                        'holiday', 'present', 'present', 'present', 'dayoff', 'present', 'present',
-                        'present', 'present', 'late', 'present', 'present', 'absent', 'present',
-                        'present', 'present', 'leave', 'present', 'present', 'holiday', 'present',
-                        'present', 'present', 'present'
-                    ]
-                },
-                {
-                    id: 3,
-                    name: "Dipanshu Singh",
-                    initials: "AK",
-                    avatarColor: "avatar-green", 
-                    attendance: [
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present',
-                        'holiday', 'present', 'present', 'dayoff', 'present', 'present', 'present',
-                        'late', 'present', 'present', 'present', 'present', 'present', 'absent',
-                        'present', 'present', 'leave', 'present', 'present', 'holiday', 'present',
-                        'present', 'present', 'present'
-                    ]
-                },
-                {
-                    id: 4,
-                    name: "Prachi mehta",
-                    initials: "AK",
-                    avatarColor: "avatar-yellow",
-                    attendance: [
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present',
-                        'holiday', 'present', 'present', 'dayoff', 'present', 'present', 'present',
-                        'present', 'late', 'present', 'present', 'present', 'absent', 'present',
-                        'present', 'leave', 'present', 'present', 'present', 'holiday', 'present',
-                        'present', 'present', 'present'
-                    ]
-                }
-            ],
-            // 'only-me': [
-            //     {
-            //         id: 1,
-            //         name: "Ayush Kumar",
-            //         initials: "AK",
-            //         avatarColor: "avatar-pink",
-            //         attendance: [
-            //             'present', 'present', 'present', 'present', 'present', 'present', 'present', 
-            //             'holiday', 'present', 'present', 'dayoff', 'present', 'present', 'present', 
-            //             'present', 'late', 'present', 'present', 'present', 'absent', 'present', 
-            //             'present', 'present', 'leave', 'present', 'present', 'holiday', 'present', 
-            //             'present', 'present', 'present'
-            //         ]
-            //     }
-            // ],
-            'all-employee': [
-                {
-                    id: 1,
-                    name: "Ayush Kumar",
-                    initials: "AK",
-                    avatarColor: "avatar-pink",
-                    attendance: [
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present', 
-                        'holiday', 'present', 'present', 'dayoff', 'present', 'present', 'present', 
-                        'present', 'late', 'present', 'present', 'present', 'absent', 'present', 
-                        'present', 'present', 'leave', 'present', 'present', 'holiday', 'present', 
-                        'present', 'present', 'present'
-                    ]
-                },
-                {
-                    id: 2,
-                    name: "Chirag Arora",
-                    initials: "CA", 
-                    avatarColor: "avatar-blue",
-                    attendance: [
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present',
-                        'holiday', 'present', 'present', 'present', 'dayoff', 'present', 'present',
-                        'present', 'present', 'late', 'present', 'present', 'absent', 'present',
-                        'present', 'present', 'leave', 'present', 'present', 'holiday', 'present',
-                        'present', 'present', 'present'
-                    ]
-                },
-                {
-                    id: 3,
-                    name: "Dipanshu Singh",
-                    initials: "DS",
-                    avatarColor: "avatar-green", 
-                    attendance: [
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present',
-                        'holiday', 'present', 'present', 'dayoff', 'present', 'present', 'present',
-                        'late', 'present', 'present', 'present', 'present', 'present', 'absent',
-                        'present', 'present', 'leave', 'present', 'present', 'holiday', 'present',
-                        'present', 'present', 'present'
-                    ]
-                },
-                {
-                    id: 4,
-                    name: "Prachi Mehta",
-                    initials: "PM",
-                    avatarColor: "avatar-yellow",
-                    attendance: [
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present',
-                        'holiday', 'present', 'present', 'dayoff', 'present', 'present', 'present',
-                        'present', 'late', 'present', 'present', 'present', 'absent', 'present',
-                        'present', 'leave', 'present', 'present', 'present', 'holiday', 'present',
-                        'present', 'present', 'present'
-                    ]
-                },
-                {
-                    id: 5,
-                    name: "Sarah Wilson",
-                    initials: "SW",
-                    avatarColor: "avatar-pink",
-                    attendance: [
-                        'present', 'present', 'late', 'present', 'present', 'present', 'present',
-                        'holiday', 'present', 'absent', 'dayoff', 'present', 'present', 'present',
-                        'present', 'present', 'present', 'present', 'leave', 'present', 'present',
-                        'present', 'present', 'present', 'present', 'present', 'holiday', 'present',
-                        'present', 'present', 'present'
-                    ]
-                },
-                {
-                    id: 6,
-                    name: "Mike Johnson",
-                    initials: "MJ",
-                    avatarColor: "avatar-blue",
-                    attendance: [
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present',
-                        'holiday', 'present', 'present', 'dayoff', 'present', 'present', 'present',
-                        'present', 'present', 'present', 'present', 'present', 'present', 'present',
-                        'present', 'present', 'present', 'present', 'present', 'holiday', 'present',
-                        'present', 'present', 'present'
-                    ]
-                }
-            ]
-        };
 
-        // Status icons mapping
-        const statusIcons = {
-            present: `<svg class="status-icon" viewBox="0 0 16 16">
-                <path d="M14.0039 12.5039C14.168 12.3216 14.25 12.112 14.25 11.875C14.25 11.638 14.168 11.4284 14.0039 11.2461L7.00391 4.24609C6.82161 4.08203 6.61198 4 6.375 4C6.13802 4 5.92839 4.08203 5.74609 4.24609L2.24609 7.74609C2.08203 7.92839 2 8.13802 2 8.375C2 8.61198 2.08203 8.82161 2.24609 9.00391C2.42839 9.16797 2.63802 9.25 2.875 9.25C3.11198 9.25 3.32161 9.16797 3.50391 9.00391L6.375 6.10547L12.7461 12.5039C12.9284 12.668 13.138 12.75 13.375 12.75C13.612 12.75 13.8216 12.668 14.0039 12.5039Z" fill="#34B53A"/>
-            </svg>`,
-            holiday: `<svg class="status-icon" viewBox="0 0 16 16">
-                <path d="M8.72479 14.1986C8.57333 14.4937 8.32931 14.65 7.99273 14.6673C7.67298 14.65 7.42896 14.4937 7.26067 14.1986L5.64508 10.7614L2.01002 10.1886C1.69027 10.1365 1.47991 9.95424 1.37893 9.64177C1.27796 9.31194 1.34528 9.02551 1.58088 8.78248L4.20621 6.10045L3.57512 2.29873C3.54146 1.9689 3.65085 1.69983 3.90328 1.49152C4.17255 1.30057 4.45864 1.28321 4.76156 1.43944L7.99273 3.2101L11.2491 1.43944C11.5352 1.28321 11.8129 1.30057 12.0822 1.49152C12.3514 1.69983 12.4608 1.9689 12.4103 2.29873L11.8045 6.10045L14.4298 8.78248C14.6486 9.02551 14.7159 9.31194 14.6318 9.64177C14.514 9.95424 14.2952 10.1365 13.9754 10.1886L10.3404 10.7614L8.72479 14.1986Z" fill="#6C5FFC"/>
-            </svg>`,
-            dayoff: `<svg class="status-icon" viewBox="0 0 16 16">
-                <path d="M5.5 14.666C5.75521 14.666 5.96484 14.584 6.12891 14.4199C6.29297 14.2559 6.375 14.0462 6.375 13.791V12.916H9.875V13.791C9.875 14.0462 9.95703 14.2559 10.1211 14.4199C10.2852 14.584 10.4948 14.666 10.75 14.666C11.0052 14.666 11.2148 14.584 11.3789 14.4199C11.543 14.2559 11.625 14.0462 11.625 13.791V12.916H12.9375C13.3021 12.8978 13.612 12.7702 13.8672 12.5332C14.1042 12.278 14.2318 11.9681 14.25 11.6035V10.291H2V11.6035C2.01823 11.9681 2.14583 12.278 2.38281 12.5332C2.63802 12.7702 2.94792 12.8978 3.3125 12.916H4.625V13.791C4.625 14.0462 4.70703 14.2559 4.87109 14.4199C5.03516 14.584 5.24479 14.666 5.5 14.666ZM2 9.41602H14.25V1.97852C14.2318 1.61393 14.1042 1.30404 13.8672 1.04883C13.612 0.811849 13.3021 0.684245 12.9375 0.666016H3.3125C2.94792 0.684245 2.63802 0.811849 2.38281 1.04883C2.14583 1.30404 2.01823 1.61393 2 1.97852V9.41602ZM4.1875 7.66602C3.91406 7.64779 3.76823 7.50195 3.75 7.22852V5.47852C3.76823 5.20508 3.91406 5.05924 4.1875 5.04102H12.0625C12.3359 5.05924 12.4818 5.20508 12.5 5.47852V7.22852C12.4818 7.50195 12.3359 7.64779 12.0625 7.66602H4.1875Z" fill="#1ABC9C"/>
-            </svg>`,
-            late: `<svg class="status-icon" viewBox="0 0 16 16">
-                <path d="M7.6665 0.666016C8.94255 0.684245 10.1092 0.994141 11.1665 1.5957C12.2238 2.21549 13.0806 3.07227 13.7368 4.16602C14.3566 5.27799 14.6665 6.44466 14.6665 7.66602C14.6665 8.88737 14.3566 10.054 13.7368 11.166C13.0806 12.2598 12.2238 13.1165 11.1665 13.7363C10.1092 14.3379 8.94255 14.6478 7.6665 14.666C6.39046 14.6478 5.2238 14.3379 4.1665 13.7363C3.10921 13.1165 2.25244 12.2598 1.59619 11.166C0.9764 10.054 0.666504 8.88737 0.666504 7.66602C0.666504 6.44466 0.9764 5.27799 1.59619 4.16602C2.25244 3.07227 3.10921 2.21549 4.1665 1.5957C5.2238 0.994141 6.39046 0.684245 7.6665 0.666016ZM7.6665 11.166C8.06755 11.1296 8.2863 10.9108 8.32275 10.5098V7.44727C8.2863 7.04622 8.06755 6.82747 7.6665 6.79102C7.26546 6.82747 7.04671 7.04622 7.01025 7.44727V10.5098C7.04671 10.9108 7.26546 11.1296 7.6665 11.166ZM6.7915 5.04102C6.7915 5.29622 6.87354 5.50586 7.0376 5.66992C7.20166 5.83398 7.4113 5.91602 7.6665 5.91602C7.92171 5.91602 8.13135 5.83398 8.29541 5.66992C8.45947 5.50586 8.5415 5.29622 8.5415 5.04102C8.5415 4.78581 8.45947 4.57617 8.29541 4.41211C8.13135 4.24805 7.92171 4.16602 7.6665 4.16602C7.4113 4.16602 7.20166 4.24805 7.0376 4.41211C6.87354 4.57617 6.7915 4.78581 6.7915 5.04102Z" fill="#FFB200"/>
-            </svg>`,
-            absent: `<svg class="status-icon" viewBox="0 0 16 16">
-                <path d="M13.6625 11.9375C13.8875 12.1875 14 12.475 14 12.8C14 13.125 13.8875 13.4125 13.6625 13.6625C13.4125 13.8875 13.125 14 12.8 14C12.475 14 12.1875 13.8875 11.9375 13.6625L8 9.6875L4.0625 13.6625C3.8125 13.8875 3.525 14 3.2 14C2.875 14 2.5875 13.8875 2.3375 13.6625C2.1125 13.4125 2 13.125 2 12.8C2 12.475 2.1125 12.1875 2.3375 11.9375L6.3125 8L2.3375 4.0625C2.1125 3.8125 2 3.525 2 3.2C2 2.875 2.1125 2.5875 2.3375 2.3375C2.5875 2.1125 2.875 2 3.2 2C3.525 2 3.8125 2.1125 4.0625 2.3375L8 6.3125L11.9375 2.3375C12.1875 2.1125 12.475 2 12.8 2C13.125 2 13.4125 2.1125 13.6625 2.3375C13.8875 2.5875 14 2.875 14 3.2C14 3.525 13.8875 3.8125 13.6625 4.0625L9.6875 8L13.6625 11.9375Z" fill="#FF3A29"/>
-            </svg>`,
-            leave: `<svg class="status-icon" viewBox="0 0 18 15">
-                <path d="M10.418 11.3555L5.08594 13.3516C4.61198 13.5339 4.14714 13.5065 3.69141 13.2695L2.43359 12.668C2.28776 12.5768 2.20573 12.4492 2.1875 12.2852C2.1875 12.1211 2.26042 11.9935 2.40625 11.9023L6.42578 9.30469L3.71875 7.9375L2.13281 8.64844C1.8776 8.75781 1.63151 8.7487 1.39453 8.62109L0.492188 8.18359C0.236979 8.0013 0.191406 7.77344 0.355469 7.5L2.35156 5.17578C2.53385 4.97526 2.76172 4.875 3.03516 4.875H6.78125C6.92708 4.875 7.0638 4.90234 7.19141 4.95703L14.6562 8.70312C15.9505 9.3776 16.862 10.3984 17.3906 11.7656C17.5182 12.1302 17.4818 12.4492 17.2812 12.7227C17.0807 13.0143 16.7891 13.1693 16.4062 13.1875H14.8477C14.2826 13.1875 13.7539 13.0599 13.2617 12.8047L10.418 11.3555ZM0 1.375C0 1.11979 0.0820312 0.910156 0.246094 0.746094C0.410156 0.582031 0.619792 0.5 0.875 0.5H16.625C16.8802 0.5 17.0898 0.582031 17.2539 0.746094C17.418 0.910156 17.5 1.11979 17.5 1.375C17.5 1.63021 17.418 1.83984 17.2539 2.00391C17.0898 2.16797 16.8802 2.25 16.625 2.25H0.875C0.619792 2.25 0.410156 2.16797 0.246094 2.00391C0.0820312 1.83984 0 1.63021 0 1.375Z" fill="#9747FF"/>
-            </svg>`,
-            halfday: `<svg class="status-icon" viewBox="0 0 16 15">
-                <path d="M7.875 4.21875L8.61328 3.83594L10.9375 2.57812L10.4727 5.25781L10.3359 6.02344L10.9102 6.59766L12.8242 8.48437L10.1992 8.86719L9.40625 9.00391L9.05078 9.71484L7.875 12.1211V4.21875ZM12.6602 1.51172C12.7148 1.16536 12.5964 0.882812 12.3047 0.664062C12.013 0.463542 11.7031 0.445312 11.375 0.609375L7.875 2.46875L4.375 0.609375C4.04688 0.445312 3.73698 0.463542 3.44531 0.664062C3.17188 0.882812 3.05339 1.16536 3.08984 1.51172L3.77344 5.50391L0.929688 8.32031C0.674479 8.57552 0.601563 8.8763 0.710938 9.22266C0.820313 9.55078 1.04818 9.74219 1.39453 9.79687L5.33203 10.3984L7.08203 14.0078C7.26432 14.3177 7.52865 14.4818 7.875 14.5C8.23958 14.4818 8.50391 14.3177 8.66797 14.0078L10.418 10.3984L14.3555 9.79687C14.7018 9.74219 14.9388 9.55078 15.0664 9.22266C15.1576 8.8763 15.0846 8.57552 14.8477 8.32031L12.0039 5.50391L12.6602 1.51172Z" fill="#80CAFF"/>
-            </svg>`
-        };
 
-        // Global state
-        let currentTab = 'my-team';
-        let currentPage = 1;
-        let rowsPerPage = 10;
-        let totalPages = 10;
+                  
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
-            renderTable();
-            setupEventListeners();
-            updateStats();
-        });
 
-        // Setup event listeners
-        function setupEventListeners() {
-            // Tab buttons
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const tabType = this.getAttribute('data-tab');
-                    switchTab(this, tabType);
-                });
-            });
 
-            // Pagination buttons
-            document.getElementById('first-page').addEventListener('click', () => goToPage(1));
-            document.getElementById('prev-page').addEventListener('click', () => goToPage(currentPage - 1));
-            document.getElementById('next-page').addEventListener('click', () => goToPage(currentPage + 1));
-            document.getElementById('last-page').addEventListener('click', () => goToPage(totalPages));
 
-            // Rows per page
-            document.getElementById('rows-select').addEventListener('change', function() {
-                rowsPerPage = parseInt(this.value);
-                currentPage = 1;
-                renderTable();
-                updatePagination();
-            });
-        }
-
-        // Tab switching functionality
-        function switchTab(element, tabType) {
-            // Remove active class from all tabs
-            document.querySelectorAll('.tab-button').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // Add active class to clicked tab
-            element.classList.add('active');
-            currentTab = tabType;
-            
-            // Update table and stats
-            renderTable();
-            updateStats();
-            
-            console.log(`Switched to tab: ${tabType}`);
-        }
-
-        // Update statistics based on current tab
-        function updateStats() {
-            const employees = employeeData[currentTab] || [];
-            const teamSize = employees.length;
-            
-            // Calculate present, absent, and on leave
-            let presentCount = 0;
-            let absentCount = 0;
-            let leaveCount = 0;
-
-            employees.forEach(employee => {
-                const todayIndex = new Date().getDate() - 1; // Today's index (0-based)
-                const todayStatus = employee.attendance[todayIndex] || 'present';
-                
-                if (todayStatus === 'present' || todayStatus === 'late' || todayStatus === 'halfday') {
-                    presentCount++;
-                } else if (todayStatus === 'absent') {
-                    absentCount++;
-                } else if (todayStatus === 'leave') {
-                    leaveCount++;
-                }
-            });
-
-            // Update the DOM
-            document.getElementById('team-size').textContent = teamSize;
-            document.getElementById('present-members').textContent = presentCount;
-            document.getElementById('absent-members').textContent = absentCount;
-            document.getElementById('leave-members').textContent = leaveCount;
-        }
-
-        // Generate table header with days
-        function generateTableHeader() {
-            const headerRow = document.getElementById('table-header-row');
-            
-            // Clear existing headers except the first one (Employee)
-            while (headerRow.children.length > 1) {
-                headerRow.removeChild(headerRow.lastChild);
-            }
-            
-            // Add day headers (1-31 for April)
-            for (let day = 1; day <= 31; day++) {
-                const th = document.createElement('th');
-                th.textContent = day.toString();
-                th.style.textAlign = 'center';
-                th.style.minWidth = '40px';
-                headerRow.appendChild(th);
-            }
-        }
-
-        // Generate employee row
-        function generateEmployeeRow(employee) {
-            const row = document.createElement('tr');
-            row.className = 'table-row';
-            
-            // Employee info cell
-            const employeeCell = document.createElement('td');
-            employeeCell.className = 'table-cell employee-cell';
-            employeeCell.innerHTML = `
-                <div class="employee-info">
-                    <div class="employee-avatar ${employee.avatarColor}">${employee.initials}</div>
-                    <p class="employee-name">${employee.name}</p>
                 </div>
-            `;
-            row.appendChild(employeeCell);
-            
-            // Attendance cells
-            employee.attendance.forEach(status => {
-                const cell = document.createElement('td');
-                cell.className = 'table-cell';
-                cell.innerHTML = statusIcons[status] || statusIcons.present;
-                row.appendChild(cell);
-            });
-            
-            return row;
-        }
 
-        // Render the attendance table
-        function renderTable() {
-            const tableBody = document.getElementById('attendance-table-body');
-            const employees = employeeData[currentTab] || [];
-            
-            // Generate header
-            generateTableHeader();
-            
-            // Clear existing content
-            tableBody.innerHTML = '';
-            
-            // Calculate pagination
-            const startIndex = (currentPage - 1) * rowsPerPage;
-            const endIndex = Math.min(startIndex + rowsPerPage, employees.length);
-            const paginatedEmployees = employees.slice(startIndex, endIndex);
-            
-            // Add employee rows
-            paginatedEmployees.forEach(employee => {
-                tableBody.appendChild(generateEmployeeRow(employee));
-            });
-            
-            // Update pagination info
-            updatePagination();
-        }
+                <!-- All Employee Sub-tab -->
+                <div class="tab-content" id="overview-all-employee">
+                     <div class="calendar-container">
+        <!-- Calendar Header -->
+        <div class="calendar-header">
+            <h1 class="calendar-title">April 2025</h1>
+            <div class="nav-buttons">
+                <button class="nav-btn">
+                    <span class="chevron-left"></span>
+                    Back
+                </button>
+                <button class="nav-btn">
+                    Next
+                    <span class="chevron-right"></span>
+                </button>
+            </div>
+        </div>
 
-        // Update pagination information
-        function updatePagination() {
-            const employees = employeeData[currentTab] || [];
-            const totalEmployees = employees.length;
-            totalPages = Math.ceil(totalEmployees / rowsPerPage);
-            
-            const startIndex = (currentPage - 1) * rowsPerPage + 1;
-            const endIndex = Math.min(currentPage * rowsPerPage, totalEmployees);
-            
-            document.getElementById('pagination-info').textContent = `Showing ${startIndex}-${endIndex} of ${totalEmployees}`;
-            document.getElementById('page-info').textContent = `Page ${currentPage} of ${totalPages}`;
-            
-            // Update button states
-            document.getElementById('first-page').disabled = currentPage === 1;
-            document.getElementById('prev-page').disabled = currentPage === 1;
-            document.getElementById('next-page').disabled = currentPage === totalPages;
-            document.getElementById('last-page').disabled = currentPage === totalPages;
-        }
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-note">Note:</div>
+            <div class="legend-icon" style="background-color: #6C5FFC;"></div>
+            <div class="legend-item">Holiday</div>
+            <div class="legend-icon" style="background-color: #1ABC9C;"></div>
+            <div class="legend-item">Day Off</div>
+            <div class="legend-divider"></div>
+            <div class="legend-icon" style="background-color: #34B53A;"></div>
+            <div class="legend-item">Present</div>
+            <div class="legend-divider"></div>
+            <div class="legend-icon" style="background-color: #80CAFF;"></div>
+            <div class="legend-item">Half Day</div>
+            <div class="legend-divider"></div>
+            <div class="legend-icon" style="background-color: #FFB200;"></div>
+            <div class="legend-item">Late</div>
+            <div class="legend-divider"></div>
+            <div class="legend-icon" style="background-color: #FF3A29;"></div>
+            <div class="legend-item">Absent</div>
+            <div class="legend-divider"></div>
+            <div class="legend-icon" style="background-color: #9747FF;"></div>
+            <div class="legend-item">On Leave</div>
+        </div>
 
-        // Go to specific page
-        function goToPage(page) {
-            if (page < 1 || page > totalPages) return;
-            
-            currentPage = page;
-            renderTable();
-        }
+        <!-- Calendar Table -->
+        <div class="calendar-table">
+            <!-- Header Row -->
+            <div class="calendar-header-row">
+                <div class="calendar-cell employee-header-cell">Employee</div>
+                <div class="calendar-cell">1</div>
+                <div class="calendar-cell">2</div>
+                <div class="calendar-cell">3</div>
+                <div class="calendar-cell">4</div>
+                <div class="calendar-cell">5</div>
+                <div class="calendar-cell">6</div>
+                <div class="calendar-cell">7</div>
+                <div class="calendar-cell">8</div>
+                <div class="calendar-cell">9</div>
+                <div class="calendar-cell">10</div>
+                <div class="calendar-cell">11</div>
+                <div class="calendar-cell">12</div>
+                <div class="calendar-cell">13</div>
+                <div class="calendar-cell">14</div>
+                <div class="calendar-cell">15</div>
+                <div class="calendar-cell">16</div>
+                <div class="calendar-cell">17</div>
+                <div class="calendar-cell">18</div>
+                <div class="calendar-cell">19</div>
+                <div class="calendar-cell">20</div>
+                <div class="calendar-cell">21</div>
+                <div class="calendar-cell">22</div>
+                <div class="calendar-cell">23</div>
+                <div class="calendar-cell">24</div>
+                <div class="calendar-cell">25</div>
+                <div class="calendar-cell">26</div>
+                <div class="calendar-cell">27</div>
+                <div class="calendar-cell">28</div>
+                <div class="calendar-cell">29</div>
+                <div class="calendar-cell">30</div>
+                <div class="calendar-cell">31</div>
+            </div>
 
-        // Calendar navigation functions
-        function previousMonth() {
-            console.log('Previous month clicked');
-            // Add month navigation logic here
-        }
+            <!-- Employee Row 1 - Ayush Kumar -->
+            <div class="calendar-row">
+                <div class="employee-cell">
+                    <div class="employee-profile">
+                        <div class="profile-avatar" style="background-color: #fecaca;">AK</div>
+                        <div class="employee-name">Ayush Kumar</div>
+                    </div>
+                </div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-holiday">★</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-dayoff">☐</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-late">⚠</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-absent">✗</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-leave">🏠</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-holiday">★</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+            </div>
 
-        function nextMonth() {
-            console.log('Next month clicked');
-            // Add month navigation logic here
-        }
-    </script>
+            <!-- Employee Row 2 - Chirag Arora -->
+            <div class="calendar-row">
+                <div class="employee-cell">
+                    <div class="employee-profile">
+                        <div class="profile-avatar" style="background-color: #bae6fd;">CA</div>
+                        <div class="employee-name">Chirag Arora</div>
+                    </div>
+                </div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-holiday">★</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-dayoff">☐</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-late">⚠</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-absent">✗</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-leave">🏠</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-holiday">★</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+            </div>
+
+            <!-- Employee Row 3 - Dipanshu Singh -->
+            <div class="calendar-row">
+                <div class="employee-cell">
+                    <div class="employee-profile">
+                        <div class="profile-avatar" style="background-color: #a7f3d0;">DS</div>
+                        <div class="employee-name">Dipanshu Singh</div>
+                    </div>
+                </div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-holiday">★</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-dayoff">☐</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-late">⚠</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-absent">✗</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-leave">🏠</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-holiday">★</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+                <div class="status-cell"><div class="status-icon status-present">✓</div></div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <div class="pagination-info">Showing 1-10 of 20</div>
+            <div class="pagination-controls">
+                <div class="rows-per-page">
+                    <span>Rows per page</span>
+                    <select class="page-select">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                <div class="page-info">Page 1 of 10</div>
+                <div class="page-buttons">
+                    <button class="page-btn" disabled><span class="chevrons-left"></span></button>
+                    <button class="page-btn" disabled><span class="chevron-left"></span></button>
+                    <button class="page-btn"><span class="chevron-right"></span></button>
+                    <button class="page-btn"><span class="chevrons-right"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+                 
+                </div>
+            </div>
+
+            <!-- Requests Tab Content -->
+            <div class="tab-content" id="requests-content">
+                <!-- My Team's Request Sub-tab -->
+                <div class="tab-content active" id="requests-team">
+                    <div class="controls">
+                        <input type="text" class="search-input" placeholder="Search" />
+                        <button class="filter-btn">
+                            Team <span class="icon chevron-down"></span>
+                        </button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="table">
+                            <thead class="table-header">
+                                <tr>
+                                    <th>Employee Name</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Check In</th>
+                                    <th>Check Out</th>
+                                    <th>Working Hours</th>
+                                    <th>Status</th>
+                                    <th width="64"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="team-requests-body">
+                              
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <div class="pagination-info">Showing 1-10 of 20</div>
+                        <div class="pagination-controls">
+                            <div class="rows-per-page">
+                                <span>Rows per page</span>
+                                <select class="page-select">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                </select>
+                            </div>
+                            <div class="page-info">Page 1 of 10</div>
+                            <div class="page-buttons">
+                                <button class="page-btn" disabled>⪤</button>
+                                <button class="page-btn" disabled>‹</button>
+                                <button class="page-btn">›</button>
+                                <button class="page-btn">⪢</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Requests Sub-tab -->
+                <div class="tab-content" id="requests-my">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                        <h2 style="font-size: 20px; font-weight: 600; color: #1e293b;">My Requests</h2>
+                        <button class="create-btn" data-open-modal="attendance-request">
+                            <span class="icon plus-icon"></span>
+                            Create Attendance Request
+                        </button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="table">
+                            <thead class="table-header">
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Check In</th>
+                                    <th>Check Out</th>
+                                    <th>Working Hours</th>
+                                    <th>Status</th>
+                                    <th width="64"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="my-requests-body">
+                                <!-- My requests will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <div class="pagination-info">Showing 1-10 of 20</div>
+                        <div class="pagination-controls">
+                            <div class="rows-per-page">
+                                <span>Rows per page</span>
+                                <select class="page-select">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                </select>
+                            </div>
+                            <div class="page-info">Page 1 of 10</div>
+                            <div class="page-buttons">
+                                <button class="page-btn" disabled>⪤</button>
+                                <button class="page-btn" disabled>‹</button>
+                                <button class="page-btn">›</button>
+                                <button class="page-btn">⪢</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    </div>
+    <!-- modals -->
+
+  <div  class="modal-overlay" data-modal-id="AR-modal-01" style="display: none;" data-close-on-click="true">
+     <div class="modal-container">
+        <!-- Header -->
+        <div class="modal-header">
+            <div class="header-content">
+                <div class="header-title">Leave Details</div>
+                <button class="close-button" data-close-modal>
+                    <svg class="close-icon" fill="none" viewBox="0 0 16 16">
+                        <path d="M12.8534 12.1462C12.8998 12.1927 12.9367 12.2478 12.9618 12.3085C12.987 12.3692 12.9999 12.4343 12.9999 12.5C12.9999 12.5657 12.987 12.6307 12.9618 12.6914C12.9367 12.7521 12.8998 12.8073 12.8534 12.8537C12.8069 12.9002 12.7518 12.937 12.6911 12.9622C12.6304 12.9873 12.5653 13.0003 12.4996 13.0003C12.4339 13.0003 12.3689 12.9873 12.3082 12.9622C12.2475 12.937 12.1923 12.9002 12.1459 12.8537L7.99963 8.70687L3.85338 12.8537C3.75956 12.9476 3.63231 13.0003 3.49963 13.0003C3.36694 13.0003 3.2397 12.9476 3.14588 12.8537C3.05206 12.7599 2.99935 12.6327 2.99935 12.5C2.99935 12.3673 3.05206 12.2401 3.14588 12.1462L7.29275 7.99999L3.14588 3.85374C3.05206 3.75992 2.99935 3.63268 2.99935 3.49999C2.99935 3.36731 3.05206 3.24006 3.14588 3.14624C3.2397 3.05242 3.36694 2.99972 3.49963 2.99972C3.63231 2.99972 3.75956 3.05242 3.85338 3.14624L7.99963 7.29312L12.1459 3.14624C12.2397 3.05242 12.3669 2.99972 12.4996 2.99972C12.6323 2.99972 12.7596 3.05242 12.8534 3.14624C12.9472 3.24006 12.9999 3.36731 12.9999 3.49999C12.9999 3.63268 12.9472 3.75992 12.8534 3.85374L8.7065 7.99999L12.8534 12.1462Z" fill="#1B1B1B"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="modal-content">
+            <div class="employee-info">
+                <!-- Employee Header -->
+                <div class="employee-header">
+                    <div class="employee-details">
+                        <h2 class="employee-name">Ayush Kumar</h2>
+                        <p class="employee-designation">UI/UX Designer</p>
+                    </div>
+                    <div class="status-tag">Requested</div>
+                </div>
+
+                <!-- Details Card -->
+                <div class="details-card">
+                    <!-- Leave Type and Start Date -->
+                    <div class="info-row">
+                      
+                          <div class="info-item">
+                            <div class="info-label">Date</div>
+                            <div class="info-value">2025-05-22</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Working Hours</div>
+                            <div class="info-value">09:02Hrs</div>
+                        </div>
+                    </div>
+
+                    <!-- End Date and Requested Days -->
+                    <div class="info-row">
+                      
+                        <div class="info-item">
+                            <div class="info-label">Check In</div>
+                            <div class="info-value">09:28pm</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Check Out</div>
+                            <div class="info-value">7:00 Pm</div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Description -->
+                    <div class="info-description">
+                        <div class="info-label">Description</div>
+                        <div class="info-value">Request for Attendance: I would like to formally request attendance for the upcoming client site visit scheduled for next week. This visit is crucial for our ongoing project and will provide an opportunity to strengthen our relationship with the client. Please let me know if you need any further details.</div>
+                    </div>
+
+                 
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+            <button class="btn-cancel" onclick="cancelRequest()">
+                <svg class="btn-icon" fill="none" viewBox="0 0 16 16">
+                    <g clipPath="url(#clip0_21_1146)">
+                        <path d="M8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.33333 8 1.33333C4.3181 1.33333 1.33333 4.3181 1.33333 8C1.33333 11.6819 4.3181 14.6667 8 14.6667Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33"/>
+                        <path d="M3.2666 3.26693L12.7333 12.7336" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_21_1146">
+                            <rect fill="white" height="16" width="16"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="btn-text"data-close-modal>Reject</div>
+            </button>
+            <button class="btn-edit" >
+                <svg class="btn-icon" fill="none" viewBox="0 0 16 16">
+                    <path d="M13.7826 4.20825C14.1351 3.85587 14.3331 3.3779 14.3332 2.87949C14.3333 2.38108 14.1353 1.90306 13.783 1.55059C13.4306 1.19811 12.9526 1.00006 12.4542 1C11.9558 0.999937 11.4778 1.19787 11.1253 1.55025L2.22796 10.4496C2.07317 10.6039 1.9587 10.7939 1.89462 11.0029L1.01396 13.9043C0.996726 13.9619 0.995425 14.0232 1.01019 14.0815C1.02496 14.1398 1.05524 14.1931 1.09782 14.2356C1.1404 14.2781 1.1937 14.3083 1.25206 14.323C1.31042 14.3376 1.37166 14.3362 1.42929 14.3189L4.33129 13.4389C4.54007 13.3754 4.73007 13.2616 4.88462 13.1076L13.7826 4.20825Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33"/>
+                    <path d="M9.6665 3L12.3332 5.66667" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33"/>
+                </svg>
+                <div class="btn-text">Approve</div>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!--  -->
+<div class="modal-overlay" id="attendance-req" data-modal-id="attendance-request" style="display: none;" data-close-on-click="true">
+        <div class="modal-container">
+        <!-- Header -->
+        <div class="modal-header">
+            <h1 class="header-title">Create Attendance Request</h1>
+            <button class="close-button"  data-close-modal>
+                <svg class="close-icon" fill="none" viewBox="0 0 24 24">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Content -->
+        <div class="modal-content">
+            <div class="content-container">
+                <!-- Form Content -->
+                <div class="form-content">
+                    <!-- Name -->
+                    <div class="form-group full-width">
+                        <label class="form-label">Date</label>
+                            <div class="date-input-container">
+                                <input type="text" class="form-input date-input" id="startDate" value="16/05/2025" placeholder="DD/MM/YYYY">
+                                <svg class="date-icon" fill="none" viewBox="0 0 16 16">
+                                    <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M2 6.66667H14" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                </svg>
+                            </div>
+                    </div>
+
+                 
+
+                    <!-- Start Date and End Date -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Check In Time</label>
+                            <div class="date-input-container">
+                                <input type="text" class="form-input date-input" id="startDate" value="16/05/2025" placeholder="DD/MM/YYYY">
+                                <svg class="date-icon" fill="none" viewBox="0 0 16 16">
+                                    <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M2 6.66667H14" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Check Out Time</label>
+                            <div class="date-input-container">
+                                <input type="text" class="form-input date-input" id="endDate" value="16/05/2025" placeholder="DD/MM/YYYY">
+                                <svg class="date-icon" fill="none" viewBox="0 0 16 16">
+                                    <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M2 6.66667H14" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="field-group" >
+                        <label class="field-label required">Description</label>
+                        <div class="textarea-container" id="description-group">
+                            <textarea 
+                                class="textarea-field" 
+                                id="description-input"
+                                placeholder="Explain briefly"
+                                rows="5"
+                            ></textarea>
+                            <svg class="resize-handle" fill="none" viewBox="0 0 20 20">
+                                <g opacity="0.6">
+                                    <path d="M17.6459 10.6463C17.8411 10.4511 18.1577 10.4512 18.3529 10.6463C18.5482 10.8415 18.5482 11.1581 18.3529 11.3533L11.3529 18.3533C11.1577 18.5484 10.8411 18.5485 10.6459 18.3533C10.4509 18.1581 10.4509 17.8415 10.6459 17.6463L17.6459 10.6463ZM17.6107 14.6111C17.8059 14.4159 18.1225 14.4161 18.3178 14.6111C18.513 14.8064 18.513 15.1229 18.3178 15.3182L15.3051 18.3309L15.227 18.3953C15.0329 18.5234 14.7689 18.5017 14.598 18.3309C14.4274 18.16 14.4055 17.8959 14.5336 17.7019L14.598 17.6238L17.6107 14.6111Z" fill="#1E293B"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+            <button class="btn-cancel" data-close-modal>
+                <div class="btn-text">Cancel</div>
+            </button>
+            <button class="btn-submit" onclick="submitMilestone()">
+                <div class="btn-text">Submit</div>
+            </button>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+ 
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/attendace.js"></script>
+    <script src="./assets/js/dropdown.js"></script>
+
+    <script src="./assets/js/modal.js"></script>
 </body>
+
 </html>

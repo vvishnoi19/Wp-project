@@ -1,0 +1,57 @@
+.dropdown-container {
+    position: absolute; /* Keeps it inside the parent cell */
+    top: 100%; /* Position below the button */
+    right: 0;
+    width: max-content;
+    min-width: 160px;
+    max-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+}
+
+.action-btn{
+    cursor: pointer;
+    transform: rotate(90deg);
+    border: none !important;
+}
+.dropdown-section {
+    background: #ffffff;
+    padding: 4px 0;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f5f9;
+}
+
+.dropdown-item-content {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+}
+
+.dropdown-item-text {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #1e293b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-item-text.poppins {
+    font-family: 'Poppins', sans-serif;
+}

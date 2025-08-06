@@ -272,7 +272,7 @@
             color: var(--slate-800);
             font-family: 'Inter', sans-serif;
         }
-
+      
         .chart-legend {
             display: flex;
             align-items: center;
@@ -361,8 +361,9 @@
             background: white;
             border-radius: 12px;
             border: 1px solid var(--slate-200);
-            overflow: hidden;
+            
         }
+        
 
         .section-header {
             padding: 16px 24px;
@@ -601,9 +602,14 @@
             background: none;
             border: none;
             padding: 4px;
-            border-radius: 4px;
+            border: none;
             color: var(--primary-blue);
+            transform: rotate(90deg);
             cursor: pointer;
+        }
+
+        #action{
+            transform: rotate(90deg);
         }
 
         /* Tab Content */
@@ -776,7 +782,6 @@
         .flg-table-wrapper {
             background: var(--flg-white);
             border-radius: 12px;
-            overflow: hidden;
             width: 100%;
             border: 1px solid var(--flg-slate-200);
         }
@@ -786,7 +791,6 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
-            overflow: hidden;
             width: 100%;
         }
 
@@ -1022,6 +1026,9 @@
         }
 
         /* Action Button */
+        .action-wrapper{
+            border: none;
+        }
         .flg-action-button {
             display: flex;
             flex-direction: row;
@@ -1237,3 +1244,120 @@
             }
         }
   
+
+        /* dropdown */
+
+
+    .dropdown-container {
+    position: absolute; /* Keeps it inside the parent cell */
+    top: 100%; /* Position below the button */
+    right: 0;
+    width: max-content;
+    min-width: 160px;
+    max-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+}
+
+.dropdown-section {
+    background: #ffffff;
+    padding: 4px 0;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f5f9;
+}
+
+.dropdown-item-content {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+}
+
+.dropdown-item-text {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #1e293b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-item-text.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+        .dropdown-item-icon {
+            flex-shrink: 0;
+            width: 16px;
+            height: 16px;
+            position: relative;
+        }
+
+        .dropdown-item-icon svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Icon styling */
+        .icon-stroke {
+            stroke: #1e293b;
+            stroke-width: 0.833333;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            .dropdown-container {
+                max-width: 160px;
+            }
+            
+            .dropdown-item-content {
+                padding: 6px 6px 6px 24px;
+            }
+            
+            .dropdown-item-text {
+                font-size: 13px;
+            }
+        }
+
+        /* Accessibility improvements */
+        .dropdown-item:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: -2px;
+        }
+
+        /* Animation for smooth appearance */
+        .dropdown-container {
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+   

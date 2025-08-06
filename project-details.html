@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/project/project-details.css">
+     <link rel="stylesheet" href="./assets/css/style.css">
+     <!-- <link rel="stylesheet" href="./assets/css/profile/style.css"> -->
+      <link rel="stylesheet" href="./assets/css/dropdown.css">
+      <link rel="stylesheet" href="./assets/css/Modals/milestone.css">
+      
+     <link rel="stylesheet" href="./assets/css/project/project-details.css">
+
+</head>
+<body>
+ <div class="dashboard-container">
+    <div id="sidebar-container">  <div class="sidebar">
+           
+            <div class="logo-section">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="./Images/main-logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navigation">
+                  <ul class="nav-list">
+                    <li>
+                        <a href="/dashboard.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="3" width="7" height="9"/>
+                                <rect x="14" y="3" width="7" height="5"/>
+                                <rect x="14" y="12" width="7" height="9"/>
+                                <rect x="3" y="16" width="7" height="5"/>
+                            </svg>
+                            <span class="nav-name">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            <span class="nav-name">Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/employees.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <span class="nav-name">All Employees</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/daily-status.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                            <span class="nav-name">Daily Status Report</span>
+                        </a>
+                    </li>
+                 
+                    <li>
+                        <a href="/report.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 0 0 4.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 0 1-15.357-2m15.357 2H15"/>
+                                <rect x="8" y="8" width="18" height="18" rx="2"/>
+                            </svg>
+                            <span class="nav-name">All Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/project.html" class="nav-item  active">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                                <circle cx="12" cy="13" r="2"/>
+                            </svg>
+                            <span class="nav-name">Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/attendence.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                                <path d="M8 14h.01"/>
+                                <path d="M12 14h.01"/>
+                                <path d="M16 14h.01"/>
+                                <path d="M8 18h.01"/>
+                                <path d="M12 18h.01"/>
+                                <path d="M16 18h.01"/>
+                            </svg>
+                            <span class="nav-name">Attendance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/leave.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M8 2v4"/>
+                                <path d="M16 2v4"/>
+                                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <path d="M3 10h18"/>
+                                <path d="M8 14h.01"/>
+                                <path d="M12 14h.01"/>
+                                <path d="M16 14h.01"/>
+                                <path d="M8 18h.01"/>
+                                <path d="M12 18h.01"/>
+                                <path d="M16 18h.01"/>
+                            </svg>
+                            <span class="nav-name">Leaves</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/announcement.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M7 7h10v3l2 2-2 2v3H7v-3l-2-2 2-2V7z"/>
+                                <path d="M11 7V4a1 1 0 0 1 1-1h0a1 1 0 0 1 1 1v3"/>
+                                <path d="M7 7L5.5 5.5"/>
+                                <path d="M17 7l1.5-1.5"/>
+                                 <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <path d="M7 17l-1.5 1.5"/>
+                                <path d="M17 17l1.5 1.5"/>
+                            </svg>
+                            <span class="nav-name">Announcement</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/request.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                                <path d="M16 10l4 4"/>
+                                <path d="M16 14l4-4"/>
+                            </svg>
+                            <span class="nav-name">All Requests</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/payroll.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                 <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <polyline points="11,18 12,19 13,18"/>
+                                <polyline points="11,6 12,5 13,6"/>
+                            </svg>
+                            <span class="nav-name">Payroll</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/assets.html" class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                            <span class="nav-name">Assets</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+</div>
+</div>
+ 
+     <div class="right-panel" id="payment-history" style="display: none;" >
+        
+         <div class="project-breadcrumb">
+            <div class="breadcrumb-item">
+                <span class="breadcrumb-text">Project Lists</span>
+                <svg class="breadcrumb-arrow" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 5L12.5 10L7.5 15" stroke="#16151C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="breadcrumb-text">Project Details</span>
+            </div>
+        </div>
+                <div class="team-contribution">
+                    <div class="contribution-header">
+                        <h2 class="contribution-title">Team Contribution</h2>
+                        <div class="contribution-tabs">
+                            <button class="contribution-tab active">Billable</button>
+                            <button class="contribution-tab">Non Billable</button>
+                        </div>
+                    </div>
+
+                    <div class="team-section">
+                        <div class="team-header">
+                            <span class="team-name">Design Team (My Team)</span>
+                            <div class="team-stats">
+                                <span>43hr</span>
+                                <span>$400</span>
+                                <span>43%</span>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #ffe9eb;">AS</div>
+                                    <span class="member-name">Abhishek Singh</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #e9f1fe;">DS</div>
+                                    <span class="member-name">Dipanshu Singh</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #fee9ff;">AK</div>
+                                    <span class="member-name">Ayush Kumar</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-section">
+                        <div class="team-header">
+                            <span class="team-name">Front End team</span>
+                            <div class="team-stats">
+                                <span>43hr</span>
+                                <span>$400</span>
+                                <span>43%</span>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #ffe9eb;">AS</div>
+                                    <span class="member-name">Sandeep Kumar</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #e9f1fe;">RV</div>
+                                    <span class="member-name">Rahul</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #f0fdf4;">KB</div>
+                                    <span class="member-name">Nakul</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-section">
+                        <div class="team-header">
+                            <span class="team-name">Backend Team</span>
+                            <div class="team-stats">
+                                <span>43hr</span>
+                                <span>$400</span>
+                                <span>43%</span>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #ffe9eb;">AS</div>
+                                    <span class="member-name">Sambhu Rai</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #e9f1fe;">VS</div>
+                                    <span class="member-name">Vikash</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #e9f1fe;">MV</div>
+                                    <span class="member-name">Mahesh</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <div class="container">
+        <!-- Breadcrumb -->
+<div class="right-panel-title" id="payment-summary-title">
+          <div class="project-breadcrumb">
+            <div class="breadcrumb-item">
+                <span class="breadcrumb-text">Project Lists</span>
+                <svg class="breadcrumb-arrow" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 5L12.5 10L7.5 15" stroke="#16151C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="breadcrumb-text">Project Details</span>
+            </div>
+        </div>
+     </div>
+
+        <div class="main-content">
+            <!-- Left Panel -->
+      
+            <div class="left-panel">
+                <!-- Project Header -->
+                <div class="project-header">
+                    <div class="project-title-section">
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h1 class="project-name">Algoquant-WebApp</h1>
+                                <div class="growth-indicator">
+                                    <span class="growth-text">3.3x</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M13.3334 5.83301H18.3334V10.833" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18.3334 5.83301L11.2501 12.9163L7.08341 8.74967L1.66675 14.1663" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="status-badge">
+                                    <div class="status-dot"></div>
+                                    <span class="status-text">In progress</span>
+                                </div>
+                                <div class="priority-badge">
+                                    <div class="priority-dot"></div>
+                                    <span class="priority-text">High</span>
+                                </div>
+                            </div>
+                            <div class="progress-section">
+                                <div class="progress-bar-container">
+                                    <div class="progress-segment progress-filled"></div>
+                                    <div class="progress-segment progress-filled"></div>
+                                    <div class="progress-segment progress-filled"></div>
+                                    <div class="progress-segment progress-filled"></div>
+                                    <div class="progress-segment progress-filled"></div>
+                                    <div class="progress-segment progress-empty"></div>
+                                    <div class="progress-segment progress-empty"></div>
+                                    <div class="progress-segment progress-empty"></div>
+                                    <div class="progress-segment progress-empty"></div>
+                                    <div class="progress-segment progress-empty"></div>
+                                </div>
+                                <div class="progress-labels">
+                                    <span class="progress-label-primary">Total Tracked <span class="progress-label-secondary">(240 Hr)</span></span>
+                                    <span class="progress-label-primary">Target Spent <span class="progress-label-secondary">(240 Hr)</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                                            <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" id="action"   aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+
+        <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+         
+                  <div class="dropdown-item" role="menuitem" tabindex="0" >
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Edit Project</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>  
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0" >
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Add New Payment</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+                  <div class="dropdown-item" role="menuitem" tabindex="0">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Archive Project</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            <div class="project-progress-container">
+                                <div class="project-progress-bar"></div>
+                                <div class="project-progress-labels">
+                                    <span>Project Progress</span>
+                                    <span>35%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon stat-icon-budget">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 3H18" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 8H18" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 13L14.5 21" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 13H9" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 13C15.667 13 15.667 3 9 3" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Project Budget</div>
+                            <div class="stat-value">₹12,45,789</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon stat-icon-date">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M8 2V6" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 2V6" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="3" y="4" width="18" height="18" rx="2" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 10H21" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Start Date</div>
+                            <div class="stat-value">12 May, 2025</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon stat-icon-type">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M11 15H13C13.5304 15 14.0391 14.7893 14.4142 14.4142C14.7893 14.0391 15 13.5304 15 13C15 12.4696 14.7893 11.9609 14.4142 11.5858C14.0391 11.2107 13.5304 11 13 11H10C9.4 11 8.9 11.2 8.6 11.6L3 17" stroke="#CF8B25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="16" cy="9" r="2.9" stroke="#CF8B25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="6" cy="5" r="3" stroke="#CF8B25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Project Type</div>
+                            <div class="stat-value">Fix Cost</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lead Owner Section -->
+                <div class="lead-owner-section">
+                    <div class="section-layout">
+                        <div class="lead-owner-content">
+                            <div class="section-title">Lead owner</div>
+                            <div class="avatar-list">
+                                <div class="avatar">AR</div>
+                                <div class="avatar">PS</div>
+                                <div class="avatar">AR</div>
+                                <div class="avatar">PS</div>
+                            </div>
+                        </div>
+                        <div class="source-section">
+                            <div class="section-title">Source</div>
+                            <div class="avatar-list">
+                                <div class="avatar">UW</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Stats -->
+                <div class="summary-stats">
+                    <div class="summary-stat">
+                        <div class="summary-stat-label">Target Hours</div>
+                        <div class="summary-stat-value">1000</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="summary-stat-label">Tracked hrs</div>
+                        <div class="summary-stat-value">456</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="summary-stat-label">Amount Received</div>
+                        <div class="summary-stat-value">₹5,23,400</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="summary-stat-label">Total payments</div>
+                        <div class="summary-stat-value">2</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="summary-stat-label">Amount Left</div>
+                        <div class="summary-stat-value">₹7,89,900</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="summary-stat-label">Receivables</div>
+                        <div class="summary-stat-value">₹40,000</div>
+                    </div>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="tab-navigation">
+                    <div class="tab-item active" onclick="switchTab('overview')">
+                        <span class="tab-text">Overview</span>
+                    </div>
+                    <div class="tab-item" onclick="switchTab('milestones')">
+                        <span class="tab-text">Milestones</span>
+                    </div>
+                    <div class="tab-item" onclick="switchTab('reports')">
+                        <span class="tab-text">Reports</span>
+                    </div>
+                    <div class="tab-item" onclick="switchTab('payment-history')">
+                        <span class="tab-text">Payment History</span>
+                    </div>
+                </div>
+
+                <!-- Tab Contents -->
+                <div id="overview-content" class="tab-content active">
+                    <div class="planning-cards">
+                        <div class="planning-card">
+                            <h3 class="planning-card-title">Time & Financial Planning</h3>
+                            <div class="planning-grid">
+                                <div class="planning-row">
+                                    <div class="planning-field">
+                                        <span class="field-label">Target Spend</span>
+                                        <span class="field-value">1000 hr</span>
+                                    </div>
+                                    <div class="planning-field">
+                                        <span class="field-label">Hours Spent</span>
+                                        <span class="field-value">200 hr</span>
+                                    </div>
+                                    <div class="planning-field">
+                                        <span class="field-label">Hours Left</span>
+                                        <span class="field-value">600 hr</span>
+                                    </div>
+                                </div>
+                                <div class="planning-row">
+                                    <div class="planning-field">
+                                        <span class="field-label">Cost Per Hour</span>
+                                        <span class="field-value">₹800</span>
+                                    </div>
+                                    <div class="planning-field">
+                                        <span class="field-label">Running XFactor</span>
+                                        <span class="field-value">4.5x</span>
+                                    </div>
+                                </div>
+                                <div class="planning-row">
+                                    <div class="planning-field">
+                                        <span class="field-label">Project Spend</span>
+                                        <span class="field-value">₹10032</span>
+                                    </div>
+                                    <div class="planning-field">
+                                        <span class="field-label">Price Difference</span>
+                                        <span class="field-value">₹10032</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planning-card">
+                            <h3 class="planning-card-title">Revenue & Billing</h3>
+                            <div class="planning-grid">
+                                <div class="planning-row">
+                                    <div class="planning-field">
+                                        <span class="field-label">Budget</span>
+                                        <span class="field-value">₹2,00,000</span>
+                                    </div>
+                                    <div class="planning-field">
+                                        <span class="field-label">Payment Milestones</span>
+                                        <span class="field-value">3</span>
+                                    </div>
+                                </div>
+                                <div class="planning-row">
+                                    <div class="planning-field">
+                                        <span class="field-label">Amount Received</span>
+                                        <span class="field-value">₹20,000</span>
+                                    </div>
+                                    <div class="planning-field">
+                                        <span class="field-label">Amount Left</span>
+                                        <span class="field-value">₹20,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="milestones-content" class="tab-content">
+                    <div class="milestones-header">
+                        <h2 class="milestones-title">Milestones List</h2>
+                        <button class="create-milestone-btn" data-open-modal="create-milestone">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 3.33333V12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.33333 8H12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="btn-text">Create Milestone</span>
+                        </button>
+                    </div>
+                    <div class="milestones-table">
+                        <div class="table-header">
+                            <div class="table-header-cell header-milestone-name">Milestone Name</div>
+                            <div class="table-header-cell header-cell">Created At</div>
+                            <div class="table-header-cell header-cell">Start Date</div>
+                            <div class="table-header-cell header-cell">End Date</div>
+                            <div class="table-header-cell header-cell">Duration</div>
+                            <div class="table-header-cell header-cell">Receivable Amount</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell cell-milestone-name">Sales Planning</div>
+                            <div class="table-cell cell-content">2025-05-22</div>
+                            <div class="table-cell cell-content">2025-05-22</div>
+                            <div class="table-cell cell-content">2025-06-22</div>
+                            <div class="table-cell cell-content">30 Days</div>
+                            <div class="table-cell cell-content">$15000</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell cell-milestone-name">Design delivery</div>
+                            <div class="table-cell cell-content">2025-05-22</div>
+                            <div class="table-cell cell-content">2025-05-22</div>
+                            <div class="table-cell cell-content">2025-06-22</div>
+                            <div class="table-cell cell-content">30 Days</div>
+                            <div class="table-cell cell-content">$15000</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell cell-milestone-name">Front End</div>
+                            <div class="table-cell cell-content">2025-06-01</div>
+                            <div class="table-cell cell-content">2025-06-01</div>
+                            <div class="table-cell cell-content">2025-07-01</div>
+                            <div class="table-cell cell-content">30 Days</div>
+                            <div class="table-cell cell-content">$15000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reports-content" class="tab-content">
+                    <!-- Header Controls -->
+        <div class="header-controls">
+            <div class="header-left">
+                <h1 class="header-title">Reports</h1>
+                <button class="filter-button">
+                    Project
+                    <svg class="icon" viewBox="0 0 16 16">
+                        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="filter-button">
+                    Client
+                    <svg class="icon" viewBox="0 0 16 16">
+                        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="header-right">
+                <div class="date-picker">
+                    <svg class="icon" viewBox="0 0 16 16">
+                        <path d="M5.33333 1.33333V4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.6667 1.33333V4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 6.66667H14" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    This year
+                </div>
+                <button class="export-button">
+                    <svg class="icon" viewBox="0 0 16 16">
+                        <path d="M8 12V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12v2a2 2 0 002 2h8a2 2 0 002-2v-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Export
+                    <svg class="icon" viewBox="0 0 16 16">
+                        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="chart-container">
+            <div class="chart-header">
+                <div class="chart-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Hours</span>
+                        <div class="stat-dot"></div>
+                        <span class="stat-value">139:15:26</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Billable Hours</span>
+                        <div class="stat-dot"></div>
+                        <span class="stat-value">111:15:26</span>
+                    </div>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <div class="legend-color total"></div>
+                        <span class="legend-text">Total Hours</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color billable"></div>
+                        <span class="legend-text">Billable Hours</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-content">
+                <div class="chart-grid">
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                </div>
+                <div class="y-axis">
+                    <span>11111.1h</span>
+                    <span>9722.2h</span>
+                    <span>8333.3h</span>
+                    <span>6944.4h</span>
+                    <span>5555.6h</span>
+                    <span>4166.7h</span>
+                    <span>2777.8h</span>
+                    <span>1388.9h</span>
+                    <span>0</span>
+                </div>
+                <div class="chart-bars">
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 100%;"></div>
+                            <div class="bar billable" style="height: 75%;"></div>
+                        </div>
+                        <div class="month-label">Jan</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 100%;"></div>
+                            <div class="bar billable" style="height: 90%;"></div>
+                        </div>
+                        <div class="month-label">Feb</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 100%;"></div>
+                            <div class="bar billable" style="height: 78%;"></div>
+                        </div>
+                        <div class="month-label">Mar</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 100%;"></div>
+                            <div class="bar billable" style="height: 45%;"></div>
+                        </div>
+                        <div class="month-label">Apr</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 100%;"></div>
+                            <div class="bar billable" style="height: 67%;"></div>
+                        </div>
+                        <div class="month-label">May</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 100%;"></div>
+                            <div class="bar billable" style="height: 21%;"></div>
+                        </div>
+                        <div class="month-label">Jun</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 2px;"></div>
+                            <div class="bar billable" style="height: 2px;"></div>
+                        </div>
+                        <div class="month-label">Jul</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 2px;"></div>
+                            <div class="bar billable" style="height: 2px;"></div>
+                        </div>
+                        <div class="month-label">Aug</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 2px;"></div>
+                            <div class="bar billable" style="height: 2px;"></div>
+                        </div>
+                        <div class="month-label">Sep</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 2px;"></div>
+                            <div class="bar billable" style="height: 2px;"></div>
+                        </div>
+                        <div class="month-label">Oct</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 2px;"></div>
+                            <div class="bar billable" style="height: 2px;"></div>
+                        </div>
+                        <div class="month-label">Nov</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bars">
+                            <div class="bar total" style="height: 2px;"></div>
+                            <div class="bar billable" style="height: 2px;"></div>
+                        </div>
+                        <div class="month-label">Dec</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="table-section">
+            <h2 class="table-title">Report List</h2>
+            <div class="table-container">
+                <table class="table">
+                    <thead class="table-header">
+                        <tr>
+                            <th>Description</th>
+                            <th>Project</th>
+                            <th>Time</th>
+                            <th>Duration</th>
+                            <th>Date</th>
+                            <th>Billing</th>
+                            <th>Billable</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="table-cell-description">working on client feedbacks from extras section</td>
+                            <td class="table-cell-project">CRM Design</td>
+                            <td>15:32 - 19:52</td>
+                            <td>04:20:45</td>
+                            <td>12/09/2025</td>
+                            <td>$123</td>
+                            <td>
+                                <div class="billable-indicator inactive">
+                                    <svg class="icon-sm" viewBox="0 0 20 20" fill="white">
+                                        <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999C12.5131 6.97968 12.6241 7.18054 12.7969 7.31838C12.9698 7.45622 13.1903 7.51975 13.41 7.49499C13.6297 7.47024 13.8305 7.35923 13.9684 7.18638C14.1062 7.01354 14.1698 6.79301 14.145 6.57333C14.0497 5.73161 13.6632 4.94967 13.0524 4.36274C12.4416 3.77582 11.6448 3.42083 10.8 3.35916V2.49999C10.8 2.27898 10.7122 2.06702 10.5559 1.91074C10.3996 1.75446 10.1877 1.66666 9.96666 1.66666C9.74565 1.66666 9.53369 1.75446 9.37741 1.91074C9.22113 2.06702 9.13333 2.27898 9.13333 2.49999V3.36749C8.27916 3.44679 7.48061 3.82584 6.87913 4.43748C6.27764 5.04913 5.91204 5.85392 5.84706 6.7093C5.78208 7.56468 6.02193 8.41546 6.52412 9.11094C7.02631 9.80643 7.75844 10.3017 8.59083 10.5092L11.0075 11.1075C11.4741 11.226 11.8814 11.5107 12.153 11.9082C12.4246 12.3058 12.5418 12.7887 12.4826 13.2665C12.4233 13.7443 12.1918 14.184 11.8314 14.5032C11.4709 14.8223 11.0064 14.999 10.525 15H9.475C8.98851 14.9996 8.51924 14.8199 8.157 14.4952C7.79476 14.1705 7.56499 13.7235 7.51166 13.24C7.48691 13.0203 7.3759 12.8195 7.20305 12.6816C7.11747 12.6134 7.01928 12.5626 6.91409 12.5323C6.8089 12.502 6.69878 12.4927 6.59 12.505C6.37031 12.5297 6.16945 12.6408 6.03161 12.8136C5.89377 12.9865 5.83024 13.207 5.855 13.4267C5.94909 14.2569 6.32652 15.0293 6.92369 15.6137C7.52086 16.1982 8.30125 16.5588 9.13333 16.635V17.5C9.13333 17.721 9.22113 17.933 9.37741 18.0893C9.53369 18.2455 9.74565 18.3333 9.96666 18.3333C10.1877 18.3333 10.3996 18.2455 10.5559 18.0893C10.7122 17.933 10.8 17.721 10.8 17.5V16.64C11.7146 16.5758 12.5709 16.167 13.1958 15.496C13.8207 14.825 14.1676 13.9419 14.1667 13.025Z"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td><span class="status-tag approved">Approved</span></td>
+                            <td>
+                               <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" id="action"   aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+
+        <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+         
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Delete</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            </td>
+                        </tr>
+                        <tr class="table-row flagged">
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <svg class="flag-icon" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M12.666 5.96667L5.99935 3.08333V2.29167C5.99935 1.95 5.71602 1.66667 5.37435 1.66667C5.03268 1.66667 4.74935 1.95 4.74935 2.29167V17.7083C4.74935 18.05 5.03268 18.3333 5.37435 18.3333C5.71602 18.3333 5.99935 18.05 5.99935 17.7083V14.4083L12.8493 11.025C12.8493 11.025 12.8493 11.025 12.8577 11.025C14.241 10.3083 14.9827 9.38333 14.941 8.40833C14.8993 7.43333 14.091 6.56667 12.666 5.96667Z"/>
+                                    </svg>
+                                    <span class="table-cell-description">working on client feedbacks from extras section</span>
+                                </div>
+                            </td>
+                            <td class="table-cell-project ui-testing">UI Testing</td>
+                            <td class="table-cell-time highlighted">15:32 - 19:52</td>
+                            <td class="table-cell-duration highlighted">04:20:45</td>
+                            <td>12/09/2025</td>
+                            <td>$123</td>
+                            <td>
+                                <div class="billable-indicator active">
+                                    <svg class="icon-sm" viewBox="0 0 20 20" fill="white">
+                                        <path d="M14.1667 13.025C14.1663 12.2129 13.8948 11.4243 13.3952 10.784C12.8957 10.1438 12.1967 9.68869 11.4092 9.49083L8.9925 8.89249C8.52456 8.77533 8.11565 8.49104 7.84286 8.0932C7.57006 7.69537 7.45223 7.21148 7.51157 6.73277C7.57091 6.25405 7.80332 5.81358 8.165 5.4944C8.52667 5.17521 8.99262 4.99936 9.475 4.99999H10.525C11.0115 5.00034 11.4808 5.18008 11.843 5.50481C12.2052 5.82954 12.435 6.27644 12.4883 6.75999C12.5131 6.97968 12.6241 7.18054 12.7969 7.31838C12.9698 7.45622 13.1903 7.51975 13.41 7.49499C13.6297 7.47024 13.8305 7.35923 13.9684 7.18638C14.1062 7.01354 14.1698 6.79301 14.145 6.57333C14.0497 5.73161 13.6632 4.94967 13.0524 4.36274C12.4416 3.77582 11.6448 3.42083 10.8 3.35916V2.49999C10.8 2.27898 10.7122 2.06702 10.5559 1.91074C10.3996 1.75446 10.1877 1.66666 9.96666 1.66666C9.74565 1.66666 9.53369 1.75446 9.37741 1.91074C9.22113 2.06702 9.13333 2.27898 9.13333 2.49999V3.36749C8.27916 3.44679 7.48061 3.82584 6.87913 4.43748C6.27764 5.04913 5.91204 5.85392 5.84706 6.7093C5.78208 7.56468 6.02193 8.41546 6.52412 9.11094C7.02631 9.80643 7.75844 10.3017 8.59083 10.5092L11.0075 11.1075C11.4741 11.226 11.8814 11.5107 12.153 11.9082C12.4246 12.3058 12.5418 12.7887 12.4826 13.2665C12.4233 13.7443 12.1918 14.184 11.8314 14.5032C11.4709 14.8223 11.0064 14.999 10.525 15H9.475C8.98851 14.9996 8.51924 14.8199 8.157 14.4952C7.79476 14.1705 7.56499 13.7235 7.51166 13.24C7.48691 13.0203 7.3759 12.8195 7.20305 12.6816C7.11747 12.6134 7.01928 12.5626 6.91409 12.5323C6.8089 12.502 6.69878 12.4927 6.59 12.505C6.37031 12.5297 6.16945 12.6408 6.03161 12.8136C5.89377 12.9865 5.83024 13.207 5.855 13.4267C5.94909 14.2569 6.32652 15.0293 6.92369 15.6137C7.52086 16.1982 8.30125 16.5588 9.13333 16.635V17.5C9.13333 17.721 9.22113 17.933 9.37741 18.0893C9.53369 18.2455 9.74565 18.3333 9.96666 18.3333C10.1877 18.3333 10.3996 18.2455 10.5559 18.0893C10.7122 17.933 10.8 17.721 10.8 17.5V16.64C11.7146 16.5758 12.5709 16.167 13.1958 15.496C13.8207 14.825 14.1676 13.9419 14.1667 13.025Z"/>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td><span class="status-tag pending">Approval Pending</span></td>
+                            <td>
+                                               <div class="action-wrapper" style="position: relative;">
+        <button class="action-btn" id="action"   aria-haspopup="true" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+        </button>
+
+        <div class="dropdown-container" role="menu" aria-label="Actions menu" style="display: none;">
+            <div class="dropdown-section">
+         
+                  <div class="dropdown-item" role="menuitem" tabindex="0" onclick="handleAction('view')">
+                    <div class="dropdown-item-content">
+                        <div class="dropdown-item-text poppins">Delete</div>
+                        <div class="dropdown-item-icon">
+                            <!-- Eye icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                 
+                            </td>
+                        </tr>
+                      
+                    
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <div class="pagination-info">Showing 1-10 of 20</div>
+                <div class="pagination-controls">
+                    <div class="rows-per-page">
+                        <span>Rows per page</span>
+                        <select class="rows-select">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                        </select>
+                    </div>
+                    <div class="page-info">Page 1 of 10</div>
+                    <div class="pagination-buttons">
+                        <button class="pagination-button" disabled>
+                            <svg class="icon" viewBox="0 0 16 16">
+                                <path d="M7.33333 11.3333L4 8L7.33333 4.66667M12 11.3333L8.66667 8L12 4.66667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="pagination-button" disabled>
+                            <svg class="icon" viewBox="0 0 16 16">
+                                <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="pagination-button">
+                            <svg class="icon" viewBox="0 0 16 16">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="pagination-button">
+                            <svg class="icon" viewBox="0 0 16 16">
+                                <path d="M4 11.3333L7.33333 8L4 4.66667M8.66667 11.3333L12 8L8.66667 4.66667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+      
+    </div>
+                </div>
+
+                <div id="payment-history-content" class="tab-content">
+                     <div class="payment-history-header">
+                        <h2 class="payment-title">Milestones List</h2>
+                        <button class="create-payment-btn" data-open-modal="add-payment">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 3.33333V12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.33333 8H12.6667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="btn-text">Add Payment</span>
+                        </button>
+                    </div>
+                    <div class="payment-table">
+                        <div class="payment-row header">
+                            <div class="payment-date">Date</div>
+                            <div class="payment-amount">Amount</div>
+                            <div class="payment-status">Status</div>
+                            <div class="payment-method">Method</div>
+                            <div class="payment-description">Description</div>
+                        </div>
+                        <div class="payment-row">
+                            <div class="payment-date">2025-01-15</div>
+                            <div class="payment-amount">₹2,50,000</div>
+                            <div class="payment-status">
+                                <span class="status-badge-success">Completed</span>
+                            </div>
+                            <div class="payment-method">Bank Transfer</div>
+                            <div class="payment-description">Initial project payment - 50% advance</div>
+                        </div>
+                        <div class="payment-row">
+                            <div class="payment-date">2025-02-10</div>
+                            <div class="payment-amount">₹1,50,000</div>
+                            <div class="payment-status">
+                                <span class="status-badge-success">Completed</span>
+                            </div>
+                            <div class="payment-method">UPI</div>
+                            <div class="payment-description">Milestone 1 completion payment</div>
+                        </div>
+                        <div class="payment-row">
+                            <div class="payment-date">2025-03-05</div>
+                            <div class="payment-amount">₹1,23,400</div>
+                            <div class="payment-status">
+                                <span class="status-badge-pending">Pending</span>
+                            </div>
+                            <div class="payment-method">Bank Transfer</div>
+                            <div class="payment-description">Milestone 2 completion payment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="right-panel active" id="payment-summary">
+
+                <div class="team-contribution">
+                    
+                    <div class="contribution-header">
+                        <h2 class="contribution-title">Team Contribution</h2>
+                        <div class="contribution-tabs">
+                            <button class="contribution-tab active">Billable</button>
+                            <button class="contribution-tab">Non Billable</button>
+                        </div>
+                    </div>
+
+                    <div class="team-section">
+                        <div class="team-header">
+                            <span class="team-name">Design Team (My Team)</span>
+                            <div class="team-stats">
+                                <span>43hr</span>
+                                <span>$400</span>
+                                <span>43%</span>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #ffe9eb;">AS</div>
+                                    <span class="member-name">Abhishek Singh</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #e9f1fe;">DS</div>
+                                    <span class="member-name">Dipanshu Singh</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #fee9ff;">AK</div>
+                                    <span class="member-name">Ayush Kumar</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-section">
+                        <div class="team-header">
+                            <span class="team-name">Front End team</span>
+                            <div class="team-stats">
+                                <span>43hr</span>
+                                <span>$400</span>
+                                <span>43%</span>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #ffe9eb;">AS</div>
+                                    <span class="member-name">Sandeep Kumar</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #e9f1fe;">RV</div>
+                                    <span class="member-name">Rahul</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #f0fdf4;">KB</div>
+                                    <span class="member-name">Nakul</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-section">
+                        <div class="team-header">
+                            <span class="team-name">Backend Team</span>
+                            <div class="team-stats">
+                                <span>43hr</span>
+                                <span>$400</span>
+                                <span>43%</span>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #ffe9eb;">AS</div>
+                                    <span class="member-name">Sambhu Rai</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #e9f1fe;">VS</div>
+                                    <span class="member-name">Vikash</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                            <div class="team-member sub-member">
+                                <div class="member-info">
+                                    <svg class="expand-icon" viewBox="0 0 18 18" fill="none" style="transform: rotate(-90deg);">
+                                        <path d="M9 12L4.5 7.5H13.5L9 12Z" fill="black"/>
+                                    </svg>
+                                    <div class="member-avatar" style="background: #e9f1fe;">MV</div>
+                                    <span class="member-name">Mahesh</span>
+                                </div>
+                                <div class="member-stats">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="stat-text">43hr</span>
+                                    <span class="stat-text">$400</span>
+                                    <span class="stat-text">43%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- modals -->
+
+<div class="modal-overlay" id="milestone-modal" data-modal-id="create-milestone" style="display: none;" data-close-on-click="true">
+        <div class="modal-container">
+        <!-- Header -->
+        <div class="modal-header">
+            <h1 class="header-title">Create New Milestone</h1>
+            <button class="close-button"  data-close-modal>
+                <svg class="close-icon" fill="none" viewBox="0 0 24 24">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Content -->
+        <div class="modal-content">
+            <div class="content-container">
+                <!-- Form Content -->
+                <div class="form-content">
+                    <!-- Name -->
+                    <div class="form-group full-width">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-input" id="milestoneName" placeholder="Enter milestone name">
+                    </div>
+
+                    <!-- Duration and Receivable Amount -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label poppins">Duration</label>
+                            <div class="duration-group">
+                                <div class="duration-input">
+                                    <input type="text" class="form-input poppins" id="duration" placeholder="Enter duration">
+                                </div>
+                                <select class="form-select" id="durationType">
+                                    <option value="day">Day</option>
+                                    <option value="week">Week</option>
+                                    <option value="month">Month</option>
+                                    <option value="year">Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Receivable Amount</label>
+                            <input type="number" class="form-input" id="receivableAmount" placeholder="Enter amount">
+                        </div>
+                    </div>
+
+                    <!-- Start Date and End Date -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Start Date</label>
+                            <div class="date-input-container">
+                                <input type="text" class="form-input date-input" id="startDate" value="16/05/2025" placeholder="DD/MM/YYYY">
+                                <svg class="date-icon" fill="none" viewBox="0 0 16 16">
+                                    <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M2 6.66667H14" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">End Date</label>
+                            <div class="date-input-container">
+                                <input type="text" class="form-input date-input" id="endDate" value="16/05/2025" placeholder="DD/MM/YYYY">
+                                <svg class="date-icon" fill="none" viewBox="0 0 16 16">
+                                    <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M2 6.66667H14" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+            <button class="btn-cancel" data-close-modal>
+                <div class="btn-text">Cancel</div>
+            </button>
+            <button class="btn-submit" onclick="submitMilestone()">
+                <div class="btn-text">Submit</div>
+            </button>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- add payment -->
+
+
+<div class="modal-overlay" id="payment-modal" data-modal-id="add-payment" style="display: none;" data-close-on-click="true">
+
+        <div class="modal-container">
+        <!-- Header -->
+        <div class="modal-header">
+            <h1 class="header-title">Add New Payment</h1>
+            <button class="close-button" data-close-modal>
+                <svg class="close-icon" fill="none" viewBox="0 0 24 24">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Content -->
+        <div class="modal-content">
+            <div class="content-container">
+                <!-- Form Content -->
+                <div class="form-content">
+                    <!-- Milestone -->
+                    <div class="form-group full-width">
+                        <label class="form-label">Milestone</label>
+                        <select class="form-select" id="milestone">
+                            <option value="">Select</option>
+                            <option value="milestone1">Phase 1 - Discovery</option>
+                            <option value="milestone2">Phase 2 - Development</option>
+                            <option value="milestone3">Phase 3 - Testing</option>
+                            <option value="milestone4">Phase 4 - Deployment</option>
+                        </select>
+                    </div>
+
+                    <!-- Sales Person and Date Of Payment -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Sales Person</label>
+                            <select class="form-select" id="salesPerson">
+                                <option value="">Select</option>
+                                <option value="john-doe">John Doe</option>
+                                <option value="jane-smith">Jane Smith</option>
+                                <option value="mike-johnson">Mike Johnson</option>
+                                <option value="sarah-wilson">Sarah Wilson</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Date Of Payment*</label>
+                            <div class="date-input-container">
+                                <input type="text" class="form-input date-input" id="paymentDate" value="04/07/2025" placeholder="DD/MM/YYYY">
+                                <svg class="date-icon" fill="none" viewBox="0 0 16 16">
+                                    <path d="M5.33333 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M10.6667 1.33333V4" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M12.6667 2.66667H3.33333C2.59695 2.66667 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66667 12.6667 2.66667Z" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                    <path d="M2 6.66667H14" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Amount and Deductions -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Amount</label>
+                            <input type="number" class="form-input" id="amount" placeholder="Enter amount">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Deductions</label>
+                            <input type="number" class="form-input" id="deductions" placeholder="Enter deductions">
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="form-group full-width">
+                        <label class="form-label">Notes</label>
+                        <div class="textarea-container">
+                            <textarea class="form-textarea" id="notes" placeholder="Explain briefly"></textarea>
+                            <svg class="resize-handle" fill="none" viewBox="0 0 20 20">
+                                <g opacity="0.6">
+                                    <path d="M17.6459 10.6463C17.8411 10.4511 18.1577 10.4512 18.3529 10.6463C18.5482 10.8415 18.5482 11.1581 18.3529 11.3533L11.3529 18.3533C11.1577 18.5484 10.8411 18.5485 10.6459 18.3533C10.4509 18.1581 10.4509 17.8415 10.6459 17.6463L17.6459 10.6463ZM17.6107 14.6111C17.8059 14.4159 18.1225 14.4161 18.3178 14.6111C18.513 14.8064 18.513 15.1229 18.3178 15.3182L15.3051 18.3309L15.227 18.3953C15.0329 18.5234 14.7689 18.5017 14.598 18.3309C14.4274 18.16 14.4055 17.8959 14.5336 17.7019L14.598 17.6238L17.6107 14.6111Z" fill="#1E293B"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+            <button class="btn-cancel" data-close-modal>
+                <div class="btn-text">Cancel</div>
+            </button>
+            <button class="btn-submit" ></button>
+                <div class="btn-text">Submit</div>
+            </button>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+    
+
+ <script src="./assets/js/project-details.js"></script>
+ <script src="./assets/js/script.js"></script>
+ <script src="./assets/js/dropdown.js"></script>
+ <script src="./assets/js/modal.js"></script>
+</body>
+</html>
